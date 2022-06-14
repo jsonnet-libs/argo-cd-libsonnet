@@ -22,8 +22,6 @@ permalink: /2.2/argoproj/v1alpha1/appProject/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -51,10 +49,57 @@ permalink: /2.2/argoproj/v1alpha1/appProject/
   * [`fn withSourceReposMixin(sourceRepos)`](#fn-specwithsourcereposmixin)
   * [`fn withSyncWindows(syncWindows)`](#fn-specwithsyncwindows)
   * [`fn withSyncWindowsMixin(syncWindows)`](#fn-specwithsyncwindowsmixin)
+  * [`obj spec.clusterResourceBlacklist`](#obj-specclusterresourceblacklist)
+    * [`fn withGroup(group)`](#fn-specclusterresourceblacklistwithgroup)
+    * [`fn withKind(kind)`](#fn-specclusterresourceblacklistwithkind)
+  * [`obj spec.clusterResourceWhitelist`](#obj-specclusterresourcewhitelist)
+    * [`fn withGroup(group)`](#fn-specclusterresourcewhitelistwithgroup)
+    * [`fn withKind(kind)`](#fn-specclusterresourcewhitelistwithkind)
+  * [`obj spec.destinations`](#obj-specdestinations)
+    * [`fn withName(name)`](#fn-specdestinationswithname)
+    * [`fn withNamespace(namespace)`](#fn-specdestinationswithnamespace)
+    * [`fn withServer(server)`](#fn-specdestinationswithserver)
+  * [`obj spec.namespaceResourceBlacklist`](#obj-specnamespaceresourceblacklist)
+    * [`fn withGroup(group)`](#fn-specnamespaceresourceblacklistwithgroup)
+    * [`fn withKind(kind)`](#fn-specnamespaceresourceblacklistwithkind)
+  * [`obj spec.namespaceResourceWhitelist`](#obj-specnamespaceresourcewhitelist)
+    * [`fn withGroup(group)`](#fn-specnamespaceresourcewhitelistwithgroup)
+    * [`fn withKind(kind)`](#fn-specnamespaceresourcewhitelistwithkind)
   * [`obj spec.orphanedResources`](#obj-specorphanedresources)
     * [`fn withIgnore(ignore)`](#fn-specorphanedresourceswithignore)
     * [`fn withIgnoreMixin(ignore)`](#fn-specorphanedresourceswithignoremixin)
     * [`fn withWarn(warn)`](#fn-specorphanedresourceswithwarn)
+    * [`obj spec.orphanedResources.ignore`](#obj-specorphanedresourcesignore)
+      * [`fn withGroup(group)`](#fn-specorphanedresourcesignorewithgroup)
+      * [`fn withKind(kind)`](#fn-specorphanedresourcesignorewithkind)
+      * [`fn withName(name)`](#fn-specorphanedresourcesignorewithname)
+  * [`obj spec.roles`](#obj-specroles)
+    * [`fn withDescription(description)`](#fn-specroleswithdescription)
+    * [`fn withGroups(groups)`](#fn-specroleswithgroups)
+    * [`fn withGroupsMixin(groups)`](#fn-specroleswithgroupsmixin)
+    * [`fn withJwtTokens(jwtTokens)`](#fn-specroleswithjwttokens)
+    * [`fn withJwtTokensMixin(jwtTokens)`](#fn-specroleswithjwttokensmixin)
+    * [`fn withName(name)`](#fn-specroleswithname)
+    * [`fn withPolicies(policies)`](#fn-specroleswithpolicies)
+    * [`fn withPoliciesMixin(policies)`](#fn-specroleswithpoliciesmixin)
+    * [`obj spec.roles.jwtTokens`](#obj-specrolesjwttokens)
+      * [`fn withExp(exp)`](#fn-specrolesjwttokenswithexp)
+      * [`fn withIat(iat)`](#fn-specrolesjwttokenswithiat)
+      * [`fn withId(id)`](#fn-specrolesjwttokenswithid)
+  * [`obj spec.signatureKeys`](#obj-specsignaturekeys)
+    * [`fn withKeyID(keyID)`](#fn-specsignaturekeyswithkeyid)
+  * [`obj spec.syncWindows`](#obj-specsyncwindows)
+    * [`fn withApplications(applications)`](#fn-specsyncwindowswithapplications)
+    * [`fn withApplicationsMixin(applications)`](#fn-specsyncwindowswithapplicationsmixin)
+    * [`fn withClusters(clusters)`](#fn-specsyncwindowswithclusters)
+    * [`fn withClustersMixin(clusters)`](#fn-specsyncwindowswithclustersmixin)
+    * [`fn withDuration(duration)`](#fn-specsyncwindowswithduration)
+    * [`fn withKind(kind)`](#fn-specsyncwindowswithkind)
+    * [`fn withManualSync(manualSync)`](#fn-specsyncwindowswithmanualsync)
+    * [`fn withNamespaces(namespaces)`](#fn-specsyncwindowswithnamespaces)
+    * [`fn withNamespacesMixin(namespaces)`](#fn-specsyncwindowswithnamespacesmixin)
+    * [`fn withSchedule(schedule)`](#fn-specsyncwindowswithschedule)
+    * [`fn withTimeZone(timeZone)`](#fn-specsyncwindowswithtimezone)
 
 ## Fields
 
@@ -169,24 +214,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -422,6 +449,114 @@ withSyncWindowsMixin(syncWindows)
 
 **Note:** This function appends passed data to existing values
 
+## obj spec.clusterResourceBlacklist
+
+"ClusterResourceBlacklist contains list of blacklisted cluster level resources"
+
+### fn spec.clusterResourceBlacklist.withGroup
+
+```ts
+withGroup(group)
+```
+
+
+
+### fn spec.clusterResourceBlacklist.withKind
+
+```ts
+withKind(kind)
+```
+
+
+
+## obj spec.clusterResourceWhitelist
+
+"ClusterResourceWhitelist contains list of whitelisted cluster level resources"
+
+### fn spec.clusterResourceWhitelist.withGroup
+
+```ts
+withGroup(group)
+```
+
+
+
+### fn spec.clusterResourceWhitelist.withKind
+
+```ts
+withKind(kind)
+```
+
+
+
+## obj spec.destinations
+
+"Destinations contains list of destinations available for deployment"
+
+### fn spec.destinations.withName
+
+```ts
+withName(name)
+```
+
+"Name is an alternate way of specifying the target cluster by its symbolic name"
+
+### fn spec.destinations.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace specifies the target namespace for the application's resources. The namespace will only be set for namespace-scoped resources that have not set a value for .metadata.namespace"
+
+### fn spec.destinations.withServer
+
+```ts
+withServer(server)
+```
+
+"Server specifies the URL of the target cluster and must be set to the Kubernetes control plane API"
+
+## obj spec.namespaceResourceBlacklist
+
+"NamespaceResourceBlacklist contains list of blacklisted namespace level resources"
+
+### fn spec.namespaceResourceBlacklist.withGroup
+
+```ts
+withGroup(group)
+```
+
+
+
+### fn spec.namespaceResourceBlacklist.withKind
+
+```ts
+withKind(kind)
+```
+
+
+
+## obj spec.namespaceResourceWhitelist
+
+"NamespaceResourceWhitelist contains list of whitelisted namespace level resources"
+
+### fn spec.namespaceResourceWhitelist.withGroup
+
+```ts
+withGroup(group)
+```
+
+
+
+### fn spec.namespaceResourceWhitelist.withKind
+
+```ts
+withKind(kind)
+```
+
+
+
 ## obj spec.orphanedResources
 
 "OrphanedResources specifies if controller should monitor orphaned resources of apps in this project"
@@ -451,3 +586,243 @@ withWarn(warn)
 ```
 
 "Warn indicates if warning condition should be created for apps which have orphaned resources"
+
+## obj spec.orphanedResources.ignore
+
+"Ignore contains a list of resources that are to be excluded from orphaned resources monitoring"
+
+### fn spec.orphanedResources.ignore.withGroup
+
+```ts
+withGroup(group)
+```
+
+
+
+### fn spec.orphanedResources.ignore.withKind
+
+```ts
+withKind(kind)
+```
+
+
+
+### fn spec.orphanedResources.ignore.withName
+
+```ts
+withName(name)
+```
+
+
+
+## obj spec.roles
+
+"Roles are user defined RBAC roles associated with this project"
+
+### fn spec.roles.withDescription
+
+```ts
+withDescription(description)
+```
+
+"Description is a description of the role"
+
+### fn spec.roles.withGroups
+
+```ts
+withGroups(groups)
+```
+
+"Groups are a list of OIDC group claims bound to this role"
+
+### fn spec.roles.withGroupsMixin
+
+```ts
+withGroupsMixin(groups)
+```
+
+"Groups are a list of OIDC group claims bound to this role"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.roles.withJwtTokens
+
+```ts
+withJwtTokens(jwtTokens)
+```
+
+"JWTTokens are a list of generated JWT tokens bound to this role"
+
+### fn spec.roles.withJwtTokensMixin
+
+```ts
+withJwtTokensMixin(jwtTokens)
+```
+
+"JWTTokens are a list of generated JWT tokens bound to this role"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.roles.withName
+
+```ts
+withName(name)
+```
+
+"Name is a name for this role"
+
+### fn spec.roles.withPolicies
+
+```ts
+withPolicies(policies)
+```
+
+"Policies Stores a list of casbin formatted strings that define access policies for the role in the project"
+
+### fn spec.roles.withPoliciesMixin
+
+```ts
+withPoliciesMixin(policies)
+```
+
+"Policies Stores a list of casbin formatted strings that define access policies for the role in the project"
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.roles.jwtTokens
+
+"JWTTokens are a list of generated JWT tokens bound to this role"
+
+### fn spec.roles.jwtTokens.withExp
+
+```ts
+withExp(exp)
+```
+
+
+
+### fn spec.roles.jwtTokens.withIat
+
+```ts
+withIat(iat)
+```
+
+
+
+### fn spec.roles.jwtTokens.withId
+
+```ts
+withId(id)
+```
+
+
+
+## obj spec.signatureKeys
+
+"SignatureKeys contains a list of PGP key IDs that commits in Git must be signed with in order to be allowed for sync"
+
+### fn spec.signatureKeys.withKeyID
+
+```ts
+withKeyID(keyID)
+```
+
+"The ID of the key in hexadecimal notation"
+
+## obj spec.syncWindows
+
+"SyncWindows controls when syncs can be run for apps in this project"
+
+### fn spec.syncWindows.withApplications
+
+```ts
+withApplications(applications)
+```
+
+"Applications contains a list of applications that the window will apply to"
+
+### fn spec.syncWindows.withApplicationsMixin
+
+```ts
+withApplicationsMixin(applications)
+```
+
+"Applications contains a list of applications that the window will apply to"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.syncWindows.withClusters
+
+```ts
+withClusters(clusters)
+```
+
+"Clusters contains a list of clusters that the window will apply to"
+
+### fn spec.syncWindows.withClustersMixin
+
+```ts
+withClustersMixin(clusters)
+```
+
+"Clusters contains a list of clusters that the window will apply to"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.syncWindows.withDuration
+
+```ts
+withDuration(duration)
+```
+
+"Duration is the amount of time the sync window will be open"
+
+### fn spec.syncWindows.withKind
+
+```ts
+withKind(kind)
+```
+
+"Kind defines if the window allows or blocks syncs"
+
+### fn spec.syncWindows.withManualSync
+
+```ts
+withManualSync(manualSync)
+```
+
+"ManualSync enables manual syncs when they would otherwise be blocked"
+
+### fn spec.syncWindows.withNamespaces
+
+```ts
+withNamespaces(namespaces)
+```
+
+"Namespaces contains a list of namespaces that the window will apply to"
+
+### fn spec.syncWindows.withNamespacesMixin
+
+```ts
+withNamespacesMixin(namespaces)
+```
+
+"Namespaces contains a list of namespaces that the window will apply to"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.syncWindows.withSchedule
+
+```ts
+withSchedule(schedule)
+```
+
+"Schedule is the time the window will begin, specified in cron format"
+
+### fn spec.syncWindows.withTimeZone
+
+```ts
+withTimeZone(timeZone)
+```
+
+"TimeZone of the sync that will be applied to the schedule"

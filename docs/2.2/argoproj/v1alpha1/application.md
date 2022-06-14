@@ -22,8 +22,6 @@ permalink: /2.2/argoproj/v1alpha1/application/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -34,6 +32,9 @@ permalink: /2.2/argoproj/v1alpha1/application/
 * [`obj operation`](#obj-operation)
   * [`fn withInfo(info)`](#fn-operationwithinfo)
   * [`fn withInfoMixin(info)`](#fn-operationwithinfomixin)
+  * [`obj operation.info`](#obj-operationinfo)
+    * [`fn withName(name)`](#fn-operationinfowithname)
+    * [`fn withValue(value)`](#fn-operationinfowithvalue)
   * [`obj operation.initiatedBy`](#obj-operationinitiatedby)
     * [`fn withAutomated(automated)`](#fn-operationinitiatedbywithautomated)
     * [`fn withUsername(username)`](#fn-operationinitiatedbywithusername)
@@ -53,6 +54,11 @@ permalink: /2.2/argoproj/v1alpha1/application/
     * [`fn withRevision(revision)`](#fn-operationsyncwithrevision)
     * [`fn withSyncOptions(syncOptions)`](#fn-operationsyncwithsyncoptions)
     * [`fn withSyncOptionsMixin(syncOptions)`](#fn-operationsyncwithsyncoptionsmixin)
+    * [`obj operation.sync.resources`](#obj-operationsyncresources)
+      * [`fn withGroup(group)`](#fn-operationsyncresourceswithgroup)
+      * [`fn withKind(kind)`](#fn-operationsyncresourceswithkind)
+      * [`fn withName(name)`](#fn-operationsyncresourceswithname)
+      * [`fn withNamespace(namespace)`](#fn-operationsyncresourceswithnamespace)
     * [`obj operation.sync.source`](#obj-operationsyncsource)
       * [`fn withChart(chart)`](#fn-operationsyncsourcewithchart)
       * [`fn withPath(path)`](#fn-operationsyncsourcewithpath)
@@ -69,6 +75,14 @@ permalink: /2.2/argoproj/v1alpha1/application/
           * [`fn withLibsMixin(libs)`](#fn-operationsyncsourcedirectoryjsonnetwithlibsmixin)
           * [`fn withTlas(tlas)`](#fn-operationsyncsourcedirectoryjsonnetwithtlas)
           * [`fn withTlasMixin(tlas)`](#fn-operationsyncsourcedirectoryjsonnetwithtlasmixin)
+          * [`obj operation.sync.source.directory.jsonnet.extVars`](#obj-operationsyncsourcedirectoryjsonnetextvars)
+            * [`fn withCode(code)`](#fn-operationsyncsourcedirectoryjsonnetextvarswithcode)
+            * [`fn withName(name)`](#fn-operationsyncsourcedirectoryjsonnetextvarswithname)
+            * [`fn withValue(value)`](#fn-operationsyncsourcedirectoryjsonnetextvarswithvalue)
+          * [`obj operation.sync.source.directory.jsonnet.tlas`](#obj-operationsyncsourcedirectoryjsonnettlas)
+            * [`fn withCode(code)`](#fn-operationsyncsourcedirectoryjsonnettlaswithcode)
+            * [`fn withName(name)`](#fn-operationsyncsourcedirectoryjsonnettlaswithname)
+            * [`fn withValue(value)`](#fn-operationsyncsourcedirectoryjsonnettlaswithvalue)
       * [`obj operation.sync.source.helm`](#obj-operationsyncsourcehelm)
         * [`fn withFileParameters(fileParameters)`](#fn-operationsyncsourcehelmwithfileparameters)
         * [`fn withFileParametersMixin(fileParameters)`](#fn-operationsyncsourcehelmwithfileparametersmixin)
@@ -80,10 +94,21 @@ permalink: /2.2/argoproj/v1alpha1/application/
         * [`fn withValueFilesMixin(valueFiles)`](#fn-operationsyncsourcehelmwithvaluefilesmixin)
         * [`fn withValues(values)`](#fn-operationsyncsourcehelmwithvalues)
         * [`fn withVersion(version)`](#fn-operationsyncsourcehelmwithversion)
+        * [`obj operation.sync.source.helm.fileParameters`](#obj-operationsyncsourcehelmfileparameters)
+          * [`fn withName(name)`](#fn-operationsyncsourcehelmfileparameterswithname)
+          * [`fn withPath(path)`](#fn-operationsyncsourcehelmfileparameterswithpath)
+        * [`obj operation.sync.source.helm.parameters`](#obj-operationsyncsourcehelmparameters)
+          * [`fn withForceString(forceString)`](#fn-operationsyncsourcehelmparameterswithforcestring)
+          * [`fn withName(name)`](#fn-operationsyncsourcehelmparameterswithname)
+          * [`fn withValue(value)`](#fn-operationsyncsourcehelmparameterswithvalue)
       * [`obj operation.sync.source.ksonnet`](#obj-operationsyncsourceksonnet)
         * [`fn withEnvironment(environment)`](#fn-operationsyncsourceksonnetwithenvironment)
         * [`fn withParameters(parameters)`](#fn-operationsyncsourceksonnetwithparameters)
         * [`fn withParametersMixin(parameters)`](#fn-operationsyncsourceksonnetwithparametersmixin)
+        * [`obj operation.sync.source.ksonnet.parameters`](#obj-operationsyncsourceksonnetparameters)
+          * [`fn withComponent(component)`](#fn-operationsyncsourceksonnetparameterswithcomponent)
+          * [`fn withName(name)`](#fn-operationsyncsourceksonnetparameterswithname)
+          * [`fn withValue(value)`](#fn-operationsyncsourceksonnetparameterswithvalue)
       * [`obj operation.sync.source.kustomize`](#obj-operationsyncsourcekustomize)
         * [`fn withCommonAnnotations(commonAnnotations)`](#fn-operationsyncsourcekustomizewithcommonannotations)
         * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-operationsyncsourcekustomizewithcommonannotationsmixin)
@@ -100,6 +125,9 @@ permalink: /2.2/argoproj/v1alpha1/application/
         * [`fn withEnv(env)`](#fn-operationsyncsourcepluginwithenv)
         * [`fn withEnvMixin(env)`](#fn-operationsyncsourcepluginwithenvmixin)
         * [`fn withName(name)`](#fn-operationsyncsourcepluginwithname)
+        * [`obj operation.sync.source.plugin.env`](#obj-operationsyncsourcepluginenv)
+          * [`fn withName(name)`](#fn-operationsyncsourcepluginenvwithname)
+          * [`fn withValue(value)`](#fn-operationsyncsourcepluginenvwithvalue)
     * [`obj operation.sync.syncStrategy`](#obj-operationsyncsyncstrategy)
       * [`obj operation.sync.syncStrategy.apply`](#obj-operationsyncsyncstrategyapply)
         * [`fn withForce(force)`](#fn-operationsyncsyncstrategyapplywithforce)
@@ -116,6 +144,18 @@ permalink: /2.2/argoproj/v1alpha1/application/
     * [`fn withName(name)`](#fn-specdestinationwithname)
     * [`fn withNamespace(namespace)`](#fn-specdestinationwithnamespace)
     * [`fn withServer(server)`](#fn-specdestinationwithserver)
+  * [`obj spec.ignoreDifferences`](#obj-specignoredifferences)
+    * [`fn withGroup(group)`](#fn-specignoredifferenceswithgroup)
+    * [`fn withJqPathExpressions(jqPathExpressions)`](#fn-specignoredifferenceswithjqpathexpressions)
+    * [`fn withJqPathExpressionsMixin(jqPathExpressions)`](#fn-specignoredifferenceswithjqpathexpressionsmixin)
+    * [`fn withJsonPointers(jsonPointers)`](#fn-specignoredifferenceswithjsonpointers)
+    * [`fn withJsonPointersMixin(jsonPointers)`](#fn-specignoredifferenceswithjsonpointersmixin)
+    * [`fn withKind(kind)`](#fn-specignoredifferenceswithkind)
+    * [`fn withName(name)`](#fn-specignoredifferenceswithname)
+    * [`fn withNamespace(namespace)`](#fn-specignoredifferenceswithnamespace)
+  * [`obj spec.info`](#obj-specinfo)
+    * [`fn withName(name)`](#fn-specinfowithname)
+    * [`fn withValue(value)`](#fn-specinfowithvalue)
   * [`obj spec.source`](#obj-specsource)
     * [`fn withChart(chart)`](#fn-specsourcewithchart)
     * [`fn withPath(path)`](#fn-specsourcewithpath)
@@ -132,6 +172,14 @@ permalink: /2.2/argoproj/v1alpha1/application/
         * [`fn withLibsMixin(libs)`](#fn-specsourcedirectoryjsonnetwithlibsmixin)
         * [`fn withTlas(tlas)`](#fn-specsourcedirectoryjsonnetwithtlas)
         * [`fn withTlasMixin(tlas)`](#fn-specsourcedirectoryjsonnetwithtlasmixin)
+        * [`obj spec.source.directory.jsonnet.extVars`](#obj-specsourcedirectoryjsonnetextvars)
+          * [`fn withCode(code)`](#fn-specsourcedirectoryjsonnetextvarswithcode)
+          * [`fn withName(name)`](#fn-specsourcedirectoryjsonnetextvarswithname)
+          * [`fn withValue(value)`](#fn-specsourcedirectoryjsonnetextvarswithvalue)
+        * [`obj spec.source.directory.jsonnet.tlas`](#obj-specsourcedirectoryjsonnettlas)
+          * [`fn withCode(code)`](#fn-specsourcedirectoryjsonnettlaswithcode)
+          * [`fn withName(name)`](#fn-specsourcedirectoryjsonnettlaswithname)
+          * [`fn withValue(value)`](#fn-specsourcedirectoryjsonnettlaswithvalue)
     * [`obj spec.source.helm`](#obj-specsourcehelm)
       * [`fn withFileParameters(fileParameters)`](#fn-specsourcehelmwithfileparameters)
       * [`fn withFileParametersMixin(fileParameters)`](#fn-specsourcehelmwithfileparametersmixin)
@@ -143,10 +191,21 @@ permalink: /2.2/argoproj/v1alpha1/application/
       * [`fn withValueFilesMixin(valueFiles)`](#fn-specsourcehelmwithvaluefilesmixin)
       * [`fn withValues(values)`](#fn-specsourcehelmwithvalues)
       * [`fn withVersion(version)`](#fn-specsourcehelmwithversion)
+      * [`obj spec.source.helm.fileParameters`](#obj-specsourcehelmfileparameters)
+        * [`fn withName(name)`](#fn-specsourcehelmfileparameterswithname)
+        * [`fn withPath(path)`](#fn-specsourcehelmfileparameterswithpath)
+      * [`obj spec.source.helm.parameters`](#obj-specsourcehelmparameters)
+        * [`fn withForceString(forceString)`](#fn-specsourcehelmparameterswithforcestring)
+        * [`fn withName(name)`](#fn-specsourcehelmparameterswithname)
+        * [`fn withValue(value)`](#fn-specsourcehelmparameterswithvalue)
     * [`obj spec.source.ksonnet`](#obj-specsourceksonnet)
       * [`fn withEnvironment(environment)`](#fn-specsourceksonnetwithenvironment)
       * [`fn withParameters(parameters)`](#fn-specsourceksonnetwithparameters)
       * [`fn withParametersMixin(parameters)`](#fn-specsourceksonnetwithparametersmixin)
+      * [`obj spec.source.ksonnet.parameters`](#obj-specsourceksonnetparameters)
+        * [`fn withComponent(component)`](#fn-specsourceksonnetparameterswithcomponent)
+        * [`fn withName(name)`](#fn-specsourceksonnetparameterswithname)
+        * [`fn withValue(value)`](#fn-specsourceksonnetparameterswithvalue)
     * [`obj spec.source.kustomize`](#obj-specsourcekustomize)
       * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specsourcekustomizewithcommonannotations)
       * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specsourcekustomizewithcommonannotationsmixin)
@@ -163,6 +222,9 @@ permalink: /2.2/argoproj/v1alpha1/application/
       * [`fn withEnv(env)`](#fn-specsourcepluginwithenv)
       * [`fn withEnvMixin(env)`](#fn-specsourcepluginwithenvmixin)
       * [`fn withName(name)`](#fn-specsourcepluginwithname)
+      * [`obj spec.source.plugin.env`](#obj-specsourcepluginenv)
+        * [`fn withName(name)`](#fn-specsourcepluginenvwithname)
+        * [`fn withValue(value)`](#fn-specsourcepluginenvwithvalue)
   * [`obj spec.syncPolicy`](#obj-specsyncpolicy)
     * [`fn withSyncOptions(syncOptions)`](#fn-specsyncpolicywithsyncoptions)
     * [`fn withSyncOptionsMixin(syncOptions)`](#fn-specsyncpolicywithsyncoptionsmixin)
@@ -293,24 +355,6 @@ withLabelsMixin(labels)
 
 **Note:** This function appends passed data to existing values
 
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-**Note:** This function appends passed data to existing values
-
 ### fn metadata.withName
 
 ```ts
@@ -390,6 +434,26 @@ withInfoMixin(info)
 "Info is a list of informational items for this operation"
 
 **Note:** This function appends passed data to existing values
+
+## obj operation.info
+
+"Info is a list of informational items for this operation"
+
+### fn operation.info.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn operation.info.withValue
+
+```ts
+withValue(value)
+```
+
+
 
 ## obj operation.initiatedBy
 
@@ -533,6 +597,42 @@ withSyncOptionsMixin(syncOptions)
 
 **Note:** This function appends passed data to existing values
 
+## obj operation.sync.resources
+
+"Resources describes which resources shall be part of the sync"
+
+### fn operation.sync.resources.withGroup
+
+```ts
+withGroup(group)
+```
+
+
+
+### fn operation.sync.resources.withKind
+
+```ts
+withKind(kind)
+```
+
+
+
+### fn operation.sync.resources.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn operation.sync.resources.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+
+
 ## obj operation.sync.source
 
 "Source overrides the source definition set in the application. This is typically set in a Rollback operation and is nil during a Sync operation"
@@ -655,6 +755,62 @@ withTlasMixin(tlas)
 
 **Note:** This function appends passed data to existing values
 
+## obj operation.sync.source.directory.jsonnet.extVars
+
+"ExtVars is a list of Jsonnet External Variables"
+
+### fn operation.sync.source.directory.jsonnet.extVars.withCode
+
+```ts
+withCode(code)
+```
+
+
+
+### fn operation.sync.source.directory.jsonnet.extVars.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn operation.sync.source.directory.jsonnet.extVars.withValue
+
+```ts
+withValue(value)
+```
+
+
+
+## obj operation.sync.source.directory.jsonnet.tlas
+
+"TLAS is a list of Jsonnet Top-level Arguments"
+
+### fn operation.sync.source.directory.jsonnet.tlas.withCode
+
+```ts
+withCode(code)
+```
+
+
+
+### fn operation.sync.source.directory.jsonnet.tlas.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn operation.sync.source.directory.jsonnet.tlas.withValue
+
+```ts
+withValue(value)
+```
+
+
+
 ## obj operation.sync.source.helm
 
 "Helm holds helm specific options"
@@ -745,6 +901,54 @@ withVersion(version)
 
 "Version is the Helm version to use for templating (either \"2\" or \"3\")"
 
+## obj operation.sync.source.helm.fileParameters
+
+"FileParameters are file parameters to the helm template"
+
+### fn operation.sync.source.helm.fileParameters.withName
+
+```ts
+withName(name)
+```
+
+"Name is the name of the Helm parameter"
+
+### fn operation.sync.source.helm.fileParameters.withPath
+
+```ts
+withPath(path)
+```
+
+"Path is the path to the file containing the values for the Helm parameter"
+
+## obj operation.sync.source.helm.parameters
+
+"Parameters is a list of Helm parameters which are passed to the helm template command upon manifest generation"
+
+### fn operation.sync.source.helm.parameters.withForceString
+
+```ts
+withForceString(forceString)
+```
+
+"ForceString determines whether to tell Helm to interpret booleans and numbers as strings"
+
+### fn operation.sync.source.helm.parameters.withName
+
+```ts
+withName(name)
+```
+
+"Name is the name of the Helm parameter"
+
+### fn operation.sync.source.helm.parameters.withValue
+
+```ts
+withValue(value)
+```
+
+"Value is the value for the Helm parameter"
+
 ## obj operation.sync.source.ksonnet
 
 "Ksonnet holds ksonnet specific options"
@@ -774,6 +978,34 @@ withParametersMixin(parameters)
 "Parameters are a list of ksonnet component parameter override values"
 
 **Note:** This function appends passed data to existing values
+
+## obj operation.sync.source.ksonnet.parameters
+
+"Parameters are a list of ksonnet component parameter override values"
+
+### fn operation.sync.source.ksonnet.parameters.withComponent
+
+```ts
+withComponent(component)
+```
+
+
+
+### fn operation.sync.source.ksonnet.parameters.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn operation.sync.source.ksonnet.parameters.withValue
+
+```ts
+withValue(value)
+```
+
+
 
 ## obj operation.sync.source.kustomize
 
@@ -903,6 +1135,26 @@ withName(name)
 
 
 
+## obj operation.sync.source.plugin.env
+
+"Env is a list of environment variable entries"
+
+### fn operation.sync.source.plugin.env.withName
+
+```ts
+withName(name)
+```
+
+"Name is the name of the variable, usually expressed in uppercase"
+
+### fn operation.sync.source.plugin.env.withValue
+
+```ts
+withValue(value)
+```
+
+"Value is the value of the variable"
+
 ## obj operation.sync.syncStrategy
 
 "SyncStrategy describes how to perform the sync"
@@ -1014,6 +1266,98 @@ withServer(server)
 ```
 
 "Server specifies the URL of the target cluster and must be set to the Kubernetes control plane API"
+
+## obj spec.ignoreDifferences
+
+"IgnoreDifferences is a list of resources and their fields which should be ignored during comparison"
+
+### fn spec.ignoreDifferences.withGroup
+
+```ts
+withGroup(group)
+```
+
+
+
+### fn spec.ignoreDifferences.withJqPathExpressions
+
+```ts
+withJqPathExpressions(jqPathExpressions)
+```
+
+
+
+### fn spec.ignoreDifferences.withJqPathExpressionsMixin
+
+```ts
+withJqPathExpressionsMixin(jqPathExpressions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.ignoreDifferences.withJsonPointers
+
+```ts
+withJsonPointers(jsonPointers)
+```
+
+
+
+### fn spec.ignoreDifferences.withJsonPointersMixin
+
+```ts
+withJsonPointersMixin(jsonPointers)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.ignoreDifferences.withKind
+
+```ts
+withKind(kind)
+```
+
+
+
+### fn spec.ignoreDifferences.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.ignoreDifferences.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+
+
+## obj spec.info
+
+"Info contains a list of information (URLs, email addresses, and plain text) that relates to the application"
+
+### fn spec.info.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.info.withValue
+
+```ts
+withValue(value)
+```
+
+
 
 ## obj spec.source
 
@@ -1137,6 +1481,62 @@ withTlasMixin(tlas)
 
 **Note:** This function appends passed data to existing values
 
+## obj spec.source.directory.jsonnet.extVars
+
+"ExtVars is a list of Jsonnet External Variables"
+
+### fn spec.source.directory.jsonnet.extVars.withCode
+
+```ts
+withCode(code)
+```
+
+
+
+### fn spec.source.directory.jsonnet.extVars.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.source.directory.jsonnet.extVars.withValue
+
+```ts
+withValue(value)
+```
+
+
+
+## obj spec.source.directory.jsonnet.tlas
+
+"TLAS is a list of Jsonnet Top-level Arguments"
+
+### fn spec.source.directory.jsonnet.tlas.withCode
+
+```ts
+withCode(code)
+```
+
+
+
+### fn spec.source.directory.jsonnet.tlas.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.source.directory.jsonnet.tlas.withValue
+
+```ts
+withValue(value)
+```
+
+
+
 ## obj spec.source.helm
 
 "Helm holds helm specific options"
@@ -1227,6 +1627,54 @@ withVersion(version)
 
 "Version is the Helm version to use for templating (either \"2\" or \"3\")"
 
+## obj spec.source.helm.fileParameters
+
+"FileParameters are file parameters to the helm template"
+
+### fn spec.source.helm.fileParameters.withName
+
+```ts
+withName(name)
+```
+
+"Name is the name of the Helm parameter"
+
+### fn spec.source.helm.fileParameters.withPath
+
+```ts
+withPath(path)
+```
+
+"Path is the path to the file containing the values for the Helm parameter"
+
+## obj spec.source.helm.parameters
+
+"Parameters is a list of Helm parameters which are passed to the helm template command upon manifest generation"
+
+### fn spec.source.helm.parameters.withForceString
+
+```ts
+withForceString(forceString)
+```
+
+"ForceString determines whether to tell Helm to interpret booleans and numbers as strings"
+
+### fn spec.source.helm.parameters.withName
+
+```ts
+withName(name)
+```
+
+"Name is the name of the Helm parameter"
+
+### fn spec.source.helm.parameters.withValue
+
+```ts
+withValue(value)
+```
+
+"Value is the value for the Helm parameter"
+
 ## obj spec.source.ksonnet
 
 "Ksonnet holds ksonnet specific options"
@@ -1256,6 +1704,34 @@ withParametersMixin(parameters)
 "Parameters are a list of ksonnet component parameter override values"
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.source.ksonnet.parameters
+
+"Parameters are a list of ksonnet component parameter override values"
+
+### fn spec.source.ksonnet.parameters.withComponent
+
+```ts
+withComponent(component)
+```
+
+
+
+### fn spec.source.ksonnet.parameters.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.source.ksonnet.parameters.withValue
+
+```ts
+withValue(value)
+```
+
+
 
 ## obj spec.source.kustomize
 
@@ -1384,6 +1860,26 @@ withName(name)
 ```
 
 
+
+## obj spec.source.plugin.env
+
+"Env is a list of environment variable entries"
+
+### fn spec.source.plugin.env.withName
+
+```ts
+withName(name)
+```
+
+"Name is the name of the variable, usually expressed in uppercase"
+
+### fn spec.source.plugin.env.withValue
+
+```ts
+withValue(value)
+```
+
+"Value is the value of the variable"
 
 ## obj spec.syncPolicy
 
