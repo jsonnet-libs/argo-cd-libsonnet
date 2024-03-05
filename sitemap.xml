@@ -2,237 +2,237 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.2/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.2/argoproj/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.2/argoproj/v1alpha1/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.2/argoproj/v1alpha1/appProject/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.2/argoproj/v1alpha1/application/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.3/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.3/argoproj/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.3/argoproj/v1alpha1/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.3/argoproj/v1alpha1/appProject/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.3/argoproj/v1alpha1/application/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.4/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.4/argoproj/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.4/argoproj/v1alpha1/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.4/argoproj/v1alpha1/appProject/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.4/argoproj/v1alpha1/application/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.4/argoproj/v1alpha1/applicationSet/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.5/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.5/argoproj/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.5/argoproj/v1alpha1/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.5/argoproj/v1alpha1/appProject/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.5/argoproj/v1alpha1/application/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.5/argoproj/v1alpha1/applicationSet/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.6/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.6/argoproj/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.6/argoproj/v1alpha1/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.6/argoproj/v1alpha1/appProject/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.6/argoproj/v1alpha1/application/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.6/argoproj/v1alpha1/applicationSet/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.7/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.7/argoproj/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.7/argoproj/v1alpha1/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.7/argoproj/v1alpha1/appProject/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.7/argoproj/v1alpha1/application/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.7/argoproj/v1alpha1/applicationSet/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.8/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.8/argoproj/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.8/argoproj/v1alpha1/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.8/argoproj/v1alpha1/appProject/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.8/argoproj/v1alpha1/application/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.8/argoproj/v1alpha1/applicationSet/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.9/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.9/argoproj/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.9/argoproj/v1alpha1/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.9/argoproj/v1alpha1/appProject/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.9/argoproj/v1alpha1/application/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.9/argoproj/v1alpha1/applicationSet/</loc>
-         <lastmod>2023-12-29</lastmod>
+         <lastmod>2024-03-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
