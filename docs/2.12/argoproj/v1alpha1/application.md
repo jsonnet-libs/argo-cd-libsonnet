@@ -1,5 +1,5 @@
 ---
-permalink: /2.11/argoproj/v1alpha1/application/
+permalink: /2.12/argoproj/v1alpha1/application/
 ---
 
 # argoproj.v1alpha1.application
@@ -861,7 +861,7 @@ withResourcesMixin(resources)
 withRevision(revision)
 ```
 
-"Revision is the revision (Git) or chart version (Helm) which to sync the application to If omitted, will use the revision specified in app spec."
+"Revision is the revision (Git) or chart version (Helm) which to sync the application to\nIf omitted, will use the revision specified in app spec."
 
 ### fn operation.sync.withRevisions
 
@@ -869,7 +869,7 @@ withRevision(revision)
 withRevisions(revisions)
 ```
 
-"Revisions is the list of revision (Git) or chart version (Helm) which to sync each source in sources field for the application to If omitted, will use the revision specified in app spec."
+"Revisions is the list of revision (Git) or chart version (Helm) which to sync each source in sources field for the application to\nIf omitted, will use the revision specified in app spec."
 
 ### fn operation.sync.withRevisionsMixin
 
@@ -877,7 +877,7 @@ withRevisions(revisions)
 withRevisionsMixin(revisions)
 ```
 
-"Revisions is the list of revision (Git) or chart version (Helm) which to sync each source in sources field for the application to If omitted, will use the revision specified in app spec."
+"Revisions is the list of revision (Git) or chart version (Helm) which to sync each source in sources field for the application to\nIf omitted, will use the revision specified in app spec."
 
 **Note:** This function appends passed data to existing values
 
@@ -887,7 +887,7 @@ withRevisionsMixin(revisions)
 withSources(sources)
 ```
 
-"Sources overrides the source definition set in the application. This is typically set in a Rollback operation and is nil during a Sync operation"
+"Sources overrides the source definition set in the application.\nThis is typically set in a Rollback operation and is nil during a Sync operation"
 
 ### fn operation.sync.withSourcesMixin
 
@@ -895,7 +895,7 @@ withSources(sources)
 withSourcesMixin(sources)
 ```
 
-"Sources overrides the source definition set in the application. This is typically set in a Rollback operation and is nil during a Sync operation"
+"Sources overrides the source definition set in the application.\nThis is typically set in a Rollback operation and is nil during a Sync operation"
 
 **Note:** This function appends passed data to existing values
 
@@ -955,7 +955,7 @@ withNamespace(namespace)
 
 ## obj operation.sync.source
 
-"Source overrides the source definition set in the application. This is typically set in a Rollback operation and is nil during a Sync operation"
+"Source overrides the source definition set in the application.\nThis is typically set in a Rollback operation and is nil during a Sync operation"
 
 ### fn operation.sync.source.withChart
 
@@ -995,7 +995,7 @@ withRepoURL(repoURL)
 withTargetRevision(targetRevision)
 ```
 
-"TargetRevision defines the revision of the source to sync the application to. In case of Git, this can be commit, tag, or branch. If omitted, will equal to HEAD. In case of Helm, this is a semver tag for the Chart's version."
+"TargetRevision defines the revision of the source to sync the application to.\nIn case of Git, this can be commit, tag, or branch. If omitted, will equal to HEAD.\nIn case of Helm, this is a semver tag for the Chart's version."
 
 ## obj operation.sync.source.directory
 
@@ -1731,7 +1731,7 @@ withString(string)
 
 ## obj operation.sync.sources
 
-"Sources overrides the source definition set in the application. This is typically set in a Rollback operation and is nil during a Sync operation"
+"Sources overrides the source definition set in the application.\nThis is typically set in a Rollback operation and is nil during a Sync operation"
 
 ### fn operation.sync.sources.withChart
 
@@ -1771,7 +1771,7 @@ withRepoURL(repoURL)
 withTargetRevision(targetRevision)
 ```
 
-"TargetRevision defines the revision of the source to sync the application to. In case of Git, this can be commit, tag, or branch. If omitted, will equal to HEAD. In case of Helm, this is a semver tag for the Chart's version."
+"TargetRevision defines the revision of the source to sync the application to.\nIn case of Git, this can be commit, tag, or branch. If omitted, will equal to HEAD.\nIn case of Helm, this is a semver tag for the Chart's version."
 
 ## obj operation.sync.sources.directory
 
@@ -2519,7 +2519,7 @@ withString(string)
 withForce(force)
 ```
 
-"Force indicates whether or not to supply the --force flag to `kubectl apply`. The --force flag deletes and re-create the resource, when PATCH encounters conflict and has retried for 5 times."
+"Force indicates whether or not to supply the --force flag to `kubectl apply`.\nThe --force flag deletes and re-create the resource, when PATCH encounters conflict and has\nretried for 5 times."
 
 ## obj operation.sync.syncStrategy.hook
 
@@ -2531,7 +2531,7 @@ withForce(force)
 withForce(force)
 ```
 
-"Force indicates whether or not to supply the --force flag to `kubectl apply`. The --force flag deletes and re-create the resource, when PATCH encounters conflict and has retried for 5 times."
+"Force indicates whether or not to supply the --force flag to `kubectl apply`.\nThe --force flag deletes and re-create the resource, when PATCH encounters conflict and has\nretried for 5 times."
 
 ## obj spec
 
@@ -2579,7 +2579,7 @@ withInfoMixin(info)
 withProject(project)
 ```
 
-"Project is a reference to the project this application belongs to. The empty string means that application belongs to the 'default' project."
+"Project is a reference to the project this application belongs to.\nThe empty string means that application belongs to the 'default' project."
 
 ### fn spec.withRevisionHistoryLimit
 
@@ -2587,7 +2587,7 @@ withProject(project)
 withRevisionHistoryLimit(revisionHistoryLimit)
 ```
 
-"RevisionHistoryLimit limits the number of items kept in the application's revision history, which is used for informational purposes as well as for rollbacks to previous versions. This should only be changed in exceptional circumstances. Setting to zero will store no history. This will reduce storage used. Increasing will increase the space used to store the history, so we do not recommend increasing it. Default is 10."
+"RevisionHistoryLimit limits the number of items kept in the application's revision history, which is used for informational purposes as well as for rollbacks to previous versions.\nThis should only be changed in exceptional circumstances.\nSetting to zero will store no history. This will reduce storage used.\nIncreasing will increase the space used to store the history, so we do not recommend increasing it.\nDefault is 10."
 
 ### fn spec.withSources
 
@@ -2625,7 +2625,7 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace specifies the target namespace for the application's resources. The namespace will only be set for namespace-scoped resources that have not set a value for .metadata.namespace"
+"Namespace specifies the target namespace for the application's resources.\nThe namespace will only be set for namespace-scoped resources that have not set a value for .metadata.namespace"
 
 ### fn spec.destination.withServer
 
@@ -2697,7 +2697,7 @@ withKind(kind)
 withManagedFieldsManagers(managedFieldsManagers)
 ```
 
-"ManagedFieldsManagers is a list of trusted managers. Fields mutated by those managers will take precedence over the desired state defined in the SCM and won't be displayed in diffs"
+"ManagedFieldsManagers is a list of trusted managers. Fields mutated by those managers will take precedence over the\ndesired state defined in the SCM and won't be displayed in diffs"
 
 ### fn spec.ignoreDifferences.withManagedFieldsManagersMixin
 
@@ -2705,7 +2705,7 @@ withManagedFieldsManagers(managedFieldsManagers)
 withManagedFieldsManagersMixin(managedFieldsManagers)
 ```
 
-"ManagedFieldsManagers is a list of trusted managers. Fields mutated by those managers will take precedence over the desired state defined in the SCM and won't be displayed in diffs"
+"ManagedFieldsManagers is a list of trusted managers. Fields mutated by those managers will take precedence over the\ndesired state defined in the SCM and won't be displayed in diffs"
 
 **Note:** This function appends passed data to existing values
 
@@ -2787,7 +2787,7 @@ withRepoURL(repoURL)
 withTargetRevision(targetRevision)
 ```
 
-"TargetRevision defines the revision of the source to sync the application to. In case of Git, this can be commit, tag, or branch. If omitted, will equal to HEAD. In case of Helm, this is a semver tag for the Chart's version."
+"TargetRevision defines the revision of the source to sync the application to.\nIn case of Git, this can be commit, tag, or branch. If omitted, will equal to HEAD.\nIn case of Helm, this is a semver tag for the Chart's version."
 
 ## obj spec.source.directory
 
@@ -3563,7 +3563,7 @@ withRepoURL(repoURL)
 withTargetRevision(targetRevision)
 ```
 
-"TargetRevision defines the revision of the source to sync the application to. In case of Git, this can be commit, tag, or branch. If omitted, will equal to HEAD. In case of Helm, this is a semver tag for the Chart's version."
+"TargetRevision defines the revision of the source to sync the application to.\nIn case of Git, this can be commit, tag, or branch. If omitted, will equal to HEAD.\nIn case of Helm, this is a semver tag for the Chart's version."
 
 ## obj spec.sources.directory
 

@@ -1,5 +1,5 @@
 ---
-permalink: /2.11/argoproj/v1alpha1/application/
+permalink: /2.13/argoproj/v1alpha1/application/
 ---
 
 # argoproj.v1alpha1.application
@@ -90,9 +90,13 @@ permalink: /2.11/argoproj/v1alpha1/application/
             * [`fn withName(name)`](#fn-operationsyncsourcedirectoryjsonnettlaswithname)
             * [`fn withValue(value)`](#fn-operationsyncsourcedirectoryjsonnettlaswithvalue)
       * [`obj operation.sync.source.helm`](#obj-operationsyncsourcehelm)
+        * [`fn withApiVersions(apiVersions)`](#fn-operationsyncsourcehelmwithapiversions)
+        * [`fn withApiVersionsMixin(apiVersions)`](#fn-operationsyncsourcehelmwithapiversionsmixin)
         * [`fn withFileParameters(fileParameters)`](#fn-operationsyncsourcehelmwithfileparameters)
         * [`fn withFileParametersMixin(fileParameters)`](#fn-operationsyncsourcehelmwithfileparametersmixin)
         * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-operationsyncsourcehelmwithignoremissingvaluefiles)
+        * [`fn withKubeVersion(kubeVersion)`](#fn-operationsyncsourcehelmwithkubeversion)
+        * [`fn withNamespace(namespace)`](#fn-operationsyncsourcehelmwithnamespace)
         * [`fn withParameters(parameters)`](#fn-operationsyncsourcehelmwithparameters)
         * [`fn withParametersMixin(parameters)`](#fn-operationsyncsourcehelmwithparametersmixin)
         * [`fn withPassCredentials(passCredentials)`](#fn-operationsyncsourcehelmwithpasscredentials)
@@ -112,6 +116,8 @@ permalink: /2.11/argoproj/v1alpha1/application/
           * [`fn withName(name)`](#fn-operationsyncsourcehelmparameterswithname)
           * [`fn withValue(value)`](#fn-operationsyncsourcehelmparameterswithvalue)
       * [`obj operation.sync.source.kustomize`](#obj-operationsyncsourcekustomize)
+        * [`fn withApiVersions(apiVersions)`](#fn-operationsyncsourcekustomizewithapiversions)
+        * [`fn withApiVersionsMixin(apiVersions)`](#fn-operationsyncsourcekustomizewithapiversionsmixin)
         * [`fn withCommonAnnotations(commonAnnotations)`](#fn-operationsyncsourcekustomizewithcommonannotations)
         * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-operationsyncsourcekustomizewithcommonannotationsenvsubst)
         * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-operationsyncsourcekustomizewithcommonannotationsmixin)
@@ -123,6 +129,7 @@ permalink: /2.11/argoproj/v1alpha1/application/
         * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-operationsyncsourcekustomizewithforcecommonlabels)
         * [`fn withImages(images)`](#fn-operationsyncsourcekustomizewithimages)
         * [`fn withImagesMixin(images)`](#fn-operationsyncsourcekustomizewithimagesmixin)
+        * [`fn withKubeVersion(kubeVersion)`](#fn-operationsyncsourcekustomizewithkubeversion)
         * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-operationsyncsourcekustomizewithlabelwithoutselector)
         * [`fn withNamePrefix(namePrefix)`](#fn-operationsyncsourcekustomizewithnameprefix)
         * [`fn withNameSuffix(nameSuffix)`](#fn-operationsyncsourcekustomizewithnamesuffix)
@@ -190,9 +197,13 @@ permalink: /2.11/argoproj/v1alpha1/application/
             * [`fn withName(name)`](#fn-operationsyncsourcesdirectoryjsonnettlaswithname)
             * [`fn withValue(value)`](#fn-operationsyncsourcesdirectoryjsonnettlaswithvalue)
       * [`obj operation.sync.sources.helm`](#obj-operationsyncsourceshelm)
+        * [`fn withApiVersions(apiVersions)`](#fn-operationsyncsourceshelmwithapiversions)
+        * [`fn withApiVersionsMixin(apiVersions)`](#fn-operationsyncsourceshelmwithapiversionsmixin)
         * [`fn withFileParameters(fileParameters)`](#fn-operationsyncsourceshelmwithfileparameters)
         * [`fn withFileParametersMixin(fileParameters)`](#fn-operationsyncsourceshelmwithfileparametersmixin)
         * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-operationsyncsourceshelmwithignoremissingvaluefiles)
+        * [`fn withKubeVersion(kubeVersion)`](#fn-operationsyncsourceshelmwithkubeversion)
+        * [`fn withNamespace(namespace)`](#fn-operationsyncsourceshelmwithnamespace)
         * [`fn withParameters(parameters)`](#fn-operationsyncsourceshelmwithparameters)
         * [`fn withParametersMixin(parameters)`](#fn-operationsyncsourceshelmwithparametersmixin)
         * [`fn withPassCredentials(passCredentials)`](#fn-operationsyncsourceshelmwithpasscredentials)
@@ -212,6 +223,8 @@ permalink: /2.11/argoproj/v1alpha1/application/
           * [`fn withName(name)`](#fn-operationsyncsourceshelmparameterswithname)
           * [`fn withValue(value)`](#fn-operationsyncsourceshelmparameterswithvalue)
       * [`obj operation.sync.sources.kustomize`](#obj-operationsyncsourceskustomize)
+        * [`fn withApiVersions(apiVersions)`](#fn-operationsyncsourceskustomizewithapiversions)
+        * [`fn withApiVersionsMixin(apiVersions)`](#fn-operationsyncsourceskustomizewithapiversionsmixin)
         * [`fn withCommonAnnotations(commonAnnotations)`](#fn-operationsyncsourceskustomizewithcommonannotations)
         * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-operationsyncsourceskustomizewithcommonannotationsenvsubst)
         * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-operationsyncsourceskustomizewithcommonannotationsmixin)
@@ -223,6 +236,7 @@ permalink: /2.11/argoproj/v1alpha1/application/
         * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-operationsyncsourceskustomizewithforcecommonlabels)
         * [`fn withImages(images)`](#fn-operationsyncsourceskustomizewithimages)
         * [`fn withImagesMixin(images)`](#fn-operationsyncsourceskustomizewithimagesmixin)
+        * [`fn withKubeVersion(kubeVersion)`](#fn-operationsyncsourceskustomizewithkubeversion)
         * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-operationsyncsourceskustomizewithlabelwithoutselector)
         * [`fn withNamePrefix(namePrefix)`](#fn-operationsyncsourceskustomizewithnameprefix)
         * [`fn withNameSuffix(nameSuffix)`](#fn-operationsyncsourceskustomizewithnamesuffix)
@@ -322,9 +336,13 @@ permalink: /2.11/argoproj/v1alpha1/application/
           * [`fn withName(name)`](#fn-specsourcedirectoryjsonnettlaswithname)
           * [`fn withValue(value)`](#fn-specsourcedirectoryjsonnettlaswithvalue)
     * [`obj spec.source.helm`](#obj-specsourcehelm)
+      * [`fn withApiVersions(apiVersions)`](#fn-specsourcehelmwithapiversions)
+      * [`fn withApiVersionsMixin(apiVersions)`](#fn-specsourcehelmwithapiversionsmixin)
       * [`fn withFileParameters(fileParameters)`](#fn-specsourcehelmwithfileparameters)
       * [`fn withFileParametersMixin(fileParameters)`](#fn-specsourcehelmwithfileparametersmixin)
       * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specsourcehelmwithignoremissingvaluefiles)
+      * [`fn withKubeVersion(kubeVersion)`](#fn-specsourcehelmwithkubeversion)
+      * [`fn withNamespace(namespace)`](#fn-specsourcehelmwithnamespace)
       * [`fn withParameters(parameters)`](#fn-specsourcehelmwithparameters)
       * [`fn withParametersMixin(parameters)`](#fn-specsourcehelmwithparametersmixin)
       * [`fn withPassCredentials(passCredentials)`](#fn-specsourcehelmwithpasscredentials)
@@ -344,6 +362,8 @@ permalink: /2.11/argoproj/v1alpha1/application/
         * [`fn withName(name)`](#fn-specsourcehelmparameterswithname)
         * [`fn withValue(value)`](#fn-specsourcehelmparameterswithvalue)
     * [`obj spec.source.kustomize`](#obj-specsourcekustomize)
+      * [`fn withApiVersions(apiVersions)`](#fn-specsourcekustomizewithapiversions)
+      * [`fn withApiVersionsMixin(apiVersions)`](#fn-specsourcekustomizewithapiversionsmixin)
       * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specsourcekustomizewithcommonannotations)
       * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specsourcekustomizewithcommonannotationsenvsubst)
       * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specsourcekustomizewithcommonannotationsmixin)
@@ -355,6 +375,7 @@ permalink: /2.11/argoproj/v1alpha1/application/
       * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specsourcekustomizewithforcecommonlabels)
       * [`fn withImages(images)`](#fn-specsourcekustomizewithimages)
       * [`fn withImagesMixin(images)`](#fn-specsourcekustomizewithimagesmixin)
+      * [`fn withKubeVersion(kubeVersion)`](#fn-specsourcekustomizewithkubeversion)
       * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specsourcekustomizewithlabelwithoutselector)
       * [`fn withNamePrefix(namePrefix)`](#fn-specsourcekustomizewithnameprefix)
       * [`fn withNameSuffix(nameSuffix)`](#fn-specsourcekustomizewithnamesuffix)
@@ -422,9 +443,13 @@ permalink: /2.11/argoproj/v1alpha1/application/
           * [`fn withName(name)`](#fn-specsourcesdirectoryjsonnettlaswithname)
           * [`fn withValue(value)`](#fn-specsourcesdirectoryjsonnettlaswithvalue)
     * [`obj spec.sources.helm`](#obj-specsourceshelm)
+      * [`fn withApiVersions(apiVersions)`](#fn-specsourceshelmwithapiversions)
+      * [`fn withApiVersionsMixin(apiVersions)`](#fn-specsourceshelmwithapiversionsmixin)
       * [`fn withFileParameters(fileParameters)`](#fn-specsourceshelmwithfileparameters)
       * [`fn withFileParametersMixin(fileParameters)`](#fn-specsourceshelmwithfileparametersmixin)
       * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specsourceshelmwithignoremissingvaluefiles)
+      * [`fn withKubeVersion(kubeVersion)`](#fn-specsourceshelmwithkubeversion)
+      * [`fn withNamespace(namespace)`](#fn-specsourceshelmwithnamespace)
       * [`fn withParameters(parameters)`](#fn-specsourceshelmwithparameters)
       * [`fn withParametersMixin(parameters)`](#fn-specsourceshelmwithparametersmixin)
       * [`fn withPassCredentials(passCredentials)`](#fn-specsourceshelmwithpasscredentials)
@@ -444,6 +469,8 @@ permalink: /2.11/argoproj/v1alpha1/application/
         * [`fn withName(name)`](#fn-specsourceshelmparameterswithname)
         * [`fn withValue(value)`](#fn-specsourceshelmparameterswithvalue)
     * [`obj spec.sources.kustomize`](#obj-specsourceskustomize)
+      * [`fn withApiVersions(apiVersions)`](#fn-specsourceskustomizewithapiversions)
+      * [`fn withApiVersionsMixin(apiVersions)`](#fn-specsourceskustomizewithapiversionsmixin)
       * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specsourceskustomizewithcommonannotations)
       * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specsourceskustomizewithcommonannotationsenvsubst)
       * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specsourceskustomizewithcommonannotationsmixin)
@@ -455,6 +482,7 @@ permalink: /2.11/argoproj/v1alpha1/application/
       * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specsourceskustomizewithforcecommonlabels)
       * [`fn withImages(images)`](#fn-specsourceskustomizewithimages)
       * [`fn withImagesMixin(images)`](#fn-specsourceskustomizewithimagesmixin)
+      * [`fn withKubeVersion(kubeVersion)`](#fn-specsourceskustomizewithkubeversion)
       * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specsourceskustomizewithlabelwithoutselector)
       * [`fn withNamePrefix(namePrefix)`](#fn-specsourceskustomizewithnameprefix)
       * [`fn withNameSuffix(nameSuffix)`](#fn-specsourceskustomizewithnamesuffix)
@@ -861,7 +889,7 @@ withResourcesMixin(resources)
 withRevision(revision)
 ```
 
-"Revision is the revision (Git) or chart version (Helm) which to sync the application to If omitted, will use the revision specified in app spec."
+"Revision is the revision (Git) or chart version (Helm) which to sync the application to\nIf omitted, will use the revision specified in app spec."
 
 ### fn operation.sync.withRevisions
 
@@ -869,7 +897,7 @@ withRevision(revision)
 withRevisions(revisions)
 ```
 
-"Revisions is the list of revision (Git) or chart version (Helm) which to sync each source in sources field for the application to If omitted, will use the revision specified in app spec."
+"Revisions is the list of revision (Git) or chart version (Helm) which to sync each source in sources field for the application to\nIf omitted, will use the revision specified in app spec."
 
 ### fn operation.sync.withRevisionsMixin
 
@@ -877,7 +905,7 @@ withRevisions(revisions)
 withRevisionsMixin(revisions)
 ```
 
-"Revisions is the list of revision (Git) or chart version (Helm) which to sync each source in sources field for the application to If omitted, will use the revision specified in app spec."
+"Revisions is the list of revision (Git) or chart version (Helm) which to sync each source in sources field for the application to\nIf omitted, will use the revision specified in app spec."
 
 **Note:** This function appends passed data to existing values
 
@@ -887,7 +915,7 @@ withRevisionsMixin(revisions)
 withSources(sources)
 ```
 
-"Sources overrides the source definition set in the application. This is typically set in a Rollback operation and is nil during a Sync operation"
+"Sources overrides the source definition set in the application.\nThis is typically set in a Rollback operation and is nil during a Sync operation"
 
 ### fn operation.sync.withSourcesMixin
 
@@ -895,7 +923,7 @@ withSources(sources)
 withSourcesMixin(sources)
 ```
 
-"Sources overrides the source definition set in the application. This is typically set in a Rollback operation and is nil during a Sync operation"
+"Sources overrides the source definition set in the application.\nThis is typically set in a Rollback operation and is nil during a Sync operation"
 
 **Note:** This function appends passed data to existing values
 
@@ -955,7 +983,7 @@ withNamespace(namespace)
 
 ## obj operation.sync.source
 
-"Source overrides the source definition set in the application. This is typically set in a Rollback operation and is nil during a Sync operation"
+"Source overrides the source definition set in the application.\nThis is typically set in a Rollback operation and is nil during a Sync operation"
 
 ### fn operation.sync.source.withChart
 
@@ -995,7 +1023,7 @@ withRepoURL(repoURL)
 withTargetRevision(targetRevision)
 ```
 
-"TargetRevision defines the revision of the source to sync the application to. In case of Git, this can be commit, tag, or branch. If omitted, will equal to HEAD. In case of Helm, this is a semver tag for the Chart's version."
+"TargetRevision defines the revision of the source to sync the application to.\nIn case of Git, this can be commit, tag, or branch. If omitted, will equal to HEAD.\nIn case of Helm, this is a semver tag for the Chart's version."
 
 ## obj operation.sync.source.directory
 
@@ -1143,6 +1171,24 @@ withValue(value)
 
 "Helm holds helm specific options"
 
+### fn operation.sync.source.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+"APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default,\nArgo CD uses the API versions of the target cluster. The format is [group/]version/kind."
+
+### fn operation.sync.source.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+"APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default,\nArgo CD uses the API versions of the target cluster. The format is [group/]version/kind."
+
+**Note:** This function appends passed data to existing values
+
 ### fn operation.sync.source.helm.withFileParameters
 
 ```ts
@@ -1168,6 +1214,22 @@ withIgnoreMissingValueFiles(ignoreMissingValueFiles)
 ```
 
 "IgnoreMissingValueFiles prevents helm template from failing when valueFiles do not exist locally by not appending them to helm template --values"
+
+### fn operation.sync.source.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+"KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD\nuses the Kubernetes version of the target cluster."
+
+### fn operation.sync.source.helm.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace is an optional namespace to template with. If left empty, defaults to the app's destination namespace."
 
 ### fn operation.sync.source.helm.withParameters
 
@@ -1315,6 +1377,24 @@ withValue(value)
 
 "Kustomize holds kustomize specific options"
 
+### fn operation.sync.source.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+"APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default,\nArgo CD uses the API versions of the target cluster. The format is [group/]version/kind."
+
+### fn operation.sync.source.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+"APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default,\nArgo CD uses the API versions of the target cluster. The format is [group/]version/kind."
+
+**Note:** This function appends passed data to existing values
+
 ### fn operation.sync.source.kustomize.withCommonAnnotations
 
 ```ts
@@ -1410,6 +1490,14 @@ withImagesMixin(images)
 "Images is a list of Kustomize image override specifications"
 
 **Note:** This function appends passed data to existing values
+
+### fn operation.sync.source.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+"KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD\nuses the Kubernetes version of the target cluster."
 
 ### fn operation.sync.source.kustomize.withLabelWithoutSelector
 
@@ -1731,7 +1819,7 @@ withString(string)
 
 ## obj operation.sync.sources
 
-"Sources overrides the source definition set in the application. This is typically set in a Rollback operation and is nil during a Sync operation"
+"Sources overrides the source definition set in the application.\nThis is typically set in a Rollback operation and is nil during a Sync operation"
 
 ### fn operation.sync.sources.withChart
 
@@ -1771,7 +1859,7 @@ withRepoURL(repoURL)
 withTargetRevision(targetRevision)
 ```
 
-"TargetRevision defines the revision of the source to sync the application to. In case of Git, this can be commit, tag, or branch. If omitted, will equal to HEAD. In case of Helm, this is a semver tag for the Chart's version."
+"TargetRevision defines the revision of the source to sync the application to.\nIn case of Git, this can be commit, tag, or branch. If omitted, will equal to HEAD.\nIn case of Helm, this is a semver tag for the Chart's version."
 
 ## obj operation.sync.sources.directory
 
@@ -1919,6 +2007,24 @@ withValue(value)
 
 "Helm holds helm specific options"
 
+### fn operation.sync.sources.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+"APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default,\nArgo CD uses the API versions of the target cluster. The format is [group/]version/kind."
+
+### fn operation.sync.sources.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+"APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default,\nArgo CD uses the API versions of the target cluster. The format is [group/]version/kind."
+
+**Note:** This function appends passed data to existing values
+
 ### fn operation.sync.sources.helm.withFileParameters
 
 ```ts
@@ -1944,6 +2050,22 @@ withIgnoreMissingValueFiles(ignoreMissingValueFiles)
 ```
 
 "IgnoreMissingValueFiles prevents helm template from failing when valueFiles do not exist locally by not appending them to helm template --values"
+
+### fn operation.sync.sources.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+"KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD\nuses the Kubernetes version of the target cluster."
+
+### fn operation.sync.sources.helm.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace is an optional namespace to template with. If left empty, defaults to the app's destination namespace."
 
 ### fn operation.sync.sources.helm.withParameters
 
@@ -2091,6 +2213,24 @@ withValue(value)
 
 "Kustomize holds kustomize specific options"
 
+### fn operation.sync.sources.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+"APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default,\nArgo CD uses the API versions of the target cluster. The format is [group/]version/kind."
+
+### fn operation.sync.sources.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+"APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default,\nArgo CD uses the API versions of the target cluster. The format is [group/]version/kind."
+
+**Note:** This function appends passed data to existing values
+
 ### fn operation.sync.sources.kustomize.withCommonAnnotations
 
 ```ts
@@ -2186,6 +2326,14 @@ withImagesMixin(images)
 "Images is a list of Kustomize image override specifications"
 
 **Note:** This function appends passed data to existing values
+
+### fn operation.sync.sources.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+"KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD\nuses the Kubernetes version of the target cluster."
 
 ### fn operation.sync.sources.kustomize.withLabelWithoutSelector
 
@@ -2519,7 +2667,7 @@ withString(string)
 withForce(force)
 ```
 
-"Force indicates whether or not to supply the --force flag to `kubectl apply`. The --force flag deletes and re-create the resource, when PATCH encounters conflict and has retried for 5 times."
+"Force indicates whether or not to supply the --force flag to `kubectl apply`.\nThe --force flag deletes and re-create the resource, when PATCH encounters conflict and has\nretried for 5 times."
 
 ## obj operation.sync.syncStrategy.hook
 
@@ -2531,7 +2679,7 @@ withForce(force)
 withForce(force)
 ```
 
-"Force indicates whether or not to supply the --force flag to `kubectl apply`. The --force flag deletes and re-create the resource, when PATCH encounters conflict and has retried for 5 times."
+"Force indicates whether or not to supply the --force flag to `kubectl apply`.\nThe --force flag deletes and re-create the resource, when PATCH encounters conflict and has\nretried for 5 times."
 
 ## obj spec
 
@@ -2579,7 +2727,7 @@ withInfoMixin(info)
 withProject(project)
 ```
 
-"Project is a reference to the project this application belongs to. The empty string means that application belongs to the 'default' project."
+"Project is a reference to the project this application belongs to.\nThe empty string means that application belongs to the 'default' project."
 
 ### fn spec.withRevisionHistoryLimit
 
@@ -2587,7 +2735,7 @@ withProject(project)
 withRevisionHistoryLimit(revisionHistoryLimit)
 ```
 
-"RevisionHistoryLimit limits the number of items kept in the application's revision history, which is used for informational purposes as well as for rollbacks to previous versions. This should only be changed in exceptional circumstances. Setting to zero will store no history. This will reduce storage used. Increasing will increase the space used to store the history, so we do not recommend increasing it. Default is 10."
+"RevisionHistoryLimit limits the number of items kept in the application's revision history, which is used for informational purposes as well as for rollbacks to previous versions.\nThis should only be changed in exceptional circumstances.\nSetting to zero will store no history. This will reduce storage used.\nIncreasing will increase the space used to store the history, so we do not recommend increasing it.\nDefault is 10."
 
 ### fn spec.withSources
 
@@ -2625,7 +2773,7 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace specifies the target namespace for the application's resources. The namespace will only be set for namespace-scoped resources that have not set a value for .metadata.namespace"
+"Namespace specifies the target namespace for the application's resources.\nThe namespace will only be set for namespace-scoped resources that have not set a value for .metadata.namespace"
 
 ### fn spec.destination.withServer
 
@@ -2697,7 +2845,7 @@ withKind(kind)
 withManagedFieldsManagers(managedFieldsManagers)
 ```
 
-"ManagedFieldsManagers is a list of trusted managers. Fields mutated by those managers will take precedence over the desired state defined in the SCM and won't be displayed in diffs"
+"ManagedFieldsManagers is a list of trusted managers. Fields mutated by those managers will take precedence over the\ndesired state defined in the SCM and won't be displayed in diffs"
 
 ### fn spec.ignoreDifferences.withManagedFieldsManagersMixin
 
@@ -2705,7 +2853,7 @@ withManagedFieldsManagers(managedFieldsManagers)
 withManagedFieldsManagersMixin(managedFieldsManagers)
 ```
 
-"ManagedFieldsManagers is a list of trusted managers. Fields mutated by those managers will take precedence over the desired state defined in the SCM and won't be displayed in diffs"
+"ManagedFieldsManagers is a list of trusted managers. Fields mutated by those managers will take precedence over the\ndesired state defined in the SCM and won't be displayed in diffs"
 
 **Note:** This function appends passed data to existing values
 
@@ -2787,7 +2935,7 @@ withRepoURL(repoURL)
 withTargetRevision(targetRevision)
 ```
 
-"TargetRevision defines the revision of the source to sync the application to. In case of Git, this can be commit, tag, or branch. If omitted, will equal to HEAD. In case of Helm, this is a semver tag for the Chart's version."
+"TargetRevision defines the revision of the source to sync the application to.\nIn case of Git, this can be commit, tag, or branch. If omitted, will equal to HEAD.\nIn case of Helm, this is a semver tag for the Chart's version."
 
 ## obj spec.source.directory
 
@@ -2935,6 +3083,24 @@ withValue(value)
 
 "Helm holds helm specific options"
 
+### fn spec.source.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+"APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default,\nArgo CD uses the API versions of the target cluster. The format is [group/]version/kind."
+
+### fn spec.source.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+"APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default,\nArgo CD uses the API versions of the target cluster. The format is [group/]version/kind."
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.source.helm.withFileParameters
 
 ```ts
@@ -2960,6 +3126,22 @@ withIgnoreMissingValueFiles(ignoreMissingValueFiles)
 ```
 
 "IgnoreMissingValueFiles prevents helm template from failing when valueFiles do not exist locally by not appending them to helm template --values"
+
+### fn spec.source.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+"KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD\nuses the Kubernetes version of the target cluster."
+
+### fn spec.source.helm.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace is an optional namespace to template with. If left empty, defaults to the app's destination namespace."
 
 ### fn spec.source.helm.withParameters
 
@@ -3107,6 +3289,24 @@ withValue(value)
 
 "Kustomize holds kustomize specific options"
 
+### fn spec.source.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+"APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default,\nArgo CD uses the API versions of the target cluster. The format is [group/]version/kind."
+
+### fn spec.source.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+"APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default,\nArgo CD uses the API versions of the target cluster. The format is [group/]version/kind."
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.source.kustomize.withCommonAnnotations
 
 ```ts
@@ -3202,6 +3402,14 @@ withImagesMixin(images)
 "Images is a list of Kustomize image override specifications"
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.source.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+"KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD\nuses the Kubernetes version of the target cluster."
 
 ### fn spec.source.kustomize.withLabelWithoutSelector
 
@@ -3563,7 +3771,7 @@ withRepoURL(repoURL)
 withTargetRevision(targetRevision)
 ```
 
-"TargetRevision defines the revision of the source to sync the application to. In case of Git, this can be commit, tag, or branch. If omitted, will equal to HEAD. In case of Helm, this is a semver tag for the Chart's version."
+"TargetRevision defines the revision of the source to sync the application to.\nIn case of Git, this can be commit, tag, or branch. If omitted, will equal to HEAD.\nIn case of Helm, this is a semver tag for the Chart's version."
 
 ## obj spec.sources.directory
 
@@ -3711,6 +3919,24 @@ withValue(value)
 
 "Helm holds helm specific options"
 
+### fn spec.sources.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+"APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default,\nArgo CD uses the API versions of the target cluster. The format is [group/]version/kind."
+
+### fn spec.sources.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+"APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default,\nArgo CD uses the API versions of the target cluster. The format is [group/]version/kind."
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.sources.helm.withFileParameters
 
 ```ts
@@ -3736,6 +3962,22 @@ withIgnoreMissingValueFiles(ignoreMissingValueFiles)
 ```
 
 "IgnoreMissingValueFiles prevents helm template from failing when valueFiles do not exist locally by not appending them to helm template --values"
+
+### fn spec.sources.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+"KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD\nuses the Kubernetes version of the target cluster."
+
+### fn spec.sources.helm.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace is an optional namespace to template with. If left empty, defaults to the app's destination namespace."
 
 ### fn spec.sources.helm.withParameters
 
@@ -3883,6 +4125,24 @@ withValue(value)
 
 "Kustomize holds kustomize specific options"
 
+### fn spec.sources.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+"APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default,\nArgo CD uses the API versions of the target cluster. The format is [group/]version/kind."
+
+### fn spec.sources.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+"APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default,\nArgo CD uses the API versions of the target cluster. The format is [group/]version/kind."
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.sources.kustomize.withCommonAnnotations
 
 ```ts
@@ -3978,6 +4238,14 @@ withImagesMixin(images)
 "Images is a list of Kustomize image override specifications"
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.sources.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+"KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD\nuses the Kubernetes version of the target cluster."
 
 ### fn spec.sources.kustomize.withLabelWithoutSelector
 
