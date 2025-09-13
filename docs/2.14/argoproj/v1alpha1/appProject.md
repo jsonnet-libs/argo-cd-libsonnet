@@ -1,10 +1,10 @@
 ---
-permalink: /2.11/argoproj/v1alpha1/appProject/
+permalink: /2.14/argoproj/v1alpha1/appProject/
 ---
 
 # argoproj.v1alpha1.appProject
 
-"AppProject provides a logical grouping of applications, providing controls for: * where the apps may deploy to (cluster whitelist) * what may be deployed (repository whitelist, resource whitelist/blacklist) * who can access these applications (roles, OIDC group claims bindings) * and what they can do (RBAC policies) * automation access to these roles (JWT tokens)"
+"AppProject provides a logical grouping of applications, providing controls for:\n* where the apps may deploy to (cluster whitelist)\n* what may be deployed (repository whitelist, resource whitelist/blacklist)\n* who can access these applications (roles, OIDC group claims bindings)\n* and what they can do (RBAC policies)\n* automation access to these roles (JWT tokens)"
 
 ## Index
 
@@ -35,6 +35,8 @@ permalink: /2.11/argoproj/v1alpha1/appProject/
   * [`fn withClusterResourceWhitelist(clusterResourceWhitelist)`](#fn-specwithclusterresourcewhitelist)
   * [`fn withClusterResourceWhitelistMixin(clusterResourceWhitelist)`](#fn-specwithclusterresourcewhitelistmixin)
   * [`fn withDescription(description)`](#fn-specwithdescription)
+  * [`fn withDestinationServiceAccounts(destinationServiceAccounts)`](#fn-specwithdestinationserviceaccounts)
+  * [`fn withDestinationServiceAccountsMixin(destinationServiceAccounts)`](#fn-specwithdestinationserviceaccountsmixin)
   * [`fn withDestinations(destinations)`](#fn-specwithdestinations)
   * [`fn withDestinationsMixin(destinations)`](#fn-specwithdestinationsmixin)
   * [`fn withNamespaceResourceBlacklist(namespaceResourceBlacklist)`](#fn-specwithnamespaceresourceblacklist)
@@ -58,6 +60,10 @@ permalink: /2.11/argoproj/v1alpha1/appProject/
   * [`obj spec.clusterResourceWhitelist`](#obj-specclusterresourcewhitelist)
     * [`fn withGroup(group)`](#fn-specclusterresourcewhitelistwithgroup)
     * [`fn withKind(kind)`](#fn-specclusterresourcewhitelistwithkind)
+  * [`obj spec.destinationServiceAccounts`](#obj-specdestinationserviceaccounts)
+    * [`fn withDefaultServiceAccount(defaultServiceAccount)`](#fn-specdestinationserviceaccountswithdefaultserviceaccount)
+    * [`fn withNamespace(namespace)`](#fn-specdestinationserviceaccountswithnamespace)
+    * [`fn withServer(server)`](#fn-specdestinationserviceaccountswithserver)
   * [`obj spec.destinations`](#obj-specdestinations)
     * [`fn withName(name)`](#fn-specdestinationswithname)
     * [`fn withNamespace(namespace)`](#fn-specdestinationswithnamespace)
@@ -326,6 +332,24 @@ withDescription(description)
 
 "Description contains optional project description"
 
+### fn spec.withDestinationServiceAccounts
+
+```ts
+withDestinationServiceAccounts(destinationServiceAccounts)
+```
+
+"DestinationServiceAccounts holds information about the service accounts to be impersonated for the application sync operation for each destination."
+
+### fn spec.withDestinationServiceAccountsMixin
+
+```ts
+withDestinationServiceAccountsMixin(destinationServiceAccounts)
+```
+
+"DestinationServiceAccounts holds information about the service accounts to be impersonated for the application sync operation for each destination."
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.withDestinations
 
 ```ts
@@ -518,6 +542,34 @@ withKind(kind)
 
 
 
+## obj spec.destinationServiceAccounts
+
+"DestinationServiceAccounts holds information about the service accounts to be impersonated for the application sync operation for each destination."
+
+### fn spec.destinationServiceAccounts.withDefaultServiceAccount
+
+```ts
+withDefaultServiceAccount(defaultServiceAccount)
+```
+
+"DefaultServiceAccount to be used for impersonation during the sync operation"
+
+### fn spec.destinationServiceAccounts.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace specifies the target namespace for the application's resources."
+
+### fn spec.destinationServiceAccounts.withServer
+
+```ts
+withServer(server)
+```
+
+"Server specifies the URL of the target cluster's Kubernetes control plane API."
+
 ## obj spec.destinations
 
 "Destinations contains list of destinations available for deployment"
@@ -536,7 +588,7 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace specifies the target namespace for the application's resources. The namespace will only be set for namespace-scoped resources that have not set a value for .metadata.namespace"
+"Namespace specifies the target namespace for the application's resources.\nThe namespace will only be set for namespace-scoped resources that have not set a value for .metadata.namespace"
 
 ### fn spec.destinations.withServer
 

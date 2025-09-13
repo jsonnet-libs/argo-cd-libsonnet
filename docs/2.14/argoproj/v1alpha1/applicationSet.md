@@ -1,5 +1,5 @@
 ---
-permalink: /2.11/argoproj/v1alpha1/applicationSet/
+permalink: /2.14/argoproj/v1alpha1/applicationSet/
 ---
 
 # argoproj.v1alpha1.applicationSet
@@ -95,6 +95,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
             * [`fn withValue(value)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecinfowithvalue)
           * [`obj spec.generators.clusterDecisionResource.template.spec.source`](#obj-specgeneratorsclusterdecisionresourcetemplatespecsource)
             * [`fn withChart(chart)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcewithchart)
+            * [`fn withName(name)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcewithname)
             * [`fn withPath(path)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcewithpath)
             * [`fn withRef(ref)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcewithref)
             * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcewithrepourl)
@@ -119,14 +120,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withName(name)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcedirectoryjsonnettlaswithname)
                   * [`fn withValue(value)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcedirectoryjsonnettlaswithvalue)
             * [`obj spec.generators.clusterDecisionResource.template.spec.source.helm`](#obj-specgeneratorsclusterdecisionresourcetemplatespecsourcehelm)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithapiversionsmixin)
               * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithfileparameters)
               * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithfileparametersmixin)
               * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithignoremissingvaluefiles)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithkubeversion)
+              * [`fn withNamespace(namespace)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithnamespace)
               * [`fn withParameters(parameters)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithparameters)
               * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithparametersmixin)
               * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithpasscredentials)
               * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithreleasename)
               * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithskipcrds)
+              * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithskipschemavalidation)
+              * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithskiptests)
               * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithvaluefiles)
               * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithvaluefilesmixin)
               * [`fn withValues(values)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithvalues)
@@ -141,6 +148,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withName(name)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcehelmparameterswithname)
                 * [`fn withValue(value)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcehelmparameterswithvalue)
             * [`obj spec.generators.clusterDecisionResource.template.spec.source.kustomize`](#obj-specgeneratorsclusterdecisionresourcetemplatespecsourcekustomize)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithapiversionsmixin)
               * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithcommonannotations)
               * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithcommonannotationsenvsubst)
               * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithcommonannotationsmixin)
@@ -152,6 +161,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithforcecommonlabels)
               * [`fn withImages(images)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithimagesmixin)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithkubeversion)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithnamesuffix)
@@ -193,8 +203,19 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withMapMixin(map)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcepluginparameterswithmapmixin)
                 * [`fn withName(name)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcepluginparameterswithname)
                 * [`fn withString(string)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcepluginparameterswithstring)
+          * [`obj spec.generators.clusterDecisionResource.template.spec.sourceHydrator`](#obj-specgeneratorsclusterdecisionresourcetemplatespecsourcehydrator)
+            * [`obj spec.generators.clusterDecisionResource.template.spec.sourceHydrator.drySource`](#obj-specgeneratorsclusterdecisionresourcetemplatespecsourcehydratordrysource)
+              * [`fn withPath(path)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcehydratordrysourcewithpath)
+              * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcehydratordrysourcewithrepourl)
+              * [`fn withTargetRevision(targetRevision)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcehydratordrysourcewithtargetrevision)
+            * [`obj spec.generators.clusterDecisionResource.template.spec.sourceHydrator.hydrateTo`](#obj-specgeneratorsclusterdecisionresourcetemplatespecsourcehydratorhydrateto)
+              * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcehydratorhydratetowithtargetbranch)
+            * [`obj spec.generators.clusterDecisionResource.template.spec.sourceHydrator.syncSource`](#obj-specgeneratorsclusterdecisionresourcetemplatespecsourcehydratorsyncsource)
+              * [`fn withPath(path)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcehydratorsyncsourcewithpath)
+              * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcehydratorsyncsourcewithtargetbranch)
           * [`obj spec.generators.clusterDecisionResource.template.spec.sources`](#obj-specgeneratorsclusterdecisionresourcetemplatespecsources)
             * [`fn withChart(chart)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceswithchart)
+            * [`fn withName(name)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceswithname)
             * [`fn withPath(path)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceswithpath)
             * [`fn withRef(ref)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceswithref)
             * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceswithrepourl)
@@ -219,14 +240,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withName(name)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcesdirectoryjsonnettlaswithname)
                   * [`fn withValue(value)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcesdirectoryjsonnettlaswithvalue)
             * [`obj spec.generators.clusterDecisionResource.template.spec.sources.helm`](#obj-specgeneratorsclusterdecisionresourcetemplatespecsourceshelm)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithapiversionsmixin)
               * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithfileparameters)
               * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithfileparametersmixin)
               * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithignoremissingvaluefiles)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithkubeversion)
+              * [`fn withNamespace(namespace)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithnamespace)
               * [`fn withParameters(parameters)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithparameters)
               * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithparametersmixin)
               * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithpasscredentials)
               * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithreleasename)
               * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithskipcrds)
+              * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithskipschemavalidation)
+              * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithskiptests)
               * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithvaluefiles)
               * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithvaluefilesmixin)
               * [`fn withValues(values)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithvalues)
@@ -241,6 +268,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withName(name)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceshelmparameterswithname)
                 * [`fn withValue(value)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceshelmparameterswithvalue)
             * [`obj spec.generators.clusterDecisionResource.template.spec.sources.kustomize`](#obj-specgeneratorsclusterdecisionresourcetemplatespecsourceskustomize)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithapiversionsmixin)
               * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithcommonannotations)
               * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithcommonannotationsenvsubst)
               * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithcommonannotationsmixin)
@@ -252,6 +281,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithforcecommonlabels)
               * [`fn withImages(images)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithimagesmixin)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithkubeversion)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithnamesuffix)
@@ -312,6 +342,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withFactor(factor)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsyncpolicyretrybackoffwithfactor)
                 * [`fn withMaxDuration(maxDuration)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsyncpolicyretrybackoffwithmaxduration)
     * [`obj spec.generators.clusters`](#obj-specgeneratorsclusters)
+      * [`fn withFlatList(flatList)`](#fn-specgeneratorsclusterswithflatlist)
       * [`fn withValues(values)`](#fn-specgeneratorsclusterswithvalues)
       * [`fn withValuesMixin(values)`](#fn-specgeneratorsclusterswithvaluesmixin)
       * [`obj spec.generators.clusters.selector`](#obj-specgeneratorsclustersselector)
@@ -363,6 +394,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
             * [`fn withValue(value)`](#fn-specgeneratorsclusterstemplatespecinfowithvalue)
           * [`obj spec.generators.clusters.template.spec.source`](#obj-specgeneratorsclusterstemplatespecsource)
             * [`fn withChart(chart)`](#fn-specgeneratorsclusterstemplatespecsourcewithchart)
+            * [`fn withName(name)`](#fn-specgeneratorsclusterstemplatespecsourcewithname)
             * [`fn withPath(path)`](#fn-specgeneratorsclusterstemplatespecsourcewithpath)
             * [`fn withRef(ref)`](#fn-specgeneratorsclusterstemplatespecsourcewithref)
             * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsclusterstemplatespecsourcewithrepourl)
@@ -387,14 +419,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withName(name)`](#fn-specgeneratorsclusterstemplatespecsourcedirectoryjsonnettlaswithname)
                   * [`fn withValue(value)`](#fn-specgeneratorsclusterstemplatespecsourcedirectoryjsonnettlaswithvalue)
             * [`obj spec.generators.clusters.template.spec.source.helm`](#obj-specgeneratorsclusterstemplatespecsourcehelm)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsclusterstemplatespecsourcehelmwithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsclusterstemplatespecsourcehelmwithapiversionsmixin)
               * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsclusterstemplatespecsourcehelmwithfileparameters)
               * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsclusterstemplatespecsourcehelmwithfileparametersmixin)
               * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsclusterstemplatespecsourcehelmwithignoremissingvaluefiles)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsclusterstemplatespecsourcehelmwithkubeversion)
+              * [`fn withNamespace(namespace)`](#fn-specgeneratorsclusterstemplatespecsourcehelmwithnamespace)
               * [`fn withParameters(parameters)`](#fn-specgeneratorsclusterstemplatespecsourcehelmwithparameters)
               * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsclusterstemplatespecsourcehelmwithparametersmixin)
               * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsclusterstemplatespecsourcehelmwithpasscredentials)
               * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsclusterstemplatespecsourcehelmwithreleasename)
               * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsclusterstemplatespecsourcehelmwithskipcrds)
+              * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsclusterstemplatespecsourcehelmwithskipschemavalidation)
+              * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsclusterstemplatespecsourcehelmwithskiptests)
               * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsclusterstemplatespecsourcehelmwithvaluefiles)
               * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsclusterstemplatespecsourcehelmwithvaluefilesmixin)
               * [`fn withValues(values)`](#fn-specgeneratorsclusterstemplatespecsourcehelmwithvalues)
@@ -409,6 +447,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withName(name)`](#fn-specgeneratorsclusterstemplatespecsourcehelmparameterswithname)
                 * [`fn withValue(value)`](#fn-specgeneratorsclusterstemplatespecsourcehelmparameterswithvalue)
             * [`obj spec.generators.clusters.template.spec.source.kustomize`](#obj-specgeneratorsclusterstemplatespecsourcekustomize)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsclusterstemplatespecsourcekustomizewithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsclusterstemplatespecsourcekustomizewithapiversionsmixin)
               * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsclusterstemplatespecsourcekustomizewithcommonannotations)
               * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsclusterstemplatespecsourcekustomizewithcommonannotationsenvsubst)
               * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsclusterstemplatespecsourcekustomizewithcommonannotationsmixin)
@@ -420,6 +460,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsclusterstemplatespecsourcekustomizewithforcecommonlabels)
               * [`fn withImages(images)`](#fn-specgeneratorsclusterstemplatespecsourcekustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorsclusterstemplatespecsourcekustomizewithimagesmixin)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsclusterstemplatespecsourcekustomizewithkubeversion)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsclusterstemplatespecsourcekustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsclusterstemplatespecsourcekustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsclusterstemplatespecsourcekustomizewithnamesuffix)
@@ -461,8 +502,19 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withMapMixin(map)`](#fn-specgeneratorsclusterstemplatespecsourcepluginparameterswithmapmixin)
                 * [`fn withName(name)`](#fn-specgeneratorsclusterstemplatespecsourcepluginparameterswithname)
                 * [`fn withString(string)`](#fn-specgeneratorsclusterstemplatespecsourcepluginparameterswithstring)
+          * [`obj spec.generators.clusters.template.spec.sourceHydrator`](#obj-specgeneratorsclusterstemplatespecsourcehydrator)
+            * [`obj spec.generators.clusters.template.spec.sourceHydrator.drySource`](#obj-specgeneratorsclusterstemplatespecsourcehydratordrysource)
+              * [`fn withPath(path)`](#fn-specgeneratorsclusterstemplatespecsourcehydratordrysourcewithpath)
+              * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsclusterstemplatespecsourcehydratordrysourcewithrepourl)
+              * [`fn withTargetRevision(targetRevision)`](#fn-specgeneratorsclusterstemplatespecsourcehydratordrysourcewithtargetrevision)
+            * [`obj spec.generators.clusters.template.spec.sourceHydrator.hydrateTo`](#obj-specgeneratorsclusterstemplatespecsourcehydratorhydrateto)
+              * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsclusterstemplatespecsourcehydratorhydratetowithtargetbranch)
+            * [`obj spec.generators.clusters.template.spec.sourceHydrator.syncSource`](#obj-specgeneratorsclusterstemplatespecsourcehydratorsyncsource)
+              * [`fn withPath(path)`](#fn-specgeneratorsclusterstemplatespecsourcehydratorsyncsourcewithpath)
+              * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsclusterstemplatespecsourcehydratorsyncsourcewithtargetbranch)
           * [`obj spec.generators.clusters.template.spec.sources`](#obj-specgeneratorsclusterstemplatespecsources)
             * [`fn withChart(chart)`](#fn-specgeneratorsclusterstemplatespecsourceswithchart)
+            * [`fn withName(name)`](#fn-specgeneratorsclusterstemplatespecsourceswithname)
             * [`fn withPath(path)`](#fn-specgeneratorsclusterstemplatespecsourceswithpath)
             * [`fn withRef(ref)`](#fn-specgeneratorsclusterstemplatespecsourceswithref)
             * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsclusterstemplatespecsourceswithrepourl)
@@ -487,14 +539,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withName(name)`](#fn-specgeneratorsclusterstemplatespecsourcesdirectoryjsonnettlaswithname)
                   * [`fn withValue(value)`](#fn-specgeneratorsclusterstemplatespecsourcesdirectoryjsonnettlaswithvalue)
             * [`obj spec.generators.clusters.template.spec.sources.helm`](#obj-specgeneratorsclusterstemplatespecsourceshelm)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsclusterstemplatespecsourceshelmwithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsclusterstemplatespecsourceshelmwithapiversionsmixin)
               * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsclusterstemplatespecsourceshelmwithfileparameters)
               * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsclusterstemplatespecsourceshelmwithfileparametersmixin)
               * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsclusterstemplatespecsourceshelmwithignoremissingvaluefiles)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsclusterstemplatespecsourceshelmwithkubeversion)
+              * [`fn withNamespace(namespace)`](#fn-specgeneratorsclusterstemplatespecsourceshelmwithnamespace)
               * [`fn withParameters(parameters)`](#fn-specgeneratorsclusterstemplatespecsourceshelmwithparameters)
               * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsclusterstemplatespecsourceshelmwithparametersmixin)
               * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsclusterstemplatespecsourceshelmwithpasscredentials)
               * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsclusterstemplatespecsourceshelmwithreleasename)
               * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsclusterstemplatespecsourceshelmwithskipcrds)
+              * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsclusterstemplatespecsourceshelmwithskipschemavalidation)
+              * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsclusterstemplatespecsourceshelmwithskiptests)
               * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsclusterstemplatespecsourceshelmwithvaluefiles)
               * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsclusterstemplatespecsourceshelmwithvaluefilesmixin)
               * [`fn withValues(values)`](#fn-specgeneratorsclusterstemplatespecsourceshelmwithvalues)
@@ -509,6 +567,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withName(name)`](#fn-specgeneratorsclusterstemplatespecsourceshelmparameterswithname)
                 * [`fn withValue(value)`](#fn-specgeneratorsclusterstemplatespecsourceshelmparameterswithvalue)
             * [`obj spec.generators.clusters.template.spec.sources.kustomize`](#obj-specgeneratorsclusterstemplatespecsourceskustomize)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsclusterstemplatespecsourceskustomizewithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsclusterstemplatespecsourceskustomizewithapiversionsmixin)
               * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsclusterstemplatespecsourceskustomizewithcommonannotations)
               * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsclusterstemplatespecsourceskustomizewithcommonannotationsenvsubst)
               * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsclusterstemplatespecsourceskustomizewithcommonannotationsmixin)
@@ -520,6 +580,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsclusterstemplatespecsourceskustomizewithforcecommonlabels)
               * [`fn withImages(images)`](#fn-specgeneratorsclusterstemplatespecsourceskustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorsclusterstemplatespecsourceskustomizewithimagesmixin)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsclusterstemplatespecsourceskustomizewithkubeversion)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsclusterstemplatespecsourceskustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsclusterstemplatespecsourceskustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsclusterstemplatespecsourceskustomizewithnamesuffix)
@@ -634,6 +695,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
             * [`fn withValue(value)`](#fn-specgeneratorsgittemplatespecinfowithvalue)
           * [`obj spec.generators.git.template.spec.source`](#obj-specgeneratorsgittemplatespecsource)
             * [`fn withChart(chart)`](#fn-specgeneratorsgittemplatespecsourcewithchart)
+            * [`fn withName(name)`](#fn-specgeneratorsgittemplatespecsourcewithname)
             * [`fn withPath(path)`](#fn-specgeneratorsgittemplatespecsourcewithpath)
             * [`fn withRef(ref)`](#fn-specgeneratorsgittemplatespecsourcewithref)
             * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsgittemplatespecsourcewithrepourl)
@@ -658,14 +720,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withName(name)`](#fn-specgeneratorsgittemplatespecsourcedirectoryjsonnettlaswithname)
                   * [`fn withValue(value)`](#fn-specgeneratorsgittemplatespecsourcedirectoryjsonnettlaswithvalue)
             * [`obj spec.generators.git.template.spec.source.helm`](#obj-specgeneratorsgittemplatespecsourcehelm)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsgittemplatespecsourcehelmwithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsgittemplatespecsourcehelmwithapiversionsmixin)
               * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsgittemplatespecsourcehelmwithfileparameters)
               * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsgittemplatespecsourcehelmwithfileparametersmixin)
               * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsgittemplatespecsourcehelmwithignoremissingvaluefiles)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsgittemplatespecsourcehelmwithkubeversion)
+              * [`fn withNamespace(namespace)`](#fn-specgeneratorsgittemplatespecsourcehelmwithnamespace)
               * [`fn withParameters(parameters)`](#fn-specgeneratorsgittemplatespecsourcehelmwithparameters)
               * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsgittemplatespecsourcehelmwithparametersmixin)
               * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsgittemplatespecsourcehelmwithpasscredentials)
               * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsgittemplatespecsourcehelmwithreleasename)
               * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsgittemplatespecsourcehelmwithskipcrds)
+              * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsgittemplatespecsourcehelmwithskipschemavalidation)
+              * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsgittemplatespecsourcehelmwithskiptests)
               * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsgittemplatespecsourcehelmwithvaluefiles)
               * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsgittemplatespecsourcehelmwithvaluefilesmixin)
               * [`fn withValues(values)`](#fn-specgeneratorsgittemplatespecsourcehelmwithvalues)
@@ -680,6 +748,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withName(name)`](#fn-specgeneratorsgittemplatespecsourcehelmparameterswithname)
                 * [`fn withValue(value)`](#fn-specgeneratorsgittemplatespecsourcehelmparameterswithvalue)
             * [`obj spec.generators.git.template.spec.source.kustomize`](#obj-specgeneratorsgittemplatespecsourcekustomize)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsgittemplatespecsourcekustomizewithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsgittemplatespecsourcekustomizewithapiversionsmixin)
               * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsgittemplatespecsourcekustomizewithcommonannotations)
               * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsgittemplatespecsourcekustomizewithcommonannotationsenvsubst)
               * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsgittemplatespecsourcekustomizewithcommonannotationsmixin)
@@ -691,6 +761,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsgittemplatespecsourcekustomizewithforcecommonlabels)
               * [`fn withImages(images)`](#fn-specgeneratorsgittemplatespecsourcekustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorsgittemplatespecsourcekustomizewithimagesmixin)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsgittemplatespecsourcekustomizewithkubeversion)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsgittemplatespecsourcekustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsgittemplatespecsourcekustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsgittemplatespecsourcekustomizewithnamesuffix)
@@ -732,8 +803,19 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withMapMixin(map)`](#fn-specgeneratorsgittemplatespecsourcepluginparameterswithmapmixin)
                 * [`fn withName(name)`](#fn-specgeneratorsgittemplatespecsourcepluginparameterswithname)
                 * [`fn withString(string)`](#fn-specgeneratorsgittemplatespecsourcepluginparameterswithstring)
+          * [`obj spec.generators.git.template.spec.sourceHydrator`](#obj-specgeneratorsgittemplatespecsourcehydrator)
+            * [`obj spec.generators.git.template.spec.sourceHydrator.drySource`](#obj-specgeneratorsgittemplatespecsourcehydratordrysource)
+              * [`fn withPath(path)`](#fn-specgeneratorsgittemplatespecsourcehydratordrysourcewithpath)
+              * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsgittemplatespecsourcehydratordrysourcewithrepourl)
+              * [`fn withTargetRevision(targetRevision)`](#fn-specgeneratorsgittemplatespecsourcehydratordrysourcewithtargetrevision)
+            * [`obj spec.generators.git.template.spec.sourceHydrator.hydrateTo`](#obj-specgeneratorsgittemplatespecsourcehydratorhydrateto)
+              * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsgittemplatespecsourcehydratorhydratetowithtargetbranch)
+            * [`obj spec.generators.git.template.spec.sourceHydrator.syncSource`](#obj-specgeneratorsgittemplatespecsourcehydratorsyncsource)
+              * [`fn withPath(path)`](#fn-specgeneratorsgittemplatespecsourcehydratorsyncsourcewithpath)
+              * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsgittemplatespecsourcehydratorsyncsourcewithtargetbranch)
           * [`obj spec.generators.git.template.spec.sources`](#obj-specgeneratorsgittemplatespecsources)
             * [`fn withChart(chart)`](#fn-specgeneratorsgittemplatespecsourceswithchart)
+            * [`fn withName(name)`](#fn-specgeneratorsgittemplatespecsourceswithname)
             * [`fn withPath(path)`](#fn-specgeneratorsgittemplatespecsourceswithpath)
             * [`fn withRef(ref)`](#fn-specgeneratorsgittemplatespecsourceswithref)
             * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsgittemplatespecsourceswithrepourl)
@@ -758,14 +840,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withName(name)`](#fn-specgeneratorsgittemplatespecsourcesdirectoryjsonnettlaswithname)
                   * [`fn withValue(value)`](#fn-specgeneratorsgittemplatespecsourcesdirectoryjsonnettlaswithvalue)
             * [`obj spec.generators.git.template.spec.sources.helm`](#obj-specgeneratorsgittemplatespecsourceshelm)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsgittemplatespecsourceshelmwithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsgittemplatespecsourceshelmwithapiversionsmixin)
               * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsgittemplatespecsourceshelmwithfileparameters)
               * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsgittemplatespecsourceshelmwithfileparametersmixin)
               * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsgittemplatespecsourceshelmwithignoremissingvaluefiles)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsgittemplatespecsourceshelmwithkubeversion)
+              * [`fn withNamespace(namespace)`](#fn-specgeneratorsgittemplatespecsourceshelmwithnamespace)
               * [`fn withParameters(parameters)`](#fn-specgeneratorsgittemplatespecsourceshelmwithparameters)
               * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsgittemplatespecsourceshelmwithparametersmixin)
               * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsgittemplatespecsourceshelmwithpasscredentials)
               * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsgittemplatespecsourceshelmwithreleasename)
               * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsgittemplatespecsourceshelmwithskipcrds)
+              * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsgittemplatespecsourceshelmwithskipschemavalidation)
+              * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsgittemplatespecsourceshelmwithskiptests)
               * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsgittemplatespecsourceshelmwithvaluefiles)
               * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsgittemplatespecsourceshelmwithvaluefilesmixin)
               * [`fn withValues(values)`](#fn-specgeneratorsgittemplatespecsourceshelmwithvalues)
@@ -780,6 +868,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withName(name)`](#fn-specgeneratorsgittemplatespecsourceshelmparameterswithname)
                 * [`fn withValue(value)`](#fn-specgeneratorsgittemplatespecsourceshelmparameterswithvalue)
             * [`obj spec.generators.git.template.spec.sources.kustomize`](#obj-specgeneratorsgittemplatespecsourceskustomize)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsgittemplatespecsourceskustomizewithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsgittemplatespecsourceskustomizewithapiversionsmixin)
               * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsgittemplatespecsourceskustomizewithcommonannotations)
               * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsgittemplatespecsourceskustomizewithcommonannotationsenvsubst)
               * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsgittemplatespecsourceskustomizewithcommonannotationsmixin)
@@ -791,6 +881,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsgittemplatespecsourceskustomizewithforcecommonlabels)
               * [`fn withImages(images)`](#fn-specgeneratorsgittemplatespecsourceskustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorsgittemplatespecsourceskustomizewithimagesmixin)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsgittemplatespecsourceskustomizewithkubeversion)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsgittemplatespecsourceskustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsgittemplatespecsourceskustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsgittemplatespecsourceskustomizewithnamesuffix)
@@ -893,6 +984,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
             * [`fn withValue(value)`](#fn-specgeneratorslisttemplatespecinfowithvalue)
           * [`obj spec.generators.list.template.spec.source`](#obj-specgeneratorslisttemplatespecsource)
             * [`fn withChart(chart)`](#fn-specgeneratorslisttemplatespecsourcewithchart)
+            * [`fn withName(name)`](#fn-specgeneratorslisttemplatespecsourcewithname)
             * [`fn withPath(path)`](#fn-specgeneratorslisttemplatespecsourcewithpath)
             * [`fn withRef(ref)`](#fn-specgeneratorslisttemplatespecsourcewithref)
             * [`fn withRepoURL(repoURL)`](#fn-specgeneratorslisttemplatespecsourcewithrepourl)
@@ -917,14 +1009,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withName(name)`](#fn-specgeneratorslisttemplatespecsourcedirectoryjsonnettlaswithname)
                   * [`fn withValue(value)`](#fn-specgeneratorslisttemplatespecsourcedirectoryjsonnettlaswithvalue)
             * [`obj spec.generators.list.template.spec.source.helm`](#obj-specgeneratorslisttemplatespecsourcehelm)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorslisttemplatespecsourcehelmwithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorslisttemplatespecsourcehelmwithapiversionsmixin)
               * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorslisttemplatespecsourcehelmwithfileparameters)
               * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorslisttemplatespecsourcehelmwithfileparametersmixin)
               * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorslisttemplatespecsourcehelmwithignoremissingvaluefiles)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorslisttemplatespecsourcehelmwithkubeversion)
+              * [`fn withNamespace(namespace)`](#fn-specgeneratorslisttemplatespecsourcehelmwithnamespace)
               * [`fn withParameters(parameters)`](#fn-specgeneratorslisttemplatespecsourcehelmwithparameters)
               * [`fn withParametersMixin(parameters)`](#fn-specgeneratorslisttemplatespecsourcehelmwithparametersmixin)
               * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorslisttemplatespecsourcehelmwithpasscredentials)
               * [`fn withReleaseName(releaseName)`](#fn-specgeneratorslisttemplatespecsourcehelmwithreleasename)
               * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorslisttemplatespecsourcehelmwithskipcrds)
+              * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorslisttemplatespecsourcehelmwithskipschemavalidation)
+              * [`fn withSkipTests(skipTests)`](#fn-specgeneratorslisttemplatespecsourcehelmwithskiptests)
               * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorslisttemplatespecsourcehelmwithvaluefiles)
               * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorslisttemplatespecsourcehelmwithvaluefilesmixin)
               * [`fn withValues(values)`](#fn-specgeneratorslisttemplatespecsourcehelmwithvalues)
@@ -939,6 +1037,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withName(name)`](#fn-specgeneratorslisttemplatespecsourcehelmparameterswithname)
                 * [`fn withValue(value)`](#fn-specgeneratorslisttemplatespecsourcehelmparameterswithvalue)
             * [`obj spec.generators.list.template.spec.source.kustomize`](#obj-specgeneratorslisttemplatespecsourcekustomize)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorslisttemplatespecsourcekustomizewithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorslisttemplatespecsourcekustomizewithapiversionsmixin)
               * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorslisttemplatespecsourcekustomizewithcommonannotations)
               * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorslisttemplatespecsourcekustomizewithcommonannotationsenvsubst)
               * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorslisttemplatespecsourcekustomizewithcommonannotationsmixin)
@@ -950,6 +1050,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorslisttemplatespecsourcekustomizewithforcecommonlabels)
               * [`fn withImages(images)`](#fn-specgeneratorslisttemplatespecsourcekustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorslisttemplatespecsourcekustomizewithimagesmixin)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorslisttemplatespecsourcekustomizewithkubeversion)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorslisttemplatespecsourcekustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorslisttemplatespecsourcekustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorslisttemplatespecsourcekustomizewithnamesuffix)
@@ -991,8 +1092,19 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withMapMixin(map)`](#fn-specgeneratorslisttemplatespecsourcepluginparameterswithmapmixin)
                 * [`fn withName(name)`](#fn-specgeneratorslisttemplatespecsourcepluginparameterswithname)
                 * [`fn withString(string)`](#fn-specgeneratorslisttemplatespecsourcepluginparameterswithstring)
+          * [`obj spec.generators.list.template.spec.sourceHydrator`](#obj-specgeneratorslisttemplatespecsourcehydrator)
+            * [`obj spec.generators.list.template.spec.sourceHydrator.drySource`](#obj-specgeneratorslisttemplatespecsourcehydratordrysource)
+              * [`fn withPath(path)`](#fn-specgeneratorslisttemplatespecsourcehydratordrysourcewithpath)
+              * [`fn withRepoURL(repoURL)`](#fn-specgeneratorslisttemplatespecsourcehydratordrysourcewithrepourl)
+              * [`fn withTargetRevision(targetRevision)`](#fn-specgeneratorslisttemplatespecsourcehydratordrysourcewithtargetrevision)
+            * [`obj spec.generators.list.template.spec.sourceHydrator.hydrateTo`](#obj-specgeneratorslisttemplatespecsourcehydratorhydrateto)
+              * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorslisttemplatespecsourcehydratorhydratetowithtargetbranch)
+            * [`obj spec.generators.list.template.spec.sourceHydrator.syncSource`](#obj-specgeneratorslisttemplatespecsourcehydratorsyncsource)
+              * [`fn withPath(path)`](#fn-specgeneratorslisttemplatespecsourcehydratorsyncsourcewithpath)
+              * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorslisttemplatespecsourcehydratorsyncsourcewithtargetbranch)
           * [`obj spec.generators.list.template.spec.sources`](#obj-specgeneratorslisttemplatespecsources)
             * [`fn withChart(chart)`](#fn-specgeneratorslisttemplatespecsourceswithchart)
+            * [`fn withName(name)`](#fn-specgeneratorslisttemplatespecsourceswithname)
             * [`fn withPath(path)`](#fn-specgeneratorslisttemplatespecsourceswithpath)
             * [`fn withRef(ref)`](#fn-specgeneratorslisttemplatespecsourceswithref)
             * [`fn withRepoURL(repoURL)`](#fn-specgeneratorslisttemplatespecsourceswithrepourl)
@@ -1017,14 +1129,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withName(name)`](#fn-specgeneratorslisttemplatespecsourcesdirectoryjsonnettlaswithname)
                   * [`fn withValue(value)`](#fn-specgeneratorslisttemplatespecsourcesdirectoryjsonnettlaswithvalue)
             * [`obj spec.generators.list.template.spec.sources.helm`](#obj-specgeneratorslisttemplatespecsourceshelm)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorslisttemplatespecsourceshelmwithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorslisttemplatespecsourceshelmwithapiversionsmixin)
               * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorslisttemplatespecsourceshelmwithfileparameters)
               * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorslisttemplatespecsourceshelmwithfileparametersmixin)
               * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorslisttemplatespecsourceshelmwithignoremissingvaluefiles)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorslisttemplatespecsourceshelmwithkubeversion)
+              * [`fn withNamespace(namespace)`](#fn-specgeneratorslisttemplatespecsourceshelmwithnamespace)
               * [`fn withParameters(parameters)`](#fn-specgeneratorslisttemplatespecsourceshelmwithparameters)
               * [`fn withParametersMixin(parameters)`](#fn-specgeneratorslisttemplatespecsourceshelmwithparametersmixin)
               * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorslisttemplatespecsourceshelmwithpasscredentials)
               * [`fn withReleaseName(releaseName)`](#fn-specgeneratorslisttemplatespecsourceshelmwithreleasename)
               * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorslisttemplatespecsourceshelmwithskipcrds)
+              * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorslisttemplatespecsourceshelmwithskipschemavalidation)
+              * [`fn withSkipTests(skipTests)`](#fn-specgeneratorslisttemplatespecsourceshelmwithskiptests)
               * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorslisttemplatespecsourceshelmwithvaluefiles)
               * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorslisttemplatespecsourceshelmwithvaluefilesmixin)
               * [`fn withValues(values)`](#fn-specgeneratorslisttemplatespecsourceshelmwithvalues)
@@ -1039,6 +1157,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withName(name)`](#fn-specgeneratorslisttemplatespecsourceshelmparameterswithname)
                 * [`fn withValue(value)`](#fn-specgeneratorslisttemplatespecsourceshelmparameterswithvalue)
             * [`obj spec.generators.list.template.spec.sources.kustomize`](#obj-specgeneratorslisttemplatespecsourceskustomize)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorslisttemplatespecsourceskustomizewithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorslisttemplatespecsourceskustomizewithapiversionsmixin)
               * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorslisttemplatespecsourceskustomizewithcommonannotations)
               * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorslisttemplatespecsourceskustomizewithcommonannotationsenvsubst)
               * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorslisttemplatespecsourceskustomizewithcommonannotationsmixin)
@@ -1050,6 +1170,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorslisttemplatespecsourceskustomizewithforcecommonlabels)
               * [`fn withImages(images)`](#fn-specgeneratorslisttemplatespecsourceskustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorslisttemplatespecsourceskustomizewithimagesmixin)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorslisttemplatespecsourceskustomizewithkubeversion)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorslisttemplatespecsourceskustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorslisttemplatespecsourceskustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorslisttemplatespecsourceskustomizewithnamesuffix)
@@ -1170,6 +1291,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecinfowithvalue)
               * [`obj spec.generators.matrix.generators.clusterDecisionResource.template.spec.source`](#obj-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsource)
                 * [`fn withChart(chart)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcewithchart)
+                * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcewithname)
                 * [`fn withPath(path)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcewithpath)
                 * [`fn withRef(ref)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcewithref)
                 * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcewithrepourl)
@@ -1194,14 +1316,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                       * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcedirectoryjsonnettlaswithname)
                       * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcedirectoryjsonnettlaswithvalue)
                 * [`obj spec.generators.matrix.generators.clusterDecisionResource.template.spec.source.helm`](#obj-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcehelm)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithapiversionsmixin)
                   * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithfileparameters)
                   * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithfileparametersmixin)
                   * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithignoremissingvaluefiles)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithkubeversion)
+                  * [`fn withNamespace(namespace)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithnamespace)
                   * [`fn withParameters(parameters)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithparameters)
                   * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithparametersmixin)
                   * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithpasscredentials)
                   * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithreleasename)
                   * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithskipcrds)
+                  * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithskipschemavalidation)
+                  * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithskiptests)
                   * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithvaluefiles)
                   * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithvaluefilesmixin)
                   * [`fn withValues(values)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcehelmwithvalues)
@@ -1216,6 +1344,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcehelmparameterswithname)
                     * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcehelmparameterswithvalue)
                 * [`obj spec.generators.matrix.generators.clusterDecisionResource.template.spec.source.kustomize`](#obj-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcekustomize)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithapiversionsmixin)
                   * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithcommonannotations)
                   * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithcommonannotationsenvsubst)
                   * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithcommonannotationsmixin)
@@ -1227,6 +1357,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithforcecommonlabels)
                   * [`fn withImages(images)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithimagesmixin)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithkubeversion)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithnamesuffix)
@@ -1268,8 +1399,19 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withMapMixin(map)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcepluginparameterswithmapmixin)
                     * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcepluginparameterswithname)
                     * [`fn withString(string)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcepluginparameterswithstring)
+              * [`obj spec.generators.matrix.generators.clusterDecisionResource.template.spec.sourceHydrator`](#obj-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcehydrator)
+                * [`obj spec.generators.matrix.generators.clusterDecisionResource.template.spec.sourceHydrator.drySource`](#obj-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcehydratordrysource)
+                  * [`fn withPath(path)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcehydratordrysourcewithpath)
+                  * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcehydratordrysourcewithrepourl)
+                  * [`fn withTargetRevision(targetRevision)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcehydratordrysourcewithtargetrevision)
+                * [`obj spec.generators.matrix.generators.clusterDecisionResource.template.spec.sourceHydrator.hydrateTo`](#obj-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcehydratorhydrateto)
+                  * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcehydratorhydratetowithtargetbranch)
+                * [`obj spec.generators.matrix.generators.clusterDecisionResource.template.spec.sourceHydrator.syncSource`](#obj-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcehydratorsyncsource)
+                  * [`fn withPath(path)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcehydratorsyncsourcewithpath)
+                  * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcehydratorsyncsourcewithtargetbranch)
               * [`obj spec.generators.matrix.generators.clusterDecisionResource.template.spec.sources`](#obj-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsources)
                 * [`fn withChart(chart)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceswithchart)
+                * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceswithname)
                 * [`fn withPath(path)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceswithpath)
                 * [`fn withRef(ref)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceswithref)
                 * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceswithrepourl)
@@ -1294,14 +1436,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                       * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcesdirectoryjsonnettlaswithname)
                       * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcesdirectoryjsonnettlaswithvalue)
                 * [`obj spec.generators.matrix.generators.clusterDecisionResource.template.spec.sources.helm`](#obj-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceshelm)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithapiversionsmixin)
                   * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithfileparameters)
                   * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithfileparametersmixin)
                   * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithignoremissingvaluefiles)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithkubeversion)
+                  * [`fn withNamespace(namespace)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithnamespace)
                   * [`fn withParameters(parameters)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithparameters)
                   * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithparametersmixin)
                   * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithpasscredentials)
                   * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithreleasename)
                   * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithskipcrds)
+                  * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithskipschemavalidation)
+                  * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithskiptests)
                   * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithvaluefiles)
                   * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithvaluefilesmixin)
                   * [`fn withValues(values)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceshelmwithvalues)
@@ -1316,6 +1464,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceshelmparameterswithname)
                     * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceshelmparameterswithvalue)
                 * [`obj spec.generators.matrix.generators.clusterDecisionResource.template.spec.sources.kustomize`](#obj-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceskustomize)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithapiversionsmixin)
                   * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithcommonannotations)
                   * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithcommonannotationsenvsubst)
                   * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithcommonannotationsmixin)
@@ -1327,6 +1477,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithforcecommonlabels)
                   * [`fn withImages(images)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithimagesmixin)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithkubeversion)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithnamesuffix)
@@ -1387,6 +1538,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withFactor(factor)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsyncpolicyretrybackoffwithfactor)
                     * [`fn withMaxDuration(maxDuration)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsyncpolicyretrybackoffwithmaxduration)
         * [`obj spec.generators.matrix.generators.clusters`](#obj-specgeneratorsmatrixgeneratorsclusters)
+          * [`fn withFlatList(flatList)`](#fn-specgeneratorsmatrixgeneratorsclusterswithflatlist)
           * [`fn withValues(values)`](#fn-specgeneratorsmatrixgeneratorsclusterswithvalues)
           * [`fn withValuesMixin(values)`](#fn-specgeneratorsmatrixgeneratorsclusterswithvaluesmixin)
           * [`obj spec.generators.matrix.generators.clusters.selector`](#obj-specgeneratorsmatrixgeneratorsclustersselector)
@@ -1438,6 +1590,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecinfowithvalue)
               * [`obj spec.generators.matrix.generators.clusters.template.spec.source`](#obj-specgeneratorsmatrixgeneratorsclusterstemplatespecsource)
                 * [`fn withChart(chart)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcewithchart)
+                * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcewithname)
                 * [`fn withPath(path)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcewithpath)
                 * [`fn withRef(ref)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcewithref)
                 * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcewithrepourl)
@@ -1462,14 +1615,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                       * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcedirectoryjsonnettlaswithname)
                       * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcedirectoryjsonnettlaswithvalue)
                 * [`obj spec.generators.matrix.generators.clusters.template.spec.source.helm`](#obj-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcehelm)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcehelmwithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcehelmwithapiversionsmixin)
                   * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcehelmwithfileparameters)
                   * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcehelmwithfileparametersmixin)
                   * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcehelmwithignoremissingvaluefiles)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcehelmwithkubeversion)
+                  * [`fn withNamespace(namespace)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcehelmwithnamespace)
                   * [`fn withParameters(parameters)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcehelmwithparameters)
                   * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcehelmwithparametersmixin)
                   * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcehelmwithpasscredentials)
                   * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcehelmwithreleasename)
                   * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcehelmwithskipcrds)
+                  * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcehelmwithskipschemavalidation)
+                  * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcehelmwithskiptests)
                   * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcehelmwithvaluefiles)
                   * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcehelmwithvaluefilesmixin)
                   * [`fn withValues(values)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcehelmwithvalues)
@@ -1484,6 +1643,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcehelmparameterswithname)
                     * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcehelmparameterswithvalue)
                 * [`obj spec.generators.matrix.generators.clusters.template.spec.source.kustomize`](#obj-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcekustomize)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcekustomizewithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcekustomizewithapiversionsmixin)
                   * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcekustomizewithcommonannotations)
                   * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcekustomizewithcommonannotationsenvsubst)
                   * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcekustomizewithcommonannotationsmixin)
@@ -1495,6 +1656,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcekustomizewithforcecommonlabels)
                   * [`fn withImages(images)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcekustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcekustomizewithimagesmixin)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcekustomizewithkubeversion)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcekustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcekustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcekustomizewithnamesuffix)
@@ -1536,8 +1698,19 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withMapMixin(map)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcepluginparameterswithmapmixin)
                     * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcepluginparameterswithname)
                     * [`fn withString(string)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcepluginparameterswithstring)
+              * [`obj spec.generators.matrix.generators.clusters.template.spec.sourceHydrator`](#obj-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcehydrator)
+                * [`obj spec.generators.matrix.generators.clusters.template.spec.sourceHydrator.drySource`](#obj-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcehydratordrysource)
+                  * [`fn withPath(path)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcehydratordrysourcewithpath)
+                  * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcehydratordrysourcewithrepourl)
+                  * [`fn withTargetRevision(targetRevision)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcehydratordrysourcewithtargetrevision)
+                * [`obj spec.generators.matrix.generators.clusters.template.spec.sourceHydrator.hydrateTo`](#obj-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcehydratorhydrateto)
+                  * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcehydratorhydratetowithtargetbranch)
+                * [`obj spec.generators.matrix.generators.clusters.template.spec.sourceHydrator.syncSource`](#obj-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcehydratorsyncsource)
+                  * [`fn withPath(path)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcehydratorsyncsourcewithpath)
+                  * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcehydratorsyncsourcewithtargetbranch)
               * [`obj spec.generators.matrix.generators.clusters.template.spec.sources`](#obj-specgeneratorsmatrixgeneratorsclusterstemplatespecsources)
                 * [`fn withChart(chart)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceswithchart)
+                * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceswithname)
                 * [`fn withPath(path)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceswithpath)
                 * [`fn withRef(ref)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceswithref)
                 * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceswithrepourl)
@@ -1562,14 +1735,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                       * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcesdirectoryjsonnettlaswithname)
                       * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcesdirectoryjsonnettlaswithvalue)
                 * [`obj spec.generators.matrix.generators.clusters.template.spec.sources.helm`](#obj-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceshelm)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceshelmwithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceshelmwithapiversionsmixin)
                   * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceshelmwithfileparameters)
                   * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceshelmwithfileparametersmixin)
                   * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceshelmwithignoremissingvaluefiles)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceshelmwithkubeversion)
+                  * [`fn withNamespace(namespace)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceshelmwithnamespace)
                   * [`fn withParameters(parameters)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceshelmwithparameters)
                   * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceshelmwithparametersmixin)
                   * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceshelmwithpasscredentials)
                   * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceshelmwithreleasename)
                   * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceshelmwithskipcrds)
+                  * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceshelmwithskipschemavalidation)
+                  * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceshelmwithskiptests)
                   * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceshelmwithvaluefiles)
                   * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceshelmwithvaluefilesmixin)
                   * [`fn withValues(values)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceshelmwithvalues)
@@ -1584,6 +1763,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceshelmparameterswithname)
                     * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceshelmparameterswithvalue)
                 * [`obj spec.generators.matrix.generators.clusters.template.spec.sources.kustomize`](#obj-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceskustomize)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceskustomizewithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceskustomizewithapiversionsmixin)
                   * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceskustomizewithcommonannotations)
                   * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceskustomizewithcommonannotationsenvsubst)
                   * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceskustomizewithcommonannotationsmixin)
@@ -1595,6 +1776,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceskustomizewithforcecommonlabels)
                   * [`fn withImages(images)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceskustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceskustomizewithimagesmixin)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceskustomizewithkubeversion)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceskustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceskustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceskustomizewithnamesuffix)
@@ -1709,6 +1891,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecinfowithvalue)
               * [`obj spec.generators.matrix.generators.git.template.spec.source`](#obj-specgeneratorsmatrixgeneratorsgittemplatespecsource)
                 * [`fn withChart(chart)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcewithchart)
+                * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcewithname)
                 * [`fn withPath(path)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcewithpath)
                 * [`fn withRef(ref)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcewithref)
                 * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcewithrepourl)
@@ -1733,14 +1916,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                       * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcedirectoryjsonnettlaswithname)
                       * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcedirectoryjsonnettlaswithvalue)
                 * [`obj spec.generators.matrix.generators.git.template.spec.source.helm`](#obj-specgeneratorsmatrixgeneratorsgittemplatespecsourcehelm)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcehelmwithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcehelmwithapiversionsmixin)
                   * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcehelmwithfileparameters)
                   * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcehelmwithfileparametersmixin)
                   * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcehelmwithignoremissingvaluefiles)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcehelmwithkubeversion)
+                  * [`fn withNamespace(namespace)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcehelmwithnamespace)
                   * [`fn withParameters(parameters)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcehelmwithparameters)
                   * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcehelmwithparametersmixin)
                   * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcehelmwithpasscredentials)
                   * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcehelmwithreleasename)
                   * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcehelmwithskipcrds)
+                  * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcehelmwithskipschemavalidation)
+                  * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcehelmwithskiptests)
                   * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcehelmwithvaluefiles)
                   * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcehelmwithvaluefilesmixin)
                   * [`fn withValues(values)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcehelmwithvalues)
@@ -1755,6 +1944,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcehelmparameterswithname)
                     * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcehelmparameterswithvalue)
                 * [`obj spec.generators.matrix.generators.git.template.spec.source.kustomize`](#obj-specgeneratorsmatrixgeneratorsgittemplatespecsourcekustomize)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcekustomizewithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcekustomizewithapiversionsmixin)
                   * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcekustomizewithcommonannotations)
                   * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcekustomizewithcommonannotationsenvsubst)
                   * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcekustomizewithcommonannotationsmixin)
@@ -1766,6 +1957,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcekustomizewithforcecommonlabels)
                   * [`fn withImages(images)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcekustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcekustomizewithimagesmixin)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcekustomizewithkubeversion)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcekustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcekustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcekustomizewithnamesuffix)
@@ -1807,8 +1999,19 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withMapMixin(map)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcepluginparameterswithmapmixin)
                     * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcepluginparameterswithname)
                     * [`fn withString(string)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcepluginparameterswithstring)
+              * [`obj spec.generators.matrix.generators.git.template.spec.sourceHydrator`](#obj-specgeneratorsmatrixgeneratorsgittemplatespecsourcehydrator)
+                * [`obj spec.generators.matrix.generators.git.template.spec.sourceHydrator.drySource`](#obj-specgeneratorsmatrixgeneratorsgittemplatespecsourcehydratordrysource)
+                  * [`fn withPath(path)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcehydratordrysourcewithpath)
+                  * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcehydratordrysourcewithrepourl)
+                  * [`fn withTargetRevision(targetRevision)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcehydratordrysourcewithtargetrevision)
+                * [`obj spec.generators.matrix.generators.git.template.spec.sourceHydrator.hydrateTo`](#obj-specgeneratorsmatrixgeneratorsgittemplatespecsourcehydratorhydrateto)
+                  * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcehydratorhydratetowithtargetbranch)
+                * [`obj spec.generators.matrix.generators.git.template.spec.sourceHydrator.syncSource`](#obj-specgeneratorsmatrixgeneratorsgittemplatespecsourcehydratorsyncsource)
+                  * [`fn withPath(path)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcehydratorsyncsourcewithpath)
+                  * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcehydratorsyncsourcewithtargetbranch)
               * [`obj spec.generators.matrix.generators.git.template.spec.sources`](#obj-specgeneratorsmatrixgeneratorsgittemplatespecsources)
                 * [`fn withChart(chart)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceswithchart)
+                * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceswithname)
                 * [`fn withPath(path)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceswithpath)
                 * [`fn withRef(ref)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceswithref)
                 * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceswithrepourl)
@@ -1833,14 +2036,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                       * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcesdirectoryjsonnettlaswithname)
                       * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcesdirectoryjsonnettlaswithvalue)
                 * [`obj spec.generators.matrix.generators.git.template.spec.sources.helm`](#obj-specgeneratorsmatrixgeneratorsgittemplatespecsourceshelm)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceshelmwithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceshelmwithapiversionsmixin)
                   * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceshelmwithfileparameters)
                   * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceshelmwithfileparametersmixin)
                   * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceshelmwithignoremissingvaluefiles)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceshelmwithkubeversion)
+                  * [`fn withNamespace(namespace)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceshelmwithnamespace)
                   * [`fn withParameters(parameters)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceshelmwithparameters)
                   * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceshelmwithparametersmixin)
                   * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceshelmwithpasscredentials)
                   * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceshelmwithreleasename)
                   * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceshelmwithskipcrds)
+                  * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceshelmwithskipschemavalidation)
+                  * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceshelmwithskiptests)
                   * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceshelmwithvaluefiles)
                   * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceshelmwithvaluefilesmixin)
                   * [`fn withValues(values)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceshelmwithvalues)
@@ -1855,6 +2064,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceshelmparameterswithname)
                     * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceshelmparameterswithvalue)
                 * [`obj spec.generators.matrix.generators.git.template.spec.sources.kustomize`](#obj-specgeneratorsmatrixgeneratorsgittemplatespecsourceskustomize)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceskustomizewithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceskustomizewithapiversionsmixin)
                   * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceskustomizewithcommonannotations)
                   * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceskustomizewithcommonannotationsenvsubst)
                   * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceskustomizewithcommonannotationsmixin)
@@ -1866,6 +2077,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceskustomizewithforcecommonlabels)
                   * [`fn withImages(images)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceskustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceskustomizewithimagesmixin)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceskustomizewithkubeversion)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceskustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceskustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceskustomizewithnamesuffix)
@@ -1968,6 +2180,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecinfowithvalue)
               * [`obj spec.generators.matrix.generators.list.template.spec.source`](#obj-specgeneratorsmatrixgeneratorslisttemplatespecsource)
                 * [`fn withChart(chart)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcewithchart)
+                * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcewithname)
                 * [`fn withPath(path)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcewithpath)
                 * [`fn withRef(ref)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcewithref)
                 * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcewithrepourl)
@@ -1992,14 +2205,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                       * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcedirectoryjsonnettlaswithname)
                       * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcedirectoryjsonnettlaswithvalue)
                 * [`obj spec.generators.matrix.generators.list.template.spec.source.helm`](#obj-specgeneratorsmatrixgeneratorslisttemplatespecsourcehelm)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcehelmwithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcehelmwithapiversionsmixin)
                   * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcehelmwithfileparameters)
                   * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcehelmwithfileparametersmixin)
                   * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcehelmwithignoremissingvaluefiles)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcehelmwithkubeversion)
+                  * [`fn withNamespace(namespace)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcehelmwithnamespace)
                   * [`fn withParameters(parameters)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcehelmwithparameters)
                   * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcehelmwithparametersmixin)
                   * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcehelmwithpasscredentials)
                   * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcehelmwithreleasename)
                   * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcehelmwithskipcrds)
+                  * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcehelmwithskipschemavalidation)
+                  * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcehelmwithskiptests)
                   * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcehelmwithvaluefiles)
                   * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcehelmwithvaluefilesmixin)
                   * [`fn withValues(values)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcehelmwithvalues)
@@ -2014,6 +2233,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcehelmparameterswithname)
                     * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcehelmparameterswithvalue)
                 * [`obj spec.generators.matrix.generators.list.template.spec.source.kustomize`](#obj-specgeneratorsmatrixgeneratorslisttemplatespecsourcekustomize)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcekustomizewithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcekustomizewithapiversionsmixin)
                   * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcekustomizewithcommonannotations)
                   * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcekustomizewithcommonannotationsenvsubst)
                   * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcekustomizewithcommonannotationsmixin)
@@ -2025,6 +2246,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcekustomizewithforcecommonlabels)
                   * [`fn withImages(images)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcekustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcekustomizewithimagesmixin)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcekustomizewithkubeversion)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcekustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcekustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcekustomizewithnamesuffix)
@@ -2066,8 +2288,19 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withMapMixin(map)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcepluginparameterswithmapmixin)
                     * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcepluginparameterswithname)
                     * [`fn withString(string)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcepluginparameterswithstring)
+              * [`obj spec.generators.matrix.generators.list.template.spec.sourceHydrator`](#obj-specgeneratorsmatrixgeneratorslisttemplatespecsourcehydrator)
+                * [`obj spec.generators.matrix.generators.list.template.spec.sourceHydrator.drySource`](#obj-specgeneratorsmatrixgeneratorslisttemplatespecsourcehydratordrysource)
+                  * [`fn withPath(path)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcehydratordrysourcewithpath)
+                  * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcehydratordrysourcewithrepourl)
+                  * [`fn withTargetRevision(targetRevision)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcehydratordrysourcewithtargetrevision)
+                * [`obj spec.generators.matrix.generators.list.template.spec.sourceHydrator.hydrateTo`](#obj-specgeneratorsmatrixgeneratorslisttemplatespecsourcehydratorhydrateto)
+                  * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcehydratorhydratetowithtargetbranch)
+                * [`obj spec.generators.matrix.generators.list.template.spec.sourceHydrator.syncSource`](#obj-specgeneratorsmatrixgeneratorslisttemplatespecsourcehydratorsyncsource)
+                  * [`fn withPath(path)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcehydratorsyncsourcewithpath)
+                  * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcehydratorsyncsourcewithtargetbranch)
               * [`obj spec.generators.matrix.generators.list.template.spec.sources`](#obj-specgeneratorsmatrixgeneratorslisttemplatespecsources)
                 * [`fn withChart(chart)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceswithchart)
+                * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceswithname)
                 * [`fn withPath(path)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceswithpath)
                 * [`fn withRef(ref)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceswithref)
                 * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceswithrepourl)
@@ -2092,14 +2325,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                       * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcesdirectoryjsonnettlaswithname)
                       * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcesdirectoryjsonnettlaswithvalue)
                 * [`obj spec.generators.matrix.generators.list.template.spec.sources.helm`](#obj-specgeneratorsmatrixgeneratorslisttemplatespecsourceshelm)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceshelmwithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceshelmwithapiversionsmixin)
                   * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceshelmwithfileparameters)
                   * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceshelmwithfileparametersmixin)
                   * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceshelmwithignoremissingvaluefiles)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceshelmwithkubeversion)
+                  * [`fn withNamespace(namespace)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceshelmwithnamespace)
                   * [`fn withParameters(parameters)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceshelmwithparameters)
                   * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceshelmwithparametersmixin)
                   * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceshelmwithpasscredentials)
                   * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceshelmwithreleasename)
                   * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceshelmwithskipcrds)
+                  * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceshelmwithskipschemavalidation)
+                  * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceshelmwithskiptests)
                   * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceshelmwithvaluefiles)
                   * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceshelmwithvaluefilesmixin)
                   * [`fn withValues(values)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceshelmwithvalues)
@@ -2114,6 +2353,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceshelmparameterswithname)
                     * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceshelmparameterswithvalue)
                 * [`obj spec.generators.matrix.generators.list.template.spec.sources.kustomize`](#obj-specgeneratorsmatrixgeneratorslisttemplatespecsourceskustomize)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceskustomizewithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceskustomizewithapiversionsmixin)
                   * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceskustomizewithcommonannotations)
                   * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceskustomizewithcommonannotationsenvsubst)
                   * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceskustomizewithcommonannotationsmixin)
@@ -2125,6 +2366,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceskustomizewithforcecommonlabels)
                   * [`fn withImages(images)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceskustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceskustomizewithimagesmixin)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceskustomizewithkubeversion)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceskustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceskustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceskustomizewithnamesuffix)
@@ -2232,6 +2474,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecinfowithvalue)
               * [`obj spec.generators.matrix.generators.plugin.template.spec.source`](#obj-specgeneratorsmatrixgeneratorsplugintemplatespecsource)
                 * [`fn withChart(chart)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcewithchart)
+                * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcewithname)
                 * [`fn withPath(path)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcewithpath)
                 * [`fn withRef(ref)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcewithref)
                 * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcewithrepourl)
@@ -2256,14 +2499,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                       * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcedirectoryjsonnettlaswithname)
                       * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcedirectoryjsonnettlaswithvalue)
                 * [`obj spec.generators.matrix.generators.plugin.template.spec.source.helm`](#obj-specgeneratorsmatrixgeneratorsplugintemplatespecsourcehelm)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcehelmwithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcehelmwithapiversionsmixin)
                   * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcehelmwithfileparameters)
                   * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcehelmwithfileparametersmixin)
                   * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcehelmwithignoremissingvaluefiles)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcehelmwithkubeversion)
+                  * [`fn withNamespace(namespace)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcehelmwithnamespace)
                   * [`fn withParameters(parameters)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcehelmwithparameters)
                   * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcehelmwithparametersmixin)
                   * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcehelmwithpasscredentials)
                   * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcehelmwithreleasename)
                   * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcehelmwithskipcrds)
+                  * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcehelmwithskipschemavalidation)
+                  * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcehelmwithskiptests)
                   * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcehelmwithvaluefiles)
                   * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcehelmwithvaluefilesmixin)
                   * [`fn withValues(values)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcehelmwithvalues)
@@ -2278,6 +2527,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcehelmparameterswithname)
                     * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcehelmparameterswithvalue)
                 * [`obj spec.generators.matrix.generators.plugin.template.spec.source.kustomize`](#obj-specgeneratorsmatrixgeneratorsplugintemplatespecsourcekustomize)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcekustomizewithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcekustomizewithapiversionsmixin)
                   * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcekustomizewithcommonannotations)
                   * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcekustomizewithcommonannotationsenvsubst)
                   * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcekustomizewithcommonannotationsmixin)
@@ -2289,6 +2540,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcekustomizewithforcecommonlabels)
                   * [`fn withImages(images)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcekustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcekustomizewithimagesmixin)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcekustomizewithkubeversion)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcekustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcekustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcekustomizewithnamesuffix)
@@ -2330,8 +2582,19 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withMapMixin(map)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcepluginparameterswithmapmixin)
                     * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcepluginparameterswithname)
                     * [`fn withString(string)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcepluginparameterswithstring)
+              * [`obj spec.generators.matrix.generators.plugin.template.spec.sourceHydrator`](#obj-specgeneratorsmatrixgeneratorsplugintemplatespecsourcehydrator)
+                * [`obj spec.generators.matrix.generators.plugin.template.spec.sourceHydrator.drySource`](#obj-specgeneratorsmatrixgeneratorsplugintemplatespecsourcehydratordrysource)
+                  * [`fn withPath(path)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcehydratordrysourcewithpath)
+                  * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcehydratordrysourcewithrepourl)
+                  * [`fn withTargetRevision(targetRevision)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcehydratordrysourcewithtargetrevision)
+                * [`obj spec.generators.matrix.generators.plugin.template.spec.sourceHydrator.hydrateTo`](#obj-specgeneratorsmatrixgeneratorsplugintemplatespecsourcehydratorhydrateto)
+                  * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcehydratorhydratetowithtargetbranch)
+                * [`obj spec.generators.matrix.generators.plugin.template.spec.sourceHydrator.syncSource`](#obj-specgeneratorsmatrixgeneratorsplugintemplatespecsourcehydratorsyncsource)
+                  * [`fn withPath(path)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcehydratorsyncsourcewithpath)
+                  * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcehydratorsyncsourcewithtargetbranch)
               * [`obj spec.generators.matrix.generators.plugin.template.spec.sources`](#obj-specgeneratorsmatrixgeneratorsplugintemplatespecsources)
                 * [`fn withChart(chart)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceswithchart)
+                * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceswithname)
                 * [`fn withPath(path)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceswithpath)
                 * [`fn withRef(ref)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceswithref)
                 * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceswithrepourl)
@@ -2356,14 +2619,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                       * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcesdirectoryjsonnettlaswithname)
                       * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcesdirectoryjsonnettlaswithvalue)
                 * [`obj spec.generators.matrix.generators.plugin.template.spec.sources.helm`](#obj-specgeneratorsmatrixgeneratorsplugintemplatespecsourceshelm)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceshelmwithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceshelmwithapiversionsmixin)
                   * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceshelmwithfileparameters)
                   * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceshelmwithfileparametersmixin)
                   * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceshelmwithignoremissingvaluefiles)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceshelmwithkubeversion)
+                  * [`fn withNamespace(namespace)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceshelmwithnamespace)
                   * [`fn withParameters(parameters)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceshelmwithparameters)
                   * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceshelmwithparametersmixin)
                   * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceshelmwithpasscredentials)
                   * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceshelmwithreleasename)
                   * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceshelmwithskipcrds)
+                  * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceshelmwithskipschemavalidation)
+                  * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceshelmwithskiptests)
                   * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceshelmwithvaluefiles)
                   * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceshelmwithvaluefilesmixin)
                   * [`fn withValues(values)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceshelmwithvalues)
@@ -2378,6 +2647,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceshelmparameterswithname)
                     * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceshelmparameterswithvalue)
                 * [`obj spec.generators.matrix.generators.plugin.template.spec.sources.kustomize`](#obj-specgeneratorsmatrixgeneratorsplugintemplatespecsourceskustomize)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceskustomizewithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceskustomizewithapiversionsmixin)
                   * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceskustomizewithcommonannotations)
                   * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceskustomizewithcommonannotationsenvsubst)
                   * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceskustomizewithcommonannotationsmixin)
@@ -2389,6 +2660,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceskustomizewithforcecommonlabels)
                   * [`fn withImages(images)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceskustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceskustomizewithimagesmixin)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceskustomizewithkubeversion)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceskustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceskustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceskustomizewithnamesuffix)
@@ -2477,6 +2749,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withSecretName(secretName)`](#fn-specgeneratorsmatrixgeneratorspullrequestbitbucketbearertokentokenrefwithsecretname)
           * [`obj spec.generators.matrix.generators.pullRequest.bitbucketServer`](#obj-specgeneratorsmatrixgeneratorspullrequestbitbucketserver)
             * [`fn withApi(api)`](#fn-specgeneratorsmatrixgeneratorspullrequestbitbucketserverwithapi)
+            * [`fn withInsecure(insecure)`](#fn-specgeneratorsmatrixgeneratorspullrequestbitbucketserverwithinsecure)
             * [`fn withProject(project)`](#fn-specgeneratorsmatrixgeneratorspullrequestbitbucketserverwithproject)
             * [`fn withRepo(repo)`](#fn-specgeneratorsmatrixgeneratorspullrequestbitbucketserverwithrepo)
             * [`obj spec.generators.matrix.generators.pullRequest.bitbucketServer.basicAuth`](#obj-specgeneratorsmatrixgeneratorspullrequestbitbucketserverbasicauth)
@@ -2484,6 +2757,13 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
               * [`obj spec.generators.matrix.generators.pullRequest.bitbucketServer.basicAuth.passwordRef`](#obj-specgeneratorsmatrixgeneratorspullrequestbitbucketserverbasicauthpasswordref)
                 * [`fn withKey(key)`](#fn-specgeneratorsmatrixgeneratorspullrequestbitbucketserverbasicauthpasswordrefwithkey)
                 * [`fn withSecretName(secretName)`](#fn-specgeneratorsmatrixgeneratorspullrequestbitbucketserverbasicauthpasswordrefwithsecretname)
+            * [`obj spec.generators.matrix.generators.pullRequest.bitbucketServer.bearerToken`](#obj-specgeneratorsmatrixgeneratorspullrequestbitbucketserverbearertoken)
+              * [`obj spec.generators.matrix.generators.pullRequest.bitbucketServer.bearerToken.tokenRef`](#obj-specgeneratorsmatrixgeneratorspullrequestbitbucketserverbearertokentokenref)
+                * [`fn withKey(key)`](#fn-specgeneratorsmatrixgeneratorspullrequestbitbucketserverbearertokentokenrefwithkey)
+                * [`fn withSecretName(secretName)`](#fn-specgeneratorsmatrixgeneratorspullrequestbitbucketserverbearertokentokenrefwithsecretname)
+            * [`obj spec.generators.matrix.generators.pullRequest.bitbucketServer.caRef`](#obj-specgeneratorsmatrixgeneratorspullrequestbitbucketservercaref)
+              * [`fn withConfigMapName(configMapName)`](#fn-specgeneratorsmatrixgeneratorspullrequestbitbucketservercarefwithconfigmapname)
+              * [`fn withKey(key)`](#fn-specgeneratorsmatrixgeneratorspullrequestbitbucketservercarefwithkey)
           * [`obj spec.generators.matrix.generators.pullRequest.filters`](#obj-specgeneratorsmatrixgeneratorspullrequestfilters)
             * [`fn withBranchMatch(branchMatch)`](#fn-specgeneratorsmatrixgeneratorspullrequestfilterswithbranchmatch)
             * [`fn withTargetBranchMatch(targetBranchMatch)`](#fn-specgeneratorsmatrixgeneratorspullrequestfilterswithtargetbranchmatch)
@@ -2512,6 +2792,9 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
             * [`fn withLabelsMixin(labels)`](#fn-specgeneratorsmatrixgeneratorspullrequestgitlabwithlabelsmixin)
             * [`fn withProject(project)`](#fn-specgeneratorsmatrixgeneratorspullrequestgitlabwithproject)
             * [`fn withPullRequestState(pullRequestState)`](#fn-specgeneratorsmatrixgeneratorspullrequestgitlabwithpullrequeststate)
+            * [`obj spec.generators.matrix.generators.pullRequest.gitlab.caRef`](#obj-specgeneratorsmatrixgeneratorspullrequestgitlabcaref)
+              * [`fn withConfigMapName(configMapName)`](#fn-specgeneratorsmatrixgeneratorspullrequestgitlabcarefwithconfigmapname)
+              * [`fn withKey(key)`](#fn-specgeneratorsmatrixgeneratorspullrequestgitlabcarefwithkey)
             * [`obj spec.generators.matrix.generators.pullRequest.gitlab.tokenRef`](#obj-specgeneratorsmatrixgeneratorspullrequestgitlabtokenref)
               * [`fn withKey(key)`](#fn-specgeneratorsmatrixgeneratorspullrequestgitlabtokenrefwithkey)
               * [`fn withSecretName(secretName)`](#fn-specgeneratorsmatrixgeneratorspullrequestgitlabtokenrefwithsecretname)
@@ -2554,6 +2837,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecinfowithvalue)
               * [`obj spec.generators.matrix.generators.pullRequest.template.spec.source`](#obj-specgeneratorsmatrixgeneratorspullrequesttemplatespecsource)
                 * [`fn withChart(chart)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcewithchart)
+                * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcewithname)
                 * [`fn withPath(path)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcewithpath)
                 * [`fn withRef(ref)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcewithref)
                 * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcewithrepourl)
@@ -2578,14 +2862,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                       * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcedirectoryjsonnettlaswithname)
                       * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcedirectoryjsonnettlaswithvalue)
                 * [`obj spec.generators.matrix.generators.pullRequest.template.spec.source.helm`](#obj-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcehelm)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcehelmwithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcehelmwithapiversionsmixin)
                   * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcehelmwithfileparameters)
                   * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcehelmwithfileparametersmixin)
                   * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcehelmwithignoremissingvaluefiles)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcehelmwithkubeversion)
+                  * [`fn withNamespace(namespace)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcehelmwithnamespace)
                   * [`fn withParameters(parameters)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcehelmwithparameters)
                   * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcehelmwithparametersmixin)
                   * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcehelmwithpasscredentials)
                   * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcehelmwithreleasename)
                   * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcehelmwithskipcrds)
+                  * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcehelmwithskipschemavalidation)
+                  * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcehelmwithskiptests)
                   * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcehelmwithvaluefiles)
                   * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcehelmwithvaluefilesmixin)
                   * [`fn withValues(values)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcehelmwithvalues)
@@ -2600,6 +2890,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcehelmparameterswithname)
                     * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcehelmparameterswithvalue)
                 * [`obj spec.generators.matrix.generators.pullRequest.template.spec.source.kustomize`](#obj-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcekustomize)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcekustomizewithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcekustomizewithapiversionsmixin)
                   * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcekustomizewithcommonannotations)
                   * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcekustomizewithcommonannotationsenvsubst)
                   * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcekustomizewithcommonannotationsmixin)
@@ -2611,6 +2903,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcekustomizewithforcecommonlabels)
                   * [`fn withImages(images)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcekustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcekustomizewithimagesmixin)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcekustomizewithkubeversion)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcekustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcekustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcekustomizewithnamesuffix)
@@ -2652,8 +2945,19 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withMapMixin(map)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcepluginparameterswithmapmixin)
                     * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcepluginparameterswithname)
                     * [`fn withString(string)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcepluginparameterswithstring)
+              * [`obj spec.generators.matrix.generators.pullRequest.template.spec.sourceHydrator`](#obj-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcehydrator)
+                * [`obj spec.generators.matrix.generators.pullRequest.template.spec.sourceHydrator.drySource`](#obj-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcehydratordrysource)
+                  * [`fn withPath(path)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcehydratordrysourcewithpath)
+                  * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcehydratordrysourcewithrepourl)
+                  * [`fn withTargetRevision(targetRevision)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcehydratordrysourcewithtargetrevision)
+                * [`obj spec.generators.matrix.generators.pullRequest.template.spec.sourceHydrator.hydrateTo`](#obj-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcehydratorhydrateto)
+                  * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcehydratorhydratetowithtargetbranch)
+                * [`obj spec.generators.matrix.generators.pullRequest.template.spec.sourceHydrator.syncSource`](#obj-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcehydratorsyncsource)
+                  * [`fn withPath(path)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcehydratorsyncsourcewithpath)
+                  * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcehydratorsyncsourcewithtargetbranch)
               * [`obj spec.generators.matrix.generators.pullRequest.template.spec.sources`](#obj-specgeneratorsmatrixgeneratorspullrequesttemplatespecsources)
                 * [`fn withChart(chart)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceswithchart)
+                * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceswithname)
                 * [`fn withPath(path)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceswithpath)
                 * [`fn withRef(ref)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceswithref)
                 * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceswithrepourl)
@@ -2678,14 +2982,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                       * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcesdirectoryjsonnettlaswithname)
                       * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcesdirectoryjsonnettlaswithvalue)
                 * [`obj spec.generators.matrix.generators.pullRequest.template.spec.sources.helm`](#obj-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceshelm)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceshelmwithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceshelmwithapiversionsmixin)
                   * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceshelmwithfileparameters)
                   * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceshelmwithfileparametersmixin)
                   * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceshelmwithignoremissingvaluefiles)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceshelmwithkubeversion)
+                  * [`fn withNamespace(namespace)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceshelmwithnamespace)
                   * [`fn withParameters(parameters)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceshelmwithparameters)
                   * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceshelmwithparametersmixin)
                   * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceshelmwithpasscredentials)
                   * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceshelmwithreleasename)
                   * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceshelmwithskipcrds)
+                  * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceshelmwithskipschemavalidation)
+                  * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceshelmwithskiptests)
                   * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceshelmwithvaluefiles)
                   * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceshelmwithvaluefilesmixin)
                   * [`fn withValues(values)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceshelmwithvalues)
@@ -2700,6 +3010,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceshelmparameterswithname)
                     * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceshelmparameterswithvalue)
                 * [`obj spec.generators.matrix.generators.pullRequest.template.spec.sources.kustomize`](#obj-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceskustomize)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceskustomizewithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceskustomizewithapiversionsmixin)
                   * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceskustomizewithcommonannotations)
                   * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceskustomizewithcommonannotationsenvsubst)
                   * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceskustomizewithcommonannotationsmixin)
@@ -2711,6 +3023,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceskustomizewithforcecommonlabels)
                   * [`fn withImages(images)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceskustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceskustomizewithimagesmixin)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceskustomizewithkubeversion)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceskustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceskustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceskustomizewithnamesuffix)
@@ -2804,12 +3117,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
           * [`obj spec.generators.matrix.generators.scmProvider.bitbucketServer`](#obj-specgeneratorsmatrixgeneratorsscmproviderbitbucketserver)
             * [`fn withAllBranches(allBranches)`](#fn-specgeneratorsmatrixgeneratorsscmproviderbitbucketserverwithallbranches)
             * [`fn withApi(api)`](#fn-specgeneratorsmatrixgeneratorsscmproviderbitbucketserverwithapi)
+            * [`fn withInsecure(insecure)`](#fn-specgeneratorsmatrixgeneratorsscmproviderbitbucketserverwithinsecure)
             * [`fn withProject(project)`](#fn-specgeneratorsmatrixgeneratorsscmproviderbitbucketserverwithproject)
             * [`obj spec.generators.matrix.generators.scmProvider.bitbucketServer.basicAuth`](#obj-specgeneratorsmatrixgeneratorsscmproviderbitbucketserverbasicauth)
               * [`fn withUsername(username)`](#fn-specgeneratorsmatrixgeneratorsscmproviderbitbucketserverbasicauthwithusername)
               * [`obj spec.generators.matrix.generators.scmProvider.bitbucketServer.basicAuth.passwordRef`](#obj-specgeneratorsmatrixgeneratorsscmproviderbitbucketserverbasicauthpasswordref)
                 * [`fn withKey(key)`](#fn-specgeneratorsmatrixgeneratorsscmproviderbitbucketserverbasicauthpasswordrefwithkey)
                 * [`fn withSecretName(secretName)`](#fn-specgeneratorsmatrixgeneratorsscmproviderbitbucketserverbasicauthpasswordrefwithsecretname)
+            * [`obj spec.generators.matrix.generators.scmProvider.bitbucketServer.bearerToken`](#obj-specgeneratorsmatrixgeneratorsscmproviderbitbucketserverbearertoken)
+              * [`obj spec.generators.matrix.generators.scmProvider.bitbucketServer.bearerToken.tokenRef`](#obj-specgeneratorsmatrixgeneratorsscmproviderbitbucketserverbearertokentokenref)
+                * [`fn withKey(key)`](#fn-specgeneratorsmatrixgeneratorsscmproviderbitbucketserverbearertokentokenrefwithkey)
+                * [`fn withSecretName(secretName)`](#fn-specgeneratorsmatrixgeneratorsscmproviderbitbucketserverbearertokentokenrefwithsecretname)
+            * [`obj spec.generators.matrix.generators.scmProvider.bitbucketServer.caRef`](#obj-specgeneratorsmatrixgeneratorsscmproviderbitbucketservercaref)
+              * [`fn withConfigMapName(configMapName)`](#fn-specgeneratorsmatrixgeneratorsscmproviderbitbucketservercarefwithconfigmapname)
+              * [`fn withKey(key)`](#fn-specgeneratorsmatrixgeneratorsscmproviderbitbucketservercarefwithkey)
           * [`obj spec.generators.matrix.generators.scmProvider.filters`](#obj-specgeneratorsmatrixgeneratorsscmproviderfilters)
             * [`fn withBranchMatch(branchMatch)`](#fn-specgeneratorsmatrixgeneratorsscmproviderfilterswithbranchmatch)
             * [`fn withLabelMatch(labelMatch)`](#fn-specgeneratorsmatrixgeneratorsscmproviderfilterswithlabelmatch)
@@ -2842,6 +3163,9 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
             * [`fn withIncludeSubgroups(includeSubgroups)`](#fn-specgeneratorsmatrixgeneratorsscmprovidergitlabwithincludesubgroups)
             * [`fn withInsecure(insecure)`](#fn-specgeneratorsmatrixgeneratorsscmprovidergitlabwithinsecure)
             * [`fn withTopic(topic)`](#fn-specgeneratorsmatrixgeneratorsscmprovidergitlabwithtopic)
+            * [`obj spec.generators.matrix.generators.scmProvider.gitlab.caRef`](#obj-specgeneratorsmatrixgeneratorsscmprovidergitlabcaref)
+              * [`fn withConfigMapName(configMapName)`](#fn-specgeneratorsmatrixgeneratorsscmprovidergitlabcarefwithconfigmapname)
+              * [`fn withKey(key)`](#fn-specgeneratorsmatrixgeneratorsscmprovidergitlabcarefwithkey)
             * [`obj spec.generators.matrix.generators.scmProvider.gitlab.tokenRef`](#obj-specgeneratorsmatrixgeneratorsscmprovidergitlabtokenref)
               * [`fn withKey(key)`](#fn-specgeneratorsmatrixgeneratorsscmprovidergitlabtokenrefwithkey)
               * [`fn withSecretName(secretName)`](#fn-specgeneratorsmatrixgeneratorsscmprovidergitlabtokenrefwithsecretname)
@@ -2884,6 +3208,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecinfowithvalue)
               * [`obj spec.generators.matrix.generators.scmProvider.template.spec.source`](#obj-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsource)
                 * [`fn withChart(chart)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcewithchart)
+                * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcewithname)
                 * [`fn withPath(path)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcewithpath)
                 * [`fn withRef(ref)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcewithref)
                 * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcewithrepourl)
@@ -2908,14 +3233,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                       * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcedirectoryjsonnettlaswithname)
                       * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcedirectoryjsonnettlaswithvalue)
                 * [`obj spec.generators.matrix.generators.scmProvider.template.spec.source.helm`](#obj-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcehelm)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcehelmwithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcehelmwithapiversionsmixin)
                   * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcehelmwithfileparameters)
                   * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcehelmwithfileparametersmixin)
                   * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcehelmwithignoremissingvaluefiles)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcehelmwithkubeversion)
+                  * [`fn withNamespace(namespace)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcehelmwithnamespace)
                   * [`fn withParameters(parameters)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcehelmwithparameters)
                   * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcehelmwithparametersmixin)
                   * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcehelmwithpasscredentials)
                   * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcehelmwithreleasename)
                   * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcehelmwithskipcrds)
+                  * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcehelmwithskipschemavalidation)
+                  * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcehelmwithskiptests)
                   * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcehelmwithvaluefiles)
                   * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcehelmwithvaluefilesmixin)
                   * [`fn withValues(values)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcehelmwithvalues)
@@ -2930,6 +3261,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcehelmparameterswithname)
                     * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcehelmparameterswithvalue)
                 * [`obj spec.generators.matrix.generators.scmProvider.template.spec.source.kustomize`](#obj-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcekustomize)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcekustomizewithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcekustomizewithapiversionsmixin)
                   * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcekustomizewithcommonannotations)
                   * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcekustomizewithcommonannotationsenvsubst)
                   * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcekustomizewithcommonannotationsmixin)
@@ -2941,6 +3274,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcekustomizewithforcecommonlabels)
                   * [`fn withImages(images)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcekustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcekustomizewithimagesmixin)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcekustomizewithkubeversion)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcekustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcekustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcekustomizewithnamesuffix)
@@ -2982,8 +3316,19 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withMapMixin(map)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcepluginparameterswithmapmixin)
                     * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcepluginparameterswithname)
                     * [`fn withString(string)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcepluginparameterswithstring)
+              * [`obj spec.generators.matrix.generators.scmProvider.template.spec.sourceHydrator`](#obj-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcehydrator)
+                * [`obj spec.generators.matrix.generators.scmProvider.template.spec.sourceHydrator.drySource`](#obj-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcehydratordrysource)
+                  * [`fn withPath(path)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcehydratordrysourcewithpath)
+                  * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcehydratordrysourcewithrepourl)
+                  * [`fn withTargetRevision(targetRevision)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcehydratordrysourcewithtargetrevision)
+                * [`obj spec.generators.matrix.generators.scmProvider.template.spec.sourceHydrator.hydrateTo`](#obj-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcehydratorhydrateto)
+                  * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcehydratorhydratetowithtargetbranch)
+                * [`obj spec.generators.matrix.generators.scmProvider.template.spec.sourceHydrator.syncSource`](#obj-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcehydratorsyncsource)
+                  * [`fn withPath(path)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcehydratorsyncsourcewithpath)
+                  * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcehydratorsyncsourcewithtargetbranch)
               * [`obj spec.generators.matrix.generators.scmProvider.template.spec.sources`](#obj-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsources)
                 * [`fn withChart(chart)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceswithchart)
+                * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceswithname)
                 * [`fn withPath(path)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceswithpath)
                 * [`fn withRef(ref)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceswithref)
                 * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceswithrepourl)
@@ -3008,14 +3353,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                       * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcesdirectoryjsonnettlaswithname)
                       * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcesdirectoryjsonnettlaswithvalue)
                 * [`obj spec.generators.matrix.generators.scmProvider.template.spec.sources.helm`](#obj-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceshelm)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceshelmwithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceshelmwithapiversionsmixin)
                   * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceshelmwithfileparameters)
                   * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceshelmwithfileparametersmixin)
                   * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceshelmwithignoremissingvaluefiles)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceshelmwithkubeversion)
+                  * [`fn withNamespace(namespace)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceshelmwithnamespace)
                   * [`fn withParameters(parameters)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceshelmwithparameters)
                   * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceshelmwithparametersmixin)
                   * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceshelmwithpasscredentials)
                   * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceshelmwithreleasename)
                   * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceshelmwithskipcrds)
+                  * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceshelmwithskipschemavalidation)
+                  * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceshelmwithskiptests)
                   * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceshelmwithvaluefiles)
                   * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceshelmwithvaluefilesmixin)
                   * [`fn withValues(values)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceshelmwithvalues)
@@ -3030,6 +3381,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withName(name)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceshelmparameterswithname)
                     * [`fn withValue(value)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceshelmparameterswithvalue)
                 * [`obj spec.generators.matrix.generators.scmProvider.template.spec.sources.kustomize`](#obj-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceskustomize)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceskustomizewithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceskustomizewithapiversionsmixin)
                   * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceskustomizewithcommonannotations)
                   * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceskustomizewithcommonannotationsenvsubst)
                   * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceskustomizewithcommonannotationsmixin)
@@ -3041,6 +3394,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceskustomizewithforcecommonlabels)
                   * [`fn withImages(images)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceskustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceskustomizewithimagesmixin)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceskustomizewithkubeversion)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceskustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceskustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceskustomizewithnamesuffix)
@@ -3149,6 +3503,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
             * [`fn withValue(value)`](#fn-specgeneratorsmatrixtemplatespecinfowithvalue)
           * [`obj spec.generators.matrix.template.spec.source`](#obj-specgeneratorsmatrixtemplatespecsource)
             * [`fn withChart(chart)`](#fn-specgeneratorsmatrixtemplatespecsourcewithchart)
+            * [`fn withName(name)`](#fn-specgeneratorsmatrixtemplatespecsourcewithname)
             * [`fn withPath(path)`](#fn-specgeneratorsmatrixtemplatespecsourcewithpath)
             * [`fn withRef(ref)`](#fn-specgeneratorsmatrixtemplatespecsourcewithref)
             * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmatrixtemplatespecsourcewithrepourl)
@@ -3173,14 +3528,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withName(name)`](#fn-specgeneratorsmatrixtemplatespecsourcedirectoryjsonnettlaswithname)
                   * [`fn withValue(value)`](#fn-specgeneratorsmatrixtemplatespecsourcedirectoryjsonnettlaswithvalue)
             * [`obj spec.generators.matrix.template.spec.source.helm`](#obj-specgeneratorsmatrixtemplatespecsourcehelm)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmatrixtemplatespecsourcehelmwithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmatrixtemplatespecsourcehelmwithapiversionsmixin)
               * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsmatrixtemplatespecsourcehelmwithfileparameters)
               * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsmatrixtemplatespecsourcehelmwithfileparametersmixin)
               * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsmatrixtemplatespecsourcehelmwithignoremissingvaluefiles)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixtemplatespecsourcehelmwithkubeversion)
+              * [`fn withNamespace(namespace)`](#fn-specgeneratorsmatrixtemplatespecsourcehelmwithnamespace)
               * [`fn withParameters(parameters)`](#fn-specgeneratorsmatrixtemplatespecsourcehelmwithparameters)
               * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsmatrixtemplatespecsourcehelmwithparametersmixin)
               * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsmatrixtemplatespecsourcehelmwithpasscredentials)
               * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsmatrixtemplatespecsourcehelmwithreleasename)
               * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsmatrixtemplatespecsourcehelmwithskipcrds)
+              * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsmatrixtemplatespecsourcehelmwithskipschemavalidation)
+              * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsmatrixtemplatespecsourcehelmwithskiptests)
               * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsmatrixtemplatespecsourcehelmwithvaluefiles)
               * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsmatrixtemplatespecsourcehelmwithvaluefilesmixin)
               * [`fn withValues(values)`](#fn-specgeneratorsmatrixtemplatespecsourcehelmwithvalues)
@@ -3195,6 +3556,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withName(name)`](#fn-specgeneratorsmatrixtemplatespecsourcehelmparameterswithname)
                 * [`fn withValue(value)`](#fn-specgeneratorsmatrixtemplatespecsourcehelmparameterswithvalue)
             * [`obj spec.generators.matrix.template.spec.source.kustomize`](#obj-specgeneratorsmatrixtemplatespecsourcekustomize)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmatrixtemplatespecsourcekustomizewithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmatrixtemplatespecsourcekustomizewithapiversionsmixin)
               * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsmatrixtemplatespecsourcekustomizewithcommonannotations)
               * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsmatrixtemplatespecsourcekustomizewithcommonannotationsenvsubst)
               * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsmatrixtemplatespecsourcekustomizewithcommonannotationsmixin)
@@ -3206,6 +3569,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmatrixtemplatespecsourcekustomizewithforcecommonlabels)
               * [`fn withImages(images)`](#fn-specgeneratorsmatrixtemplatespecsourcekustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorsmatrixtemplatespecsourcekustomizewithimagesmixin)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixtemplatespecsourcekustomizewithkubeversion)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmatrixtemplatespecsourcekustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmatrixtemplatespecsourcekustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmatrixtemplatespecsourcekustomizewithnamesuffix)
@@ -3247,8 +3611,19 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withMapMixin(map)`](#fn-specgeneratorsmatrixtemplatespecsourcepluginparameterswithmapmixin)
                 * [`fn withName(name)`](#fn-specgeneratorsmatrixtemplatespecsourcepluginparameterswithname)
                 * [`fn withString(string)`](#fn-specgeneratorsmatrixtemplatespecsourcepluginparameterswithstring)
+          * [`obj spec.generators.matrix.template.spec.sourceHydrator`](#obj-specgeneratorsmatrixtemplatespecsourcehydrator)
+            * [`obj spec.generators.matrix.template.spec.sourceHydrator.drySource`](#obj-specgeneratorsmatrixtemplatespecsourcehydratordrysource)
+              * [`fn withPath(path)`](#fn-specgeneratorsmatrixtemplatespecsourcehydratordrysourcewithpath)
+              * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmatrixtemplatespecsourcehydratordrysourcewithrepourl)
+              * [`fn withTargetRevision(targetRevision)`](#fn-specgeneratorsmatrixtemplatespecsourcehydratordrysourcewithtargetrevision)
+            * [`obj spec.generators.matrix.template.spec.sourceHydrator.hydrateTo`](#obj-specgeneratorsmatrixtemplatespecsourcehydratorhydrateto)
+              * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsmatrixtemplatespecsourcehydratorhydratetowithtargetbranch)
+            * [`obj spec.generators.matrix.template.spec.sourceHydrator.syncSource`](#obj-specgeneratorsmatrixtemplatespecsourcehydratorsyncsource)
+              * [`fn withPath(path)`](#fn-specgeneratorsmatrixtemplatespecsourcehydratorsyncsourcewithpath)
+              * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsmatrixtemplatespecsourcehydratorsyncsourcewithtargetbranch)
           * [`obj spec.generators.matrix.template.spec.sources`](#obj-specgeneratorsmatrixtemplatespecsources)
             * [`fn withChart(chart)`](#fn-specgeneratorsmatrixtemplatespecsourceswithchart)
+            * [`fn withName(name)`](#fn-specgeneratorsmatrixtemplatespecsourceswithname)
             * [`fn withPath(path)`](#fn-specgeneratorsmatrixtemplatespecsourceswithpath)
             * [`fn withRef(ref)`](#fn-specgeneratorsmatrixtemplatespecsourceswithref)
             * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmatrixtemplatespecsourceswithrepourl)
@@ -3273,14 +3648,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withName(name)`](#fn-specgeneratorsmatrixtemplatespecsourcesdirectoryjsonnettlaswithname)
                   * [`fn withValue(value)`](#fn-specgeneratorsmatrixtemplatespecsourcesdirectoryjsonnettlaswithvalue)
             * [`obj spec.generators.matrix.template.spec.sources.helm`](#obj-specgeneratorsmatrixtemplatespecsourceshelm)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmatrixtemplatespecsourceshelmwithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmatrixtemplatespecsourceshelmwithapiversionsmixin)
               * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsmatrixtemplatespecsourceshelmwithfileparameters)
               * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsmatrixtemplatespecsourceshelmwithfileparametersmixin)
               * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsmatrixtemplatespecsourceshelmwithignoremissingvaluefiles)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixtemplatespecsourceshelmwithkubeversion)
+              * [`fn withNamespace(namespace)`](#fn-specgeneratorsmatrixtemplatespecsourceshelmwithnamespace)
               * [`fn withParameters(parameters)`](#fn-specgeneratorsmatrixtemplatespecsourceshelmwithparameters)
               * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsmatrixtemplatespecsourceshelmwithparametersmixin)
               * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsmatrixtemplatespecsourceshelmwithpasscredentials)
               * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsmatrixtemplatespecsourceshelmwithreleasename)
               * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsmatrixtemplatespecsourceshelmwithskipcrds)
+              * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsmatrixtemplatespecsourceshelmwithskipschemavalidation)
+              * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsmatrixtemplatespecsourceshelmwithskiptests)
               * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsmatrixtemplatespecsourceshelmwithvaluefiles)
               * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsmatrixtemplatespecsourceshelmwithvaluefilesmixin)
               * [`fn withValues(values)`](#fn-specgeneratorsmatrixtemplatespecsourceshelmwithvalues)
@@ -3295,6 +3676,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withName(name)`](#fn-specgeneratorsmatrixtemplatespecsourceshelmparameterswithname)
                 * [`fn withValue(value)`](#fn-specgeneratorsmatrixtemplatespecsourceshelmparameterswithvalue)
             * [`obj spec.generators.matrix.template.spec.sources.kustomize`](#obj-specgeneratorsmatrixtemplatespecsourceskustomize)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmatrixtemplatespecsourceskustomizewithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmatrixtemplatespecsourceskustomizewithapiversionsmixin)
               * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsmatrixtemplatespecsourceskustomizewithcommonannotations)
               * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsmatrixtemplatespecsourceskustomizewithcommonannotationsenvsubst)
               * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsmatrixtemplatespecsourceskustomizewithcommonannotationsmixin)
@@ -3306,6 +3689,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmatrixtemplatespecsourceskustomizewithforcecommonlabels)
               * [`fn withImages(images)`](#fn-specgeneratorsmatrixtemplatespecsourceskustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorsmatrixtemplatespecsourceskustomizewithimagesmixin)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixtemplatespecsourceskustomizewithkubeversion)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmatrixtemplatespecsourceskustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmatrixtemplatespecsourceskustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmatrixtemplatespecsourceskustomizewithnamesuffix)
@@ -3428,6 +3812,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecinfowithvalue)
               * [`obj spec.generators.merge.generators.clusterDecisionResource.template.spec.source`](#obj-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsource)
                 * [`fn withChart(chart)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcewithchart)
+                * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcewithname)
                 * [`fn withPath(path)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcewithpath)
                 * [`fn withRef(ref)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcewithref)
                 * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcewithrepourl)
@@ -3452,14 +3837,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                       * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcedirectoryjsonnettlaswithname)
                       * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcedirectoryjsonnettlaswithvalue)
                 * [`obj spec.generators.merge.generators.clusterDecisionResource.template.spec.source.helm`](#obj-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcehelm)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcehelmwithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcehelmwithapiversionsmixin)
                   * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcehelmwithfileparameters)
                   * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcehelmwithfileparametersmixin)
                   * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcehelmwithignoremissingvaluefiles)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcehelmwithkubeversion)
+                  * [`fn withNamespace(namespace)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcehelmwithnamespace)
                   * [`fn withParameters(parameters)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcehelmwithparameters)
                   * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcehelmwithparametersmixin)
                   * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcehelmwithpasscredentials)
                   * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcehelmwithreleasename)
                   * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcehelmwithskipcrds)
+                  * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcehelmwithskipschemavalidation)
+                  * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcehelmwithskiptests)
                   * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcehelmwithvaluefiles)
                   * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcehelmwithvaluefilesmixin)
                   * [`fn withValues(values)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcehelmwithvalues)
@@ -3474,6 +3865,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcehelmparameterswithname)
                     * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcehelmparameterswithvalue)
                 * [`obj spec.generators.merge.generators.clusterDecisionResource.template.spec.source.kustomize`](#obj-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcekustomize)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithapiversionsmixin)
                   * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithcommonannotations)
                   * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithcommonannotationsenvsubst)
                   * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithcommonannotationsmixin)
@@ -3485,6 +3878,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithforcecommonlabels)
                   * [`fn withImages(images)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithimagesmixin)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithkubeversion)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithnamesuffix)
@@ -3526,8 +3920,19 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withMapMixin(map)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcepluginparameterswithmapmixin)
                     * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcepluginparameterswithname)
                     * [`fn withString(string)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcepluginparameterswithstring)
+              * [`obj spec.generators.merge.generators.clusterDecisionResource.template.spec.sourceHydrator`](#obj-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcehydrator)
+                * [`obj spec.generators.merge.generators.clusterDecisionResource.template.spec.sourceHydrator.drySource`](#obj-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcehydratordrysource)
+                  * [`fn withPath(path)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcehydratordrysourcewithpath)
+                  * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcehydratordrysourcewithrepourl)
+                  * [`fn withTargetRevision(targetRevision)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcehydratordrysourcewithtargetrevision)
+                * [`obj spec.generators.merge.generators.clusterDecisionResource.template.spec.sourceHydrator.hydrateTo`](#obj-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcehydratorhydrateto)
+                  * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcehydratorhydratetowithtargetbranch)
+                * [`obj spec.generators.merge.generators.clusterDecisionResource.template.spec.sourceHydrator.syncSource`](#obj-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcehydratorsyncsource)
+                  * [`fn withPath(path)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcehydratorsyncsourcewithpath)
+                  * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcehydratorsyncsourcewithtargetbranch)
               * [`obj spec.generators.merge.generators.clusterDecisionResource.template.spec.sources`](#obj-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsources)
                 * [`fn withChart(chart)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceswithchart)
+                * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceswithname)
                 * [`fn withPath(path)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceswithpath)
                 * [`fn withRef(ref)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceswithref)
                 * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceswithrepourl)
@@ -3552,14 +3957,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                       * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcesdirectoryjsonnettlaswithname)
                       * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcesdirectoryjsonnettlaswithvalue)
                 * [`obj spec.generators.merge.generators.clusterDecisionResource.template.spec.sources.helm`](#obj-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceshelm)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceshelmwithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceshelmwithapiversionsmixin)
                   * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceshelmwithfileparameters)
                   * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceshelmwithfileparametersmixin)
                   * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceshelmwithignoremissingvaluefiles)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceshelmwithkubeversion)
+                  * [`fn withNamespace(namespace)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceshelmwithnamespace)
                   * [`fn withParameters(parameters)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceshelmwithparameters)
                   * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceshelmwithparametersmixin)
                   * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceshelmwithpasscredentials)
                   * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceshelmwithreleasename)
                   * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceshelmwithskipcrds)
+                  * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceshelmwithskipschemavalidation)
+                  * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceshelmwithskiptests)
                   * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceshelmwithvaluefiles)
                   * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceshelmwithvaluefilesmixin)
                   * [`fn withValues(values)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceshelmwithvalues)
@@ -3574,6 +3985,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceshelmparameterswithname)
                     * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceshelmparameterswithvalue)
                 * [`obj spec.generators.merge.generators.clusterDecisionResource.template.spec.sources.kustomize`](#obj-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceskustomize)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithapiversionsmixin)
                   * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithcommonannotations)
                   * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithcommonannotationsenvsubst)
                   * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithcommonannotationsmixin)
@@ -3585,6 +3998,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithforcecommonlabels)
                   * [`fn withImages(images)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithimagesmixin)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithkubeversion)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithnamesuffix)
@@ -3645,6 +4059,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withFactor(factor)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsyncpolicyretrybackoffwithfactor)
                     * [`fn withMaxDuration(maxDuration)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsyncpolicyretrybackoffwithmaxduration)
         * [`obj spec.generators.merge.generators.clusters`](#obj-specgeneratorsmergegeneratorsclusters)
+          * [`fn withFlatList(flatList)`](#fn-specgeneratorsmergegeneratorsclusterswithflatlist)
           * [`fn withValues(values)`](#fn-specgeneratorsmergegeneratorsclusterswithvalues)
           * [`fn withValuesMixin(values)`](#fn-specgeneratorsmergegeneratorsclusterswithvaluesmixin)
           * [`obj spec.generators.merge.generators.clusters.selector`](#obj-specgeneratorsmergegeneratorsclustersselector)
@@ -3696,6 +4111,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecinfowithvalue)
               * [`obj spec.generators.merge.generators.clusters.template.spec.source`](#obj-specgeneratorsmergegeneratorsclusterstemplatespecsource)
                 * [`fn withChart(chart)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcewithchart)
+                * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcewithname)
                 * [`fn withPath(path)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcewithpath)
                 * [`fn withRef(ref)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcewithref)
                 * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcewithrepourl)
@@ -3720,14 +4136,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                       * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcedirectoryjsonnettlaswithname)
                       * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcedirectoryjsonnettlaswithvalue)
                 * [`obj spec.generators.merge.generators.clusters.template.spec.source.helm`](#obj-specgeneratorsmergegeneratorsclusterstemplatespecsourcehelm)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcehelmwithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcehelmwithapiversionsmixin)
                   * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcehelmwithfileparameters)
                   * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcehelmwithfileparametersmixin)
                   * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcehelmwithignoremissingvaluefiles)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcehelmwithkubeversion)
+                  * [`fn withNamespace(namespace)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcehelmwithnamespace)
                   * [`fn withParameters(parameters)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcehelmwithparameters)
                   * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcehelmwithparametersmixin)
                   * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcehelmwithpasscredentials)
                   * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcehelmwithreleasename)
                   * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcehelmwithskipcrds)
+                  * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcehelmwithskipschemavalidation)
+                  * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcehelmwithskiptests)
                   * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcehelmwithvaluefiles)
                   * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcehelmwithvaluefilesmixin)
                   * [`fn withValues(values)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcehelmwithvalues)
@@ -3742,6 +4164,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcehelmparameterswithname)
                     * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcehelmparameterswithvalue)
                 * [`obj spec.generators.merge.generators.clusters.template.spec.source.kustomize`](#obj-specgeneratorsmergegeneratorsclusterstemplatespecsourcekustomize)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcekustomizewithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcekustomizewithapiversionsmixin)
                   * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcekustomizewithcommonannotations)
                   * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcekustomizewithcommonannotationsenvsubst)
                   * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcekustomizewithcommonannotationsmixin)
@@ -3753,6 +4177,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcekustomizewithforcecommonlabels)
                   * [`fn withImages(images)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcekustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcekustomizewithimagesmixin)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcekustomizewithkubeversion)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcekustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcekustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcekustomizewithnamesuffix)
@@ -3794,8 +4219,19 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withMapMixin(map)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcepluginparameterswithmapmixin)
                     * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcepluginparameterswithname)
                     * [`fn withString(string)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcepluginparameterswithstring)
+              * [`obj spec.generators.merge.generators.clusters.template.spec.sourceHydrator`](#obj-specgeneratorsmergegeneratorsclusterstemplatespecsourcehydrator)
+                * [`obj spec.generators.merge.generators.clusters.template.spec.sourceHydrator.drySource`](#obj-specgeneratorsmergegeneratorsclusterstemplatespecsourcehydratordrysource)
+                  * [`fn withPath(path)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcehydratordrysourcewithpath)
+                  * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcehydratordrysourcewithrepourl)
+                  * [`fn withTargetRevision(targetRevision)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcehydratordrysourcewithtargetrevision)
+                * [`obj spec.generators.merge.generators.clusters.template.spec.sourceHydrator.hydrateTo`](#obj-specgeneratorsmergegeneratorsclusterstemplatespecsourcehydratorhydrateto)
+                  * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcehydratorhydratetowithtargetbranch)
+                * [`obj spec.generators.merge.generators.clusters.template.spec.sourceHydrator.syncSource`](#obj-specgeneratorsmergegeneratorsclusterstemplatespecsourcehydratorsyncsource)
+                  * [`fn withPath(path)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcehydratorsyncsourcewithpath)
+                  * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcehydratorsyncsourcewithtargetbranch)
               * [`obj spec.generators.merge.generators.clusters.template.spec.sources`](#obj-specgeneratorsmergegeneratorsclusterstemplatespecsources)
                 * [`fn withChart(chart)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceswithchart)
+                * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceswithname)
                 * [`fn withPath(path)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceswithpath)
                 * [`fn withRef(ref)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceswithref)
                 * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceswithrepourl)
@@ -3820,14 +4256,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                       * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcesdirectoryjsonnettlaswithname)
                       * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcesdirectoryjsonnettlaswithvalue)
                 * [`obj spec.generators.merge.generators.clusters.template.spec.sources.helm`](#obj-specgeneratorsmergegeneratorsclusterstemplatespecsourceshelm)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceshelmwithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceshelmwithapiversionsmixin)
                   * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceshelmwithfileparameters)
                   * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceshelmwithfileparametersmixin)
                   * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceshelmwithignoremissingvaluefiles)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceshelmwithkubeversion)
+                  * [`fn withNamespace(namespace)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceshelmwithnamespace)
                   * [`fn withParameters(parameters)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceshelmwithparameters)
                   * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceshelmwithparametersmixin)
                   * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceshelmwithpasscredentials)
                   * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceshelmwithreleasename)
                   * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceshelmwithskipcrds)
+                  * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceshelmwithskipschemavalidation)
+                  * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceshelmwithskiptests)
                   * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceshelmwithvaluefiles)
                   * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceshelmwithvaluefilesmixin)
                   * [`fn withValues(values)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceshelmwithvalues)
@@ -3842,6 +4284,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceshelmparameterswithname)
                     * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceshelmparameterswithvalue)
                 * [`obj spec.generators.merge.generators.clusters.template.spec.sources.kustomize`](#obj-specgeneratorsmergegeneratorsclusterstemplatespecsourceskustomize)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceskustomizewithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceskustomizewithapiversionsmixin)
                   * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceskustomizewithcommonannotations)
                   * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceskustomizewithcommonannotationsenvsubst)
                   * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceskustomizewithcommonannotationsmixin)
@@ -3853,6 +4297,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceskustomizewithforcecommonlabels)
                   * [`fn withImages(images)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceskustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceskustomizewithimagesmixin)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceskustomizewithkubeversion)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceskustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceskustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceskustomizewithnamesuffix)
@@ -3967,6 +4412,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorsgittemplatespecinfowithvalue)
               * [`obj spec.generators.merge.generators.git.template.spec.source`](#obj-specgeneratorsmergegeneratorsgittemplatespecsource)
                 * [`fn withChart(chart)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcewithchart)
+                * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcewithname)
                 * [`fn withPath(path)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcewithpath)
                 * [`fn withRef(ref)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcewithref)
                 * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcewithrepourl)
@@ -3991,14 +4437,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                       * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcedirectoryjsonnettlaswithname)
                       * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcedirectoryjsonnettlaswithvalue)
                 * [`obj spec.generators.merge.generators.git.template.spec.source.helm`](#obj-specgeneratorsmergegeneratorsgittemplatespecsourcehelm)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcehelmwithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcehelmwithapiversionsmixin)
                   * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcehelmwithfileparameters)
                   * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcehelmwithfileparametersmixin)
                   * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcehelmwithignoremissingvaluefiles)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcehelmwithkubeversion)
+                  * [`fn withNamespace(namespace)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcehelmwithnamespace)
                   * [`fn withParameters(parameters)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcehelmwithparameters)
                   * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcehelmwithparametersmixin)
                   * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcehelmwithpasscredentials)
                   * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcehelmwithreleasename)
                   * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcehelmwithskipcrds)
+                  * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcehelmwithskipschemavalidation)
+                  * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcehelmwithskiptests)
                   * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcehelmwithvaluefiles)
                   * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcehelmwithvaluefilesmixin)
                   * [`fn withValues(values)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcehelmwithvalues)
@@ -4013,6 +4465,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcehelmparameterswithname)
                     * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcehelmparameterswithvalue)
                 * [`obj spec.generators.merge.generators.git.template.spec.source.kustomize`](#obj-specgeneratorsmergegeneratorsgittemplatespecsourcekustomize)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcekustomizewithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcekustomizewithapiversionsmixin)
                   * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcekustomizewithcommonannotations)
                   * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcekustomizewithcommonannotationsenvsubst)
                   * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcekustomizewithcommonannotationsmixin)
@@ -4024,6 +4478,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcekustomizewithforcecommonlabels)
                   * [`fn withImages(images)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcekustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcekustomizewithimagesmixin)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcekustomizewithkubeversion)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcekustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcekustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcekustomizewithnamesuffix)
@@ -4065,8 +4520,19 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withMapMixin(map)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcepluginparameterswithmapmixin)
                     * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcepluginparameterswithname)
                     * [`fn withString(string)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcepluginparameterswithstring)
+              * [`obj spec.generators.merge.generators.git.template.spec.sourceHydrator`](#obj-specgeneratorsmergegeneratorsgittemplatespecsourcehydrator)
+                * [`obj spec.generators.merge.generators.git.template.spec.sourceHydrator.drySource`](#obj-specgeneratorsmergegeneratorsgittemplatespecsourcehydratordrysource)
+                  * [`fn withPath(path)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcehydratordrysourcewithpath)
+                  * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcehydratordrysourcewithrepourl)
+                  * [`fn withTargetRevision(targetRevision)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcehydratordrysourcewithtargetrevision)
+                * [`obj spec.generators.merge.generators.git.template.spec.sourceHydrator.hydrateTo`](#obj-specgeneratorsmergegeneratorsgittemplatespecsourcehydratorhydrateto)
+                  * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcehydratorhydratetowithtargetbranch)
+                * [`obj spec.generators.merge.generators.git.template.spec.sourceHydrator.syncSource`](#obj-specgeneratorsmergegeneratorsgittemplatespecsourcehydratorsyncsource)
+                  * [`fn withPath(path)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcehydratorsyncsourcewithpath)
+                  * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcehydratorsyncsourcewithtargetbranch)
               * [`obj spec.generators.merge.generators.git.template.spec.sources`](#obj-specgeneratorsmergegeneratorsgittemplatespecsources)
                 * [`fn withChart(chart)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceswithchart)
+                * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceswithname)
                 * [`fn withPath(path)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceswithpath)
                 * [`fn withRef(ref)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceswithref)
                 * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceswithrepourl)
@@ -4091,14 +4557,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                       * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcesdirectoryjsonnettlaswithname)
                       * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcesdirectoryjsonnettlaswithvalue)
                 * [`obj spec.generators.merge.generators.git.template.spec.sources.helm`](#obj-specgeneratorsmergegeneratorsgittemplatespecsourceshelm)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceshelmwithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceshelmwithapiversionsmixin)
                   * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceshelmwithfileparameters)
                   * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceshelmwithfileparametersmixin)
                   * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceshelmwithignoremissingvaluefiles)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceshelmwithkubeversion)
+                  * [`fn withNamespace(namespace)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceshelmwithnamespace)
                   * [`fn withParameters(parameters)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceshelmwithparameters)
                   * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceshelmwithparametersmixin)
                   * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceshelmwithpasscredentials)
                   * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceshelmwithreleasename)
                   * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceshelmwithskipcrds)
+                  * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceshelmwithskipschemavalidation)
+                  * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceshelmwithskiptests)
                   * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceshelmwithvaluefiles)
                   * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceshelmwithvaluefilesmixin)
                   * [`fn withValues(values)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceshelmwithvalues)
@@ -4113,6 +4585,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceshelmparameterswithname)
                     * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceshelmparameterswithvalue)
                 * [`obj spec.generators.merge.generators.git.template.spec.sources.kustomize`](#obj-specgeneratorsmergegeneratorsgittemplatespecsourceskustomize)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceskustomizewithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceskustomizewithapiversionsmixin)
                   * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceskustomizewithcommonannotations)
                   * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceskustomizewithcommonannotationsenvsubst)
                   * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceskustomizewithcommonannotationsmixin)
@@ -4124,6 +4598,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceskustomizewithforcecommonlabels)
                   * [`fn withImages(images)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceskustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceskustomizewithimagesmixin)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceskustomizewithkubeversion)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceskustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceskustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceskustomizewithnamesuffix)
@@ -4226,6 +4701,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorslisttemplatespecinfowithvalue)
               * [`obj spec.generators.merge.generators.list.template.spec.source`](#obj-specgeneratorsmergegeneratorslisttemplatespecsource)
                 * [`fn withChart(chart)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcewithchart)
+                * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcewithname)
                 * [`fn withPath(path)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcewithpath)
                 * [`fn withRef(ref)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcewithref)
                 * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcewithrepourl)
@@ -4250,14 +4726,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                       * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcedirectoryjsonnettlaswithname)
                       * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcedirectoryjsonnettlaswithvalue)
                 * [`obj spec.generators.merge.generators.list.template.spec.source.helm`](#obj-specgeneratorsmergegeneratorslisttemplatespecsourcehelm)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcehelmwithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcehelmwithapiversionsmixin)
                   * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcehelmwithfileparameters)
                   * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcehelmwithfileparametersmixin)
                   * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcehelmwithignoremissingvaluefiles)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcehelmwithkubeversion)
+                  * [`fn withNamespace(namespace)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcehelmwithnamespace)
                   * [`fn withParameters(parameters)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcehelmwithparameters)
                   * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcehelmwithparametersmixin)
                   * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcehelmwithpasscredentials)
                   * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcehelmwithreleasename)
                   * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcehelmwithskipcrds)
+                  * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcehelmwithskipschemavalidation)
+                  * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcehelmwithskiptests)
                   * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcehelmwithvaluefiles)
                   * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcehelmwithvaluefilesmixin)
                   * [`fn withValues(values)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcehelmwithvalues)
@@ -4272,6 +4754,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcehelmparameterswithname)
                     * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcehelmparameterswithvalue)
                 * [`obj spec.generators.merge.generators.list.template.spec.source.kustomize`](#obj-specgeneratorsmergegeneratorslisttemplatespecsourcekustomize)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcekustomizewithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcekustomizewithapiversionsmixin)
                   * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcekustomizewithcommonannotations)
                   * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcekustomizewithcommonannotationsenvsubst)
                   * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcekustomizewithcommonannotationsmixin)
@@ -4283,6 +4767,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcekustomizewithforcecommonlabels)
                   * [`fn withImages(images)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcekustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcekustomizewithimagesmixin)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcekustomizewithkubeversion)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcekustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcekustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcekustomizewithnamesuffix)
@@ -4324,8 +4809,19 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withMapMixin(map)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcepluginparameterswithmapmixin)
                     * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcepluginparameterswithname)
                     * [`fn withString(string)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcepluginparameterswithstring)
+              * [`obj spec.generators.merge.generators.list.template.spec.sourceHydrator`](#obj-specgeneratorsmergegeneratorslisttemplatespecsourcehydrator)
+                * [`obj spec.generators.merge.generators.list.template.spec.sourceHydrator.drySource`](#obj-specgeneratorsmergegeneratorslisttemplatespecsourcehydratordrysource)
+                  * [`fn withPath(path)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcehydratordrysourcewithpath)
+                  * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcehydratordrysourcewithrepourl)
+                  * [`fn withTargetRevision(targetRevision)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcehydratordrysourcewithtargetrevision)
+                * [`obj spec.generators.merge.generators.list.template.spec.sourceHydrator.hydrateTo`](#obj-specgeneratorsmergegeneratorslisttemplatespecsourcehydratorhydrateto)
+                  * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcehydratorhydratetowithtargetbranch)
+                * [`obj spec.generators.merge.generators.list.template.spec.sourceHydrator.syncSource`](#obj-specgeneratorsmergegeneratorslisttemplatespecsourcehydratorsyncsource)
+                  * [`fn withPath(path)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcehydratorsyncsourcewithpath)
+                  * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcehydratorsyncsourcewithtargetbranch)
               * [`obj spec.generators.merge.generators.list.template.spec.sources`](#obj-specgeneratorsmergegeneratorslisttemplatespecsources)
                 * [`fn withChart(chart)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceswithchart)
+                * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceswithname)
                 * [`fn withPath(path)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceswithpath)
                 * [`fn withRef(ref)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceswithref)
                 * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceswithrepourl)
@@ -4350,14 +4846,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                       * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcesdirectoryjsonnettlaswithname)
                       * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcesdirectoryjsonnettlaswithvalue)
                 * [`obj spec.generators.merge.generators.list.template.spec.sources.helm`](#obj-specgeneratorsmergegeneratorslisttemplatespecsourceshelm)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceshelmwithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceshelmwithapiversionsmixin)
                   * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceshelmwithfileparameters)
                   * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceshelmwithfileparametersmixin)
                   * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceshelmwithignoremissingvaluefiles)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceshelmwithkubeversion)
+                  * [`fn withNamespace(namespace)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceshelmwithnamespace)
                   * [`fn withParameters(parameters)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceshelmwithparameters)
                   * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceshelmwithparametersmixin)
                   * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceshelmwithpasscredentials)
                   * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceshelmwithreleasename)
                   * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceshelmwithskipcrds)
+                  * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceshelmwithskipschemavalidation)
+                  * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceshelmwithskiptests)
                   * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceshelmwithvaluefiles)
                   * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceshelmwithvaluefilesmixin)
                   * [`fn withValues(values)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceshelmwithvalues)
@@ -4372,6 +4874,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceshelmparameterswithname)
                     * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceshelmparameterswithvalue)
                 * [`obj spec.generators.merge.generators.list.template.spec.sources.kustomize`](#obj-specgeneratorsmergegeneratorslisttemplatespecsourceskustomize)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceskustomizewithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceskustomizewithapiversionsmixin)
                   * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceskustomizewithcommonannotations)
                   * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceskustomizewithcommonannotationsenvsubst)
                   * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceskustomizewithcommonannotationsmixin)
@@ -4383,6 +4887,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceskustomizewithforcecommonlabels)
                   * [`fn withImages(images)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceskustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceskustomizewithimagesmixin)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceskustomizewithkubeversion)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceskustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceskustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceskustomizewithnamesuffix)
@@ -4490,6 +4995,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecinfowithvalue)
               * [`obj spec.generators.merge.generators.plugin.template.spec.source`](#obj-specgeneratorsmergegeneratorsplugintemplatespecsource)
                 * [`fn withChart(chart)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcewithchart)
+                * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcewithname)
                 * [`fn withPath(path)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcewithpath)
                 * [`fn withRef(ref)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcewithref)
                 * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcewithrepourl)
@@ -4514,14 +5020,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                       * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcedirectoryjsonnettlaswithname)
                       * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcedirectoryjsonnettlaswithvalue)
                 * [`obj spec.generators.merge.generators.plugin.template.spec.source.helm`](#obj-specgeneratorsmergegeneratorsplugintemplatespecsourcehelm)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcehelmwithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcehelmwithapiversionsmixin)
                   * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcehelmwithfileparameters)
                   * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcehelmwithfileparametersmixin)
                   * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcehelmwithignoremissingvaluefiles)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcehelmwithkubeversion)
+                  * [`fn withNamespace(namespace)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcehelmwithnamespace)
                   * [`fn withParameters(parameters)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcehelmwithparameters)
                   * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcehelmwithparametersmixin)
                   * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcehelmwithpasscredentials)
                   * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcehelmwithreleasename)
                   * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcehelmwithskipcrds)
+                  * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcehelmwithskipschemavalidation)
+                  * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcehelmwithskiptests)
                   * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcehelmwithvaluefiles)
                   * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcehelmwithvaluefilesmixin)
                   * [`fn withValues(values)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcehelmwithvalues)
@@ -4536,6 +5048,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcehelmparameterswithname)
                     * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcehelmparameterswithvalue)
                 * [`obj spec.generators.merge.generators.plugin.template.spec.source.kustomize`](#obj-specgeneratorsmergegeneratorsplugintemplatespecsourcekustomize)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcekustomizewithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcekustomizewithapiversionsmixin)
                   * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcekustomizewithcommonannotations)
                   * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcekustomizewithcommonannotationsenvsubst)
                   * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcekustomizewithcommonannotationsmixin)
@@ -4547,6 +5061,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcekustomizewithforcecommonlabels)
                   * [`fn withImages(images)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcekustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcekustomizewithimagesmixin)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcekustomizewithkubeversion)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcekustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcekustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcekustomizewithnamesuffix)
@@ -4588,8 +5103,19 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withMapMixin(map)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcepluginparameterswithmapmixin)
                     * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcepluginparameterswithname)
                     * [`fn withString(string)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcepluginparameterswithstring)
+              * [`obj spec.generators.merge.generators.plugin.template.spec.sourceHydrator`](#obj-specgeneratorsmergegeneratorsplugintemplatespecsourcehydrator)
+                * [`obj spec.generators.merge.generators.plugin.template.spec.sourceHydrator.drySource`](#obj-specgeneratorsmergegeneratorsplugintemplatespecsourcehydratordrysource)
+                  * [`fn withPath(path)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcehydratordrysourcewithpath)
+                  * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcehydratordrysourcewithrepourl)
+                  * [`fn withTargetRevision(targetRevision)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcehydratordrysourcewithtargetrevision)
+                * [`obj spec.generators.merge.generators.plugin.template.spec.sourceHydrator.hydrateTo`](#obj-specgeneratorsmergegeneratorsplugintemplatespecsourcehydratorhydrateto)
+                  * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcehydratorhydratetowithtargetbranch)
+                * [`obj spec.generators.merge.generators.plugin.template.spec.sourceHydrator.syncSource`](#obj-specgeneratorsmergegeneratorsplugintemplatespecsourcehydratorsyncsource)
+                  * [`fn withPath(path)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcehydratorsyncsourcewithpath)
+                  * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcehydratorsyncsourcewithtargetbranch)
               * [`obj spec.generators.merge.generators.plugin.template.spec.sources`](#obj-specgeneratorsmergegeneratorsplugintemplatespecsources)
                 * [`fn withChart(chart)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceswithchart)
+                * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceswithname)
                 * [`fn withPath(path)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceswithpath)
                 * [`fn withRef(ref)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceswithref)
                 * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceswithrepourl)
@@ -4614,14 +5140,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                       * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcesdirectoryjsonnettlaswithname)
                       * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcesdirectoryjsonnettlaswithvalue)
                 * [`obj spec.generators.merge.generators.plugin.template.spec.sources.helm`](#obj-specgeneratorsmergegeneratorsplugintemplatespecsourceshelm)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceshelmwithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceshelmwithapiversionsmixin)
                   * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceshelmwithfileparameters)
                   * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceshelmwithfileparametersmixin)
                   * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceshelmwithignoremissingvaluefiles)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceshelmwithkubeversion)
+                  * [`fn withNamespace(namespace)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceshelmwithnamespace)
                   * [`fn withParameters(parameters)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceshelmwithparameters)
                   * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceshelmwithparametersmixin)
                   * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceshelmwithpasscredentials)
                   * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceshelmwithreleasename)
                   * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceshelmwithskipcrds)
+                  * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceshelmwithskipschemavalidation)
+                  * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceshelmwithskiptests)
                   * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceshelmwithvaluefiles)
                   * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceshelmwithvaluefilesmixin)
                   * [`fn withValues(values)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceshelmwithvalues)
@@ -4636,6 +5168,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceshelmparameterswithname)
                     * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceshelmparameterswithvalue)
                 * [`obj spec.generators.merge.generators.plugin.template.spec.sources.kustomize`](#obj-specgeneratorsmergegeneratorsplugintemplatespecsourceskustomize)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceskustomizewithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceskustomizewithapiversionsmixin)
                   * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceskustomizewithcommonannotations)
                   * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceskustomizewithcommonannotationsenvsubst)
                   * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceskustomizewithcommonannotationsmixin)
@@ -4647,6 +5181,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceskustomizewithforcecommonlabels)
                   * [`fn withImages(images)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceskustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceskustomizewithimagesmixin)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceskustomizewithkubeversion)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceskustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceskustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceskustomizewithnamesuffix)
@@ -4735,6 +5270,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withSecretName(secretName)`](#fn-specgeneratorsmergegeneratorspullrequestbitbucketbearertokentokenrefwithsecretname)
           * [`obj spec.generators.merge.generators.pullRequest.bitbucketServer`](#obj-specgeneratorsmergegeneratorspullrequestbitbucketserver)
             * [`fn withApi(api)`](#fn-specgeneratorsmergegeneratorspullrequestbitbucketserverwithapi)
+            * [`fn withInsecure(insecure)`](#fn-specgeneratorsmergegeneratorspullrequestbitbucketserverwithinsecure)
             * [`fn withProject(project)`](#fn-specgeneratorsmergegeneratorspullrequestbitbucketserverwithproject)
             * [`fn withRepo(repo)`](#fn-specgeneratorsmergegeneratorspullrequestbitbucketserverwithrepo)
             * [`obj spec.generators.merge.generators.pullRequest.bitbucketServer.basicAuth`](#obj-specgeneratorsmergegeneratorspullrequestbitbucketserverbasicauth)
@@ -4742,6 +5278,13 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
               * [`obj spec.generators.merge.generators.pullRequest.bitbucketServer.basicAuth.passwordRef`](#obj-specgeneratorsmergegeneratorspullrequestbitbucketserverbasicauthpasswordref)
                 * [`fn withKey(key)`](#fn-specgeneratorsmergegeneratorspullrequestbitbucketserverbasicauthpasswordrefwithkey)
                 * [`fn withSecretName(secretName)`](#fn-specgeneratorsmergegeneratorspullrequestbitbucketserverbasicauthpasswordrefwithsecretname)
+            * [`obj spec.generators.merge.generators.pullRequest.bitbucketServer.bearerToken`](#obj-specgeneratorsmergegeneratorspullrequestbitbucketserverbearertoken)
+              * [`obj spec.generators.merge.generators.pullRequest.bitbucketServer.bearerToken.tokenRef`](#obj-specgeneratorsmergegeneratorspullrequestbitbucketserverbearertokentokenref)
+                * [`fn withKey(key)`](#fn-specgeneratorsmergegeneratorspullrequestbitbucketserverbearertokentokenrefwithkey)
+                * [`fn withSecretName(secretName)`](#fn-specgeneratorsmergegeneratorspullrequestbitbucketserverbearertokentokenrefwithsecretname)
+            * [`obj spec.generators.merge.generators.pullRequest.bitbucketServer.caRef`](#obj-specgeneratorsmergegeneratorspullrequestbitbucketservercaref)
+              * [`fn withConfigMapName(configMapName)`](#fn-specgeneratorsmergegeneratorspullrequestbitbucketservercarefwithconfigmapname)
+              * [`fn withKey(key)`](#fn-specgeneratorsmergegeneratorspullrequestbitbucketservercarefwithkey)
           * [`obj spec.generators.merge.generators.pullRequest.filters`](#obj-specgeneratorsmergegeneratorspullrequestfilters)
             * [`fn withBranchMatch(branchMatch)`](#fn-specgeneratorsmergegeneratorspullrequestfilterswithbranchmatch)
             * [`fn withTargetBranchMatch(targetBranchMatch)`](#fn-specgeneratorsmergegeneratorspullrequestfilterswithtargetbranchmatch)
@@ -4770,6 +5313,9 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
             * [`fn withLabelsMixin(labels)`](#fn-specgeneratorsmergegeneratorspullrequestgitlabwithlabelsmixin)
             * [`fn withProject(project)`](#fn-specgeneratorsmergegeneratorspullrequestgitlabwithproject)
             * [`fn withPullRequestState(pullRequestState)`](#fn-specgeneratorsmergegeneratorspullrequestgitlabwithpullrequeststate)
+            * [`obj spec.generators.merge.generators.pullRequest.gitlab.caRef`](#obj-specgeneratorsmergegeneratorspullrequestgitlabcaref)
+              * [`fn withConfigMapName(configMapName)`](#fn-specgeneratorsmergegeneratorspullrequestgitlabcarefwithconfigmapname)
+              * [`fn withKey(key)`](#fn-specgeneratorsmergegeneratorspullrequestgitlabcarefwithkey)
             * [`obj spec.generators.merge.generators.pullRequest.gitlab.tokenRef`](#obj-specgeneratorsmergegeneratorspullrequestgitlabtokenref)
               * [`fn withKey(key)`](#fn-specgeneratorsmergegeneratorspullrequestgitlabtokenrefwithkey)
               * [`fn withSecretName(secretName)`](#fn-specgeneratorsmergegeneratorspullrequestgitlabtokenrefwithsecretname)
@@ -4812,6 +5358,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecinfowithvalue)
               * [`obj spec.generators.merge.generators.pullRequest.template.spec.source`](#obj-specgeneratorsmergegeneratorspullrequesttemplatespecsource)
                 * [`fn withChart(chart)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcewithchart)
+                * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcewithname)
                 * [`fn withPath(path)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcewithpath)
                 * [`fn withRef(ref)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcewithref)
                 * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcewithrepourl)
@@ -4836,14 +5383,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                       * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcedirectoryjsonnettlaswithname)
                       * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcedirectoryjsonnettlaswithvalue)
                 * [`obj spec.generators.merge.generators.pullRequest.template.spec.source.helm`](#obj-specgeneratorsmergegeneratorspullrequesttemplatespecsourcehelm)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcehelmwithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcehelmwithapiversionsmixin)
                   * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcehelmwithfileparameters)
                   * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcehelmwithfileparametersmixin)
                   * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcehelmwithignoremissingvaluefiles)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcehelmwithkubeversion)
+                  * [`fn withNamespace(namespace)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcehelmwithnamespace)
                   * [`fn withParameters(parameters)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcehelmwithparameters)
                   * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcehelmwithparametersmixin)
                   * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcehelmwithpasscredentials)
                   * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcehelmwithreleasename)
                   * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcehelmwithskipcrds)
+                  * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcehelmwithskipschemavalidation)
+                  * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcehelmwithskiptests)
                   * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcehelmwithvaluefiles)
                   * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcehelmwithvaluefilesmixin)
                   * [`fn withValues(values)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcehelmwithvalues)
@@ -4858,6 +5411,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcehelmparameterswithname)
                     * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcehelmparameterswithvalue)
                 * [`obj spec.generators.merge.generators.pullRequest.template.spec.source.kustomize`](#obj-specgeneratorsmergegeneratorspullrequesttemplatespecsourcekustomize)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcekustomizewithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcekustomizewithapiversionsmixin)
                   * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcekustomizewithcommonannotations)
                   * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcekustomizewithcommonannotationsenvsubst)
                   * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcekustomizewithcommonannotationsmixin)
@@ -4869,6 +5424,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcekustomizewithforcecommonlabels)
                   * [`fn withImages(images)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcekustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcekustomizewithimagesmixin)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcekustomizewithkubeversion)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcekustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcekustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcekustomizewithnamesuffix)
@@ -4910,8 +5466,19 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withMapMixin(map)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcepluginparameterswithmapmixin)
                     * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcepluginparameterswithname)
                     * [`fn withString(string)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcepluginparameterswithstring)
+              * [`obj spec.generators.merge.generators.pullRequest.template.spec.sourceHydrator`](#obj-specgeneratorsmergegeneratorspullrequesttemplatespecsourcehydrator)
+                * [`obj spec.generators.merge.generators.pullRequest.template.spec.sourceHydrator.drySource`](#obj-specgeneratorsmergegeneratorspullrequesttemplatespecsourcehydratordrysource)
+                  * [`fn withPath(path)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcehydratordrysourcewithpath)
+                  * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcehydratordrysourcewithrepourl)
+                  * [`fn withTargetRevision(targetRevision)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcehydratordrysourcewithtargetrevision)
+                * [`obj spec.generators.merge.generators.pullRequest.template.spec.sourceHydrator.hydrateTo`](#obj-specgeneratorsmergegeneratorspullrequesttemplatespecsourcehydratorhydrateto)
+                  * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcehydratorhydratetowithtargetbranch)
+                * [`obj spec.generators.merge.generators.pullRequest.template.spec.sourceHydrator.syncSource`](#obj-specgeneratorsmergegeneratorspullrequesttemplatespecsourcehydratorsyncsource)
+                  * [`fn withPath(path)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcehydratorsyncsourcewithpath)
+                  * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcehydratorsyncsourcewithtargetbranch)
               * [`obj spec.generators.merge.generators.pullRequest.template.spec.sources`](#obj-specgeneratorsmergegeneratorspullrequesttemplatespecsources)
                 * [`fn withChart(chart)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceswithchart)
+                * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceswithname)
                 * [`fn withPath(path)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceswithpath)
                 * [`fn withRef(ref)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceswithref)
                 * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceswithrepourl)
@@ -4936,14 +5503,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                       * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcesdirectoryjsonnettlaswithname)
                       * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcesdirectoryjsonnettlaswithvalue)
                 * [`obj spec.generators.merge.generators.pullRequest.template.spec.sources.helm`](#obj-specgeneratorsmergegeneratorspullrequesttemplatespecsourceshelm)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceshelmwithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceshelmwithapiversionsmixin)
                   * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceshelmwithfileparameters)
                   * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceshelmwithfileparametersmixin)
                   * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceshelmwithignoremissingvaluefiles)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceshelmwithkubeversion)
+                  * [`fn withNamespace(namespace)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceshelmwithnamespace)
                   * [`fn withParameters(parameters)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceshelmwithparameters)
                   * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceshelmwithparametersmixin)
                   * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceshelmwithpasscredentials)
                   * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceshelmwithreleasename)
                   * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceshelmwithskipcrds)
+                  * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceshelmwithskipschemavalidation)
+                  * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceshelmwithskiptests)
                   * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceshelmwithvaluefiles)
                   * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceshelmwithvaluefilesmixin)
                   * [`fn withValues(values)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceshelmwithvalues)
@@ -4958,6 +5531,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceshelmparameterswithname)
                     * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceshelmparameterswithvalue)
                 * [`obj spec.generators.merge.generators.pullRequest.template.spec.sources.kustomize`](#obj-specgeneratorsmergegeneratorspullrequesttemplatespecsourceskustomize)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceskustomizewithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceskustomizewithapiversionsmixin)
                   * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceskustomizewithcommonannotations)
                   * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceskustomizewithcommonannotationsenvsubst)
                   * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceskustomizewithcommonannotationsmixin)
@@ -4969,6 +5544,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceskustomizewithforcecommonlabels)
                   * [`fn withImages(images)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceskustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceskustomizewithimagesmixin)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceskustomizewithkubeversion)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceskustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceskustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceskustomizewithnamesuffix)
@@ -5062,12 +5638,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
           * [`obj spec.generators.merge.generators.scmProvider.bitbucketServer`](#obj-specgeneratorsmergegeneratorsscmproviderbitbucketserver)
             * [`fn withAllBranches(allBranches)`](#fn-specgeneratorsmergegeneratorsscmproviderbitbucketserverwithallbranches)
             * [`fn withApi(api)`](#fn-specgeneratorsmergegeneratorsscmproviderbitbucketserverwithapi)
+            * [`fn withInsecure(insecure)`](#fn-specgeneratorsmergegeneratorsscmproviderbitbucketserverwithinsecure)
             * [`fn withProject(project)`](#fn-specgeneratorsmergegeneratorsscmproviderbitbucketserverwithproject)
             * [`obj spec.generators.merge.generators.scmProvider.bitbucketServer.basicAuth`](#obj-specgeneratorsmergegeneratorsscmproviderbitbucketserverbasicauth)
               * [`fn withUsername(username)`](#fn-specgeneratorsmergegeneratorsscmproviderbitbucketserverbasicauthwithusername)
               * [`obj spec.generators.merge.generators.scmProvider.bitbucketServer.basicAuth.passwordRef`](#obj-specgeneratorsmergegeneratorsscmproviderbitbucketserverbasicauthpasswordref)
                 * [`fn withKey(key)`](#fn-specgeneratorsmergegeneratorsscmproviderbitbucketserverbasicauthpasswordrefwithkey)
                 * [`fn withSecretName(secretName)`](#fn-specgeneratorsmergegeneratorsscmproviderbitbucketserverbasicauthpasswordrefwithsecretname)
+            * [`obj spec.generators.merge.generators.scmProvider.bitbucketServer.bearerToken`](#obj-specgeneratorsmergegeneratorsscmproviderbitbucketserverbearertoken)
+              * [`obj spec.generators.merge.generators.scmProvider.bitbucketServer.bearerToken.tokenRef`](#obj-specgeneratorsmergegeneratorsscmproviderbitbucketserverbearertokentokenref)
+                * [`fn withKey(key)`](#fn-specgeneratorsmergegeneratorsscmproviderbitbucketserverbearertokentokenrefwithkey)
+                * [`fn withSecretName(secretName)`](#fn-specgeneratorsmergegeneratorsscmproviderbitbucketserverbearertokentokenrefwithsecretname)
+            * [`obj spec.generators.merge.generators.scmProvider.bitbucketServer.caRef`](#obj-specgeneratorsmergegeneratorsscmproviderbitbucketservercaref)
+              * [`fn withConfigMapName(configMapName)`](#fn-specgeneratorsmergegeneratorsscmproviderbitbucketservercarefwithconfigmapname)
+              * [`fn withKey(key)`](#fn-specgeneratorsmergegeneratorsscmproviderbitbucketservercarefwithkey)
           * [`obj spec.generators.merge.generators.scmProvider.filters`](#obj-specgeneratorsmergegeneratorsscmproviderfilters)
             * [`fn withBranchMatch(branchMatch)`](#fn-specgeneratorsmergegeneratorsscmproviderfilterswithbranchmatch)
             * [`fn withLabelMatch(labelMatch)`](#fn-specgeneratorsmergegeneratorsscmproviderfilterswithlabelmatch)
@@ -5100,6 +5684,9 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
             * [`fn withIncludeSubgroups(includeSubgroups)`](#fn-specgeneratorsmergegeneratorsscmprovidergitlabwithincludesubgroups)
             * [`fn withInsecure(insecure)`](#fn-specgeneratorsmergegeneratorsscmprovidergitlabwithinsecure)
             * [`fn withTopic(topic)`](#fn-specgeneratorsmergegeneratorsscmprovidergitlabwithtopic)
+            * [`obj spec.generators.merge.generators.scmProvider.gitlab.caRef`](#obj-specgeneratorsmergegeneratorsscmprovidergitlabcaref)
+              * [`fn withConfigMapName(configMapName)`](#fn-specgeneratorsmergegeneratorsscmprovidergitlabcarefwithconfigmapname)
+              * [`fn withKey(key)`](#fn-specgeneratorsmergegeneratorsscmprovidergitlabcarefwithkey)
             * [`obj spec.generators.merge.generators.scmProvider.gitlab.tokenRef`](#obj-specgeneratorsmergegeneratorsscmprovidergitlabtokenref)
               * [`fn withKey(key)`](#fn-specgeneratorsmergegeneratorsscmprovidergitlabtokenrefwithkey)
               * [`fn withSecretName(secretName)`](#fn-specgeneratorsmergegeneratorsscmprovidergitlabtokenrefwithsecretname)
@@ -5142,6 +5729,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecinfowithvalue)
               * [`obj spec.generators.merge.generators.scmProvider.template.spec.source`](#obj-specgeneratorsmergegeneratorsscmprovidertemplatespecsource)
                 * [`fn withChart(chart)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcewithchart)
+                * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcewithname)
                 * [`fn withPath(path)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcewithpath)
                 * [`fn withRef(ref)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcewithref)
                 * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcewithrepourl)
@@ -5166,14 +5754,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                       * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcedirectoryjsonnettlaswithname)
                       * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcedirectoryjsonnettlaswithvalue)
                 * [`obj spec.generators.merge.generators.scmProvider.template.spec.source.helm`](#obj-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcehelm)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcehelmwithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcehelmwithapiversionsmixin)
                   * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcehelmwithfileparameters)
                   * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcehelmwithfileparametersmixin)
                   * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcehelmwithignoremissingvaluefiles)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcehelmwithkubeversion)
+                  * [`fn withNamespace(namespace)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcehelmwithnamespace)
                   * [`fn withParameters(parameters)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcehelmwithparameters)
                   * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcehelmwithparametersmixin)
                   * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcehelmwithpasscredentials)
                   * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcehelmwithreleasename)
                   * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcehelmwithskipcrds)
+                  * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcehelmwithskipschemavalidation)
+                  * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcehelmwithskiptests)
                   * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcehelmwithvaluefiles)
                   * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcehelmwithvaluefilesmixin)
                   * [`fn withValues(values)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcehelmwithvalues)
@@ -5188,6 +5782,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcehelmparameterswithname)
                     * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcehelmparameterswithvalue)
                 * [`obj spec.generators.merge.generators.scmProvider.template.spec.source.kustomize`](#obj-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcekustomize)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcekustomizewithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcekustomizewithapiversionsmixin)
                   * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcekustomizewithcommonannotations)
                   * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcekustomizewithcommonannotationsenvsubst)
                   * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcekustomizewithcommonannotationsmixin)
@@ -5199,6 +5795,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcekustomizewithforcecommonlabels)
                   * [`fn withImages(images)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcekustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcekustomizewithimagesmixin)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcekustomizewithkubeversion)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcekustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcekustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcekustomizewithnamesuffix)
@@ -5240,8 +5837,19 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withMapMixin(map)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcepluginparameterswithmapmixin)
                     * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcepluginparameterswithname)
                     * [`fn withString(string)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcepluginparameterswithstring)
+              * [`obj spec.generators.merge.generators.scmProvider.template.spec.sourceHydrator`](#obj-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcehydrator)
+                * [`obj spec.generators.merge.generators.scmProvider.template.spec.sourceHydrator.drySource`](#obj-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcehydratordrysource)
+                  * [`fn withPath(path)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcehydratordrysourcewithpath)
+                  * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcehydratordrysourcewithrepourl)
+                  * [`fn withTargetRevision(targetRevision)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcehydratordrysourcewithtargetrevision)
+                * [`obj spec.generators.merge.generators.scmProvider.template.spec.sourceHydrator.hydrateTo`](#obj-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcehydratorhydrateto)
+                  * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcehydratorhydratetowithtargetbranch)
+                * [`obj spec.generators.merge.generators.scmProvider.template.spec.sourceHydrator.syncSource`](#obj-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcehydratorsyncsource)
+                  * [`fn withPath(path)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcehydratorsyncsourcewithpath)
+                  * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcehydratorsyncsourcewithtargetbranch)
               * [`obj spec.generators.merge.generators.scmProvider.template.spec.sources`](#obj-specgeneratorsmergegeneratorsscmprovidertemplatespecsources)
                 * [`fn withChart(chart)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceswithchart)
+                * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceswithname)
                 * [`fn withPath(path)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceswithpath)
                 * [`fn withRef(ref)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceswithref)
                 * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceswithrepourl)
@@ -5266,14 +5874,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                       * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcesdirectoryjsonnettlaswithname)
                       * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcesdirectoryjsonnettlaswithvalue)
                 * [`obj spec.generators.merge.generators.scmProvider.template.spec.sources.helm`](#obj-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceshelm)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceshelmwithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceshelmwithapiversionsmixin)
                   * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceshelmwithfileparameters)
                   * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceshelmwithfileparametersmixin)
                   * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceshelmwithignoremissingvaluefiles)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceshelmwithkubeversion)
+                  * [`fn withNamespace(namespace)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceshelmwithnamespace)
                   * [`fn withParameters(parameters)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceshelmwithparameters)
                   * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceshelmwithparametersmixin)
                   * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceshelmwithpasscredentials)
                   * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceshelmwithreleasename)
                   * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceshelmwithskipcrds)
+                  * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceshelmwithskipschemavalidation)
+                  * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceshelmwithskiptests)
                   * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceshelmwithvaluefiles)
                   * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceshelmwithvaluefilesmixin)
                   * [`fn withValues(values)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceshelmwithvalues)
@@ -5288,6 +5902,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                     * [`fn withName(name)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceshelmparameterswithname)
                     * [`fn withValue(value)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceshelmparameterswithvalue)
                 * [`obj spec.generators.merge.generators.scmProvider.template.spec.sources.kustomize`](#obj-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceskustomize)
+                  * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceskustomizewithapiversions)
+                  * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceskustomizewithapiversionsmixin)
                   * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceskustomizewithcommonannotations)
                   * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceskustomizewithcommonannotationsenvsubst)
                   * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceskustomizewithcommonannotationsmixin)
@@ -5299,6 +5915,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceskustomizewithforcecommonlabels)
                   * [`fn withImages(images)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceskustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceskustomizewithimagesmixin)
+                  * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceskustomizewithkubeversion)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceskustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceskustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceskustomizewithnamesuffix)
@@ -5407,6 +6024,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
             * [`fn withValue(value)`](#fn-specgeneratorsmergetemplatespecinfowithvalue)
           * [`obj spec.generators.merge.template.spec.source`](#obj-specgeneratorsmergetemplatespecsource)
             * [`fn withChart(chart)`](#fn-specgeneratorsmergetemplatespecsourcewithchart)
+            * [`fn withName(name)`](#fn-specgeneratorsmergetemplatespecsourcewithname)
             * [`fn withPath(path)`](#fn-specgeneratorsmergetemplatespecsourcewithpath)
             * [`fn withRef(ref)`](#fn-specgeneratorsmergetemplatespecsourcewithref)
             * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmergetemplatespecsourcewithrepourl)
@@ -5431,14 +6049,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withName(name)`](#fn-specgeneratorsmergetemplatespecsourcedirectoryjsonnettlaswithname)
                   * [`fn withValue(value)`](#fn-specgeneratorsmergetemplatespecsourcedirectoryjsonnettlaswithvalue)
             * [`obj spec.generators.merge.template.spec.source.helm`](#obj-specgeneratorsmergetemplatespecsourcehelm)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmergetemplatespecsourcehelmwithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmergetemplatespecsourcehelmwithapiversionsmixin)
               * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsmergetemplatespecsourcehelmwithfileparameters)
               * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsmergetemplatespecsourcehelmwithfileparametersmixin)
               * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsmergetemplatespecsourcehelmwithignoremissingvaluefiles)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergetemplatespecsourcehelmwithkubeversion)
+              * [`fn withNamespace(namespace)`](#fn-specgeneratorsmergetemplatespecsourcehelmwithnamespace)
               * [`fn withParameters(parameters)`](#fn-specgeneratorsmergetemplatespecsourcehelmwithparameters)
               * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsmergetemplatespecsourcehelmwithparametersmixin)
               * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsmergetemplatespecsourcehelmwithpasscredentials)
               * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsmergetemplatespecsourcehelmwithreleasename)
               * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsmergetemplatespecsourcehelmwithskipcrds)
+              * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsmergetemplatespecsourcehelmwithskipschemavalidation)
+              * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsmergetemplatespecsourcehelmwithskiptests)
               * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsmergetemplatespecsourcehelmwithvaluefiles)
               * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsmergetemplatespecsourcehelmwithvaluefilesmixin)
               * [`fn withValues(values)`](#fn-specgeneratorsmergetemplatespecsourcehelmwithvalues)
@@ -5453,6 +6077,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withName(name)`](#fn-specgeneratorsmergetemplatespecsourcehelmparameterswithname)
                 * [`fn withValue(value)`](#fn-specgeneratorsmergetemplatespecsourcehelmparameterswithvalue)
             * [`obj spec.generators.merge.template.spec.source.kustomize`](#obj-specgeneratorsmergetemplatespecsourcekustomize)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmergetemplatespecsourcekustomizewithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmergetemplatespecsourcekustomizewithapiversionsmixin)
               * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsmergetemplatespecsourcekustomizewithcommonannotations)
               * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsmergetemplatespecsourcekustomizewithcommonannotationsenvsubst)
               * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsmergetemplatespecsourcekustomizewithcommonannotationsmixin)
@@ -5464,6 +6090,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmergetemplatespecsourcekustomizewithforcecommonlabels)
               * [`fn withImages(images)`](#fn-specgeneratorsmergetemplatespecsourcekustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorsmergetemplatespecsourcekustomizewithimagesmixin)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergetemplatespecsourcekustomizewithkubeversion)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmergetemplatespecsourcekustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmergetemplatespecsourcekustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmergetemplatespecsourcekustomizewithnamesuffix)
@@ -5505,8 +6132,19 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withMapMixin(map)`](#fn-specgeneratorsmergetemplatespecsourcepluginparameterswithmapmixin)
                 * [`fn withName(name)`](#fn-specgeneratorsmergetemplatespecsourcepluginparameterswithname)
                 * [`fn withString(string)`](#fn-specgeneratorsmergetemplatespecsourcepluginparameterswithstring)
+          * [`obj spec.generators.merge.template.spec.sourceHydrator`](#obj-specgeneratorsmergetemplatespecsourcehydrator)
+            * [`obj spec.generators.merge.template.spec.sourceHydrator.drySource`](#obj-specgeneratorsmergetemplatespecsourcehydratordrysource)
+              * [`fn withPath(path)`](#fn-specgeneratorsmergetemplatespecsourcehydratordrysourcewithpath)
+              * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmergetemplatespecsourcehydratordrysourcewithrepourl)
+              * [`fn withTargetRevision(targetRevision)`](#fn-specgeneratorsmergetemplatespecsourcehydratordrysourcewithtargetrevision)
+            * [`obj spec.generators.merge.template.spec.sourceHydrator.hydrateTo`](#obj-specgeneratorsmergetemplatespecsourcehydratorhydrateto)
+              * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsmergetemplatespecsourcehydratorhydratetowithtargetbranch)
+            * [`obj spec.generators.merge.template.spec.sourceHydrator.syncSource`](#obj-specgeneratorsmergetemplatespecsourcehydratorsyncsource)
+              * [`fn withPath(path)`](#fn-specgeneratorsmergetemplatespecsourcehydratorsyncsourcewithpath)
+              * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsmergetemplatespecsourcehydratorsyncsourcewithtargetbranch)
           * [`obj spec.generators.merge.template.spec.sources`](#obj-specgeneratorsmergetemplatespecsources)
             * [`fn withChart(chart)`](#fn-specgeneratorsmergetemplatespecsourceswithchart)
+            * [`fn withName(name)`](#fn-specgeneratorsmergetemplatespecsourceswithname)
             * [`fn withPath(path)`](#fn-specgeneratorsmergetemplatespecsourceswithpath)
             * [`fn withRef(ref)`](#fn-specgeneratorsmergetemplatespecsourceswithref)
             * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsmergetemplatespecsourceswithrepourl)
@@ -5531,14 +6169,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withName(name)`](#fn-specgeneratorsmergetemplatespecsourcesdirectoryjsonnettlaswithname)
                   * [`fn withValue(value)`](#fn-specgeneratorsmergetemplatespecsourcesdirectoryjsonnettlaswithvalue)
             * [`obj spec.generators.merge.template.spec.sources.helm`](#obj-specgeneratorsmergetemplatespecsourceshelm)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmergetemplatespecsourceshelmwithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmergetemplatespecsourceshelmwithapiversionsmixin)
               * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsmergetemplatespecsourceshelmwithfileparameters)
               * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsmergetemplatespecsourceshelmwithfileparametersmixin)
               * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsmergetemplatespecsourceshelmwithignoremissingvaluefiles)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergetemplatespecsourceshelmwithkubeversion)
+              * [`fn withNamespace(namespace)`](#fn-specgeneratorsmergetemplatespecsourceshelmwithnamespace)
               * [`fn withParameters(parameters)`](#fn-specgeneratorsmergetemplatespecsourceshelmwithparameters)
               * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsmergetemplatespecsourceshelmwithparametersmixin)
               * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsmergetemplatespecsourceshelmwithpasscredentials)
               * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsmergetemplatespecsourceshelmwithreleasename)
               * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsmergetemplatespecsourceshelmwithskipcrds)
+              * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsmergetemplatespecsourceshelmwithskipschemavalidation)
+              * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsmergetemplatespecsourceshelmwithskiptests)
               * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsmergetemplatespecsourceshelmwithvaluefiles)
               * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsmergetemplatespecsourceshelmwithvaluefilesmixin)
               * [`fn withValues(values)`](#fn-specgeneratorsmergetemplatespecsourceshelmwithvalues)
@@ -5553,6 +6197,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withName(name)`](#fn-specgeneratorsmergetemplatespecsourceshelmparameterswithname)
                 * [`fn withValue(value)`](#fn-specgeneratorsmergetemplatespecsourceshelmparameterswithvalue)
             * [`obj spec.generators.merge.template.spec.sources.kustomize`](#obj-specgeneratorsmergetemplatespecsourceskustomize)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsmergetemplatespecsourceskustomizewithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsmergetemplatespecsourceskustomizewithapiversionsmixin)
               * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsmergetemplatespecsourceskustomizewithcommonannotations)
               * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsmergetemplatespecsourceskustomizewithcommonannotationsenvsubst)
               * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsmergetemplatespecsourceskustomizewithcommonannotationsmixin)
@@ -5564,6 +6210,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmergetemplatespecsourceskustomizewithforcecommonlabels)
               * [`fn withImages(images)`](#fn-specgeneratorsmergetemplatespecsourceskustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorsmergetemplatespecsourceskustomizewithimagesmixin)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergetemplatespecsourceskustomizewithkubeversion)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmergetemplatespecsourceskustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmergetemplatespecsourceskustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmergetemplatespecsourceskustomizewithnamesuffix)
@@ -5671,6 +6318,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
             * [`fn withValue(value)`](#fn-specgeneratorsplugintemplatespecinfowithvalue)
           * [`obj spec.generators.plugin.template.spec.source`](#obj-specgeneratorsplugintemplatespecsource)
             * [`fn withChart(chart)`](#fn-specgeneratorsplugintemplatespecsourcewithchart)
+            * [`fn withName(name)`](#fn-specgeneratorsplugintemplatespecsourcewithname)
             * [`fn withPath(path)`](#fn-specgeneratorsplugintemplatespecsourcewithpath)
             * [`fn withRef(ref)`](#fn-specgeneratorsplugintemplatespecsourcewithref)
             * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsplugintemplatespecsourcewithrepourl)
@@ -5695,14 +6343,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withName(name)`](#fn-specgeneratorsplugintemplatespecsourcedirectoryjsonnettlaswithname)
                   * [`fn withValue(value)`](#fn-specgeneratorsplugintemplatespecsourcedirectoryjsonnettlaswithvalue)
             * [`obj spec.generators.plugin.template.spec.source.helm`](#obj-specgeneratorsplugintemplatespecsourcehelm)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsplugintemplatespecsourcehelmwithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsplugintemplatespecsourcehelmwithapiversionsmixin)
               * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsplugintemplatespecsourcehelmwithfileparameters)
               * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsplugintemplatespecsourcehelmwithfileparametersmixin)
               * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsplugintemplatespecsourcehelmwithignoremissingvaluefiles)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsplugintemplatespecsourcehelmwithkubeversion)
+              * [`fn withNamespace(namespace)`](#fn-specgeneratorsplugintemplatespecsourcehelmwithnamespace)
               * [`fn withParameters(parameters)`](#fn-specgeneratorsplugintemplatespecsourcehelmwithparameters)
               * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsplugintemplatespecsourcehelmwithparametersmixin)
               * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsplugintemplatespecsourcehelmwithpasscredentials)
               * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsplugintemplatespecsourcehelmwithreleasename)
               * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsplugintemplatespecsourcehelmwithskipcrds)
+              * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsplugintemplatespecsourcehelmwithskipschemavalidation)
+              * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsplugintemplatespecsourcehelmwithskiptests)
               * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsplugintemplatespecsourcehelmwithvaluefiles)
               * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsplugintemplatespecsourcehelmwithvaluefilesmixin)
               * [`fn withValues(values)`](#fn-specgeneratorsplugintemplatespecsourcehelmwithvalues)
@@ -5717,6 +6371,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withName(name)`](#fn-specgeneratorsplugintemplatespecsourcehelmparameterswithname)
                 * [`fn withValue(value)`](#fn-specgeneratorsplugintemplatespecsourcehelmparameterswithvalue)
             * [`obj spec.generators.plugin.template.spec.source.kustomize`](#obj-specgeneratorsplugintemplatespecsourcekustomize)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsplugintemplatespecsourcekustomizewithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsplugintemplatespecsourcekustomizewithapiversionsmixin)
               * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsplugintemplatespecsourcekustomizewithcommonannotations)
               * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsplugintemplatespecsourcekustomizewithcommonannotationsenvsubst)
               * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsplugintemplatespecsourcekustomizewithcommonannotationsmixin)
@@ -5728,6 +6384,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsplugintemplatespecsourcekustomizewithforcecommonlabels)
               * [`fn withImages(images)`](#fn-specgeneratorsplugintemplatespecsourcekustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorsplugintemplatespecsourcekustomizewithimagesmixin)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsplugintemplatespecsourcekustomizewithkubeversion)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsplugintemplatespecsourcekustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsplugintemplatespecsourcekustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsplugintemplatespecsourcekustomizewithnamesuffix)
@@ -5769,8 +6426,19 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withMapMixin(map)`](#fn-specgeneratorsplugintemplatespecsourcepluginparameterswithmapmixin)
                 * [`fn withName(name)`](#fn-specgeneratorsplugintemplatespecsourcepluginparameterswithname)
                 * [`fn withString(string)`](#fn-specgeneratorsplugintemplatespecsourcepluginparameterswithstring)
+          * [`obj spec.generators.plugin.template.spec.sourceHydrator`](#obj-specgeneratorsplugintemplatespecsourcehydrator)
+            * [`obj spec.generators.plugin.template.spec.sourceHydrator.drySource`](#obj-specgeneratorsplugintemplatespecsourcehydratordrysource)
+              * [`fn withPath(path)`](#fn-specgeneratorsplugintemplatespecsourcehydratordrysourcewithpath)
+              * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsplugintemplatespecsourcehydratordrysourcewithrepourl)
+              * [`fn withTargetRevision(targetRevision)`](#fn-specgeneratorsplugintemplatespecsourcehydratordrysourcewithtargetrevision)
+            * [`obj spec.generators.plugin.template.spec.sourceHydrator.hydrateTo`](#obj-specgeneratorsplugintemplatespecsourcehydratorhydrateto)
+              * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsplugintemplatespecsourcehydratorhydratetowithtargetbranch)
+            * [`obj spec.generators.plugin.template.spec.sourceHydrator.syncSource`](#obj-specgeneratorsplugintemplatespecsourcehydratorsyncsource)
+              * [`fn withPath(path)`](#fn-specgeneratorsplugintemplatespecsourcehydratorsyncsourcewithpath)
+              * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsplugintemplatespecsourcehydratorsyncsourcewithtargetbranch)
           * [`obj spec.generators.plugin.template.spec.sources`](#obj-specgeneratorsplugintemplatespecsources)
             * [`fn withChart(chart)`](#fn-specgeneratorsplugintemplatespecsourceswithchart)
+            * [`fn withName(name)`](#fn-specgeneratorsplugintemplatespecsourceswithname)
             * [`fn withPath(path)`](#fn-specgeneratorsplugintemplatespecsourceswithpath)
             * [`fn withRef(ref)`](#fn-specgeneratorsplugintemplatespecsourceswithref)
             * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsplugintemplatespecsourceswithrepourl)
@@ -5795,14 +6463,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withName(name)`](#fn-specgeneratorsplugintemplatespecsourcesdirectoryjsonnettlaswithname)
                   * [`fn withValue(value)`](#fn-specgeneratorsplugintemplatespecsourcesdirectoryjsonnettlaswithvalue)
             * [`obj spec.generators.plugin.template.spec.sources.helm`](#obj-specgeneratorsplugintemplatespecsourceshelm)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsplugintemplatespecsourceshelmwithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsplugintemplatespecsourceshelmwithapiversionsmixin)
               * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsplugintemplatespecsourceshelmwithfileparameters)
               * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsplugintemplatespecsourceshelmwithfileparametersmixin)
               * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsplugintemplatespecsourceshelmwithignoremissingvaluefiles)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsplugintemplatespecsourceshelmwithkubeversion)
+              * [`fn withNamespace(namespace)`](#fn-specgeneratorsplugintemplatespecsourceshelmwithnamespace)
               * [`fn withParameters(parameters)`](#fn-specgeneratorsplugintemplatespecsourceshelmwithparameters)
               * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsplugintemplatespecsourceshelmwithparametersmixin)
               * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsplugintemplatespecsourceshelmwithpasscredentials)
               * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsplugintemplatespecsourceshelmwithreleasename)
               * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsplugintemplatespecsourceshelmwithskipcrds)
+              * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsplugintemplatespecsourceshelmwithskipschemavalidation)
+              * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsplugintemplatespecsourceshelmwithskiptests)
               * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsplugintemplatespecsourceshelmwithvaluefiles)
               * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsplugintemplatespecsourceshelmwithvaluefilesmixin)
               * [`fn withValues(values)`](#fn-specgeneratorsplugintemplatespecsourceshelmwithvalues)
@@ -5817,6 +6491,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withName(name)`](#fn-specgeneratorsplugintemplatespecsourceshelmparameterswithname)
                 * [`fn withValue(value)`](#fn-specgeneratorsplugintemplatespecsourceshelmparameterswithvalue)
             * [`obj spec.generators.plugin.template.spec.sources.kustomize`](#obj-specgeneratorsplugintemplatespecsourceskustomize)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsplugintemplatespecsourceskustomizewithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsplugintemplatespecsourceskustomizewithapiversionsmixin)
               * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsplugintemplatespecsourceskustomizewithcommonannotations)
               * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsplugintemplatespecsourceskustomizewithcommonannotationsenvsubst)
               * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsplugintemplatespecsourceskustomizewithcommonannotationsmixin)
@@ -5828,6 +6504,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsplugintemplatespecsourceskustomizewithforcecommonlabels)
               * [`fn withImages(images)`](#fn-specgeneratorsplugintemplatespecsourceskustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorsplugintemplatespecsourceskustomizewithimagesmixin)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsplugintemplatespecsourceskustomizewithkubeversion)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsplugintemplatespecsourceskustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsplugintemplatespecsourceskustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsplugintemplatespecsourceskustomizewithnamesuffix)
@@ -5916,6 +6593,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
             * [`fn withSecretName(secretName)`](#fn-specgeneratorspullrequestbitbucketbearertokentokenrefwithsecretname)
       * [`obj spec.generators.pullRequest.bitbucketServer`](#obj-specgeneratorspullrequestbitbucketserver)
         * [`fn withApi(api)`](#fn-specgeneratorspullrequestbitbucketserverwithapi)
+        * [`fn withInsecure(insecure)`](#fn-specgeneratorspullrequestbitbucketserverwithinsecure)
         * [`fn withProject(project)`](#fn-specgeneratorspullrequestbitbucketserverwithproject)
         * [`fn withRepo(repo)`](#fn-specgeneratorspullrequestbitbucketserverwithrepo)
         * [`obj spec.generators.pullRequest.bitbucketServer.basicAuth`](#obj-specgeneratorspullrequestbitbucketserverbasicauth)
@@ -5923,6 +6601,13 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
           * [`obj spec.generators.pullRequest.bitbucketServer.basicAuth.passwordRef`](#obj-specgeneratorspullrequestbitbucketserverbasicauthpasswordref)
             * [`fn withKey(key)`](#fn-specgeneratorspullrequestbitbucketserverbasicauthpasswordrefwithkey)
             * [`fn withSecretName(secretName)`](#fn-specgeneratorspullrequestbitbucketserverbasicauthpasswordrefwithsecretname)
+        * [`obj spec.generators.pullRequest.bitbucketServer.bearerToken`](#obj-specgeneratorspullrequestbitbucketserverbearertoken)
+          * [`obj spec.generators.pullRequest.bitbucketServer.bearerToken.tokenRef`](#obj-specgeneratorspullrequestbitbucketserverbearertokentokenref)
+            * [`fn withKey(key)`](#fn-specgeneratorspullrequestbitbucketserverbearertokentokenrefwithkey)
+            * [`fn withSecretName(secretName)`](#fn-specgeneratorspullrequestbitbucketserverbearertokentokenrefwithsecretname)
+        * [`obj spec.generators.pullRequest.bitbucketServer.caRef`](#obj-specgeneratorspullrequestbitbucketservercaref)
+          * [`fn withConfigMapName(configMapName)`](#fn-specgeneratorspullrequestbitbucketservercarefwithconfigmapname)
+          * [`fn withKey(key)`](#fn-specgeneratorspullrequestbitbucketservercarefwithkey)
       * [`obj spec.generators.pullRequest.filters`](#obj-specgeneratorspullrequestfilters)
         * [`fn withBranchMatch(branchMatch)`](#fn-specgeneratorspullrequestfilterswithbranchmatch)
         * [`fn withTargetBranchMatch(targetBranchMatch)`](#fn-specgeneratorspullrequestfilterswithtargetbranchmatch)
@@ -5951,6 +6636,9 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
         * [`fn withLabelsMixin(labels)`](#fn-specgeneratorspullrequestgitlabwithlabelsmixin)
         * [`fn withProject(project)`](#fn-specgeneratorspullrequestgitlabwithproject)
         * [`fn withPullRequestState(pullRequestState)`](#fn-specgeneratorspullrequestgitlabwithpullrequeststate)
+        * [`obj spec.generators.pullRequest.gitlab.caRef`](#obj-specgeneratorspullrequestgitlabcaref)
+          * [`fn withConfigMapName(configMapName)`](#fn-specgeneratorspullrequestgitlabcarefwithconfigmapname)
+          * [`fn withKey(key)`](#fn-specgeneratorspullrequestgitlabcarefwithkey)
         * [`obj spec.generators.pullRequest.gitlab.tokenRef`](#obj-specgeneratorspullrequestgitlabtokenref)
           * [`fn withKey(key)`](#fn-specgeneratorspullrequestgitlabtokenrefwithkey)
           * [`fn withSecretName(secretName)`](#fn-specgeneratorspullrequestgitlabtokenrefwithsecretname)
@@ -5993,6 +6681,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
             * [`fn withValue(value)`](#fn-specgeneratorspullrequesttemplatespecinfowithvalue)
           * [`obj spec.generators.pullRequest.template.spec.source`](#obj-specgeneratorspullrequesttemplatespecsource)
             * [`fn withChart(chart)`](#fn-specgeneratorspullrequesttemplatespecsourcewithchart)
+            * [`fn withName(name)`](#fn-specgeneratorspullrequesttemplatespecsourcewithname)
             * [`fn withPath(path)`](#fn-specgeneratorspullrequesttemplatespecsourcewithpath)
             * [`fn withRef(ref)`](#fn-specgeneratorspullrequesttemplatespecsourcewithref)
             * [`fn withRepoURL(repoURL)`](#fn-specgeneratorspullrequesttemplatespecsourcewithrepourl)
@@ -6017,14 +6706,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withName(name)`](#fn-specgeneratorspullrequesttemplatespecsourcedirectoryjsonnettlaswithname)
                   * [`fn withValue(value)`](#fn-specgeneratorspullrequesttemplatespecsourcedirectoryjsonnettlaswithvalue)
             * [`obj spec.generators.pullRequest.template.spec.source.helm`](#obj-specgeneratorspullrequesttemplatespecsourcehelm)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorspullrequesttemplatespecsourcehelmwithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorspullrequesttemplatespecsourcehelmwithapiversionsmixin)
               * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorspullrequesttemplatespecsourcehelmwithfileparameters)
               * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorspullrequesttemplatespecsourcehelmwithfileparametersmixin)
               * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorspullrequesttemplatespecsourcehelmwithignoremissingvaluefiles)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorspullrequesttemplatespecsourcehelmwithkubeversion)
+              * [`fn withNamespace(namespace)`](#fn-specgeneratorspullrequesttemplatespecsourcehelmwithnamespace)
               * [`fn withParameters(parameters)`](#fn-specgeneratorspullrequesttemplatespecsourcehelmwithparameters)
               * [`fn withParametersMixin(parameters)`](#fn-specgeneratorspullrequesttemplatespecsourcehelmwithparametersmixin)
               * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorspullrequesttemplatespecsourcehelmwithpasscredentials)
               * [`fn withReleaseName(releaseName)`](#fn-specgeneratorspullrequesttemplatespecsourcehelmwithreleasename)
               * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorspullrequesttemplatespecsourcehelmwithskipcrds)
+              * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorspullrequesttemplatespecsourcehelmwithskipschemavalidation)
+              * [`fn withSkipTests(skipTests)`](#fn-specgeneratorspullrequesttemplatespecsourcehelmwithskiptests)
               * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorspullrequesttemplatespecsourcehelmwithvaluefiles)
               * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorspullrequesttemplatespecsourcehelmwithvaluefilesmixin)
               * [`fn withValues(values)`](#fn-specgeneratorspullrequesttemplatespecsourcehelmwithvalues)
@@ -6039,6 +6734,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withName(name)`](#fn-specgeneratorspullrequesttemplatespecsourcehelmparameterswithname)
                 * [`fn withValue(value)`](#fn-specgeneratorspullrequesttemplatespecsourcehelmparameterswithvalue)
             * [`obj spec.generators.pullRequest.template.spec.source.kustomize`](#obj-specgeneratorspullrequesttemplatespecsourcekustomize)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorspullrequesttemplatespecsourcekustomizewithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorspullrequesttemplatespecsourcekustomizewithapiversionsmixin)
               * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorspullrequesttemplatespecsourcekustomizewithcommonannotations)
               * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorspullrequesttemplatespecsourcekustomizewithcommonannotationsenvsubst)
               * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorspullrequesttemplatespecsourcekustomizewithcommonannotationsmixin)
@@ -6050,6 +6747,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorspullrequesttemplatespecsourcekustomizewithforcecommonlabels)
               * [`fn withImages(images)`](#fn-specgeneratorspullrequesttemplatespecsourcekustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorspullrequesttemplatespecsourcekustomizewithimagesmixin)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorspullrequesttemplatespecsourcekustomizewithkubeversion)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorspullrequesttemplatespecsourcekustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorspullrequesttemplatespecsourcekustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorspullrequesttemplatespecsourcekustomizewithnamesuffix)
@@ -6091,8 +6789,19 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withMapMixin(map)`](#fn-specgeneratorspullrequesttemplatespecsourcepluginparameterswithmapmixin)
                 * [`fn withName(name)`](#fn-specgeneratorspullrequesttemplatespecsourcepluginparameterswithname)
                 * [`fn withString(string)`](#fn-specgeneratorspullrequesttemplatespecsourcepluginparameterswithstring)
+          * [`obj spec.generators.pullRequest.template.spec.sourceHydrator`](#obj-specgeneratorspullrequesttemplatespecsourcehydrator)
+            * [`obj spec.generators.pullRequest.template.spec.sourceHydrator.drySource`](#obj-specgeneratorspullrequesttemplatespecsourcehydratordrysource)
+              * [`fn withPath(path)`](#fn-specgeneratorspullrequesttemplatespecsourcehydratordrysourcewithpath)
+              * [`fn withRepoURL(repoURL)`](#fn-specgeneratorspullrequesttemplatespecsourcehydratordrysourcewithrepourl)
+              * [`fn withTargetRevision(targetRevision)`](#fn-specgeneratorspullrequesttemplatespecsourcehydratordrysourcewithtargetrevision)
+            * [`obj spec.generators.pullRequest.template.spec.sourceHydrator.hydrateTo`](#obj-specgeneratorspullrequesttemplatespecsourcehydratorhydrateto)
+              * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorspullrequesttemplatespecsourcehydratorhydratetowithtargetbranch)
+            * [`obj spec.generators.pullRequest.template.spec.sourceHydrator.syncSource`](#obj-specgeneratorspullrequesttemplatespecsourcehydratorsyncsource)
+              * [`fn withPath(path)`](#fn-specgeneratorspullrequesttemplatespecsourcehydratorsyncsourcewithpath)
+              * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorspullrequesttemplatespecsourcehydratorsyncsourcewithtargetbranch)
           * [`obj spec.generators.pullRequest.template.spec.sources`](#obj-specgeneratorspullrequesttemplatespecsources)
             * [`fn withChart(chart)`](#fn-specgeneratorspullrequesttemplatespecsourceswithchart)
+            * [`fn withName(name)`](#fn-specgeneratorspullrequesttemplatespecsourceswithname)
             * [`fn withPath(path)`](#fn-specgeneratorspullrequesttemplatespecsourceswithpath)
             * [`fn withRef(ref)`](#fn-specgeneratorspullrequesttemplatespecsourceswithref)
             * [`fn withRepoURL(repoURL)`](#fn-specgeneratorspullrequesttemplatespecsourceswithrepourl)
@@ -6117,14 +6826,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withName(name)`](#fn-specgeneratorspullrequesttemplatespecsourcesdirectoryjsonnettlaswithname)
                   * [`fn withValue(value)`](#fn-specgeneratorspullrequesttemplatespecsourcesdirectoryjsonnettlaswithvalue)
             * [`obj spec.generators.pullRequest.template.spec.sources.helm`](#obj-specgeneratorspullrequesttemplatespecsourceshelm)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorspullrequesttemplatespecsourceshelmwithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorspullrequesttemplatespecsourceshelmwithapiversionsmixin)
               * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorspullrequesttemplatespecsourceshelmwithfileparameters)
               * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorspullrequesttemplatespecsourceshelmwithfileparametersmixin)
               * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorspullrequesttemplatespecsourceshelmwithignoremissingvaluefiles)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorspullrequesttemplatespecsourceshelmwithkubeversion)
+              * [`fn withNamespace(namespace)`](#fn-specgeneratorspullrequesttemplatespecsourceshelmwithnamespace)
               * [`fn withParameters(parameters)`](#fn-specgeneratorspullrequesttemplatespecsourceshelmwithparameters)
               * [`fn withParametersMixin(parameters)`](#fn-specgeneratorspullrequesttemplatespecsourceshelmwithparametersmixin)
               * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorspullrequesttemplatespecsourceshelmwithpasscredentials)
               * [`fn withReleaseName(releaseName)`](#fn-specgeneratorspullrequesttemplatespecsourceshelmwithreleasename)
               * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorspullrequesttemplatespecsourceshelmwithskipcrds)
+              * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorspullrequesttemplatespecsourceshelmwithskipschemavalidation)
+              * [`fn withSkipTests(skipTests)`](#fn-specgeneratorspullrequesttemplatespecsourceshelmwithskiptests)
               * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorspullrequesttemplatespecsourceshelmwithvaluefiles)
               * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorspullrequesttemplatespecsourceshelmwithvaluefilesmixin)
               * [`fn withValues(values)`](#fn-specgeneratorspullrequesttemplatespecsourceshelmwithvalues)
@@ -6139,6 +6854,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withName(name)`](#fn-specgeneratorspullrequesttemplatespecsourceshelmparameterswithname)
                 * [`fn withValue(value)`](#fn-specgeneratorspullrequesttemplatespecsourceshelmparameterswithvalue)
             * [`obj spec.generators.pullRequest.template.spec.sources.kustomize`](#obj-specgeneratorspullrequesttemplatespecsourceskustomize)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorspullrequesttemplatespecsourceskustomizewithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorspullrequesttemplatespecsourceskustomizewithapiversionsmixin)
               * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorspullrequesttemplatespecsourceskustomizewithcommonannotations)
               * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorspullrequesttemplatespecsourceskustomizewithcommonannotationsenvsubst)
               * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorspullrequesttemplatespecsourceskustomizewithcommonannotationsmixin)
@@ -6150,6 +6867,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorspullrequesttemplatespecsourceskustomizewithforcecommonlabels)
               * [`fn withImages(images)`](#fn-specgeneratorspullrequesttemplatespecsourceskustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorspullrequesttemplatespecsourceskustomizewithimagesmixin)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorspullrequesttemplatespecsourceskustomizewithkubeversion)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorspullrequesttemplatespecsourceskustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorspullrequesttemplatespecsourceskustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorspullrequesttemplatespecsourceskustomizewithnamesuffix)
@@ -6243,12 +6961,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
       * [`obj spec.generators.scmProvider.bitbucketServer`](#obj-specgeneratorsscmproviderbitbucketserver)
         * [`fn withAllBranches(allBranches)`](#fn-specgeneratorsscmproviderbitbucketserverwithallbranches)
         * [`fn withApi(api)`](#fn-specgeneratorsscmproviderbitbucketserverwithapi)
+        * [`fn withInsecure(insecure)`](#fn-specgeneratorsscmproviderbitbucketserverwithinsecure)
         * [`fn withProject(project)`](#fn-specgeneratorsscmproviderbitbucketserverwithproject)
         * [`obj spec.generators.scmProvider.bitbucketServer.basicAuth`](#obj-specgeneratorsscmproviderbitbucketserverbasicauth)
           * [`fn withUsername(username)`](#fn-specgeneratorsscmproviderbitbucketserverbasicauthwithusername)
           * [`obj spec.generators.scmProvider.bitbucketServer.basicAuth.passwordRef`](#obj-specgeneratorsscmproviderbitbucketserverbasicauthpasswordref)
             * [`fn withKey(key)`](#fn-specgeneratorsscmproviderbitbucketserverbasicauthpasswordrefwithkey)
             * [`fn withSecretName(secretName)`](#fn-specgeneratorsscmproviderbitbucketserverbasicauthpasswordrefwithsecretname)
+        * [`obj spec.generators.scmProvider.bitbucketServer.bearerToken`](#obj-specgeneratorsscmproviderbitbucketserverbearertoken)
+          * [`obj spec.generators.scmProvider.bitbucketServer.bearerToken.tokenRef`](#obj-specgeneratorsscmproviderbitbucketserverbearertokentokenref)
+            * [`fn withKey(key)`](#fn-specgeneratorsscmproviderbitbucketserverbearertokentokenrefwithkey)
+            * [`fn withSecretName(secretName)`](#fn-specgeneratorsscmproviderbitbucketserverbearertokentokenrefwithsecretname)
+        * [`obj spec.generators.scmProvider.bitbucketServer.caRef`](#obj-specgeneratorsscmproviderbitbucketservercaref)
+          * [`fn withConfigMapName(configMapName)`](#fn-specgeneratorsscmproviderbitbucketservercarefwithconfigmapname)
+          * [`fn withKey(key)`](#fn-specgeneratorsscmproviderbitbucketservercarefwithkey)
       * [`obj spec.generators.scmProvider.filters`](#obj-specgeneratorsscmproviderfilters)
         * [`fn withBranchMatch(branchMatch)`](#fn-specgeneratorsscmproviderfilterswithbranchmatch)
         * [`fn withLabelMatch(labelMatch)`](#fn-specgeneratorsscmproviderfilterswithlabelmatch)
@@ -6281,6 +7007,9 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
         * [`fn withIncludeSubgroups(includeSubgroups)`](#fn-specgeneratorsscmprovidergitlabwithincludesubgroups)
         * [`fn withInsecure(insecure)`](#fn-specgeneratorsscmprovidergitlabwithinsecure)
         * [`fn withTopic(topic)`](#fn-specgeneratorsscmprovidergitlabwithtopic)
+        * [`obj spec.generators.scmProvider.gitlab.caRef`](#obj-specgeneratorsscmprovidergitlabcaref)
+          * [`fn withConfigMapName(configMapName)`](#fn-specgeneratorsscmprovidergitlabcarefwithconfigmapname)
+          * [`fn withKey(key)`](#fn-specgeneratorsscmprovidergitlabcarefwithkey)
         * [`obj spec.generators.scmProvider.gitlab.tokenRef`](#obj-specgeneratorsscmprovidergitlabtokenref)
           * [`fn withKey(key)`](#fn-specgeneratorsscmprovidergitlabtokenrefwithkey)
           * [`fn withSecretName(secretName)`](#fn-specgeneratorsscmprovidergitlabtokenrefwithsecretname)
@@ -6323,6 +7052,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
             * [`fn withValue(value)`](#fn-specgeneratorsscmprovidertemplatespecinfowithvalue)
           * [`obj spec.generators.scmProvider.template.spec.source`](#obj-specgeneratorsscmprovidertemplatespecsource)
             * [`fn withChart(chart)`](#fn-specgeneratorsscmprovidertemplatespecsourcewithchart)
+            * [`fn withName(name)`](#fn-specgeneratorsscmprovidertemplatespecsourcewithname)
             * [`fn withPath(path)`](#fn-specgeneratorsscmprovidertemplatespecsourcewithpath)
             * [`fn withRef(ref)`](#fn-specgeneratorsscmprovidertemplatespecsourcewithref)
             * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsscmprovidertemplatespecsourcewithrepourl)
@@ -6347,14 +7077,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withName(name)`](#fn-specgeneratorsscmprovidertemplatespecsourcedirectoryjsonnettlaswithname)
                   * [`fn withValue(value)`](#fn-specgeneratorsscmprovidertemplatespecsourcedirectoryjsonnettlaswithvalue)
             * [`obj spec.generators.scmProvider.template.spec.source.helm`](#obj-specgeneratorsscmprovidertemplatespecsourcehelm)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsscmprovidertemplatespecsourcehelmwithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsscmprovidertemplatespecsourcehelmwithapiversionsmixin)
               * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsscmprovidertemplatespecsourcehelmwithfileparameters)
               * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsscmprovidertemplatespecsourcehelmwithfileparametersmixin)
               * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsscmprovidertemplatespecsourcehelmwithignoremissingvaluefiles)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsscmprovidertemplatespecsourcehelmwithkubeversion)
+              * [`fn withNamespace(namespace)`](#fn-specgeneratorsscmprovidertemplatespecsourcehelmwithnamespace)
               * [`fn withParameters(parameters)`](#fn-specgeneratorsscmprovidertemplatespecsourcehelmwithparameters)
               * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsscmprovidertemplatespecsourcehelmwithparametersmixin)
               * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsscmprovidertemplatespecsourcehelmwithpasscredentials)
               * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsscmprovidertemplatespecsourcehelmwithreleasename)
               * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsscmprovidertemplatespecsourcehelmwithskipcrds)
+              * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsscmprovidertemplatespecsourcehelmwithskipschemavalidation)
+              * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsscmprovidertemplatespecsourcehelmwithskiptests)
               * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsscmprovidertemplatespecsourcehelmwithvaluefiles)
               * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsscmprovidertemplatespecsourcehelmwithvaluefilesmixin)
               * [`fn withValues(values)`](#fn-specgeneratorsscmprovidertemplatespecsourcehelmwithvalues)
@@ -6369,6 +7105,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withName(name)`](#fn-specgeneratorsscmprovidertemplatespecsourcehelmparameterswithname)
                 * [`fn withValue(value)`](#fn-specgeneratorsscmprovidertemplatespecsourcehelmparameterswithvalue)
             * [`obj spec.generators.scmProvider.template.spec.source.kustomize`](#obj-specgeneratorsscmprovidertemplatespecsourcekustomize)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsscmprovidertemplatespecsourcekustomizewithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsscmprovidertemplatespecsourcekustomizewithapiversionsmixin)
               * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsscmprovidertemplatespecsourcekustomizewithcommonannotations)
               * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsscmprovidertemplatespecsourcekustomizewithcommonannotationsenvsubst)
               * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsscmprovidertemplatespecsourcekustomizewithcommonannotationsmixin)
@@ -6380,6 +7118,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsscmprovidertemplatespecsourcekustomizewithforcecommonlabels)
               * [`fn withImages(images)`](#fn-specgeneratorsscmprovidertemplatespecsourcekustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorsscmprovidertemplatespecsourcekustomizewithimagesmixin)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsscmprovidertemplatespecsourcekustomizewithkubeversion)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsscmprovidertemplatespecsourcekustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsscmprovidertemplatespecsourcekustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsscmprovidertemplatespecsourcekustomizewithnamesuffix)
@@ -6421,8 +7160,19 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withMapMixin(map)`](#fn-specgeneratorsscmprovidertemplatespecsourcepluginparameterswithmapmixin)
                 * [`fn withName(name)`](#fn-specgeneratorsscmprovidertemplatespecsourcepluginparameterswithname)
                 * [`fn withString(string)`](#fn-specgeneratorsscmprovidertemplatespecsourcepluginparameterswithstring)
+          * [`obj spec.generators.scmProvider.template.spec.sourceHydrator`](#obj-specgeneratorsscmprovidertemplatespecsourcehydrator)
+            * [`obj spec.generators.scmProvider.template.spec.sourceHydrator.drySource`](#obj-specgeneratorsscmprovidertemplatespecsourcehydratordrysource)
+              * [`fn withPath(path)`](#fn-specgeneratorsscmprovidertemplatespecsourcehydratordrysourcewithpath)
+              * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsscmprovidertemplatespecsourcehydratordrysourcewithrepourl)
+              * [`fn withTargetRevision(targetRevision)`](#fn-specgeneratorsscmprovidertemplatespecsourcehydratordrysourcewithtargetrevision)
+            * [`obj spec.generators.scmProvider.template.spec.sourceHydrator.hydrateTo`](#obj-specgeneratorsscmprovidertemplatespecsourcehydratorhydrateto)
+              * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsscmprovidertemplatespecsourcehydratorhydratetowithtargetbranch)
+            * [`obj spec.generators.scmProvider.template.spec.sourceHydrator.syncSource`](#obj-specgeneratorsscmprovidertemplatespecsourcehydratorsyncsource)
+              * [`fn withPath(path)`](#fn-specgeneratorsscmprovidertemplatespecsourcehydratorsyncsourcewithpath)
+              * [`fn withTargetBranch(targetBranch)`](#fn-specgeneratorsscmprovidertemplatespecsourcehydratorsyncsourcewithtargetbranch)
           * [`obj spec.generators.scmProvider.template.spec.sources`](#obj-specgeneratorsscmprovidertemplatespecsources)
             * [`fn withChart(chart)`](#fn-specgeneratorsscmprovidertemplatespecsourceswithchart)
+            * [`fn withName(name)`](#fn-specgeneratorsscmprovidertemplatespecsourceswithname)
             * [`fn withPath(path)`](#fn-specgeneratorsscmprovidertemplatespecsourceswithpath)
             * [`fn withRef(ref)`](#fn-specgeneratorsscmprovidertemplatespecsourceswithref)
             * [`fn withRepoURL(repoURL)`](#fn-specgeneratorsscmprovidertemplatespecsourceswithrepourl)
@@ -6447,14 +7197,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                   * [`fn withName(name)`](#fn-specgeneratorsscmprovidertemplatespecsourcesdirectoryjsonnettlaswithname)
                   * [`fn withValue(value)`](#fn-specgeneratorsscmprovidertemplatespecsourcesdirectoryjsonnettlaswithvalue)
             * [`obj spec.generators.scmProvider.template.spec.sources.helm`](#obj-specgeneratorsscmprovidertemplatespecsourceshelm)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsscmprovidertemplatespecsourceshelmwithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsscmprovidertemplatespecsourceshelmwithapiversionsmixin)
               * [`fn withFileParameters(fileParameters)`](#fn-specgeneratorsscmprovidertemplatespecsourceshelmwithfileparameters)
               * [`fn withFileParametersMixin(fileParameters)`](#fn-specgeneratorsscmprovidertemplatespecsourceshelmwithfileparametersmixin)
               * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-specgeneratorsscmprovidertemplatespecsourceshelmwithignoremissingvaluefiles)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsscmprovidertemplatespecsourceshelmwithkubeversion)
+              * [`fn withNamespace(namespace)`](#fn-specgeneratorsscmprovidertemplatespecsourceshelmwithnamespace)
               * [`fn withParameters(parameters)`](#fn-specgeneratorsscmprovidertemplatespecsourceshelmwithparameters)
               * [`fn withParametersMixin(parameters)`](#fn-specgeneratorsscmprovidertemplatespecsourceshelmwithparametersmixin)
               * [`fn withPassCredentials(passCredentials)`](#fn-specgeneratorsscmprovidertemplatespecsourceshelmwithpasscredentials)
               * [`fn withReleaseName(releaseName)`](#fn-specgeneratorsscmprovidertemplatespecsourceshelmwithreleasename)
               * [`fn withSkipCrds(skipCrds)`](#fn-specgeneratorsscmprovidertemplatespecsourceshelmwithskipcrds)
+              * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-specgeneratorsscmprovidertemplatespecsourceshelmwithskipschemavalidation)
+              * [`fn withSkipTests(skipTests)`](#fn-specgeneratorsscmprovidertemplatespecsourceshelmwithskiptests)
               * [`fn withValueFiles(valueFiles)`](#fn-specgeneratorsscmprovidertemplatespecsourceshelmwithvaluefiles)
               * [`fn withValueFilesMixin(valueFiles)`](#fn-specgeneratorsscmprovidertemplatespecsourceshelmwithvaluefilesmixin)
               * [`fn withValues(values)`](#fn-specgeneratorsscmprovidertemplatespecsourceshelmwithvalues)
@@ -6469,6 +7225,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
                 * [`fn withName(name)`](#fn-specgeneratorsscmprovidertemplatespecsourceshelmparameterswithname)
                 * [`fn withValue(value)`](#fn-specgeneratorsscmprovidertemplatespecsourceshelmparameterswithvalue)
             * [`obj spec.generators.scmProvider.template.spec.sources.kustomize`](#obj-specgeneratorsscmprovidertemplatespecsourceskustomize)
+              * [`fn withApiVersions(apiVersions)`](#fn-specgeneratorsscmprovidertemplatespecsourceskustomizewithapiversions)
+              * [`fn withApiVersionsMixin(apiVersions)`](#fn-specgeneratorsscmprovidertemplatespecsourceskustomizewithapiversionsmixin)
               * [`fn withCommonAnnotations(commonAnnotations)`](#fn-specgeneratorsscmprovidertemplatespecsourceskustomizewithcommonannotations)
               * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-specgeneratorsscmprovidertemplatespecsourceskustomizewithcommonannotationsenvsubst)
               * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-specgeneratorsscmprovidertemplatespecsourceskustomizewithcommonannotationsmixin)
@@ -6480,6 +7238,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsscmprovidertemplatespecsourceskustomizewithforcecommonlabels)
               * [`fn withImages(images)`](#fn-specgeneratorsscmprovidertemplatespecsourceskustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorsscmprovidertemplatespecsourceskustomizewithimagesmixin)
+              * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsscmprovidertemplatespecsourceskustomizewithkubeversion)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsscmprovidertemplatespecsourceskustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsscmprovidertemplatespecsourceskustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsscmprovidertemplatespecsourceskustomizewithnamesuffix)
@@ -6616,6 +7375,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
         * [`fn withValue(value)`](#fn-spectemplatespecinfowithvalue)
       * [`obj spec.template.spec.source`](#obj-spectemplatespecsource)
         * [`fn withChart(chart)`](#fn-spectemplatespecsourcewithchart)
+        * [`fn withName(name)`](#fn-spectemplatespecsourcewithname)
         * [`fn withPath(path)`](#fn-spectemplatespecsourcewithpath)
         * [`fn withRef(ref)`](#fn-spectemplatespecsourcewithref)
         * [`fn withRepoURL(repoURL)`](#fn-spectemplatespecsourcewithrepourl)
@@ -6640,14 +7400,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
               * [`fn withName(name)`](#fn-spectemplatespecsourcedirectoryjsonnettlaswithname)
               * [`fn withValue(value)`](#fn-spectemplatespecsourcedirectoryjsonnettlaswithvalue)
         * [`obj spec.template.spec.source.helm`](#obj-spectemplatespecsourcehelm)
+          * [`fn withApiVersions(apiVersions)`](#fn-spectemplatespecsourcehelmwithapiversions)
+          * [`fn withApiVersionsMixin(apiVersions)`](#fn-spectemplatespecsourcehelmwithapiversionsmixin)
           * [`fn withFileParameters(fileParameters)`](#fn-spectemplatespecsourcehelmwithfileparameters)
           * [`fn withFileParametersMixin(fileParameters)`](#fn-spectemplatespecsourcehelmwithfileparametersmixin)
           * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-spectemplatespecsourcehelmwithignoremissingvaluefiles)
+          * [`fn withKubeVersion(kubeVersion)`](#fn-spectemplatespecsourcehelmwithkubeversion)
+          * [`fn withNamespace(namespace)`](#fn-spectemplatespecsourcehelmwithnamespace)
           * [`fn withParameters(parameters)`](#fn-spectemplatespecsourcehelmwithparameters)
           * [`fn withParametersMixin(parameters)`](#fn-spectemplatespecsourcehelmwithparametersmixin)
           * [`fn withPassCredentials(passCredentials)`](#fn-spectemplatespecsourcehelmwithpasscredentials)
           * [`fn withReleaseName(releaseName)`](#fn-spectemplatespecsourcehelmwithreleasename)
           * [`fn withSkipCrds(skipCrds)`](#fn-spectemplatespecsourcehelmwithskipcrds)
+          * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-spectemplatespecsourcehelmwithskipschemavalidation)
+          * [`fn withSkipTests(skipTests)`](#fn-spectemplatespecsourcehelmwithskiptests)
           * [`fn withValueFiles(valueFiles)`](#fn-spectemplatespecsourcehelmwithvaluefiles)
           * [`fn withValueFilesMixin(valueFiles)`](#fn-spectemplatespecsourcehelmwithvaluefilesmixin)
           * [`fn withValues(values)`](#fn-spectemplatespecsourcehelmwithvalues)
@@ -6662,6 +7428,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
             * [`fn withName(name)`](#fn-spectemplatespecsourcehelmparameterswithname)
             * [`fn withValue(value)`](#fn-spectemplatespecsourcehelmparameterswithvalue)
         * [`obj spec.template.spec.source.kustomize`](#obj-spectemplatespecsourcekustomize)
+          * [`fn withApiVersions(apiVersions)`](#fn-spectemplatespecsourcekustomizewithapiversions)
+          * [`fn withApiVersionsMixin(apiVersions)`](#fn-spectemplatespecsourcekustomizewithapiversionsmixin)
           * [`fn withCommonAnnotations(commonAnnotations)`](#fn-spectemplatespecsourcekustomizewithcommonannotations)
           * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-spectemplatespecsourcekustomizewithcommonannotationsenvsubst)
           * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-spectemplatespecsourcekustomizewithcommonannotationsmixin)
@@ -6673,6 +7441,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
           * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-spectemplatespecsourcekustomizewithforcecommonlabels)
           * [`fn withImages(images)`](#fn-spectemplatespecsourcekustomizewithimages)
           * [`fn withImagesMixin(images)`](#fn-spectemplatespecsourcekustomizewithimagesmixin)
+          * [`fn withKubeVersion(kubeVersion)`](#fn-spectemplatespecsourcekustomizewithkubeversion)
           * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-spectemplatespecsourcekustomizewithlabelwithoutselector)
           * [`fn withNamePrefix(namePrefix)`](#fn-spectemplatespecsourcekustomizewithnameprefix)
           * [`fn withNameSuffix(nameSuffix)`](#fn-spectemplatespecsourcekustomizewithnamesuffix)
@@ -6714,8 +7483,19 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
             * [`fn withMapMixin(map)`](#fn-spectemplatespecsourcepluginparameterswithmapmixin)
             * [`fn withName(name)`](#fn-spectemplatespecsourcepluginparameterswithname)
             * [`fn withString(string)`](#fn-spectemplatespecsourcepluginparameterswithstring)
+      * [`obj spec.template.spec.sourceHydrator`](#obj-spectemplatespecsourcehydrator)
+        * [`obj spec.template.spec.sourceHydrator.drySource`](#obj-spectemplatespecsourcehydratordrysource)
+          * [`fn withPath(path)`](#fn-spectemplatespecsourcehydratordrysourcewithpath)
+          * [`fn withRepoURL(repoURL)`](#fn-spectemplatespecsourcehydratordrysourcewithrepourl)
+          * [`fn withTargetRevision(targetRevision)`](#fn-spectemplatespecsourcehydratordrysourcewithtargetrevision)
+        * [`obj spec.template.spec.sourceHydrator.hydrateTo`](#obj-spectemplatespecsourcehydratorhydrateto)
+          * [`fn withTargetBranch(targetBranch)`](#fn-spectemplatespecsourcehydratorhydratetowithtargetbranch)
+        * [`obj spec.template.spec.sourceHydrator.syncSource`](#obj-spectemplatespecsourcehydratorsyncsource)
+          * [`fn withPath(path)`](#fn-spectemplatespecsourcehydratorsyncsourcewithpath)
+          * [`fn withTargetBranch(targetBranch)`](#fn-spectemplatespecsourcehydratorsyncsourcewithtargetbranch)
       * [`obj spec.template.spec.sources`](#obj-spectemplatespecsources)
         * [`fn withChart(chart)`](#fn-spectemplatespecsourceswithchart)
+        * [`fn withName(name)`](#fn-spectemplatespecsourceswithname)
         * [`fn withPath(path)`](#fn-spectemplatespecsourceswithpath)
         * [`fn withRef(ref)`](#fn-spectemplatespecsourceswithref)
         * [`fn withRepoURL(repoURL)`](#fn-spectemplatespecsourceswithrepourl)
@@ -6740,14 +7520,20 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
               * [`fn withName(name)`](#fn-spectemplatespecsourcesdirectoryjsonnettlaswithname)
               * [`fn withValue(value)`](#fn-spectemplatespecsourcesdirectoryjsonnettlaswithvalue)
         * [`obj spec.template.spec.sources.helm`](#obj-spectemplatespecsourceshelm)
+          * [`fn withApiVersions(apiVersions)`](#fn-spectemplatespecsourceshelmwithapiversions)
+          * [`fn withApiVersionsMixin(apiVersions)`](#fn-spectemplatespecsourceshelmwithapiversionsmixin)
           * [`fn withFileParameters(fileParameters)`](#fn-spectemplatespecsourceshelmwithfileparameters)
           * [`fn withFileParametersMixin(fileParameters)`](#fn-spectemplatespecsourceshelmwithfileparametersmixin)
           * [`fn withIgnoreMissingValueFiles(ignoreMissingValueFiles)`](#fn-spectemplatespecsourceshelmwithignoremissingvaluefiles)
+          * [`fn withKubeVersion(kubeVersion)`](#fn-spectemplatespecsourceshelmwithkubeversion)
+          * [`fn withNamespace(namespace)`](#fn-spectemplatespecsourceshelmwithnamespace)
           * [`fn withParameters(parameters)`](#fn-spectemplatespecsourceshelmwithparameters)
           * [`fn withParametersMixin(parameters)`](#fn-spectemplatespecsourceshelmwithparametersmixin)
           * [`fn withPassCredentials(passCredentials)`](#fn-spectemplatespecsourceshelmwithpasscredentials)
           * [`fn withReleaseName(releaseName)`](#fn-spectemplatespecsourceshelmwithreleasename)
           * [`fn withSkipCrds(skipCrds)`](#fn-spectemplatespecsourceshelmwithskipcrds)
+          * [`fn withSkipSchemaValidation(skipSchemaValidation)`](#fn-spectemplatespecsourceshelmwithskipschemavalidation)
+          * [`fn withSkipTests(skipTests)`](#fn-spectemplatespecsourceshelmwithskiptests)
           * [`fn withValueFiles(valueFiles)`](#fn-spectemplatespecsourceshelmwithvaluefiles)
           * [`fn withValueFilesMixin(valueFiles)`](#fn-spectemplatespecsourceshelmwithvaluefilesmixin)
           * [`fn withValues(values)`](#fn-spectemplatespecsourceshelmwithvalues)
@@ -6762,6 +7548,8 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
             * [`fn withName(name)`](#fn-spectemplatespecsourceshelmparameterswithname)
             * [`fn withValue(value)`](#fn-spectemplatespecsourceshelmparameterswithvalue)
         * [`obj spec.template.spec.sources.kustomize`](#obj-spectemplatespecsourceskustomize)
+          * [`fn withApiVersions(apiVersions)`](#fn-spectemplatespecsourceskustomizewithapiversions)
+          * [`fn withApiVersionsMixin(apiVersions)`](#fn-spectemplatespecsourceskustomizewithapiversionsmixin)
           * [`fn withCommonAnnotations(commonAnnotations)`](#fn-spectemplatespecsourceskustomizewithcommonannotations)
           * [`fn withCommonAnnotationsEnvsubst(commonAnnotationsEnvsubst)`](#fn-spectemplatespecsourceskustomizewithcommonannotationsenvsubst)
           * [`fn withCommonAnnotationsMixin(commonAnnotations)`](#fn-spectemplatespecsourceskustomizewithcommonannotationsmixin)
@@ -6773,6 +7561,7 @@ permalink: /2.11/argoproj/v1alpha1/applicationSet/
           * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-spectemplatespecsourceskustomizewithforcecommonlabels)
           * [`fn withImages(images)`](#fn-spectemplatespecsourceskustomizewithimages)
           * [`fn withImagesMixin(images)`](#fn-spectemplatespecsourceskustomizewithimagesmixin)
+          * [`fn withKubeVersion(kubeVersion)`](#fn-spectemplatespecsourceskustomizewithkubeversion)
           * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-spectemplatespecsourceskustomizewithlabelwithoutselector)
           * [`fn withNamePrefix(namePrefix)`](#fn-spectemplatespecsourceskustomizewithnameprefix)
           * [`fn withNameSuffix(nameSuffix)`](#fn-spectemplatespecsourceskustomizewithnamesuffix)
@@ -7519,6 +8308,14 @@ withChart(chart)
 
 
 
+### fn spec.generators.clusterDecisionResource.template.spec.source.withName
+
+```ts
+withName(name)
+```
+
+
+
 ### fn spec.generators.clusterDecisionResource.template.spec.source.withPath
 
 ```ts
@@ -7697,6 +8494,24 @@ withValue(value)
 
 
 
+### fn spec.generators.clusterDecisionResource.template.spec.source.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.clusterDecisionResource.template.spec.source.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.clusterDecisionResource.template.spec.source.helm.withFileParameters
 
 ```ts
@@ -7719,6 +8534,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.clusterDecisionResource.template.spec.source.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.clusterDecisionResource.template.spec.source.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -7761,6 +8592,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.clusterDecisionResource.template.spec.source.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.clusterDecisionResource.template.spec.source.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -7869,6 +8716,24 @@ withValue(value)
 
 
 
+### fn spec.generators.clusterDecisionResource.template.spec.source.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.clusterDecisionResource.template.spec.source.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.clusterDecisionResource.template.spec.source.kustomize.withCommonAnnotations
 
 ```ts
@@ -7964,6 +8829,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.clusterDecisionResource.template.spec.source.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.clusterDecisionResource.template.spec.source.kustomize.withLabelWithoutSelector
 
@@ -8283,6 +9156,70 @@ withString(string)
 
 
 
+## obj spec.generators.clusterDecisionResource.template.spec.sourceHydrator
+
+
+
+## obj spec.generators.clusterDecisionResource.template.spec.sourceHydrator.drySource
+
+
+
+### fn spec.generators.clusterDecisionResource.template.spec.sourceHydrator.drySource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.clusterDecisionResource.template.spec.sourceHydrator.drySource.withRepoURL
+
+```ts
+withRepoURL(repoURL)
+```
+
+
+
+### fn spec.generators.clusterDecisionResource.template.spec.sourceHydrator.drySource.withTargetRevision
+
+```ts
+withTargetRevision(targetRevision)
+```
+
+
+
+## obj spec.generators.clusterDecisionResource.template.spec.sourceHydrator.hydrateTo
+
+
+
+### fn spec.generators.clusterDecisionResource.template.spec.sourceHydrator.hydrateTo.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
+## obj spec.generators.clusterDecisionResource.template.spec.sourceHydrator.syncSource
+
+
+
+### fn spec.generators.clusterDecisionResource.template.spec.sourceHydrator.syncSource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.clusterDecisionResource.template.spec.sourceHydrator.syncSource.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
 ## obj spec.generators.clusterDecisionResource.template.spec.sources
 
 
@@ -8291,6 +9228,14 @@ withString(string)
 
 ```ts
 withChart(chart)
+```
+
+
+
+### fn spec.generators.clusterDecisionResource.template.spec.sources.withName
+
+```ts
+withName(name)
 ```
 
 
@@ -8473,6 +9418,24 @@ withValue(value)
 
 
 
+### fn spec.generators.clusterDecisionResource.template.spec.sources.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.clusterDecisionResource.template.spec.sources.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.clusterDecisionResource.template.spec.sources.helm.withFileParameters
 
 ```ts
@@ -8495,6 +9458,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.clusterDecisionResource.template.spec.sources.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.clusterDecisionResource.template.spec.sources.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -8537,6 +9516,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.clusterDecisionResource.template.spec.sources.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.clusterDecisionResource.template.spec.sources.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -8645,6 +9640,24 @@ withValue(value)
 
 
 
+### fn spec.generators.clusterDecisionResource.template.spec.sources.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.clusterDecisionResource.template.spec.sources.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.clusterDecisionResource.template.spec.sources.kustomize.withCommonAnnotations
 
 ```ts
@@ -8740,6 +9753,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.clusterDecisionResource.template.spec.sources.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.clusterDecisionResource.template.spec.sources.kustomize.withLabelWithoutSelector
 
@@ -9193,6 +10214,14 @@ withMaxDuration(maxDuration)
 
 
 
+### fn spec.generators.clusters.withFlatList
+
+```ts
+withFlatList(flatList)
+```
+
+
+
 ### fn spec.generators.clusters.withValues
 
 ```ts
@@ -9591,6 +10620,14 @@ withChart(chart)
 
 
 
+### fn spec.generators.clusters.template.spec.source.withName
+
+```ts
+withName(name)
+```
+
+
+
 ### fn spec.generators.clusters.template.spec.source.withPath
 
 ```ts
@@ -9769,6 +10806,24 @@ withValue(value)
 
 
 
+### fn spec.generators.clusters.template.spec.source.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.clusters.template.spec.source.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.clusters.template.spec.source.helm.withFileParameters
 
 ```ts
@@ -9791,6 +10846,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.clusters.template.spec.source.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.clusters.template.spec.source.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -9833,6 +10904,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.clusters.template.spec.source.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.clusters.template.spec.source.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -9941,6 +11028,24 @@ withValue(value)
 
 
 
+### fn spec.generators.clusters.template.spec.source.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.clusters.template.spec.source.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.clusters.template.spec.source.kustomize.withCommonAnnotations
 
 ```ts
@@ -10036,6 +11141,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.clusters.template.spec.source.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.clusters.template.spec.source.kustomize.withLabelWithoutSelector
 
@@ -10355,6 +11468,70 @@ withString(string)
 
 
 
+## obj spec.generators.clusters.template.spec.sourceHydrator
+
+
+
+## obj spec.generators.clusters.template.spec.sourceHydrator.drySource
+
+
+
+### fn spec.generators.clusters.template.spec.sourceHydrator.drySource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.clusters.template.spec.sourceHydrator.drySource.withRepoURL
+
+```ts
+withRepoURL(repoURL)
+```
+
+
+
+### fn spec.generators.clusters.template.spec.sourceHydrator.drySource.withTargetRevision
+
+```ts
+withTargetRevision(targetRevision)
+```
+
+
+
+## obj spec.generators.clusters.template.spec.sourceHydrator.hydrateTo
+
+
+
+### fn spec.generators.clusters.template.spec.sourceHydrator.hydrateTo.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
+## obj spec.generators.clusters.template.spec.sourceHydrator.syncSource
+
+
+
+### fn spec.generators.clusters.template.spec.sourceHydrator.syncSource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.clusters.template.spec.sourceHydrator.syncSource.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
 ## obj spec.generators.clusters.template.spec.sources
 
 
@@ -10363,6 +11540,14 @@ withString(string)
 
 ```ts
 withChart(chart)
+```
+
+
+
+### fn spec.generators.clusters.template.spec.sources.withName
+
+```ts
+withName(name)
 ```
 
 
@@ -10545,6 +11730,24 @@ withValue(value)
 
 
 
+### fn spec.generators.clusters.template.spec.sources.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.clusters.template.spec.sources.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.clusters.template.spec.sources.helm.withFileParameters
 
 ```ts
@@ -10567,6 +11770,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.clusters.template.spec.sources.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.clusters.template.spec.sources.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -10609,6 +11828,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.clusters.template.spec.sources.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.clusters.template.spec.sources.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -10717,6 +11952,24 @@ withValue(value)
 
 
 
+### fn spec.generators.clusters.template.spec.sources.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.clusters.template.spec.sources.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.clusters.template.spec.sources.kustomize.withCommonAnnotations
 
 ```ts
@@ -10812,6 +12065,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.clusters.template.spec.sources.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.clusters.template.spec.sources.kustomize.withLabelWithoutSelector
 
@@ -11685,6 +12946,14 @@ withChart(chart)
 
 
 
+### fn spec.generators.git.template.spec.source.withName
+
+```ts
+withName(name)
+```
+
+
+
 ### fn spec.generators.git.template.spec.source.withPath
 
 ```ts
@@ -11863,6 +13132,24 @@ withValue(value)
 
 
 
+### fn spec.generators.git.template.spec.source.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.git.template.spec.source.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.git.template.spec.source.helm.withFileParameters
 
 ```ts
@@ -11885,6 +13172,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.git.template.spec.source.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.git.template.spec.source.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -11927,6 +13230,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.git.template.spec.source.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.git.template.spec.source.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -12035,6 +13354,24 @@ withValue(value)
 
 
 
+### fn spec.generators.git.template.spec.source.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.git.template.spec.source.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.git.template.spec.source.kustomize.withCommonAnnotations
 
 ```ts
@@ -12130,6 +13467,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.git.template.spec.source.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.git.template.spec.source.kustomize.withLabelWithoutSelector
 
@@ -12449,6 +13794,70 @@ withString(string)
 
 
 
+## obj spec.generators.git.template.spec.sourceHydrator
+
+
+
+## obj spec.generators.git.template.spec.sourceHydrator.drySource
+
+
+
+### fn spec.generators.git.template.spec.sourceHydrator.drySource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.git.template.spec.sourceHydrator.drySource.withRepoURL
+
+```ts
+withRepoURL(repoURL)
+```
+
+
+
+### fn spec.generators.git.template.spec.sourceHydrator.drySource.withTargetRevision
+
+```ts
+withTargetRevision(targetRevision)
+```
+
+
+
+## obj spec.generators.git.template.spec.sourceHydrator.hydrateTo
+
+
+
+### fn spec.generators.git.template.spec.sourceHydrator.hydrateTo.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
+## obj spec.generators.git.template.spec.sourceHydrator.syncSource
+
+
+
+### fn spec.generators.git.template.spec.sourceHydrator.syncSource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.git.template.spec.sourceHydrator.syncSource.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
 ## obj spec.generators.git.template.spec.sources
 
 
@@ -12457,6 +13866,14 @@ withString(string)
 
 ```ts
 withChart(chart)
+```
+
+
+
+### fn spec.generators.git.template.spec.sources.withName
+
+```ts
+withName(name)
 ```
 
 
@@ -12639,6 +14056,24 @@ withValue(value)
 
 
 
+### fn spec.generators.git.template.spec.sources.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.git.template.spec.sources.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.git.template.spec.sources.helm.withFileParameters
 
 ```ts
@@ -12661,6 +14096,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.git.template.spec.sources.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.git.template.spec.sources.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -12703,6 +14154,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.git.template.spec.sources.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.git.template.spec.sources.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -12811,6 +14278,24 @@ withValue(value)
 
 
 
+### fn spec.generators.git.template.spec.sources.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.git.template.spec.sources.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.git.template.spec.sources.kustomize.withCommonAnnotations
 
 ```ts
@@ -12906,6 +14391,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.git.template.spec.sources.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.git.template.spec.sources.kustomize.withLabelWithoutSelector
 
@@ -13687,6 +15180,14 @@ withChart(chart)
 
 
 
+### fn spec.generators.list.template.spec.source.withName
+
+```ts
+withName(name)
+```
+
+
+
 ### fn spec.generators.list.template.spec.source.withPath
 
 ```ts
@@ -13865,6 +15366,24 @@ withValue(value)
 
 
 
+### fn spec.generators.list.template.spec.source.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.list.template.spec.source.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.list.template.spec.source.helm.withFileParameters
 
 ```ts
@@ -13887,6 +15406,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.list.template.spec.source.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.list.template.spec.source.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -13929,6 +15464,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.list.template.spec.source.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.list.template.spec.source.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -14037,6 +15588,24 @@ withValue(value)
 
 
 
+### fn spec.generators.list.template.spec.source.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.list.template.spec.source.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.list.template.spec.source.kustomize.withCommonAnnotations
 
 ```ts
@@ -14132,6 +15701,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.list.template.spec.source.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.list.template.spec.source.kustomize.withLabelWithoutSelector
 
@@ -14451,6 +16028,70 @@ withString(string)
 
 
 
+## obj spec.generators.list.template.spec.sourceHydrator
+
+
+
+## obj spec.generators.list.template.spec.sourceHydrator.drySource
+
+
+
+### fn spec.generators.list.template.spec.sourceHydrator.drySource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.list.template.spec.sourceHydrator.drySource.withRepoURL
+
+```ts
+withRepoURL(repoURL)
+```
+
+
+
+### fn spec.generators.list.template.spec.sourceHydrator.drySource.withTargetRevision
+
+```ts
+withTargetRevision(targetRevision)
+```
+
+
+
+## obj spec.generators.list.template.spec.sourceHydrator.hydrateTo
+
+
+
+### fn spec.generators.list.template.spec.sourceHydrator.hydrateTo.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
+## obj spec.generators.list.template.spec.sourceHydrator.syncSource
+
+
+
+### fn spec.generators.list.template.spec.sourceHydrator.syncSource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.list.template.spec.sourceHydrator.syncSource.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
 ## obj spec.generators.list.template.spec.sources
 
 
@@ -14459,6 +16100,14 @@ withString(string)
 
 ```ts
 withChart(chart)
+```
+
+
+
+### fn spec.generators.list.template.spec.sources.withName
+
+```ts
+withName(name)
 ```
 
 
@@ -14641,6 +16290,24 @@ withValue(value)
 
 
 
+### fn spec.generators.list.template.spec.sources.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.list.template.spec.sources.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.list.template.spec.sources.helm.withFileParameters
 
 ```ts
@@ -14663,6 +16330,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.list.template.spec.sources.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.list.template.spec.sources.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -14705,6 +16388,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.list.template.spec.sources.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.list.template.spec.sources.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -14813,6 +16512,24 @@ withValue(value)
 
 
 
+### fn spec.generators.list.template.spec.sources.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.list.template.spec.sources.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.list.template.spec.sources.kustomize.withCommonAnnotations
 
 ```ts
@@ -14908,6 +16625,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.list.template.spec.sources.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.list.template.spec.sources.kustomize.withLabelWithoutSelector
 
@@ -15825,6 +17550,14 @@ withChart(chart)
 
 
 
+### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.source.withName
+
+```ts
+withName(name)
+```
+
+
+
 ### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.source.withPath
 
 ```ts
@@ -16003,6 +17736,24 @@ withValue(value)
 
 
 
+### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.source.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.source.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.source.helm.withFileParameters
 
 ```ts
@@ -16025,6 +17776,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.source.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.source.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -16067,6 +17834,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.source.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.source.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -16175,6 +17958,24 @@ withValue(value)
 
 
 
+### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.source.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.source.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.source.kustomize.withCommonAnnotations
 
 ```ts
@@ -16270,6 +18071,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.source.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.source.kustomize.withLabelWithoutSelector
 
@@ -16589,6 +18398,70 @@ withString(string)
 
 
 
+## obj spec.generators.matrix.generators.clusterDecisionResource.template.spec.sourceHydrator
+
+
+
+## obj spec.generators.matrix.generators.clusterDecisionResource.template.spec.sourceHydrator.drySource
+
+
+
+### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.sourceHydrator.drySource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.sourceHydrator.drySource.withRepoURL
+
+```ts
+withRepoURL(repoURL)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.sourceHydrator.drySource.withTargetRevision
+
+```ts
+withTargetRevision(targetRevision)
+```
+
+
+
+## obj spec.generators.matrix.generators.clusterDecisionResource.template.spec.sourceHydrator.hydrateTo
+
+
+
+### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.sourceHydrator.hydrateTo.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
+## obj spec.generators.matrix.generators.clusterDecisionResource.template.spec.sourceHydrator.syncSource
+
+
+
+### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.sourceHydrator.syncSource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.sourceHydrator.syncSource.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
 ## obj spec.generators.matrix.generators.clusterDecisionResource.template.spec.sources
 
 
@@ -16597,6 +18470,14 @@ withString(string)
 
 ```ts
 withChart(chart)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.sources.withName
+
+```ts
+withName(name)
 ```
 
 
@@ -16779,6 +18660,24 @@ withValue(value)
 
 
 
+### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.sources.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.sources.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.sources.helm.withFileParameters
 
 ```ts
@@ -16801,6 +18700,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.sources.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.sources.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -16843,6 +18758,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.sources.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.sources.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -16951,6 +18882,24 @@ withValue(value)
 
 
 
+### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.sources.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.sources.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.sources.kustomize.withCommonAnnotations
 
 ```ts
@@ -17046,6 +18995,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.sources.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.sources.kustomize.withLabelWithoutSelector
 
@@ -17499,6 +19456,14 @@ withMaxDuration(maxDuration)
 
 
 
+### fn spec.generators.matrix.generators.clusters.withFlatList
+
+```ts
+withFlatList(flatList)
+```
+
+
+
 ### fn spec.generators.matrix.generators.clusters.withValues
 
 ```ts
@@ -17897,6 +19862,14 @@ withChart(chart)
 
 
 
+### fn spec.generators.matrix.generators.clusters.template.spec.source.withName
+
+```ts
+withName(name)
+```
+
+
+
 ### fn spec.generators.matrix.generators.clusters.template.spec.source.withPath
 
 ```ts
@@ -18075,6 +20048,24 @@ withValue(value)
 
 
 
+### fn spec.generators.matrix.generators.clusters.template.spec.source.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusters.template.spec.source.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.matrix.generators.clusters.template.spec.source.helm.withFileParameters
 
 ```ts
@@ -18097,6 +20088,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusters.template.spec.source.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusters.template.spec.source.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -18139,6 +20146,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusters.template.spec.source.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusters.template.spec.source.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -18247,6 +20270,24 @@ withValue(value)
 
 
 
+### fn spec.generators.matrix.generators.clusters.template.spec.source.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusters.template.spec.source.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.matrix.generators.clusters.template.spec.source.kustomize.withCommonAnnotations
 
 ```ts
@@ -18342,6 +20383,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.matrix.generators.clusters.template.spec.source.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.matrix.generators.clusters.template.spec.source.kustomize.withLabelWithoutSelector
 
@@ -18661,6 +20710,70 @@ withString(string)
 
 
 
+## obj spec.generators.matrix.generators.clusters.template.spec.sourceHydrator
+
+
+
+## obj spec.generators.matrix.generators.clusters.template.spec.sourceHydrator.drySource
+
+
+
+### fn spec.generators.matrix.generators.clusters.template.spec.sourceHydrator.drySource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusters.template.spec.sourceHydrator.drySource.withRepoURL
+
+```ts
+withRepoURL(repoURL)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusters.template.spec.sourceHydrator.drySource.withTargetRevision
+
+```ts
+withTargetRevision(targetRevision)
+```
+
+
+
+## obj spec.generators.matrix.generators.clusters.template.spec.sourceHydrator.hydrateTo
+
+
+
+### fn spec.generators.matrix.generators.clusters.template.spec.sourceHydrator.hydrateTo.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
+## obj spec.generators.matrix.generators.clusters.template.spec.sourceHydrator.syncSource
+
+
+
+### fn spec.generators.matrix.generators.clusters.template.spec.sourceHydrator.syncSource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusters.template.spec.sourceHydrator.syncSource.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
 ## obj spec.generators.matrix.generators.clusters.template.spec.sources
 
 
@@ -18669,6 +20782,14 @@ withString(string)
 
 ```ts
 withChart(chart)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusters.template.spec.sources.withName
+
+```ts
+withName(name)
 ```
 
 
@@ -18851,6 +20972,24 @@ withValue(value)
 
 
 
+### fn spec.generators.matrix.generators.clusters.template.spec.sources.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusters.template.spec.sources.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.matrix.generators.clusters.template.spec.sources.helm.withFileParameters
 
 ```ts
@@ -18873,6 +21012,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusters.template.spec.sources.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusters.template.spec.sources.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -18915,6 +21070,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusters.template.spec.sources.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusters.template.spec.sources.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -19023,6 +21194,24 @@ withValue(value)
 
 
 
+### fn spec.generators.matrix.generators.clusters.template.spec.sources.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusters.template.spec.sources.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.matrix.generators.clusters.template.spec.sources.kustomize.withCommonAnnotations
 
 ```ts
@@ -19118,6 +21307,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.matrix.generators.clusters.template.spec.sources.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.matrix.generators.clusters.template.spec.sources.kustomize.withLabelWithoutSelector
 
@@ -19991,6 +22188,14 @@ withChart(chart)
 
 
 
+### fn spec.generators.matrix.generators.git.template.spec.source.withName
+
+```ts
+withName(name)
+```
+
+
+
 ### fn spec.generators.matrix.generators.git.template.spec.source.withPath
 
 ```ts
@@ -20169,6 +22374,24 @@ withValue(value)
 
 
 
+### fn spec.generators.matrix.generators.git.template.spec.source.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.matrix.generators.git.template.spec.source.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.matrix.generators.git.template.spec.source.helm.withFileParameters
 
 ```ts
@@ -20191,6 +22414,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.matrix.generators.git.template.spec.source.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.matrix.generators.git.template.spec.source.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -20233,6 +22472,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.matrix.generators.git.template.spec.source.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.matrix.generators.git.template.spec.source.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -20341,6 +22596,24 @@ withValue(value)
 
 
 
+### fn spec.generators.matrix.generators.git.template.spec.source.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.matrix.generators.git.template.spec.source.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.matrix.generators.git.template.spec.source.kustomize.withCommonAnnotations
 
 ```ts
@@ -20436,6 +22709,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.matrix.generators.git.template.spec.source.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.matrix.generators.git.template.spec.source.kustomize.withLabelWithoutSelector
 
@@ -20755,6 +23036,70 @@ withString(string)
 
 
 
+## obj spec.generators.matrix.generators.git.template.spec.sourceHydrator
+
+
+
+## obj spec.generators.matrix.generators.git.template.spec.sourceHydrator.drySource
+
+
+
+### fn spec.generators.matrix.generators.git.template.spec.sourceHydrator.drySource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.matrix.generators.git.template.spec.sourceHydrator.drySource.withRepoURL
+
+```ts
+withRepoURL(repoURL)
+```
+
+
+
+### fn spec.generators.matrix.generators.git.template.spec.sourceHydrator.drySource.withTargetRevision
+
+```ts
+withTargetRevision(targetRevision)
+```
+
+
+
+## obj spec.generators.matrix.generators.git.template.spec.sourceHydrator.hydrateTo
+
+
+
+### fn spec.generators.matrix.generators.git.template.spec.sourceHydrator.hydrateTo.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
+## obj spec.generators.matrix.generators.git.template.spec.sourceHydrator.syncSource
+
+
+
+### fn spec.generators.matrix.generators.git.template.spec.sourceHydrator.syncSource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.matrix.generators.git.template.spec.sourceHydrator.syncSource.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
 ## obj spec.generators.matrix.generators.git.template.spec.sources
 
 
@@ -20763,6 +23108,14 @@ withString(string)
 
 ```ts
 withChart(chart)
+```
+
+
+
+### fn spec.generators.matrix.generators.git.template.spec.sources.withName
+
+```ts
+withName(name)
 ```
 
 
@@ -20945,6 +23298,24 @@ withValue(value)
 
 
 
+### fn spec.generators.matrix.generators.git.template.spec.sources.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.matrix.generators.git.template.spec.sources.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.matrix.generators.git.template.spec.sources.helm.withFileParameters
 
 ```ts
@@ -20967,6 +23338,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.matrix.generators.git.template.spec.sources.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.matrix.generators.git.template.spec.sources.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -21009,6 +23396,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.matrix.generators.git.template.spec.sources.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.matrix.generators.git.template.spec.sources.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -21117,6 +23520,24 @@ withValue(value)
 
 
 
+### fn spec.generators.matrix.generators.git.template.spec.sources.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.matrix.generators.git.template.spec.sources.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.matrix.generators.git.template.spec.sources.kustomize.withCommonAnnotations
 
 ```ts
@@ -21212,6 +23633,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.matrix.generators.git.template.spec.sources.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.matrix.generators.git.template.spec.sources.kustomize.withLabelWithoutSelector
 
@@ -21993,6 +24422,14 @@ withChart(chart)
 
 
 
+### fn spec.generators.matrix.generators.list.template.spec.source.withName
+
+```ts
+withName(name)
+```
+
+
+
 ### fn spec.generators.matrix.generators.list.template.spec.source.withPath
 
 ```ts
@@ -22171,6 +24608,24 @@ withValue(value)
 
 
 
+### fn spec.generators.matrix.generators.list.template.spec.source.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.matrix.generators.list.template.spec.source.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.matrix.generators.list.template.spec.source.helm.withFileParameters
 
 ```ts
@@ -22193,6 +24648,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.matrix.generators.list.template.spec.source.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.matrix.generators.list.template.spec.source.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -22235,6 +24706,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.matrix.generators.list.template.spec.source.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.matrix.generators.list.template.spec.source.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -22343,6 +24830,24 @@ withValue(value)
 
 
 
+### fn spec.generators.matrix.generators.list.template.spec.source.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.matrix.generators.list.template.spec.source.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.matrix.generators.list.template.spec.source.kustomize.withCommonAnnotations
 
 ```ts
@@ -22438,6 +24943,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.matrix.generators.list.template.spec.source.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.matrix.generators.list.template.spec.source.kustomize.withLabelWithoutSelector
 
@@ -22757,6 +25270,70 @@ withString(string)
 
 
 
+## obj spec.generators.matrix.generators.list.template.spec.sourceHydrator
+
+
+
+## obj spec.generators.matrix.generators.list.template.spec.sourceHydrator.drySource
+
+
+
+### fn spec.generators.matrix.generators.list.template.spec.sourceHydrator.drySource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.matrix.generators.list.template.spec.sourceHydrator.drySource.withRepoURL
+
+```ts
+withRepoURL(repoURL)
+```
+
+
+
+### fn spec.generators.matrix.generators.list.template.spec.sourceHydrator.drySource.withTargetRevision
+
+```ts
+withTargetRevision(targetRevision)
+```
+
+
+
+## obj spec.generators.matrix.generators.list.template.spec.sourceHydrator.hydrateTo
+
+
+
+### fn spec.generators.matrix.generators.list.template.spec.sourceHydrator.hydrateTo.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
+## obj spec.generators.matrix.generators.list.template.spec.sourceHydrator.syncSource
+
+
+
+### fn spec.generators.matrix.generators.list.template.spec.sourceHydrator.syncSource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.matrix.generators.list.template.spec.sourceHydrator.syncSource.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
 ## obj spec.generators.matrix.generators.list.template.spec.sources
 
 
@@ -22765,6 +25342,14 @@ withString(string)
 
 ```ts
 withChart(chart)
+```
+
+
+
+### fn spec.generators.matrix.generators.list.template.spec.sources.withName
+
+```ts
+withName(name)
 ```
 
 
@@ -22947,6 +25532,24 @@ withValue(value)
 
 
 
+### fn spec.generators.matrix.generators.list.template.spec.sources.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.matrix.generators.list.template.spec.sources.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.matrix.generators.list.template.spec.sources.helm.withFileParameters
 
 ```ts
@@ -22969,6 +25572,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.matrix.generators.list.template.spec.sources.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.matrix.generators.list.template.spec.sources.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -23011,6 +25630,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.matrix.generators.list.template.spec.sources.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.matrix.generators.list.template.spec.sources.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -23119,6 +25754,24 @@ withValue(value)
 
 
 
+### fn spec.generators.matrix.generators.list.template.spec.sources.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.matrix.generators.list.template.spec.sources.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.matrix.generators.list.template.spec.sources.kustomize.withCommonAnnotations
 
 ```ts
@@ -23214,6 +25867,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.matrix.generators.list.template.spec.sources.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.matrix.generators.list.template.spec.sources.kustomize.withLabelWithoutSelector
 
@@ -24029,6 +26690,14 @@ withChart(chart)
 
 
 
+### fn spec.generators.matrix.generators.plugin.template.spec.source.withName
+
+```ts
+withName(name)
+```
+
+
+
 ### fn spec.generators.matrix.generators.plugin.template.spec.source.withPath
 
 ```ts
@@ -24207,6 +26876,24 @@ withValue(value)
 
 
 
+### fn spec.generators.matrix.generators.plugin.template.spec.source.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.matrix.generators.plugin.template.spec.source.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.matrix.generators.plugin.template.spec.source.helm.withFileParameters
 
 ```ts
@@ -24229,6 +26916,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.matrix.generators.plugin.template.spec.source.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.matrix.generators.plugin.template.spec.source.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -24271,6 +26974,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.matrix.generators.plugin.template.spec.source.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.matrix.generators.plugin.template.spec.source.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -24379,6 +27098,24 @@ withValue(value)
 
 
 
+### fn spec.generators.matrix.generators.plugin.template.spec.source.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.matrix.generators.plugin.template.spec.source.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.matrix.generators.plugin.template.spec.source.kustomize.withCommonAnnotations
 
 ```ts
@@ -24474,6 +27211,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.matrix.generators.plugin.template.spec.source.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.matrix.generators.plugin.template.spec.source.kustomize.withLabelWithoutSelector
 
@@ -24793,6 +27538,70 @@ withString(string)
 
 
 
+## obj spec.generators.matrix.generators.plugin.template.spec.sourceHydrator
+
+
+
+## obj spec.generators.matrix.generators.plugin.template.spec.sourceHydrator.drySource
+
+
+
+### fn spec.generators.matrix.generators.plugin.template.spec.sourceHydrator.drySource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.matrix.generators.plugin.template.spec.sourceHydrator.drySource.withRepoURL
+
+```ts
+withRepoURL(repoURL)
+```
+
+
+
+### fn spec.generators.matrix.generators.plugin.template.spec.sourceHydrator.drySource.withTargetRevision
+
+```ts
+withTargetRevision(targetRevision)
+```
+
+
+
+## obj spec.generators.matrix.generators.plugin.template.spec.sourceHydrator.hydrateTo
+
+
+
+### fn spec.generators.matrix.generators.plugin.template.spec.sourceHydrator.hydrateTo.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
+## obj spec.generators.matrix.generators.plugin.template.spec.sourceHydrator.syncSource
+
+
+
+### fn spec.generators.matrix.generators.plugin.template.spec.sourceHydrator.syncSource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.matrix.generators.plugin.template.spec.sourceHydrator.syncSource.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
 ## obj spec.generators.matrix.generators.plugin.template.spec.sources
 
 
@@ -24801,6 +27610,14 @@ withString(string)
 
 ```ts
 withChart(chart)
+```
+
+
+
+### fn spec.generators.matrix.generators.plugin.template.spec.sources.withName
+
+```ts
+withName(name)
 ```
 
 
@@ -24983,6 +27800,24 @@ withValue(value)
 
 
 
+### fn spec.generators.matrix.generators.plugin.template.spec.sources.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.matrix.generators.plugin.template.spec.sources.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.matrix.generators.plugin.template.spec.sources.helm.withFileParameters
 
 ```ts
@@ -25005,6 +27840,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.matrix.generators.plugin.template.spec.sources.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.matrix.generators.plugin.template.spec.sources.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -25047,6 +27898,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.matrix.generators.plugin.template.spec.sources.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.matrix.generators.plugin.template.spec.sources.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -25155,6 +28022,24 @@ withValue(value)
 
 
 
+### fn spec.generators.matrix.generators.plugin.template.spec.sources.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.matrix.generators.plugin.template.spec.sources.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.matrix.generators.plugin.template.spec.sources.kustomize.withCommonAnnotations
 
 ```ts
@@ -25250,6 +28135,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.matrix.generators.plugin.template.spec.sources.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.matrix.generators.plugin.template.spec.sources.kustomize.withLabelWithoutSelector
 
@@ -25899,6 +28792,14 @@ withApi(api)
 
 
 
+### fn spec.generators.matrix.generators.pullRequest.bitbucketServer.withInsecure
+
+```ts
+withInsecure(insecure)
+```
+
+
+
 ### fn spec.generators.matrix.generators.pullRequest.bitbucketServer.withProject
 
 ```ts
@@ -25943,6 +28844,50 @@ withKey(key)
 
 ```ts
 withSecretName(secretName)
+```
+
+
+
+## obj spec.generators.matrix.generators.pullRequest.bitbucketServer.bearerToken
+
+
+
+## obj spec.generators.matrix.generators.pullRequest.bitbucketServer.bearerToken.tokenRef
+
+
+
+### fn spec.generators.matrix.generators.pullRequest.bitbucketServer.bearerToken.tokenRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.generators.matrix.generators.pullRequest.bitbucketServer.bearerToken.tokenRef.withSecretName
+
+```ts
+withSecretName(secretName)
+```
+
+
+
+## obj spec.generators.matrix.generators.pullRequest.bitbucketServer.caRef
+
+
+
+### fn spec.generators.matrix.generators.pullRequest.bitbucketServer.caRef.withConfigMapName
+
+```ts
+withConfigMapName(configMapName)
+```
+
+
+
+### fn spec.generators.matrix.generators.pullRequest.bitbucketServer.caRef.withKey
+
+```ts
+withKey(key)
 ```
 
 
@@ -26147,6 +29092,26 @@ withProject(project)
 
 ```ts
 withPullRequestState(pullRequestState)
+```
+
+
+
+## obj spec.generators.matrix.generators.pullRequest.gitlab.caRef
+
+
+
+### fn spec.generators.matrix.generators.pullRequest.gitlab.caRef.withConfigMapName
+
+```ts
+withConfigMapName(configMapName)
+```
+
+
+
+### fn spec.generators.matrix.generators.pullRequest.gitlab.caRef.withKey
+
+```ts
+withKey(key)
 ```
 
 
@@ -26473,6 +29438,14 @@ withChart(chart)
 
 
 
+### fn spec.generators.matrix.generators.pullRequest.template.spec.source.withName
+
+```ts
+withName(name)
+```
+
+
+
 ### fn spec.generators.matrix.generators.pullRequest.template.spec.source.withPath
 
 ```ts
@@ -26651,6 +29624,24 @@ withValue(value)
 
 
 
+### fn spec.generators.matrix.generators.pullRequest.template.spec.source.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.matrix.generators.pullRequest.template.spec.source.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.matrix.generators.pullRequest.template.spec.source.helm.withFileParameters
 
 ```ts
@@ -26673,6 +29664,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.matrix.generators.pullRequest.template.spec.source.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.matrix.generators.pullRequest.template.spec.source.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -26715,6 +29722,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.matrix.generators.pullRequest.template.spec.source.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.matrix.generators.pullRequest.template.spec.source.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -26823,6 +29846,24 @@ withValue(value)
 
 
 
+### fn spec.generators.matrix.generators.pullRequest.template.spec.source.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.matrix.generators.pullRequest.template.spec.source.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.matrix.generators.pullRequest.template.spec.source.kustomize.withCommonAnnotations
 
 ```ts
@@ -26918,6 +29959,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.matrix.generators.pullRequest.template.spec.source.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.matrix.generators.pullRequest.template.spec.source.kustomize.withLabelWithoutSelector
 
@@ -27237,6 +30286,70 @@ withString(string)
 
 
 
+## obj spec.generators.matrix.generators.pullRequest.template.spec.sourceHydrator
+
+
+
+## obj spec.generators.matrix.generators.pullRequest.template.spec.sourceHydrator.drySource
+
+
+
+### fn spec.generators.matrix.generators.pullRequest.template.spec.sourceHydrator.drySource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.matrix.generators.pullRequest.template.spec.sourceHydrator.drySource.withRepoURL
+
+```ts
+withRepoURL(repoURL)
+```
+
+
+
+### fn spec.generators.matrix.generators.pullRequest.template.spec.sourceHydrator.drySource.withTargetRevision
+
+```ts
+withTargetRevision(targetRevision)
+```
+
+
+
+## obj spec.generators.matrix.generators.pullRequest.template.spec.sourceHydrator.hydrateTo
+
+
+
+### fn spec.generators.matrix.generators.pullRequest.template.spec.sourceHydrator.hydrateTo.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
+## obj spec.generators.matrix.generators.pullRequest.template.spec.sourceHydrator.syncSource
+
+
+
+### fn spec.generators.matrix.generators.pullRequest.template.spec.sourceHydrator.syncSource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.matrix.generators.pullRequest.template.spec.sourceHydrator.syncSource.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
 ## obj spec.generators.matrix.generators.pullRequest.template.spec.sources
 
 
@@ -27245,6 +30358,14 @@ withString(string)
 
 ```ts
 withChart(chart)
+```
+
+
+
+### fn spec.generators.matrix.generators.pullRequest.template.spec.sources.withName
+
+```ts
+withName(name)
 ```
 
 
@@ -27427,6 +30548,24 @@ withValue(value)
 
 
 
+### fn spec.generators.matrix.generators.pullRequest.template.spec.sources.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.matrix.generators.pullRequest.template.spec.sources.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.matrix.generators.pullRequest.template.spec.sources.helm.withFileParameters
 
 ```ts
@@ -27449,6 +30588,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.matrix.generators.pullRequest.template.spec.sources.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.matrix.generators.pullRequest.template.spec.sources.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -27491,6 +30646,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.matrix.generators.pullRequest.template.spec.sources.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.matrix.generators.pullRequest.template.spec.sources.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -27599,6 +30770,24 @@ withValue(value)
 
 
 
+### fn spec.generators.matrix.generators.pullRequest.template.spec.sources.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.matrix.generators.pullRequest.template.spec.sources.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.matrix.generators.pullRequest.template.spec.sources.kustomize.withCommonAnnotations
 
 ```ts
@@ -27694,6 +30883,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.matrix.generators.pullRequest.template.spec.sources.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.matrix.generators.pullRequest.template.spec.sources.kustomize.withLabelWithoutSelector
 
@@ -28389,6 +31586,14 @@ withApi(api)
 
 
 
+### fn spec.generators.matrix.generators.scmProvider.bitbucketServer.withInsecure
+
+```ts
+withInsecure(insecure)
+```
+
+
+
 ### fn spec.generators.matrix.generators.scmProvider.bitbucketServer.withProject
 
 ```ts
@@ -28425,6 +31630,50 @@ withKey(key)
 
 ```ts
 withSecretName(secretName)
+```
+
+
+
+## obj spec.generators.matrix.generators.scmProvider.bitbucketServer.bearerToken
+
+
+
+## obj spec.generators.matrix.generators.scmProvider.bitbucketServer.bearerToken.tokenRef
+
+
+
+### fn spec.generators.matrix.generators.scmProvider.bitbucketServer.bearerToken.tokenRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.generators.matrix.generators.scmProvider.bitbucketServer.bearerToken.tokenRef.withSecretName
+
+```ts
+withSecretName(secretName)
+```
+
+
+
+## obj spec.generators.matrix.generators.scmProvider.bitbucketServer.caRef
+
+
+
+### fn spec.generators.matrix.generators.scmProvider.bitbucketServer.caRef.withConfigMapName
+
+```ts
+withConfigMapName(configMapName)
+```
+
+
+
+### fn spec.generators.matrix.generators.scmProvider.bitbucketServer.caRef.withKey
+
+```ts
+withKey(key)
 ```
 
 
@@ -28661,6 +31910,26 @@ withInsecure(insecure)
 
 ```ts
 withTopic(topic)
+```
+
+
+
+## obj spec.generators.matrix.generators.scmProvider.gitlab.caRef
+
+
+
+### fn spec.generators.matrix.generators.scmProvider.gitlab.caRef.withConfigMapName
+
+```ts
+withConfigMapName(configMapName)
+```
+
+
+
+### fn spec.generators.matrix.generators.scmProvider.gitlab.caRef.withKey
+
+```ts
+withKey(key)
 ```
 
 
@@ -28987,6 +32256,14 @@ withChart(chart)
 
 
 
+### fn spec.generators.matrix.generators.scmProvider.template.spec.source.withName
+
+```ts
+withName(name)
+```
+
+
+
 ### fn spec.generators.matrix.generators.scmProvider.template.spec.source.withPath
 
 ```ts
@@ -29165,6 +32442,24 @@ withValue(value)
 
 
 
+### fn spec.generators.matrix.generators.scmProvider.template.spec.source.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.matrix.generators.scmProvider.template.spec.source.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.matrix.generators.scmProvider.template.spec.source.helm.withFileParameters
 
 ```ts
@@ -29187,6 +32482,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.matrix.generators.scmProvider.template.spec.source.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.matrix.generators.scmProvider.template.spec.source.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -29229,6 +32540,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.matrix.generators.scmProvider.template.spec.source.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.matrix.generators.scmProvider.template.spec.source.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -29337,6 +32664,24 @@ withValue(value)
 
 
 
+### fn spec.generators.matrix.generators.scmProvider.template.spec.source.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.matrix.generators.scmProvider.template.spec.source.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.matrix.generators.scmProvider.template.spec.source.kustomize.withCommonAnnotations
 
 ```ts
@@ -29432,6 +32777,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.matrix.generators.scmProvider.template.spec.source.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.matrix.generators.scmProvider.template.spec.source.kustomize.withLabelWithoutSelector
 
@@ -29751,6 +33104,70 @@ withString(string)
 
 
 
+## obj spec.generators.matrix.generators.scmProvider.template.spec.sourceHydrator
+
+
+
+## obj spec.generators.matrix.generators.scmProvider.template.spec.sourceHydrator.drySource
+
+
+
+### fn spec.generators.matrix.generators.scmProvider.template.spec.sourceHydrator.drySource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.matrix.generators.scmProvider.template.spec.sourceHydrator.drySource.withRepoURL
+
+```ts
+withRepoURL(repoURL)
+```
+
+
+
+### fn spec.generators.matrix.generators.scmProvider.template.spec.sourceHydrator.drySource.withTargetRevision
+
+```ts
+withTargetRevision(targetRevision)
+```
+
+
+
+## obj spec.generators.matrix.generators.scmProvider.template.spec.sourceHydrator.hydrateTo
+
+
+
+### fn spec.generators.matrix.generators.scmProvider.template.spec.sourceHydrator.hydrateTo.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
+## obj spec.generators.matrix.generators.scmProvider.template.spec.sourceHydrator.syncSource
+
+
+
+### fn spec.generators.matrix.generators.scmProvider.template.spec.sourceHydrator.syncSource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.matrix.generators.scmProvider.template.spec.sourceHydrator.syncSource.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
 ## obj spec.generators.matrix.generators.scmProvider.template.spec.sources
 
 
@@ -29759,6 +33176,14 @@ withString(string)
 
 ```ts
 withChart(chart)
+```
+
+
+
+### fn spec.generators.matrix.generators.scmProvider.template.spec.sources.withName
+
+```ts
+withName(name)
 ```
 
 
@@ -29941,6 +33366,24 @@ withValue(value)
 
 
 
+### fn spec.generators.matrix.generators.scmProvider.template.spec.sources.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.matrix.generators.scmProvider.template.spec.sources.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.matrix.generators.scmProvider.template.spec.sources.helm.withFileParameters
 
 ```ts
@@ -29963,6 +33406,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.matrix.generators.scmProvider.template.spec.sources.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.matrix.generators.scmProvider.template.spec.sources.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -30005,6 +33464,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.matrix.generators.scmProvider.template.spec.sources.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.matrix.generators.scmProvider.template.spec.sources.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -30113,6 +33588,24 @@ withValue(value)
 
 
 
+### fn spec.generators.matrix.generators.scmProvider.template.spec.sources.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.matrix.generators.scmProvider.template.spec.sources.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.matrix.generators.scmProvider.template.spec.sources.kustomize.withCommonAnnotations
 
 ```ts
@@ -30208,6 +33701,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.matrix.generators.scmProvider.template.spec.sources.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.matrix.generators.scmProvider.template.spec.sources.kustomize.withLabelWithoutSelector
 
@@ -31037,6 +34538,14 @@ withChart(chart)
 
 
 
+### fn spec.generators.matrix.template.spec.source.withName
+
+```ts
+withName(name)
+```
+
+
+
 ### fn spec.generators.matrix.template.spec.source.withPath
 
 ```ts
@@ -31215,6 +34724,24 @@ withValue(value)
 
 
 
+### fn spec.generators.matrix.template.spec.source.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.matrix.template.spec.source.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.matrix.template.spec.source.helm.withFileParameters
 
 ```ts
@@ -31237,6 +34764,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.matrix.template.spec.source.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.matrix.template.spec.source.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -31279,6 +34822,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.matrix.template.spec.source.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.matrix.template.spec.source.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -31387,6 +34946,24 @@ withValue(value)
 
 
 
+### fn spec.generators.matrix.template.spec.source.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.matrix.template.spec.source.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.matrix.template.spec.source.kustomize.withCommonAnnotations
 
 ```ts
@@ -31482,6 +35059,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.matrix.template.spec.source.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.matrix.template.spec.source.kustomize.withLabelWithoutSelector
 
@@ -31801,6 +35386,70 @@ withString(string)
 
 
 
+## obj spec.generators.matrix.template.spec.sourceHydrator
+
+
+
+## obj spec.generators.matrix.template.spec.sourceHydrator.drySource
+
+
+
+### fn spec.generators.matrix.template.spec.sourceHydrator.drySource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.matrix.template.spec.sourceHydrator.drySource.withRepoURL
+
+```ts
+withRepoURL(repoURL)
+```
+
+
+
+### fn spec.generators.matrix.template.spec.sourceHydrator.drySource.withTargetRevision
+
+```ts
+withTargetRevision(targetRevision)
+```
+
+
+
+## obj spec.generators.matrix.template.spec.sourceHydrator.hydrateTo
+
+
+
+### fn spec.generators.matrix.template.spec.sourceHydrator.hydrateTo.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
+## obj spec.generators.matrix.template.spec.sourceHydrator.syncSource
+
+
+
+### fn spec.generators.matrix.template.spec.sourceHydrator.syncSource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.matrix.template.spec.sourceHydrator.syncSource.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
 ## obj spec.generators.matrix.template.spec.sources
 
 
@@ -31809,6 +35458,14 @@ withString(string)
 
 ```ts
 withChart(chart)
+```
+
+
+
+### fn spec.generators.matrix.template.spec.sources.withName
+
+```ts
+withName(name)
 ```
 
 
@@ -31991,6 +35648,24 @@ withValue(value)
 
 
 
+### fn spec.generators.matrix.template.spec.sources.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.matrix.template.spec.sources.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.matrix.template.spec.sources.helm.withFileParameters
 
 ```ts
@@ -32013,6 +35688,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.matrix.template.spec.sources.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.matrix.template.spec.sources.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -32055,6 +35746,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.matrix.template.spec.sources.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.matrix.template.spec.sources.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -32163,6 +35870,24 @@ withValue(value)
 
 
 
+### fn spec.generators.matrix.template.spec.sources.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.matrix.template.spec.sources.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.matrix.template.spec.sources.kustomize.withCommonAnnotations
 
 ```ts
@@ -32258,6 +35983,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.matrix.template.spec.sources.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.matrix.template.spec.sources.kustomize.withLabelWithoutSelector
 
@@ -33193,6 +36926,14 @@ withChart(chart)
 
 
 
+### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.source.withName
+
+```ts
+withName(name)
+```
+
+
+
 ### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.source.withPath
 
 ```ts
@@ -33371,6 +37112,24 @@ withValue(value)
 
 
 
+### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.source.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.source.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.source.helm.withFileParameters
 
 ```ts
@@ -33393,6 +37152,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.source.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.source.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -33435,6 +37210,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.source.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.source.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -33543,6 +37334,24 @@ withValue(value)
 
 
 
+### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.source.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.source.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.source.kustomize.withCommonAnnotations
 
 ```ts
@@ -33638,6 +37447,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.source.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.source.kustomize.withLabelWithoutSelector
 
@@ -33957,6 +37774,70 @@ withString(string)
 
 
 
+## obj spec.generators.merge.generators.clusterDecisionResource.template.spec.sourceHydrator
+
+
+
+## obj spec.generators.merge.generators.clusterDecisionResource.template.spec.sourceHydrator.drySource
+
+
+
+### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.sourceHydrator.drySource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.sourceHydrator.drySource.withRepoURL
+
+```ts
+withRepoURL(repoURL)
+```
+
+
+
+### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.sourceHydrator.drySource.withTargetRevision
+
+```ts
+withTargetRevision(targetRevision)
+```
+
+
+
+## obj spec.generators.merge.generators.clusterDecisionResource.template.spec.sourceHydrator.hydrateTo
+
+
+
+### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.sourceHydrator.hydrateTo.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
+## obj spec.generators.merge.generators.clusterDecisionResource.template.spec.sourceHydrator.syncSource
+
+
+
+### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.sourceHydrator.syncSource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.sourceHydrator.syncSource.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
 ## obj spec.generators.merge.generators.clusterDecisionResource.template.spec.sources
 
 
@@ -33965,6 +37846,14 @@ withString(string)
 
 ```ts
 withChart(chart)
+```
+
+
+
+### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.sources.withName
+
+```ts
+withName(name)
 ```
 
 
@@ -34147,6 +38036,24 @@ withValue(value)
 
 
 
+### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.sources.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.sources.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.sources.helm.withFileParameters
 
 ```ts
@@ -34169,6 +38076,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.sources.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.sources.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -34211,6 +38134,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.sources.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.sources.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -34319,6 +38258,24 @@ withValue(value)
 
 
 
+### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.sources.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.sources.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.sources.kustomize.withCommonAnnotations
 
 ```ts
@@ -34414,6 +38371,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.sources.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.sources.kustomize.withLabelWithoutSelector
 
@@ -34867,6 +38832,14 @@ withMaxDuration(maxDuration)
 
 
 
+### fn spec.generators.merge.generators.clusters.withFlatList
+
+```ts
+withFlatList(flatList)
+```
+
+
+
 ### fn spec.generators.merge.generators.clusters.withValues
 
 ```ts
@@ -35265,6 +39238,14 @@ withChart(chart)
 
 
 
+### fn spec.generators.merge.generators.clusters.template.spec.source.withName
+
+```ts
+withName(name)
+```
+
+
+
 ### fn spec.generators.merge.generators.clusters.template.spec.source.withPath
 
 ```ts
@@ -35443,6 +39424,24 @@ withValue(value)
 
 
 
+### fn spec.generators.merge.generators.clusters.template.spec.source.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.merge.generators.clusters.template.spec.source.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.merge.generators.clusters.template.spec.source.helm.withFileParameters
 
 ```ts
@@ -35465,6 +39464,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.merge.generators.clusters.template.spec.source.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.merge.generators.clusters.template.spec.source.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -35507,6 +39522,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.merge.generators.clusters.template.spec.source.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.merge.generators.clusters.template.spec.source.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -35615,6 +39646,24 @@ withValue(value)
 
 
 
+### fn spec.generators.merge.generators.clusters.template.spec.source.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.merge.generators.clusters.template.spec.source.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.merge.generators.clusters.template.spec.source.kustomize.withCommonAnnotations
 
 ```ts
@@ -35710,6 +39759,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.merge.generators.clusters.template.spec.source.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.merge.generators.clusters.template.spec.source.kustomize.withLabelWithoutSelector
 
@@ -36029,6 +40086,70 @@ withString(string)
 
 
 
+## obj spec.generators.merge.generators.clusters.template.spec.sourceHydrator
+
+
+
+## obj spec.generators.merge.generators.clusters.template.spec.sourceHydrator.drySource
+
+
+
+### fn spec.generators.merge.generators.clusters.template.spec.sourceHydrator.drySource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.merge.generators.clusters.template.spec.sourceHydrator.drySource.withRepoURL
+
+```ts
+withRepoURL(repoURL)
+```
+
+
+
+### fn spec.generators.merge.generators.clusters.template.spec.sourceHydrator.drySource.withTargetRevision
+
+```ts
+withTargetRevision(targetRevision)
+```
+
+
+
+## obj spec.generators.merge.generators.clusters.template.spec.sourceHydrator.hydrateTo
+
+
+
+### fn spec.generators.merge.generators.clusters.template.spec.sourceHydrator.hydrateTo.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
+## obj spec.generators.merge.generators.clusters.template.spec.sourceHydrator.syncSource
+
+
+
+### fn spec.generators.merge.generators.clusters.template.spec.sourceHydrator.syncSource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.merge.generators.clusters.template.spec.sourceHydrator.syncSource.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
 ## obj spec.generators.merge.generators.clusters.template.spec.sources
 
 
@@ -36037,6 +40158,14 @@ withString(string)
 
 ```ts
 withChart(chart)
+```
+
+
+
+### fn spec.generators.merge.generators.clusters.template.spec.sources.withName
+
+```ts
+withName(name)
 ```
 
 
@@ -36219,6 +40348,24 @@ withValue(value)
 
 
 
+### fn spec.generators.merge.generators.clusters.template.spec.sources.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.merge.generators.clusters.template.spec.sources.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.merge.generators.clusters.template.spec.sources.helm.withFileParameters
 
 ```ts
@@ -36241,6 +40388,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.merge.generators.clusters.template.spec.sources.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.merge.generators.clusters.template.spec.sources.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -36283,6 +40446,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.merge.generators.clusters.template.spec.sources.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.merge.generators.clusters.template.spec.sources.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -36391,6 +40570,24 @@ withValue(value)
 
 
 
+### fn spec.generators.merge.generators.clusters.template.spec.sources.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.merge.generators.clusters.template.spec.sources.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.merge.generators.clusters.template.spec.sources.kustomize.withCommonAnnotations
 
 ```ts
@@ -36486,6 +40683,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.merge.generators.clusters.template.spec.sources.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.merge.generators.clusters.template.spec.sources.kustomize.withLabelWithoutSelector
 
@@ -37359,6 +41564,14 @@ withChart(chart)
 
 
 
+### fn spec.generators.merge.generators.git.template.spec.source.withName
+
+```ts
+withName(name)
+```
+
+
+
 ### fn spec.generators.merge.generators.git.template.spec.source.withPath
 
 ```ts
@@ -37537,6 +41750,24 @@ withValue(value)
 
 
 
+### fn spec.generators.merge.generators.git.template.spec.source.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.merge.generators.git.template.spec.source.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.merge.generators.git.template.spec.source.helm.withFileParameters
 
 ```ts
@@ -37559,6 +41790,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.merge.generators.git.template.spec.source.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.merge.generators.git.template.spec.source.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -37601,6 +41848,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.merge.generators.git.template.spec.source.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.merge.generators.git.template.spec.source.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -37709,6 +41972,24 @@ withValue(value)
 
 
 
+### fn spec.generators.merge.generators.git.template.spec.source.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.merge.generators.git.template.spec.source.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.merge.generators.git.template.spec.source.kustomize.withCommonAnnotations
 
 ```ts
@@ -37804,6 +42085,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.merge.generators.git.template.spec.source.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.merge.generators.git.template.spec.source.kustomize.withLabelWithoutSelector
 
@@ -38123,6 +42412,70 @@ withString(string)
 
 
 
+## obj spec.generators.merge.generators.git.template.spec.sourceHydrator
+
+
+
+## obj spec.generators.merge.generators.git.template.spec.sourceHydrator.drySource
+
+
+
+### fn spec.generators.merge.generators.git.template.spec.sourceHydrator.drySource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.merge.generators.git.template.spec.sourceHydrator.drySource.withRepoURL
+
+```ts
+withRepoURL(repoURL)
+```
+
+
+
+### fn spec.generators.merge.generators.git.template.spec.sourceHydrator.drySource.withTargetRevision
+
+```ts
+withTargetRevision(targetRevision)
+```
+
+
+
+## obj spec.generators.merge.generators.git.template.spec.sourceHydrator.hydrateTo
+
+
+
+### fn spec.generators.merge.generators.git.template.spec.sourceHydrator.hydrateTo.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
+## obj spec.generators.merge.generators.git.template.spec.sourceHydrator.syncSource
+
+
+
+### fn spec.generators.merge.generators.git.template.spec.sourceHydrator.syncSource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.merge.generators.git.template.spec.sourceHydrator.syncSource.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
 ## obj spec.generators.merge.generators.git.template.spec.sources
 
 
@@ -38131,6 +42484,14 @@ withString(string)
 
 ```ts
 withChart(chart)
+```
+
+
+
+### fn spec.generators.merge.generators.git.template.spec.sources.withName
+
+```ts
+withName(name)
 ```
 
 
@@ -38313,6 +42674,24 @@ withValue(value)
 
 
 
+### fn spec.generators.merge.generators.git.template.spec.sources.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.merge.generators.git.template.spec.sources.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.merge.generators.git.template.spec.sources.helm.withFileParameters
 
 ```ts
@@ -38335,6 +42714,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.merge.generators.git.template.spec.sources.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.merge.generators.git.template.spec.sources.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -38377,6 +42772,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.merge.generators.git.template.spec.sources.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.merge.generators.git.template.spec.sources.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -38485,6 +42896,24 @@ withValue(value)
 
 
 
+### fn spec.generators.merge.generators.git.template.spec.sources.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.merge.generators.git.template.spec.sources.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.merge.generators.git.template.spec.sources.kustomize.withCommonAnnotations
 
 ```ts
@@ -38580,6 +43009,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.merge.generators.git.template.spec.sources.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.merge.generators.git.template.spec.sources.kustomize.withLabelWithoutSelector
 
@@ -39361,6 +43798,14 @@ withChart(chart)
 
 
 
+### fn spec.generators.merge.generators.list.template.spec.source.withName
+
+```ts
+withName(name)
+```
+
+
+
 ### fn spec.generators.merge.generators.list.template.spec.source.withPath
 
 ```ts
@@ -39539,6 +43984,24 @@ withValue(value)
 
 
 
+### fn spec.generators.merge.generators.list.template.spec.source.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.merge.generators.list.template.spec.source.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.merge.generators.list.template.spec.source.helm.withFileParameters
 
 ```ts
@@ -39561,6 +44024,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.merge.generators.list.template.spec.source.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.merge.generators.list.template.spec.source.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -39603,6 +44082,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.merge.generators.list.template.spec.source.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.merge.generators.list.template.spec.source.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -39711,6 +44206,24 @@ withValue(value)
 
 
 
+### fn spec.generators.merge.generators.list.template.spec.source.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.merge.generators.list.template.spec.source.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.merge.generators.list.template.spec.source.kustomize.withCommonAnnotations
 
 ```ts
@@ -39806,6 +44319,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.merge.generators.list.template.spec.source.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.merge.generators.list.template.spec.source.kustomize.withLabelWithoutSelector
 
@@ -40125,6 +44646,70 @@ withString(string)
 
 
 
+## obj spec.generators.merge.generators.list.template.spec.sourceHydrator
+
+
+
+## obj spec.generators.merge.generators.list.template.spec.sourceHydrator.drySource
+
+
+
+### fn spec.generators.merge.generators.list.template.spec.sourceHydrator.drySource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.merge.generators.list.template.spec.sourceHydrator.drySource.withRepoURL
+
+```ts
+withRepoURL(repoURL)
+```
+
+
+
+### fn spec.generators.merge.generators.list.template.spec.sourceHydrator.drySource.withTargetRevision
+
+```ts
+withTargetRevision(targetRevision)
+```
+
+
+
+## obj spec.generators.merge.generators.list.template.spec.sourceHydrator.hydrateTo
+
+
+
+### fn spec.generators.merge.generators.list.template.spec.sourceHydrator.hydrateTo.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
+## obj spec.generators.merge.generators.list.template.spec.sourceHydrator.syncSource
+
+
+
+### fn spec.generators.merge.generators.list.template.spec.sourceHydrator.syncSource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.merge.generators.list.template.spec.sourceHydrator.syncSource.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
 ## obj spec.generators.merge.generators.list.template.spec.sources
 
 
@@ -40133,6 +44718,14 @@ withString(string)
 
 ```ts
 withChart(chart)
+```
+
+
+
+### fn spec.generators.merge.generators.list.template.spec.sources.withName
+
+```ts
+withName(name)
 ```
 
 
@@ -40315,6 +44908,24 @@ withValue(value)
 
 
 
+### fn spec.generators.merge.generators.list.template.spec.sources.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.merge.generators.list.template.spec.sources.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.merge.generators.list.template.spec.sources.helm.withFileParameters
 
 ```ts
@@ -40337,6 +44948,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.merge.generators.list.template.spec.sources.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.merge.generators.list.template.spec.sources.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -40379,6 +45006,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.merge.generators.list.template.spec.sources.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.merge.generators.list.template.spec.sources.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -40487,6 +45130,24 @@ withValue(value)
 
 
 
+### fn spec.generators.merge.generators.list.template.spec.sources.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.merge.generators.list.template.spec.sources.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.merge.generators.list.template.spec.sources.kustomize.withCommonAnnotations
 
 ```ts
@@ -40582,6 +45243,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.merge.generators.list.template.spec.sources.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.merge.generators.list.template.spec.sources.kustomize.withLabelWithoutSelector
 
@@ -41397,6 +46066,14 @@ withChart(chart)
 
 
 
+### fn spec.generators.merge.generators.plugin.template.spec.source.withName
+
+```ts
+withName(name)
+```
+
+
+
 ### fn spec.generators.merge.generators.plugin.template.spec.source.withPath
 
 ```ts
@@ -41575,6 +46252,24 @@ withValue(value)
 
 
 
+### fn spec.generators.merge.generators.plugin.template.spec.source.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.merge.generators.plugin.template.spec.source.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.merge.generators.plugin.template.spec.source.helm.withFileParameters
 
 ```ts
@@ -41597,6 +46292,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.merge.generators.plugin.template.spec.source.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.merge.generators.plugin.template.spec.source.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -41639,6 +46350,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.merge.generators.plugin.template.spec.source.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.merge.generators.plugin.template.spec.source.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -41747,6 +46474,24 @@ withValue(value)
 
 
 
+### fn spec.generators.merge.generators.plugin.template.spec.source.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.merge.generators.plugin.template.spec.source.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.merge.generators.plugin.template.spec.source.kustomize.withCommonAnnotations
 
 ```ts
@@ -41842,6 +46587,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.merge.generators.plugin.template.spec.source.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.merge.generators.plugin.template.spec.source.kustomize.withLabelWithoutSelector
 
@@ -42161,6 +46914,70 @@ withString(string)
 
 
 
+## obj spec.generators.merge.generators.plugin.template.spec.sourceHydrator
+
+
+
+## obj spec.generators.merge.generators.plugin.template.spec.sourceHydrator.drySource
+
+
+
+### fn spec.generators.merge.generators.plugin.template.spec.sourceHydrator.drySource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.merge.generators.plugin.template.spec.sourceHydrator.drySource.withRepoURL
+
+```ts
+withRepoURL(repoURL)
+```
+
+
+
+### fn spec.generators.merge.generators.plugin.template.spec.sourceHydrator.drySource.withTargetRevision
+
+```ts
+withTargetRevision(targetRevision)
+```
+
+
+
+## obj spec.generators.merge.generators.plugin.template.spec.sourceHydrator.hydrateTo
+
+
+
+### fn spec.generators.merge.generators.plugin.template.spec.sourceHydrator.hydrateTo.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
+## obj spec.generators.merge.generators.plugin.template.spec.sourceHydrator.syncSource
+
+
+
+### fn spec.generators.merge.generators.plugin.template.spec.sourceHydrator.syncSource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.merge.generators.plugin.template.spec.sourceHydrator.syncSource.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
 ## obj spec.generators.merge.generators.plugin.template.spec.sources
 
 
@@ -42169,6 +46986,14 @@ withString(string)
 
 ```ts
 withChart(chart)
+```
+
+
+
+### fn spec.generators.merge.generators.plugin.template.spec.sources.withName
+
+```ts
+withName(name)
 ```
 
 
@@ -42351,6 +47176,24 @@ withValue(value)
 
 
 
+### fn spec.generators.merge.generators.plugin.template.spec.sources.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.merge.generators.plugin.template.spec.sources.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.merge.generators.plugin.template.spec.sources.helm.withFileParameters
 
 ```ts
@@ -42373,6 +47216,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.merge.generators.plugin.template.spec.sources.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.merge.generators.plugin.template.spec.sources.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -42415,6 +47274,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.merge.generators.plugin.template.spec.sources.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.merge.generators.plugin.template.spec.sources.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -42523,6 +47398,24 @@ withValue(value)
 
 
 
+### fn spec.generators.merge.generators.plugin.template.spec.sources.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.merge.generators.plugin.template.spec.sources.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.merge.generators.plugin.template.spec.sources.kustomize.withCommonAnnotations
 
 ```ts
@@ -42618,6 +47511,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.merge.generators.plugin.template.spec.sources.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.merge.generators.plugin.template.spec.sources.kustomize.withLabelWithoutSelector
 
@@ -43267,6 +48168,14 @@ withApi(api)
 
 
 
+### fn spec.generators.merge.generators.pullRequest.bitbucketServer.withInsecure
+
+```ts
+withInsecure(insecure)
+```
+
+
+
 ### fn spec.generators.merge.generators.pullRequest.bitbucketServer.withProject
 
 ```ts
@@ -43311,6 +48220,50 @@ withKey(key)
 
 ```ts
 withSecretName(secretName)
+```
+
+
+
+## obj spec.generators.merge.generators.pullRequest.bitbucketServer.bearerToken
+
+
+
+## obj spec.generators.merge.generators.pullRequest.bitbucketServer.bearerToken.tokenRef
+
+
+
+### fn spec.generators.merge.generators.pullRequest.bitbucketServer.bearerToken.tokenRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.generators.merge.generators.pullRequest.bitbucketServer.bearerToken.tokenRef.withSecretName
+
+```ts
+withSecretName(secretName)
+```
+
+
+
+## obj spec.generators.merge.generators.pullRequest.bitbucketServer.caRef
+
+
+
+### fn spec.generators.merge.generators.pullRequest.bitbucketServer.caRef.withConfigMapName
+
+```ts
+withConfigMapName(configMapName)
+```
+
+
+
+### fn spec.generators.merge.generators.pullRequest.bitbucketServer.caRef.withKey
+
+```ts
+withKey(key)
 ```
 
 
@@ -43515,6 +48468,26 @@ withProject(project)
 
 ```ts
 withPullRequestState(pullRequestState)
+```
+
+
+
+## obj spec.generators.merge.generators.pullRequest.gitlab.caRef
+
+
+
+### fn spec.generators.merge.generators.pullRequest.gitlab.caRef.withConfigMapName
+
+```ts
+withConfigMapName(configMapName)
+```
+
+
+
+### fn spec.generators.merge.generators.pullRequest.gitlab.caRef.withKey
+
+```ts
+withKey(key)
 ```
 
 
@@ -43841,6 +48814,14 @@ withChart(chart)
 
 
 
+### fn spec.generators.merge.generators.pullRequest.template.spec.source.withName
+
+```ts
+withName(name)
+```
+
+
+
 ### fn spec.generators.merge.generators.pullRequest.template.spec.source.withPath
 
 ```ts
@@ -44019,6 +49000,24 @@ withValue(value)
 
 
 
+### fn spec.generators.merge.generators.pullRequest.template.spec.source.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.merge.generators.pullRequest.template.spec.source.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.merge.generators.pullRequest.template.spec.source.helm.withFileParameters
 
 ```ts
@@ -44041,6 +49040,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.merge.generators.pullRequest.template.spec.source.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.merge.generators.pullRequest.template.spec.source.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -44083,6 +49098,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.merge.generators.pullRequest.template.spec.source.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.merge.generators.pullRequest.template.spec.source.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -44191,6 +49222,24 @@ withValue(value)
 
 
 
+### fn spec.generators.merge.generators.pullRequest.template.spec.source.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.merge.generators.pullRequest.template.spec.source.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.merge.generators.pullRequest.template.spec.source.kustomize.withCommonAnnotations
 
 ```ts
@@ -44286,6 +49335,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.merge.generators.pullRequest.template.spec.source.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.merge.generators.pullRequest.template.spec.source.kustomize.withLabelWithoutSelector
 
@@ -44605,6 +49662,70 @@ withString(string)
 
 
 
+## obj spec.generators.merge.generators.pullRequest.template.spec.sourceHydrator
+
+
+
+## obj spec.generators.merge.generators.pullRequest.template.spec.sourceHydrator.drySource
+
+
+
+### fn spec.generators.merge.generators.pullRequest.template.spec.sourceHydrator.drySource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.merge.generators.pullRequest.template.spec.sourceHydrator.drySource.withRepoURL
+
+```ts
+withRepoURL(repoURL)
+```
+
+
+
+### fn spec.generators.merge.generators.pullRequest.template.spec.sourceHydrator.drySource.withTargetRevision
+
+```ts
+withTargetRevision(targetRevision)
+```
+
+
+
+## obj spec.generators.merge.generators.pullRequest.template.spec.sourceHydrator.hydrateTo
+
+
+
+### fn spec.generators.merge.generators.pullRequest.template.spec.sourceHydrator.hydrateTo.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
+## obj spec.generators.merge.generators.pullRequest.template.spec.sourceHydrator.syncSource
+
+
+
+### fn spec.generators.merge.generators.pullRequest.template.spec.sourceHydrator.syncSource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.merge.generators.pullRequest.template.spec.sourceHydrator.syncSource.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
 ## obj spec.generators.merge.generators.pullRequest.template.spec.sources
 
 
@@ -44613,6 +49734,14 @@ withString(string)
 
 ```ts
 withChart(chart)
+```
+
+
+
+### fn spec.generators.merge.generators.pullRequest.template.spec.sources.withName
+
+```ts
+withName(name)
 ```
 
 
@@ -44795,6 +49924,24 @@ withValue(value)
 
 
 
+### fn spec.generators.merge.generators.pullRequest.template.spec.sources.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.merge.generators.pullRequest.template.spec.sources.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.merge.generators.pullRequest.template.spec.sources.helm.withFileParameters
 
 ```ts
@@ -44817,6 +49964,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.merge.generators.pullRequest.template.spec.sources.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.merge.generators.pullRequest.template.spec.sources.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -44859,6 +50022,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.merge.generators.pullRequest.template.spec.sources.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.merge.generators.pullRequest.template.spec.sources.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -44967,6 +50146,24 @@ withValue(value)
 
 
 
+### fn spec.generators.merge.generators.pullRequest.template.spec.sources.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.merge.generators.pullRequest.template.spec.sources.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.merge.generators.pullRequest.template.spec.sources.kustomize.withCommonAnnotations
 
 ```ts
@@ -45062,6 +50259,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.merge.generators.pullRequest.template.spec.sources.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.merge.generators.pullRequest.template.spec.sources.kustomize.withLabelWithoutSelector
 
@@ -45757,6 +50962,14 @@ withApi(api)
 
 
 
+### fn spec.generators.merge.generators.scmProvider.bitbucketServer.withInsecure
+
+```ts
+withInsecure(insecure)
+```
+
+
+
 ### fn spec.generators.merge.generators.scmProvider.bitbucketServer.withProject
 
 ```ts
@@ -45793,6 +51006,50 @@ withKey(key)
 
 ```ts
 withSecretName(secretName)
+```
+
+
+
+## obj spec.generators.merge.generators.scmProvider.bitbucketServer.bearerToken
+
+
+
+## obj spec.generators.merge.generators.scmProvider.bitbucketServer.bearerToken.tokenRef
+
+
+
+### fn spec.generators.merge.generators.scmProvider.bitbucketServer.bearerToken.tokenRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.generators.merge.generators.scmProvider.bitbucketServer.bearerToken.tokenRef.withSecretName
+
+```ts
+withSecretName(secretName)
+```
+
+
+
+## obj spec.generators.merge.generators.scmProvider.bitbucketServer.caRef
+
+
+
+### fn spec.generators.merge.generators.scmProvider.bitbucketServer.caRef.withConfigMapName
+
+```ts
+withConfigMapName(configMapName)
+```
+
+
+
+### fn spec.generators.merge.generators.scmProvider.bitbucketServer.caRef.withKey
+
+```ts
+withKey(key)
 ```
 
 
@@ -46029,6 +51286,26 @@ withInsecure(insecure)
 
 ```ts
 withTopic(topic)
+```
+
+
+
+## obj spec.generators.merge.generators.scmProvider.gitlab.caRef
+
+
+
+### fn spec.generators.merge.generators.scmProvider.gitlab.caRef.withConfigMapName
+
+```ts
+withConfigMapName(configMapName)
+```
+
+
+
+### fn spec.generators.merge.generators.scmProvider.gitlab.caRef.withKey
+
+```ts
+withKey(key)
 ```
 
 
@@ -46355,6 +51632,14 @@ withChart(chart)
 
 
 
+### fn spec.generators.merge.generators.scmProvider.template.spec.source.withName
+
+```ts
+withName(name)
+```
+
+
+
 ### fn spec.generators.merge.generators.scmProvider.template.spec.source.withPath
 
 ```ts
@@ -46533,6 +51818,24 @@ withValue(value)
 
 
 
+### fn spec.generators.merge.generators.scmProvider.template.spec.source.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.merge.generators.scmProvider.template.spec.source.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.merge.generators.scmProvider.template.spec.source.helm.withFileParameters
 
 ```ts
@@ -46555,6 +51858,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.merge.generators.scmProvider.template.spec.source.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.merge.generators.scmProvider.template.spec.source.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -46597,6 +51916,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.merge.generators.scmProvider.template.spec.source.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.merge.generators.scmProvider.template.spec.source.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -46705,6 +52040,24 @@ withValue(value)
 
 
 
+### fn spec.generators.merge.generators.scmProvider.template.spec.source.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.merge.generators.scmProvider.template.spec.source.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.merge.generators.scmProvider.template.spec.source.kustomize.withCommonAnnotations
 
 ```ts
@@ -46800,6 +52153,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.merge.generators.scmProvider.template.spec.source.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.merge.generators.scmProvider.template.spec.source.kustomize.withLabelWithoutSelector
 
@@ -47119,6 +52480,70 @@ withString(string)
 
 
 
+## obj spec.generators.merge.generators.scmProvider.template.spec.sourceHydrator
+
+
+
+## obj spec.generators.merge.generators.scmProvider.template.spec.sourceHydrator.drySource
+
+
+
+### fn spec.generators.merge.generators.scmProvider.template.spec.sourceHydrator.drySource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.merge.generators.scmProvider.template.spec.sourceHydrator.drySource.withRepoURL
+
+```ts
+withRepoURL(repoURL)
+```
+
+
+
+### fn spec.generators.merge.generators.scmProvider.template.spec.sourceHydrator.drySource.withTargetRevision
+
+```ts
+withTargetRevision(targetRevision)
+```
+
+
+
+## obj spec.generators.merge.generators.scmProvider.template.spec.sourceHydrator.hydrateTo
+
+
+
+### fn spec.generators.merge.generators.scmProvider.template.spec.sourceHydrator.hydrateTo.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
+## obj spec.generators.merge.generators.scmProvider.template.spec.sourceHydrator.syncSource
+
+
+
+### fn spec.generators.merge.generators.scmProvider.template.spec.sourceHydrator.syncSource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.merge.generators.scmProvider.template.spec.sourceHydrator.syncSource.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
 ## obj spec.generators.merge.generators.scmProvider.template.spec.sources
 
 
@@ -47127,6 +52552,14 @@ withString(string)
 
 ```ts
 withChart(chart)
+```
+
+
+
+### fn spec.generators.merge.generators.scmProvider.template.spec.sources.withName
+
+```ts
+withName(name)
 ```
 
 
@@ -47309,6 +52742,24 @@ withValue(value)
 
 
 
+### fn spec.generators.merge.generators.scmProvider.template.spec.sources.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.merge.generators.scmProvider.template.spec.sources.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.merge.generators.scmProvider.template.spec.sources.helm.withFileParameters
 
 ```ts
@@ -47331,6 +52782,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.merge.generators.scmProvider.template.spec.sources.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.merge.generators.scmProvider.template.spec.sources.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -47373,6 +52840,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.merge.generators.scmProvider.template.spec.sources.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.merge.generators.scmProvider.template.spec.sources.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -47481,6 +52964,24 @@ withValue(value)
 
 
 
+### fn spec.generators.merge.generators.scmProvider.template.spec.sources.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.merge.generators.scmProvider.template.spec.sources.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.merge.generators.scmProvider.template.spec.sources.kustomize.withCommonAnnotations
 
 ```ts
@@ -47576,6 +53077,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.merge.generators.scmProvider.template.spec.sources.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.merge.generators.scmProvider.template.spec.sources.kustomize.withLabelWithoutSelector
 
@@ -48405,6 +53914,14 @@ withChart(chart)
 
 
 
+### fn spec.generators.merge.template.spec.source.withName
+
+```ts
+withName(name)
+```
+
+
+
 ### fn spec.generators.merge.template.spec.source.withPath
 
 ```ts
@@ -48583,6 +54100,24 @@ withValue(value)
 
 
 
+### fn spec.generators.merge.template.spec.source.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.merge.template.spec.source.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.merge.template.spec.source.helm.withFileParameters
 
 ```ts
@@ -48605,6 +54140,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.merge.template.spec.source.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.merge.template.spec.source.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -48647,6 +54198,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.merge.template.spec.source.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.merge.template.spec.source.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -48755,6 +54322,24 @@ withValue(value)
 
 
 
+### fn spec.generators.merge.template.spec.source.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.merge.template.spec.source.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.merge.template.spec.source.kustomize.withCommonAnnotations
 
 ```ts
@@ -48850,6 +54435,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.merge.template.spec.source.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.merge.template.spec.source.kustomize.withLabelWithoutSelector
 
@@ -49169,6 +54762,70 @@ withString(string)
 
 
 
+## obj spec.generators.merge.template.spec.sourceHydrator
+
+
+
+## obj spec.generators.merge.template.spec.sourceHydrator.drySource
+
+
+
+### fn spec.generators.merge.template.spec.sourceHydrator.drySource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.merge.template.spec.sourceHydrator.drySource.withRepoURL
+
+```ts
+withRepoURL(repoURL)
+```
+
+
+
+### fn spec.generators.merge.template.spec.sourceHydrator.drySource.withTargetRevision
+
+```ts
+withTargetRevision(targetRevision)
+```
+
+
+
+## obj spec.generators.merge.template.spec.sourceHydrator.hydrateTo
+
+
+
+### fn spec.generators.merge.template.spec.sourceHydrator.hydrateTo.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
+## obj spec.generators.merge.template.spec.sourceHydrator.syncSource
+
+
+
+### fn spec.generators.merge.template.spec.sourceHydrator.syncSource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.merge.template.spec.sourceHydrator.syncSource.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
 ## obj spec.generators.merge.template.spec.sources
 
 
@@ -49177,6 +54834,14 @@ withString(string)
 
 ```ts
 withChart(chart)
+```
+
+
+
+### fn spec.generators.merge.template.spec.sources.withName
+
+```ts
+withName(name)
 ```
 
 
@@ -49359,6 +55024,24 @@ withValue(value)
 
 
 
+### fn spec.generators.merge.template.spec.sources.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.merge.template.spec.sources.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.merge.template.spec.sources.helm.withFileParameters
 
 ```ts
@@ -49381,6 +55064,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.merge.template.spec.sources.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.merge.template.spec.sources.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -49423,6 +55122,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.merge.template.spec.sources.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.merge.template.spec.sources.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -49531,6 +55246,24 @@ withValue(value)
 
 
 
+### fn spec.generators.merge.template.spec.sources.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.merge.template.spec.sources.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.merge.template.spec.sources.kustomize.withCommonAnnotations
 
 ```ts
@@ -49626,6 +55359,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.merge.template.spec.sources.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.merge.template.spec.sources.kustomize.withLabelWithoutSelector
 
@@ -50441,6 +56182,14 @@ withChart(chart)
 
 
 
+### fn spec.generators.plugin.template.spec.source.withName
+
+```ts
+withName(name)
+```
+
+
+
 ### fn spec.generators.plugin.template.spec.source.withPath
 
 ```ts
@@ -50619,6 +56368,24 @@ withValue(value)
 
 
 
+### fn spec.generators.plugin.template.spec.source.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.plugin.template.spec.source.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.plugin.template.spec.source.helm.withFileParameters
 
 ```ts
@@ -50641,6 +56408,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.plugin.template.spec.source.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.plugin.template.spec.source.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -50683,6 +56466,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.plugin.template.spec.source.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.plugin.template.spec.source.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -50791,6 +56590,24 @@ withValue(value)
 
 
 
+### fn spec.generators.plugin.template.spec.source.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.plugin.template.spec.source.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.plugin.template.spec.source.kustomize.withCommonAnnotations
 
 ```ts
@@ -50886,6 +56703,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.plugin.template.spec.source.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.plugin.template.spec.source.kustomize.withLabelWithoutSelector
 
@@ -51205,6 +57030,70 @@ withString(string)
 
 
 
+## obj spec.generators.plugin.template.spec.sourceHydrator
+
+
+
+## obj spec.generators.plugin.template.spec.sourceHydrator.drySource
+
+
+
+### fn spec.generators.plugin.template.spec.sourceHydrator.drySource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.plugin.template.spec.sourceHydrator.drySource.withRepoURL
+
+```ts
+withRepoURL(repoURL)
+```
+
+
+
+### fn spec.generators.plugin.template.spec.sourceHydrator.drySource.withTargetRevision
+
+```ts
+withTargetRevision(targetRevision)
+```
+
+
+
+## obj spec.generators.plugin.template.spec.sourceHydrator.hydrateTo
+
+
+
+### fn spec.generators.plugin.template.spec.sourceHydrator.hydrateTo.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
+## obj spec.generators.plugin.template.spec.sourceHydrator.syncSource
+
+
+
+### fn spec.generators.plugin.template.spec.sourceHydrator.syncSource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.plugin.template.spec.sourceHydrator.syncSource.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
 ## obj spec.generators.plugin.template.spec.sources
 
 
@@ -51213,6 +57102,14 @@ withString(string)
 
 ```ts
 withChart(chart)
+```
+
+
+
+### fn spec.generators.plugin.template.spec.sources.withName
+
+```ts
+withName(name)
 ```
 
 
@@ -51395,6 +57292,24 @@ withValue(value)
 
 
 
+### fn spec.generators.plugin.template.spec.sources.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.plugin.template.spec.sources.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.plugin.template.spec.sources.helm.withFileParameters
 
 ```ts
@@ -51417,6 +57332,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.plugin.template.spec.sources.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.plugin.template.spec.sources.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -51459,6 +57390,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.plugin.template.spec.sources.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.plugin.template.spec.sources.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -51567,6 +57514,24 @@ withValue(value)
 
 
 
+### fn spec.generators.plugin.template.spec.sources.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.plugin.template.spec.sources.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.plugin.template.spec.sources.kustomize.withCommonAnnotations
 
 ```ts
@@ -51662,6 +57627,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.plugin.template.spec.sources.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.plugin.template.spec.sources.kustomize.withLabelWithoutSelector
 
@@ -52311,6 +58284,14 @@ withApi(api)
 
 
 
+### fn spec.generators.pullRequest.bitbucketServer.withInsecure
+
+```ts
+withInsecure(insecure)
+```
+
+
+
 ### fn spec.generators.pullRequest.bitbucketServer.withProject
 
 ```ts
@@ -52355,6 +58336,50 @@ withKey(key)
 
 ```ts
 withSecretName(secretName)
+```
+
+
+
+## obj spec.generators.pullRequest.bitbucketServer.bearerToken
+
+
+
+## obj spec.generators.pullRequest.bitbucketServer.bearerToken.tokenRef
+
+
+
+### fn spec.generators.pullRequest.bitbucketServer.bearerToken.tokenRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.generators.pullRequest.bitbucketServer.bearerToken.tokenRef.withSecretName
+
+```ts
+withSecretName(secretName)
+```
+
+
+
+## obj spec.generators.pullRequest.bitbucketServer.caRef
+
+
+
+### fn spec.generators.pullRequest.bitbucketServer.caRef.withConfigMapName
+
+```ts
+withConfigMapName(configMapName)
+```
+
+
+
+### fn spec.generators.pullRequest.bitbucketServer.caRef.withKey
+
+```ts
+withKey(key)
 ```
 
 
@@ -52559,6 +58584,26 @@ withProject(project)
 
 ```ts
 withPullRequestState(pullRequestState)
+```
+
+
+
+## obj spec.generators.pullRequest.gitlab.caRef
+
+
+
+### fn spec.generators.pullRequest.gitlab.caRef.withConfigMapName
+
+```ts
+withConfigMapName(configMapName)
+```
+
+
+
+### fn spec.generators.pullRequest.gitlab.caRef.withKey
+
+```ts
+withKey(key)
 ```
 
 
@@ -52885,6 +58930,14 @@ withChart(chart)
 
 
 
+### fn spec.generators.pullRequest.template.spec.source.withName
+
+```ts
+withName(name)
+```
+
+
+
 ### fn spec.generators.pullRequest.template.spec.source.withPath
 
 ```ts
@@ -53063,6 +59116,24 @@ withValue(value)
 
 
 
+### fn spec.generators.pullRequest.template.spec.source.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.pullRequest.template.spec.source.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.pullRequest.template.spec.source.helm.withFileParameters
 
 ```ts
@@ -53085,6 +59156,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.pullRequest.template.spec.source.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.pullRequest.template.spec.source.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -53127,6 +59214,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.pullRequest.template.spec.source.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.pullRequest.template.spec.source.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -53235,6 +59338,24 @@ withValue(value)
 
 
 
+### fn spec.generators.pullRequest.template.spec.source.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.pullRequest.template.spec.source.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.pullRequest.template.spec.source.kustomize.withCommonAnnotations
 
 ```ts
@@ -53330,6 +59451,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.pullRequest.template.spec.source.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.pullRequest.template.spec.source.kustomize.withLabelWithoutSelector
 
@@ -53649,6 +59778,70 @@ withString(string)
 
 
 
+## obj spec.generators.pullRequest.template.spec.sourceHydrator
+
+
+
+## obj spec.generators.pullRequest.template.spec.sourceHydrator.drySource
+
+
+
+### fn spec.generators.pullRequest.template.spec.sourceHydrator.drySource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.pullRequest.template.spec.sourceHydrator.drySource.withRepoURL
+
+```ts
+withRepoURL(repoURL)
+```
+
+
+
+### fn spec.generators.pullRequest.template.spec.sourceHydrator.drySource.withTargetRevision
+
+```ts
+withTargetRevision(targetRevision)
+```
+
+
+
+## obj spec.generators.pullRequest.template.spec.sourceHydrator.hydrateTo
+
+
+
+### fn spec.generators.pullRequest.template.spec.sourceHydrator.hydrateTo.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
+## obj spec.generators.pullRequest.template.spec.sourceHydrator.syncSource
+
+
+
+### fn spec.generators.pullRequest.template.spec.sourceHydrator.syncSource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.pullRequest.template.spec.sourceHydrator.syncSource.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
 ## obj spec.generators.pullRequest.template.spec.sources
 
 
@@ -53657,6 +59850,14 @@ withString(string)
 
 ```ts
 withChart(chart)
+```
+
+
+
+### fn spec.generators.pullRequest.template.spec.sources.withName
+
+```ts
+withName(name)
 ```
 
 
@@ -53839,6 +60040,24 @@ withValue(value)
 
 
 
+### fn spec.generators.pullRequest.template.spec.sources.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.pullRequest.template.spec.sources.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.pullRequest.template.spec.sources.helm.withFileParameters
 
 ```ts
@@ -53861,6 +60080,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.pullRequest.template.spec.sources.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.pullRequest.template.spec.sources.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -53903,6 +60138,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.pullRequest.template.spec.sources.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.pullRequest.template.spec.sources.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -54011,6 +60262,24 @@ withValue(value)
 
 
 
+### fn spec.generators.pullRequest.template.spec.sources.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.pullRequest.template.spec.sources.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.pullRequest.template.spec.sources.kustomize.withCommonAnnotations
 
 ```ts
@@ -54106,6 +60375,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.pullRequest.template.spec.sources.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.pullRequest.template.spec.sources.kustomize.withLabelWithoutSelector
 
@@ -54801,6 +61078,14 @@ withApi(api)
 
 
 
+### fn spec.generators.scmProvider.bitbucketServer.withInsecure
+
+```ts
+withInsecure(insecure)
+```
+
+
+
 ### fn spec.generators.scmProvider.bitbucketServer.withProject
 
 ```ts
@@ -54837,6 +61122,50 @@ withKey(key)
 
 ```ts
 withSecretName(secretName)
+```
+
+
+
+## obj spec.generators.scmProvider.bitbucketServer.bearerToken
+
+
+
+## obj spec.generators.scmProvider.bitbucketServer.bearerToken.tokenRef
+
+
+
+### fn spec.generators.scmProvider.bitbucketServer.bearerToken.tokenRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.generators.scmProvider.bitbucketServer.bearerToken.tokenRef.withSecretName
+
+```ts
+withSecretName(secretName)
+```
+
+
+
+## obj spec.generators.scmProvider.bitbucketServer.caRef
+
+
+
+### fn spec.generators.scmProvider.bitbucketServer.caRef.withConfigMapName
+
+```ts
+withConfigMapName(configMapName)
+```
+
+
+
+### fn spec.generators.scmProvider.bitbucketServer.caRef.withKey
+
+```ts
+withKey(key)
 ```
 
 
@@ -55073,6 +61402,26 @@ withInsecure(insecure)
 
 ```ts
 withTopic(topic)
+```
+
+
+
+## obj spec.generators.scmProvider.gitlab.caRef
+
+
+
+### fn spec.generators.scmProvider.gitlab.caRef.withConfigMapName
+
+```ts
+withConfigMapName(configMapName)
+```
+
+
+
+### fn spec.generators.scmProvider.gitlab.caRef.withKey
+
+```ts
+withKey(key)
 ```
 
 
@@ -55399,6 +61748,14 @@ withChart(chart)
 
 
 
+### fn spec.generators.scmProvider.template.spec.source.withName
+
+```ts
+withName(name)
+```
+
+
+
 ### fn spec.generators.scmProvider.template.spec.source.withPath
 
 ```ts
@@ -55577,6 +61934,24 @@ withValue(value)
 
 
 
+### fn spec.generators.scmProvider.template.spec.source.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.scmProvider.template.spec.source.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.scmProvider.template.spec.source.helm.withFileParameters
 
 ```ts
@@ -55599,6 +61974,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.scmProvider.template.spec.source.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.scmProvider.template.spec.source.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -55641,6 +62032,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.scmProvider.template.spec.source.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.scmProvider.template.spec.source.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -55749,6 +62156,24 @@ withValue(value)
 
 
 
+### fn spec.generators.scmProvider.template.spec.source.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.scmProvider.template.spec.source.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.scmProvider.template.spec.source.kustomize.withCommonAnnotations
 
 ```ts
@@ -55844,6 +62269,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.scmProvider.template.spec.source.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.scmProvider.template.spec.source.kustomize.withLabelWithoutSelector
 
@@ -56163,6 +62596,70 @@ withString(string)
 
 
 
+## obj spec.generators.scmProvider.template.spec.sourceHydrator
+
+
+
+## obj spec.generators.scmProvider.template.spec.sourceHydrator.drySource
+
+
+
+### fn spec.generators.scmProvider.template.spec.sourceHydrator.drySource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.scmProvider.template.spec.sourceHydrator.drySource.withRepoURL
+
+```ts
+withRepoURL(repoURL)
+```
+
+
+
+### fn spec.generators.scmProvider.template.spec.sourceHydrator.drySource.withTargetRevision
+
+```ts
+withTargetRevision(targetRevision)
+```
+
+
+
+## obj spec.generators.scmProvider.template.spec.sourceHydrator.hydrateTo
+
+
+
+### fn spec.generators.scmProvider.template.spec.sourceHydrator.hydrateTo.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
+## obj spec.generators.scmProvider.template.spec.sourceHydrator.syncSource
+
+
+
+### fn spec.generators.scmProvider.template.spec.sourceHydrator.syncSource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.generators.scmProvider.template.spec.sourceHydrator.syncSource.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
 ## obj spec.generators.scmProvider.template.spec.sources
 
 
@@ -56171,6 +62668,14 @@ withString(string)
 
 ```ts
 withChart(chart)
+```
+
+
+
+### fn spec.generators.scmProvider.template.spec.sources.withName
+
+```ts
+withName(name)
 ```
 
 
@@ -56353,6 +62858,24 @@ withValue(value)
 
 
 
+### fn spec.generators.scmProvider.template.spec.sources.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.scmProvider.template.spec.sources.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.scmProvider.template.spec.sources.helm.withFileParameters
 
 ```ts
@@ -56375,6 +62898,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.generators.scmProvider.template.spec.sources.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.scmProvider.template.spec.sources.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -56417,6 +62956,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.generators.scmProvider.template.spec.sources.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.generators.scmProvider.template.spec.sources.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -56525,6 +63080,24 @@ withValue(value)
 
 
 
+### fn spec.generators.scmProvider.template.spec.sources.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.generators.scmProvider.template.spec.sources.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.generators.scmProvider.template.spec.sources.kustomize.withCommonAnnotations
 
 ```ts
@@ -56620,6 +63193,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.generators.scmProvider.template.spec.sources.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.generators.scmProvider.template.spec.sources.kustomize.withLabelWithoutSelector
 
@@ -57659,6 +64240,14 @@ withChart(chart)
 
 
 
+### fn spec.template.spec.source.withName
+
+```ts
+withName(name)
+```
+
+
+
 ### fn spec.template.spec.source.withPath
 
 ```ts
@@ -57837,6 +64426,24 @@ withValue(value)
 
 
 
+### fn spec.template.spec.source.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.template.spec.source.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.template.spec.source.helm.withFileParameters
 
 ```ts
@@ -57859,6 +64466,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.template.spec.source.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.template.spec.source.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -57901,6 +64524,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.template.spec.source.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.template.spec.source.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -58009,6 +64648,24 @@ withValue(value)
 
 
 
+### fn spec.template.spec.source.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.template.spec.source.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.template.spec.source.kustomize.withCommonAnnotations
 
 ```ts
@@ -58104,6 +64761,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.template.spec.source.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.template.spec.source.kustomize.withLabelWithoutSelector
 
@@ -58423,6 +65088,70 @@ withString(string)
 
 
 
+## obj spec.template.spec.sourceHydrator
+
+
+
+## obj spec.template.spec.sourceHydrator.drySource
+
+
+
+### fn spec.template.spec.sourceHydrator.drySource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.template.spec.sourceHydrator.drySource.withRepoURL
+
+```ts
+withRepoURL(repoURL)
+```
+
+
+
+### fn spec.template.spec.sourceHydrator.drySource.withTargetRevision
+
+```ts
+withTargetRevision(targetRevision)
+```
+
+
+
+## obj spec.template.spec.sourceHydrator.hydrateTo
+
+
+
+### fn spec.template.spec.sourceHydrator.hydrateTo.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
+## obj spec.template.spec.sourceHydrator.syncSource
+
+
+
+### fn spec.template.spec.sourceHydrator.syncSource.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.template.spec.sourceHydrator.syncSource.withTargetBranch
+
+```ts
+withTargetBranch(targetBranch)
+```
+
+
+
 ## obj spec.template.spec.sources
 
 
@@ -58431,6 +65160,14 @@ withString(string)
 
 ```ts
 withChart(chart)
+```
+
+
+
+### fn spec.template.spec.sources.withName
+
+```ts
+withName(name)
 ```
 
 
@@ -58613,6 +65350,24 @@ withValue(value)
 
 
 
+### fn spec.template.spec.sources.helm.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.template.spec.sources.helm.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.template.spec.sources.helm.withFileParameters
 
 ```ts
@@ -58635,6 +65390,22 @@ withFileParametersMixin(fileParameters)
 
 ```ts
 withIgnoreMissingValueFiles(ignoreMissingValueFiles)
+```
+
+
+
+### fn spec.template.spec.sources.helm.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.template.spec.sources.helm.withNamespace
+
+```ts
+withNamespace(namespace)
 ```
 
 
@@ -58677,6 +65448,22 @@ withReleaseName(releaseName)
 
 ```ts
 withSkipCrds(skipCrds)
+```
+
+
+
+### fn spec.template.spec.sources.helm.withSkipSchemaValidation
+
+```ts
+withSkipSchemaValidation(skipSchemaValidation)
+```
+
+
+
+### fn spec.template.spec.sources.helm.withSkipTests
+
+```ts
+withSkipTests(skipTests)
 ```
 
 
@@ -58785,6 +65572,24 @@ withValue(value)
 
 
 
+### fn spec.template.spec.sources.kustomize.withApiVersions
+
+```ts
+withApiVersions(apiVersions)
+```
+
+
+
+### fn spec.template.spec.sources.kustomize.withApiVersionsMixin
+
+```ts
+withApiVersionsMixin(apiVersions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.template.spec.sources.kustomize.withCommonAnnotations
 
 ```ts
@@ -58880,6 +65685,14 @@ withImagesMixin(images)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.template.spec.sources.kustomize.withKubeVersion
+
+```ts
+withKubeVersion(kubeVersion)
+```
+
+
 
 ### fn spec.template.spec.sources.kustomize.withLabelWithoutSelector
 
