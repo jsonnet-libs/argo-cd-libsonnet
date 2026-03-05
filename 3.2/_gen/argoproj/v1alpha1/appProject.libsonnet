@@ -148,6 +148,8 @@
     },
     '#syncWindows':: d.obj(help='"SyncWindows controls when syncs can be run for apps in this project"'),
     syncWindows: {
+      '#withAndOperator':: d.fn(help='"UseAndOperator use AND operator for matching applications, namespaces and clusters instead of the default OR operator"', args=[d.arg(name='andOperator', type=d.T.boolean)]),
+      withAndOperator(andOperator): { andOperator: andOperator },
       '#withApplications':: d.fn(help='"Applications contains a list of applications that the window will apply to"', args=[d.arg(name='applications', type=d.T.array)]),
       withApplications(applications): { applications: if std.isArray(v=applications) then applications else [applications] },
       '#withApplicationsMixin':: d.fn(help='"Applications contains a list of applications that the window will apply to"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='applications', type=d.T.array)]),
@@ -156,6 +158,8 @@
       withClusters(clusters): { clusters: if std.isArray(v=clusters) then clusters else [clusters] },
       '#withClustersMixin':: d.fn(help='"Clusters contains a list of clusters that the window will apply to"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='clusters', type=d.T.array)]),
       withClustersMixin(clusters): { clusters+: if std.isArray(v=clusters) then clusters else [clusters] },
+      '#withDescription':: d.fn(help='"Description of the sync that will be applied to the schedule, can be used to add any information such as a ticket number for example"', args=[d.arg(name='description', type=d.T.string)]),
+      withDescription(description): { description: description },
       '#withDuration':: d.fn(help='"Duration is the amount of time the sync window will be open"', args=[d.arg(name='duration', type=d.T.string)]),
       withDuration(duration): { duration: duration },
       '#withKind':: d.fn(help='"Kind defines if the window allows or blocks syncs"', args=[d.arg(name='kind', type=d.T.string)]),

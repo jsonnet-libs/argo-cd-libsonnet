@@ -1,5 +1,5 @@
 ---
-permalink: /2.14/argoproj/
+permalink: /3.2/argoproj/
 ---
 
 # argoproj

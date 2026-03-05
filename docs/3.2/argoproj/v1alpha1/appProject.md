@@ -1,5 +1,5 @@
 ---
-permalink: /2.14/argoproj/v1alpha1/appProject/
+permalink: /3.2/argoproj/v1alpha1/appProject/
 ---
 
 # argoproj.v1alpha1.appProject
@@ -98,10 +98,12 @@ permalink: /2.14/argoproj/v1alpha1/appProject/
   * [`obj spec.signatureKeys`](#obj-specsignaturekeys)
     * [`fn withKeyID(keyID)`](#fn-specsignaturekeyswithkeyid)
   * [`obj spec.syncWindows`](#obj-specsyncwindows)
+    * [`fn withAndOperator(andOperator)`](#fn-specsyncwindowswithandoperator)
     * [`fn withApplications(applications)`](#fn-specsyncwindowswithapplications)
     * [`fn withApplicationsMixin(applications)`](#fn-specsyncwindowswithapplicationsmixin)
     * [`fn withClusters(clusters)`](#fn-specsyncwindowswithclusters)
     * [`fn withClustersMixin(clusters)`](#fn-specsyncwindowswithclustersmixin)
+    * [`fn withDescription(description)`](#fn-specsyncwindowswithdescription)
     * [`fn withDuration(duration)`](#fn-specsyncwindowswithduration)
     * [`fn withKind(kind)`](#fn-specsyncwindowswithkind)
     * [`fn withManualSync(manualSync)`](#fn-specsyncwindowswithmanualsync)
@@ -814,6 +816,14 @@ withKeyID(keyID)
 
 "SyncWindows controls when syncs can be run for apps in this project"
 
+### fn spec.syncWindows.withAndOperator
+
+```ts
+withAndOperator(andOperator)
+```
+
+"UseAndOperator use AND operator for matching applications, namespaces and clusters instead of the default OR operator"
+
 ### fn spec.syncWindows.withApplications
 
 ```ts
@@ -849,6 +859,14 @@ withClustersMixin(clusters)
 "Clusters contains a list of clusters that the window will apply to"
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.syncWindows.withDescription
+
+```ts
+withDescription(description)
+```
+
+"Description of the sync that will be applied to the schedule, can be used to add any information such as a ticket number for example"
 
 ### fn spec.syncWindows.withDuration
 

@@ -1,5 +1,5 @@
 ---
-permalink: /2.14/argoproj/v1alpha1/applicationSet/
+permalink: /3.2/argoproj/v1alpha1/applicationSet/
 ---
 
 # argoproj.v1alpha1.applicationSet
@@ -159,9 +159,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
               * [`fn withComponentsMixin(components)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithcomponentsmixin)
               * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithforcecommonannotations)
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithforcecommonlabels)
+              * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithignoremissingcomponents)
               * [`fn withImages(images)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithimagesmixin)
               * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithkubeversion)
+              * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithlabelincludetemplates)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithnamesuffix)
@@ -279,9 +281,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
               * [`fn withComponentsMixin(components)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithcomponentsmixin)
               * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithforcecommonannotations)
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithforcecommonlabels)
+              * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithignoremissingcomponents)
               * [`fn withImages(images)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithimagesmixin)
               * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithkubeversion)
+              * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithlabelincludetemplates)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithnamesuffix)
@@ -328,6 +332,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
             * [`fn withSyncOptionsMixin(syncOptions)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsyncpolicywithsyncoptionsmixin)
             * [`obj spec.generators.clusterDecisionResource.template.spec.syncPolicy.automated`](#obj-specgeneratorsclusterdecisionresourcetemplatespecsyncpolicyautomated)
               * [`fn withAllowEmpty(allowEmpty)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsyncpolicyautomatedwithallowempty)
+              * [`fn withEnabled(enabled)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsyncpolicyautomatedwithenabled)
               * [`fn withPrune(prune)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsyncpolicyautomatedwithprune)
               * [`fn withSelfHeal(selfHeal)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsyncpolicyautomatedwithselfheal)
             * [`obj spec.generators.clusterDecisionResource.template.spec.syncPolicy.managedNamespaceMetadata`](#obj-specgeneratorsclusterdecisionresourcetemplatespecsyncpolicymanagednamespacemetadata)
@@ -337,6 +342,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
               * [`fn withLabelsMixin(labels)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsyncpolicymanagednamespacemetadatawithlabelsmixin)
             * [`obj spec.generators.clusterDecisionResource.template.spec.syncPolicy.retry`](#obj-specgeneratorsclusterdecisionresourcetemplatespecsyncpolicyretry)
               * [`fn withLimit(limit)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsyncpolicyretrywithlimit)
+              * [`fn withRefresh(refresh)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsyncpolicyretrywithrefresh)
               * [`obj spec.generators.clusterDecisionResource.template.spec.syncPolicy.retry.backoff`](#obj-specgeneratorsclusterdecisionresourcetemplatespecsyncpolicyretrybackoff)
                 * [`fn withDuration(duration)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsyncpolicyretrybackoffwithduration)
                 * [`fn withFactor(factor)`](#fn-specgeneratorsclusterdecisionresourcetemplatespecsyncpolicyretrybackoffwithfactor)
@@ -458,9 +464,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
               * [`fn withComponentsMixin(components)`](#fn-specgeneratorsclusterstemplatespecsourcekustomizewithcomponentsmixin)
               * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsclusterstemplatespecsourcekustomizewithforcecommonannotations)
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsclusterstemplatespecsourcekustomizewithforcecommonlabels)
+              * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsclusterstemplatespecsourcekustomizewithignoremissingcomponents)
               * [`fn withImages(images)`](#fn-specgeneratorsclusterstemplatespecsourcekustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorsclusterstemplatespecsourcekustomizewithimagesmixin)
               * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsclusterstemplatespecsourcekustomizewithkubeversion)
+              * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsclusterstemplatespecsourcekustomizewithlabelincludetemplates)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsclusterstemplatespecsourcekustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsclusterstemplatespecsourcekustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsclusterstemplatespecsourcekustomizewithnamesuffix)
@@ -578,9 +586,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
               * [`fn withComponentsMixin(components)`](#fn-specgeneratorsclusterstemplatespecsourceskustomizewithcomponentsmixin)
               * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsclusterstemplatespecsourceskustomizewithforcecommonannotations)
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsclusterstemplatespecsourceskustomizewithforcecommonlabels)
+              * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsclusterstemplatespecsourceskustomizewithignoremissingcomponents)
               * [`fn withImages(images)`](#fn-specgeneratorsclusterstemplatespecsourceskustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorsclusterstemplatespecsourceskustomizewithimagesmixin)
               * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsclusterstemplatespecsourceskustomizewithkubeversion)
+              * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsclusterstemplatespecsourceskustomizewithlabelincludetemplates)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsclusterstemplatespecsourceskustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsclusterstemplatespecsourceskustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsclusterstemplatespecsourceskustomizewithnamesuffix)
@@ -627,6 +637,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
             * [`fn withSyncOptionsMixin(syncOptions)`](#fn-specgeneratorsclusterstemplatespecsyncpolicywithsyncoptionsmixin)
             * [`obj spec.generators.clusters.template.spec.syncPolicy.automated`](#obj-specgeneratorsclusterstemplatespecsyncpolicyautomated)
               * [`fn withAllowEmpty(allowEmpty)`](#fn-specgeneratorsclusterstemplatespecsyncpolicyautomatedwithallowempty)
+              * [`fn withEnabled(enabled)`](#fn-specgeneratorsclusterstemplatespecsyncpolicyautomatedwithenabled)
               * [`fn withPrune(prune)`](#fn-specgeneratorsclusterstemplatespecsyncpolicyautomatedwithprune)
               * [`fn withSelfHeal(selfHeal)`](#fn-specgeneratorsclusterstemplatespecsyncpolicyautomatedwithselfheal)
             * [`obj spec.generators.clusters.template.spec.syncPolicy.managedNamespaceMetadata`](#obj-specgeneratorsclusterstemplatespecsyncpolicymanagednamespacemetadata)
@@ -636,6 +647,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
               * [`fn withLabelsMixin(labels)`](#fn-specgeneratorsclusterstemplatespecsyncpolicymanagednamespacemetadatawithlabelsmixin)
             * [`obj spec.generators.clusters.template.spec.syncPolicy.retry`](#obj-specgeneratorsclusterstemplatespecsyncpolicyretry)
               * [`fn withLimit(limit)`](#fn-specgeneratorsclusterstemplatespecsyncpolicyretrywithlimit)
+              * [`fn withRefresh(refresh)`](#fn-specgeneratorsclusterstemplatespecsyncpolicyretrywithrefresh)
               * [`obj spec.generators.clusters.template.spec.syncPolicy.retry.backoff`](#obj-specgeneratorsclusterstemplatespecsyncpolicyretrybackoff)
                 * [`fn withDuration(duration)`](#fn-specgeneratorsclusterstemplatespecsyncpolicyretrybackoffwithduration)
                 * [`fn withFactor(factor)`](#fn-specgeneratorsclusterstemplatespecsyncpolicyretrybackoffwithfactor)
@@ -655,6 +667,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
         * [`fn withExclude(exclude)`](#fn-specgeneratorsgitdirectorieswithexclude)
         * [`fn withPath(path)`](#fn-specgeneratorsgitdirectorieswithpath)
       * [`obj spec.generators.git.files`](#obj-specgeneratorsgitfiles)
+        * [`fn withExclude(exclude)`](#fn-specgeneratorsgitfileswithexclude)
         * [`fn withPath(path)`](#fn-specgeneratorsgitfileswithpath)
       * [`obj spec.generators.git.template`](#obj-specgeneratorsgittemplate)
         * [`obj spec.generators.git.template.metadata`](#obj-specgeneratorsgittemplatemetadata)
@@ -759,9 +772,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
               * [`fn withComponentsMixin(components)`](#fn-specgeneratorsgittemplatespecsourcekustomizewithcomponentsmixin)
               * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsgittemplatespecsourcekustomizewithforcecommonannotations)
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsgittemplatespecsourcekustomizewithforcecommonlabels)
+              * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsgittemplatespecsourcekustomizewithignoremissingcomponents)
               * [`fn withImages(images)`](#fn-specgeneratorsgittemplatespecsourcekustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorsgittemplatespecsourcekustomizewithimagesmixin)
               * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsgittemplatespecsourcekustomizewithkubeversion)
+              * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsgittemplatespecsourcekustomizewithlabelincludetemplates)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsgittemplatespecsourcekustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsgittemplatespecsourcekustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsgittemplatespecsourcekustomizewithnamesuffix)
@@ -879,9 +894,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
               * [`fn withComponentsMixin(components)`](#fn-specgeneratorsgittemplatespecsourceskustomizewithcomponentsmixin)
               * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsgittemplatespecsourceskustomizewithforcecommonannotations)
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsgittemplatespecsourceskustomizewithforcecommonlabels)
+              * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsgittemplatespecsourceskustomizewithignoremissingcomponents)
               * [`fn withImages(images)`](#fn-specgeneratorsgittemplatespecsourceskustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorsgittemplatespecsourceskustomizewithimagesmixin)
               * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsgittemplatespecsourceskustomizewithkubeversion)
+              * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsgittemplatespecsourceskustomizewithlabelincludetemplates)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsgittemplatespecsourceskustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsgittemplatespecsourceskustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsgittemplatespecsourceskustomizewithnamesuffix)
@@ -928,6 +945,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
             * [`fn withSyncOptionsMixin(syncOptions)`](#fn-specgeneratorsgittemplatespecsyncpolicywithsyncoptionsmixin)
             * [`obj spec.generators.git.template.spec.syncPolicy.automated`](#obj-specgeneratorsgittemplatespecsyncpolicyautomated)
               * [`fn withAllowEmpty(allowEmpty)`](#fn-specgeneratorsgittemplatespecsyncpolicyautomatedwithallowempty)
+              * [`fn withEnabled(enabled)`](#fn-specgeneratorsgittemplatespecsyncpolicyautomatedwithenabled)
               * [`fn withPrune(prune)`](#fn-specgeneratorsgittemplatespecsyncpolicyautomatedwithprune)
               * [`fn withSelfHeal(selfHeal)`](#fn-specgeneratorsgittemplatespecsyncpolicyautomatedwithselfheal)
             * [`obj spec.generators.git.template.spec.syncPolicy.managedNamespaceMetadata`](#obj-specgeneratorsgittemplatespecsyncpolicymanagednamespacemetadata)
@@ -937,6 +955,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
               * [`fn withLabelsMixin(labels)`](#fn-specgeneratorsgittemplatespecsyncpolicymanagednamespacemetadatawithlabelsmixin)
             * [`obj spec.generators.git.template.spec.syncPolicy.retry`](#obj-specgeneratorsgittemplatespecsyncpolicyretry)
               * [`fn withLimit(limit)`](#fn-specgeneratorsgittemplatespecsyncpolicyretrywithlimit)
+              * [`fn withRefresh(refresh)`](#fn-specgeneratorsgittemplatespecsyncpolicyretrywithrefresh)
               * [`obj spec.generators.git.template.spec.syncPolicy.retry.backoff`](#obj-specgeneratorsgittemplatespecsyncpolicyretrybackoff)
                 * [`fn withDuration(duration)`](#fn-specgeneratorsgittemplatespecsyncpolicyretrybackoffwithduration)
                 * [`fn withFactor(factor)`](#fn-specgeneratorsgittemplatespecsyncpolicyretrybackoffwithfactor)
@@ -1048,9 +1067,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
               * [`fn withComponentsMixin(components)`](#fn-specgeneratorslisttemplatespecsourcekustomizewithcomponentsmixin)
               * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorslisttemplatespecsourcekustomizewithforcecommonannotations)
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorslisttemplatespecsourcekustomizewithforcecommonlabels)
+              * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorslisttemplatespecsourcekustomizewithignoremissingcomponents)
               * [`fn withImages(images)`](#fn-specgeneratorslisttemplatespecsourcekustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorslisttemplatespecsourcekustomizewithimagesmixin)
               * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorslisttemplatespecsourcekustomizewithkubeversion)
+              * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorslisttemplatespecsourcekustomizewithlabelincludetemplates)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorslisttemplatespecsourcekustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorslisttemplatespecsourcekustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorslisttemplatespecsourcekustomizewithnamesuffix)
@@ -1168,9 +1189,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
               * [`fn withComponentsMixin(components)`](#fn-specgeneratorslisttemplatespecsourceskustomizewithcomponentsmixin)
               * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorslisttemplatespecsourceskustomizewithforcecommonannotations)
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorslisttemplatespecsourceskustomizewithforcecommonlabels)
+              * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorslisttemplatespecsourceskustomizewithignoremissingcomponents)
               * [`fn withImages(images)`](#fn-specgeneratorslisttemplatespecsourceskustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorslisttemplatespecsourceskustomizewithimagesmixin)
               * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorslisttemplatespecsourceskustomizewithkubeversion)
+              * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorslisttemplatespecsourceskustomizewithlabelincludetemplates)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorslisttemplatespecsourceskustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorslisttemplatespecsourceskustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorslisttemplatespecsourceskustomizewithnamesuffix)
@@ -1217,6 +1240,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
             * [`fn withSyncOptionsMixin(syncOptions)`](#fn-specgeneratorslisttemplatespecsyncpolicywithsyncoptionsmixin)
             * [`obj spec.generators.list.template.spec.syncPolicy.automated`](#obj-specgeneratorslisttemplatespecsyncpolicyautomated)
               * [`fn withAllowEmpty(allowEmpty)`](#fn-specgeneratorslisttemplatespecsyncpolicyautomatedwithallowempty)
+              * [`fn withEnabled(enabled)`](#fn-specgeneratorslisttemplatespecsyncpolicyautomatedwithenabled)
               * [`fn withPrune(prune)`](#fn-specgeneratorslisttemplatespecsyncpolicyautomatedwithprune)
               * [`fn withSelfHeal(selfHeal)`](#fn-specgeneratorslisttemplatespecsyncpolicyautomatedwithselfheal)
             * [`obj spec.generators.list.template.spec.syncPolicy.managedNamespaceMetadata`](#obj-specgeneratorslisttemplatespecsyncpolicymanagednamespacemetadata)
@@ -1226,6 +1250,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
               * [`fn withLabelsMixin(labels)`](#fn-specgeneratorslisttemplatespecsyncpolicymanagednamespacemetadatawithlabelsmixin)
             * [`obj spec.generators.list.template.spec.syncPolicy.retry`](#obj-specgeneratorslisttemplatespecsyncpolicyretry)
               * [`fn withLimit(limit)`](#fn-specgeneratorslisttemplatespecsyncpolicyretrywithlimit)
+              * [`fn withRefresh(refresh)`](#fn-specgeneratorslisttemplatespecsyncpolicyretrywithrefresh)
               * [`obj spec.generators.list.template.spec.syncPolicy.retry.backoff`](#obj-specgeneratorslisttemplatespecsyncpolicyretrybackoff)
                 * [`fn withDuration(duration)`](#fn-specgeneratorslisttemplatespecsyncpolicyretrybackoffwithduration)
                 * [`fn withFactor(factor)`](#fn-specgeneratorslisttemplatespecsyncpolicyretrybackoffwithfactor)
@@ -1355,9 +1380,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withComponentsMixin(components)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithcomponentsmixin)
                   * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithforcecommonannotations)
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithforcecommonlabels)
+                  * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithignoremissingcomponents)
                   * [`fn withImages(images)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithimagesmixin)
                   * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithkubeversion)
+                  * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithlabelincludetemplates)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithnamesuffix)
@@ -1475,9 +1502,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withComponentsMixin(components)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithcomponentsmixin)
                   * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithforcecommonannotations)
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithforcecommonlabels)
+                  * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithignoremissingcomponents)
                   * [`fn withImages(images)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithimagesmixin)
                   * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithkubeversion)
+                  * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithlabelincludetemplates)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithnamesuffix)
@@ -1524,6 +1553,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                 * [`fn withSyncOptionsMixin(syncOptions)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsyncpolicywithsyncoptionsmixin)
                 * [`obj spec.generators.matrix.generators.clusterDecisionResource.template.spec.syncPolicy.automated`](#obj-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsyncpolicyautomated)
                   * [`fn withAllowEmpty(allowEmpty)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsyncpolicyautomatedwithallowempty)
+                  * [`fn withEnabled(enabled)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsyncpolicyautomatedwithenabled)
                   * [`fn withPrune(prune)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsyncpolicyautomatedwithprune)
                   * [`fn withSelfHeal(selfHeal)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsyncpolicyautomatedwithselfheal)
                 * [`obj spec.generators.matrix.generators.clusterDecisionResource.template.spec.syncPolicy.managedNamespaceMetadata`](#obj-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsyncpolicymanagednamespacemetadata)
@@ -1533,6 +1563,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withLabelsMixin(labels)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsyncpolicymanagednamespacemetadatawithlabelsmixin)
                 * [`obj spec.generators.matrix.generators.clusterDecisionResource.template.spec.syncPolicy.retry`](#obj-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsyncpolicyretry)
                   * [`fn withLimit(limit)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsyncpolicyretrywithlimit)
+                  * [`fn withRefresh(refresh)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsyncpolicyretrywithrefresh)
                   * [`obj spec.generators.matrix.generators.clusterDecisionResource.template.spec.syncPolicy.retry.backoff`](#obj-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsyncpolicyretrybackoff)
                     * [`fn withDuration(duration)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsyncpolicyretrybackoffwithduration)
                     * [`fn withFactor(factor)`](#fn-specgeneratorsmatrixgeneratorsclusterdecisionresourcetemplatespecsyncpolicyretrybackoffwithfactor)
@@ -1654,9 +1685,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withComponentsMixin(components)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcekustomizewithcomponentsmixin)
                   * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcekustomizewithforcecommonannotations)
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcekustomizewithforcecommonlabels)
+                  * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcekustomizewithignoremissingcomponents)
                   * [`fn withImages(images)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcekustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcekustomizewithimagesmixin)
                   * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcekustomizewithkubeversion)
+                  * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcekustomizewithlabelincludetemplates)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcekustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcekustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourcekustomizewithnamesuffix)
@@ -1774,9 +1807,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withComponentsMixin(components)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceskustomizewithcomponentsmixin)
                   * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceskustomizewithforcecommonannotations)
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceskustomizewithforcecommonlabels)
+                  * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceskustomizewithignoremissingcomponents)
                   * [`fn withImages(images)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceskustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceskustomizewithimagesmixin)
                   * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceskustomizewithkubeversion)
+                  * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceskustomizewithlabelincludetemplates)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceskustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceskustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsourceskustomizewithnamesuffix)
@@ -1823,6 +1858,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                 * [`fn withSyncOptionsMixin(syncOptions)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsyncpolicywithsyncoptionsmixin)
                 * [`obj spec.generators.matrix.generators.clusters.template.spec.syncPolicy.automated`](#obj-specgeneratorsmatrixgeneratorsclusterstemplatespecsyncpolicyautomated)
                   * [`fn withAllowEmpty(allowEmpty)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsyncpolicyautomatedwithallowempty)
+                  * [`fn withEnabled(enabled)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsyncpolicyautomatedwithenabled)
                   * [`fn withPrune(prune)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsyncpolicyautomatedwithprune)
                   * [`fn withSelfHeal(selfHeal)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsyncpolicyautomatedwithselfheal)
                 * [`obj spec.generators.matrix.generators.clusters.template.spec.syncPolicy.managedNamespaceMetadata`](#obj-specgeneratorsmatrixgeneratorsclusterstemplatespecsyncpolicymanagednamespacemetadata)
@@ -1832,6 +1868,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withLabelsMixin(labels)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsyncpolicymanagednamespacemetadatawithlabelsmixin)
                 * [`obj spec.generators.matrix.generators.clusters.template.spec.syncPolicy.retry`](#obj-specgeneratorsmatrixgeneratorsclusterstemplatespecsyncpolicyretry)
                   * [`fn withLimit(limit)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsyncpolicyretrywithlimit)
+                  * [`fn withRefresh(refresh)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsyncpolicyretrywithrefresh)
                   * [`obj spec.generators.matrix.generators.clusters.template.spec.syncPolicy.retry.backoff`](#obj-specgeneratorsmatrixgeneratorsclusterstemplatespecsyncpolicyretrybackoff)
                     * [`fn withDuration(duration)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsyncpolicyretrybackoffwithduration)
                     * [`fn withFactor(factor)`](#fn-specgeneratorsmatrixgeneratorsclusterstemplatespecsyncpolicyretrybackoffwithfactor)
@@ -1851,6 +1888,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
             * [`fn withExclude(exclude)`](#fn-specgeneratorsmatrixgeneratorsgitdirectorieswithexclude)
             * [`fn withPath(path)`](#fn-specgeneratorsmatrixgeneratorsgitdirectorieswithpath)
           * [`obj spec.generators.matrix.generators.git.files`](#obj-specgeneratorsmatrixgeneratorsgitfiles)
+            * [`fn withExclude(exclude)`](#fn-specgeneratorsmatrixgeneratorsgitfileswithexclude)
             * [`fn withPath(path)`](#fn-specgeneratorsmatrixgeneratorsgitfileswithpath)
           * [`obj spec.generators.matrix.generators.git.template`](#obj-specgeneratorsmatrixgeneratorsgittemplate)
             * [`obj spec.generators.matrix.generators.git.template.metadata`](#obj-specgeneratorsmatrixgeneratorsgittemplatemetadata)
@@ -1955,9 +1993,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withComponentsMixin(components)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcekustomizewithcomponentsmixin)
                   * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcekustomizewithforcecommonannotations)
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcekustomizewithforcecommonlabels)
+                  * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcekustomizewithignoremissingcomponents)
                   * [`fn withImages(images)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcekustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcekustomizewithimagesmixin)
                   * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcekustomizewithkubeversion)
+                  * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcekustomizewithlabelincludetemplates)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcekustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcekustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourcekustomizewithnamesuffix)
@@ -2075,9 +2115,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withComponentsMixin(components)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceskustomizewithcomponentsmixin)
                   * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceskustomizewithforcecommonannotations)
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceskustomizewithforcecommonlabels)
+                  * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceskustomizewithignoremissingcomponents)
                   * [`fn withImages(images)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceskustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceskustomizewithimagesmixin)
                   * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceskustomizewithkubeversion)
+                  * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceskustomizewithlabelincludetemplates)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceskustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceskustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsourceskustomizewithnamesuffix)
@@ -2124,6 +2166,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                 * [`fn withSyncOptionsMixin(syncOptions)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsyncpolicywithsyncoptionsmixin)
                 * [`obj spec.generators.matrix.generators.git.template.spec.syncPolicy.automated`](#obj-specgeneratorsmatrixgeneratorsgittemplatespecsyncpolicyautomated)
                   * [`fn withAllowEmpty(allowEmpty)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsyncpolicyautomatedwithallowempty)
+                  * [`fn withEnabled(enabled)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsyncpolicyautomatedwithenabled)
                   * [`fn withPrune(prune)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsyncpolicyautomatedwithprune)
                   * [`fn withSelfHeal(selfHeal)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsyncpolicyautomatedwithselfheal)
                 * [`obj spec.generators.matrix.generators.git.template.spec.syncPolicy.managedNamespaceMetadata`](#obj-specgeneratorsmatrixgeneratorsgittemplatespecsyncpolicymanagednamespacemetadata)
@@ -2133,6 +2176,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withLabelsMixin(labels)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsyncpolicymanagednamespacemetadatawithlabelsmixin)
                 * [`obj spec.generators.matrix.generators.git.template.spec.syncPolicy.retry`](#obj-specgeneratorsmatrixgeneratorsgittemplatespecsyncpolicyretry)
                   * [`fn withLimit(limit)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsyncpolicyretrywithlimit)
+                  * [`fn withRefresh(refresh)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsyncpolicyretrywithrefresh)
                   * [`obj spec.generators.matrix.generators.git.template.spec.syncPolicy.retry.backoff`](#obj-specgeneratorsmatrixgeneratorsgittemplatespecsyncpolicyretrybackoff)
                     * [`fn withDuration(duration)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsyncpolicyretrybackoffwithduration)
                     * [`fn withFactor(factor)`](#fn-specgeneratorsmatrixgeneratorsgittemplatespecsyncpolicyretrybackoffwithfactor)
@@ -2244,9 +2288,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withComponentsMixin(components)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcekustomizewithcomponentsmixin)
                   * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcekustomizewithforcecommonannotations)
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcekustomizewithforcecommonlabels)
+                  * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcekustomizewithignoremissingcomponents)
                   * [`fn withImages(images)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcekustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcekustomizewithimagesmixin)
                   * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcekustomizewithkubeversion)
+                  * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcekustomizewithlabelincludetemplates)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcekustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcekustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourcekustomizewithnamesuffix)
@@ -2364,9 +2410,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withComponentsMixin(components)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceskustomizewithcomponentsmixin)
                   * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceskustomizewithforcecommonannotations)
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceskustomizewithforcecommonlabels)
+                  * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceskustomizewithignoremissingcomponents)
                   * [`fn withImages(images)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceskustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceskustomizewithimagesmixin)
                   * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceskustomizewithkubeversion)
+                  * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceskustomizewithlabelincludetemplates)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceskustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceskustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsourceskustomizewithnamesuffix)
@@ -2413,6 +2461,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                 * [`fn withSyncOptionsMixin(syncOptions)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsyncpolicywithsyncoptionsmixin)
                 * [`obj spec.generators.matrix.generators.list.template.spec.syncPolicy.automated`](#obj-specgeneratorsmatrixgeneratorslisttemplatespecsyncpolicyautomated)
                   * [`fn withAllowEmpty(allowEmpty)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsyncpolicyautomatedwithallowempty)
+                  * [`fn withEnabled(enabled)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsyncpolicyautomatedwithenabled)
                   * [`fn withPrune(prune)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsyncpolicyautomatedwithprune)
                   * [`fn withSelfHeal(selfHeal)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsyncpolicyautomatedwithselfheal)
                 * [`obj spec.generators.matrix.generators.list.template.spec.syncPolicy.managedNamespaceMetadata`](#obj-specgeneratorsmatrixgeneratorslisttemplatespecsyncpolicymanagednamespacemetadata)
@@ -2422,6 +2471,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withLabelsMixin(labels)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsyncpolicymanagednamespacemetadatawithlabelsmixin)
                 * [`obj spec.generators.matrix.generators.list.template.spec.syncPolicy.retry`](#obj-specgeneratorsmatrixgeneratorslisttemplatespecsyncpolicyretry)
                   * [`fn withLimit(limit)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsyncpolicyretrywithlimit)
+                  * [`fn withRefresh(refresh)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsyncpolicyretrywithrefresh)
                   * [`obj spec.generators.matrix.generators.list.template.spec.syncPolicy.retry.backoff`](#obj-specgeneratorsmatrixgeneratorslisttemplatespecsyncpolicyretrybackoff)
                     * [`fn withDuration(duration)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsyncpolicyretrybackoffwithduration)
                     * [`fn withFactor(factor)`](#fn-specgeneratorsmatrixgeneratorslisttemplatespecsyncpolicyretrybackoffwithfactor)
@@ -2538,9 +2588,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withComponentsMixin(components)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcekustomizewithcomponentsmixin)
                   * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcekustomizewithforcecommonannotations)
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcekustomizewithforcecommonlabels)
+                  * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcekustomizewithignoremissingcomponents)
                   * [`fn withImages(images)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcekustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcekustomizewithimagesmixin)
                   * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcekustomizewithkubeversion)
+                  * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcekustomizewithlabelincludetemplates)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcekustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcekustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourcekustomizewithnamesuffix)
@@ -2658,9 +2710,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withComponentsMixin(components)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceskustomizewithcomponentsmixin)
                   * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceskustomizewithforcecommonannotations)
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceskustomizewithforcecommonlabels)
+                  * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceskustomizewithignoremissingcomponents)
                   * [`fn withImages(images)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceskustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceskustomizewithimagesmixin)
                   * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceskustomizewithkubeversion)
+                  * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceskustomizewithlabelincludetemplates)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceskustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceskustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsourceskustomizewithnamesuffix)
@@ -2707,6 +2761,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                 * [`fn withSyncOptionsMixin(syncOptions)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsyncpolicywithsyncoptionsmixin)
                 * [`obj spec.generators.matrix.generators.plugin.template.spec.syncPolicy.automated`](#obj-specgeneratorsmatrixgeneratorsplugintemplatespecsyncpolicyautomated)
                   * [`fn withAllowEmpty(allowEmpty)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsyncpolicyautomatedwithallowempty)
+                  * [`fn withEnabled(enabled)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsyncpolicyautomatedwithenabled)
                   * [`fn withPrune(prune)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsyncpolicyautomatedwithprune)
                   * [`fn withSelfHeal(selfHeal)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsyncpolicyautomatedwithselfheal)
                 * [`obj spec.generators.matrix.generators.plugin.template.spec.syncPolicy.managedNamespaceMetadata`](#obj-specgeneratorsmatrixgeneratorsplugintemplatespecsyncpolicymanagednamespacemetadata)
@@ -2716,14 +2771,18 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withLabelsMixin(labels)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsyncpolicymanagednamespacemetadatawithlabelsmixin)
                 * [`obj spec.generators.matrix.generators.plugin.template.spec.syncPolicy.retry`](#obj-specgeneratorsmatrixgeneratorsplugintemplatespecsyncpolicyretry)
                   * [`fn withLimit(limit)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsyncpolicyretrywithlimit)
+                  * [`fn withRefresh(refresh)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsyncpolicyretrywithrefresh)
                   * [`obj spec.generators.matrix.generators.plugin.template.spec.syncPolicy.retry.backoff`](#obj-specgeneratorsmatrixgeneratorsplugintemplatespecsyncpolicyretrybackoff)
                     * [`fn withDuration(duration)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsyncpolicyretrybackoffwithduration)
                     * [`fn withFactor(factor)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsyncpolicyretrybackoffwithfactor)
                     * [`fn withMaxDuration(maxDuration)`](#fn-specgeneratorsmatrixgeneratorsplugintemplatespecsyncpolicyretrybackoffwithmaxduration)
         * [`obj spec.generators.matrix.generators.pullRequest`](#obj-specgeneratorsmatrixgeneratorspullrequest)
+          * [`fn withContinueOnRepoNotFoundError(continueOnRepoNotFoundError)`](#fn-specgeneratorsmatrixgeneratorspullrequestwithcontinueonreponotfounderror)
           * [`fn withFilters(filters)`](#fn-specgeneratorsmatrixgeneratorspullrequestwithfilters)
           * [`fn withFiltersMixin(filters)`](#fn-specgeneratorsmatrixgeneratorspullrequestwithfiltersmixin)
           * [`fn withRequeueAfterSeconds(requeueAfterSeconds)`](#fn-specgeneratorsmatrixgeneratorspullrequestwithrequeueafterseconds)
+          * [`fn withValues(values)`](#fn-specgeneratorsmatrixgeneratorspullrequestwithvalues)
+          * [`fn withValuesMixin(values)`](#fn-specgeneratorsmatrixgeneratorspullrequestwithvaluesmixin)
           * [`obj spec.generators.matrix.generators.pullRequest.azuredevops`](#obj-specgeneratorsmatrixgeneratorspullrequestazuredevops)
             * [`fn withApi(api)`](#fn-specgeneratorsmatrixgeneratorspullrequestazuredevopswithapi)
             * [`fn withLabels(labels)`](#fn-specgeneratorsmatrixgeneratorspullrequestazuredevopswithlabels)
@@ -2767,9 +2826,12 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
           * [`obj spec.generators.matrix.generators.pullRequest.filters`](#obj-specgeneratorsmatrixgeneratorspullrequestfilters)
             * [`fn withBranchMatch(branchMatch)`](#fn-specgeneratorsmatrixgeneratorspullrequestfilterswithbranchmatch)
             * [`fn withTargetBranchMatch(targetBranchMatch)`](#fn-specgeneratorsmatrixgeneratorspullrequestfilterswithtargetbranchmatch)
+            * [`fn withTitleMatch(titleMatch)`](#fn-specgeneratorsmatrixgeneratorspullrequestfilterswithtitlematch)
           * [`obj spec.generators.matrix.generators.pullRequest.gitea`](#obj-specgeneratorsmatrixgeneratorspullrequestgitea)
             * [`fn withApi(api)`](#fn-specgeneratorsmatrixgeneratorspullrequestgiteawithapi)
             * [`fn withInsecure(insecure)`](#fn-specgeneratorsmatrixgeneratorspullrequestgiteawithinsecure)
+            * [`fn withLabels(labels)`](#fn-specgeneratorsmatrixgeneratorspullrequestgiteawithlabels)
+            * [`fn withLabelsMixin(labels)`](#fn-specgeneratorsmatrixgeneratorspullrequestgiteawithlabelsmixin)
             * [`fn withOwner(owner)`](#fn-specgeneratorsmatrixgeneratorspullrequestgiteawithowner)
             * [`fn withRepo(repo)`](#fn-specgeneratorsmatrixgeneratorspullrequestgiteawithrepo)
             * [`obj spec.generators.matrix.generators.pullRequest.gitea.tokenRef`](#obj-specgeneratorsmatrixgeneratorspullrequestgiteatokenref)
@@ -2901,9 +2963,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withComponentsMixin(components)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcekustomizewithcomponentsmixin)
                   * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcekustomizewithforcecommonannotations)
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcekustomizewithforcecommonlabels)
+                  * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcekustomizewithignoremissingcomponents)
                   * [`fn withImages(images)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcekustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcekustomizewithimagesmixin)
                   * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcekustomizewithkubeversion)
+                  * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcekustomizewithlabelincludetemplates)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcekustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcekustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourcekustomizewithnamesuffix)
@@ -3021,9 +3085,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withComponentsMixin(components)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceskustomizewithcomponentsmixin)
                   * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceskustomizewithforcecommonannotations)
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceskustomizewithforcecommonlabels)
+                  * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceskustomizewithignoremissingcomponents)
                   * [`fn withImages(images)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceskustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceskustomizewithimagesmixin)
                   * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceskustomizewithkubeversion)
+                  * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceskustomizewithlabelincludetemplates)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceskustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceskustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsourceskustomizewithnamesuffix)
@@ -3070,6 +3136,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                 * [`fn withSyncOptionsMixin(syncOptions)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsyncpolicywithsyncoptionsmixin)
                 * [`obj spec.generators.matrix.generators.pullRequest.template.spec.syncPolicy.automated`](#obj-specgeneratorsmatrixgeneratorspullrequesttemplatespecsyncpolicyautomated)
                   * [`fn withAllowEmpty(allowEmpty)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsyncpolicyautomatedwithallowempty)
+                  * [`fn withEnabled(enabled)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsyncpolicyautomatedwithenabled)
                   * [`fn withPrune(prune)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsyncpolicyautomatedwithprune)
                   * [`fn withSelfHeal(selfHeal)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsyncpolicyautomatedwithselfheal)
                 * [`obj spec.generators.matrix.generators.pullRequest.template.spec.syncPolicy.managedNamespaceMetadata`](#obj-specgeneratorsmatrixgeneratorspullrequesttemplatespecsyncpolicymanagednamespacemetadata)
@@ -3079,6 +3146,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withLabelsMixin(labels)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsyncpolicymanagednamespacemetadatawithlabelsmixin)
                 * [`obj spec.generators.matrix.generators.pullRequest.template.spec.syncPolicy.retry`](#obj-specgeneratorsmatrixgeneratorspullrequesttemplatespecsyncpolicyretry)
                   * [`fn withLimit(limit)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsyncpolicyretrywithlimit)
+                  * [`fn withRefresh(refresh)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsyncpolicyretrywithrefresh)
                   * [`obj spec.generators.matrix.generators.pullRequest.template.spec.syncPolicy.retry.backoff`](#obj-specgeneratorsmatrixgeneratorspullrequesttemplatespecsyncpolicyretrybackoff)
                     * [`fn withDuration(duration)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsyncpolicyretrybackoffwithduration)
                     * [`fn withFactor(factor)`](#fn-specgeneratorsmatrixgeneratorspullrequesttemplatespecsyncpolicyretrybackoffwithfactor)
@@ -3272,9 +3340,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withComponentsMixin(components)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcekustomizewithcomponentsmixin)
                   * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcekustomizewithforcecommonannotations)
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcekustomizewithforcecommonlabels)
+                  * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcekustomizewithignoremissingcomponents)
                   * [`fn withImages(images)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcekustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcekustomizewithimagesmixin)
                   * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcekustomizewithkubeversion)
+                  * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcekustomizewithlabelincludetemplates)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcekustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcekustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourcekustomizewithnamesuffix)
@@ -3392,9 +3462,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withComponentsMixin(components)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceskustomizewithcomponentsmixin)
                   * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceskustomizewithforcecommonannotations)
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceskustomizewithforcecommonlabels)
+                  * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceskustomizewithignoremissingcomponents)
                   * [`fn withImages(images)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceskustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceskustomizewithimagesmixin)
                   * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceskustomizewithkubeversion)
+                  * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceskustomizewithlabelincludetemplates)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceskustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceskustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsourceskustomizewithnamesuffix)
@@ -3441,6 +3513,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                 * [`fn withSyncOptionsMixin(syncOptions)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsyncpolicywithsyncoptionsmixin)
                 * [`obj spec.generators.matrix.generators.scmProvider.template.spec.syncPolicy.automated`](#obj-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsyncpolicyautomated)
                   * [`fn withAllowEmpty(allowEmpty)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsyncpolicyautomatedwithallowempty)
+                  * [`fn withEnabled(enabled)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsyncpolicyautomatedwithenabled)
                   * [`fn withPrune(prune)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsyncpolicyautomatedwithprune)
                   * [`fn withSelfHeal(selfHeal)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsyncpolicyautomatedwithselfheal)
                 * [`obj spec.generators.matrix.generators.scmProvider.template.spec.syncPolicy.managedNamespaceMetadata`](#obj-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsyncpolicymanagednamespacemetadata)
@@ -3450,6 +3523,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withLabelsMixin(labels)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsyncpolicymanagednamespacemetadatawithlabelsmixin)
                 * [`obj spec.generators.matrix.generators.scmProvider.template.spec.syncPolicy.retry`](#obj-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsyncpolicyretry)
                   * [`fn withLimit(limit)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsyncpolicyretrywithlimit)
+                  * [`fn withRefresh(refresh)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsyncpolicyretrywithrefresh)
                   * [`obj spec.generators.matrix.generators.scmProvider.template.spec.syncPolicy.retry.backoff`](#obj-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsyncpolicyretrybackoff)
                     * [`fn withDuration(duration)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsyncpolicyretrybackoffwithduration)
                     * [`fn withFactor(factor)`](#fn-specgeneratorsmatrixgeneratorsscmprovidertemplatespecsyncpolicyretrybackoffwithfactor)
@@ -3567,9 +3641,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
               * [`fn withComponentsMixin(components)`](#fn-specgeneratorsmatrixtemplatespecsourcekustomizewithcomponentsmixin)
               * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsmatrixtemplatespecsourcekustomizewithforcecommonannotations)
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmatrixtemplatespecsourcekustomizewithforcecommonlabels)
+              * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsmatrixtemplatespecsourcekustomizewithignoremissingcomponents)
               * [`fn withImages(images)`](#fn-specgeneratorsmatrixtemplatespecsourcekustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorsmatrixtemplatespecsourcekustomizewithimagesmixin)
               * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixtemplatespecsourcekustomizewithkubeversion)
+              * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsmatrixtemplatespecsourcekustomizewithlabelincludetemplates)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmatrixtemplatespecsourcekustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmatrixtemplatespecsourcekustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmatrixtemplatespecsourcekustomizewithnamesuffix)
@@ -3687,9 +3763,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
               * [`fn withComponentsMixin(components)`](#fn-specgeneratorsmatrixtemplatespecsourceskustomizewithcomponentsmixin)
               * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsmatrixtemplatespecsourceskustomizewithforcecommonannotations)
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmatrixtemplatespecsourceskustomizewithforcecommonlabels)
+              * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsmatrixtemplatespecsourceskustomizewithignoremissingcomponents)
               * [`fn withImages(images)`](#fn-specgeneratorsmatrixtemplatespecsourceskustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorsmatrixtemplatespecsourceskustomizewithimagesmixin)
               * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmatrixtemplatespecsourceskustomizewithkubeversion)
+              * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsmatrixtemplatespecsourceskustomizewithlabelincludetemplates)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmatrixtemplatespecsourceskustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmatrixtemplatespecsourceskustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmatrixtemplatespecsourceskustomizewithnamesuffix)
@@ -3736,6 +3814,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
             * [`fn withSyncOptionsMixin(syncOptions)`](#fn-specgeneratorsmatrixtemplatespecsyncpolicywithsyncoptionsmixin)
             * [`obj spec.generators.matrix.template.spec.syncPolicy.automated`](#obj-specgeneratorsmatrixtemplatespecsyncpolicyautomated)
               * [`fn withAllowEmpty(allowEmpty)`](#fn-specgeneratorsmatrixtemplatespecsyncpolicyautomatedwithallowempty)
+              * [`fn withEnabled(enabled)`](#fn-specgeneratorsmatrixtemplatespecsyncpolicyautomatedwithenabled)
               * [`fn withPrune(prune)`](#fn-specgeneratorsmatrixtemplatespecsyncpolicyautomatedwithprune)
               * [`fn withSelfHeal(selfHeal)`](#fn-specgeneratorsmatrixtemplatespecsyncpolicyautomatedwithselfheal)
             * [`obj spec.generators.matrix.template.spec.syncPolicy.managedNamespaceMetadata`](#obj-specgeneratorsmatrixtemplatespecsyncpolicymanagednamespacemetadata)
@@ -3745,6 +3824,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
               * [`fn withLabelsMixin(labels)`](#fn-specgeneratorsmatrixtemplatespecsyncpolicymanagednamespacemetadatawithlabelsmixin)
             * [`obj spec.generators.matrix.template.spec.syncPolicy.retry`](#obj-specgeneratorsmatrixtemplatespecsyncpolicyretry)
               * [`fn withLimit(limit)`](#fn-specgeneratorsmatrixtemplatespecsyncpolicyretrywithlimit)
+              * [`fn withRefresh(refresh)`](#fn-specgeneratorsmatrixtemplatespecsyncpolicyretrywithrefresh)
               * [`obj spec.generators.matrix.template.spec.syncPolicy.retry.backoff`](#obj-specgeneratorsmatrixtemplatespecsyncpolicyretrybackoff)
                 * [`fn withDuration(duration)`](#fn-specgeneratorsmatrixtemplatespecsyncpolicyretrybackoffwithduration)
                 * [`fn withFactor(factor)`](#fn-specgeneratorsmatrixtemplatespecsyncpolicyretrybackoffwithfactor)
@@ -3876,9 +3956,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withComponentsMixin(components)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithcomponentsmixin)
                   * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithforcecommonannotations)
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithforcecommonlabels)
+                  * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithignoremissingcomponents)
                   * [`fn withImages(images)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithimagesmixin)
                   * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithkubeversion)
+                  * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithlabelincludetemplates)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourcekustomizewithnamesuffix)
@@ -3996,9 +4078,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withComponentsMixin(components)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithcomponentsmixin)
                   * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithforcecommonannotations)
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithforcecommonlabels)
+                  * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithignoremissingcomponents)
                   * [`fn withImages(images)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithimagesmixin)
                   * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithkubeversion)
+                  * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithlabelincludetemplates)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsourceskustomizewithnamesuffix)
@@ -4045,6 +4129,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                 * [`fn withSyncOptionsMixin(syncOptions)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsyncpolicywithsyncoptionsmixin)
                 * [`obj spec.generators.merge.generators.clusterDecisionResource.template.spec.syncPolicy.automated`](#obj-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsyncpolicyautomated)
                   * [`fn withAllowEmpty(allowEmpty)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsyncpolicyautomatedwithallowempty)
+                  * [`fn withEnabled(enabled)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsyncpolicyautomatedwithenabled)
                   * [`fn withPrune(prune)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsyncpolicyautomatedwithprune)
                   * [`fn withSelfHeal(selfHeal)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsyncpolicyautomatedwithselfheal)
                 * [`obj spec.generators.merge.generators.clusterDecisionResource.template.spec.syncPolicy.managedNamespaceMetadata`](#obj-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsyncpolicymanagednamespacemetadata)
@@ -4054,6 +4139,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withLabelsMixin(labels)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsyncpolicymanagednamespacemetadatawithlabelsmixin)
                 * [`obj spec.generators.merge.generators.clusterDecisionResource.template.spec.syncPolicy.retry`](#obj-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsyncpolicyretry)
                   * [`fn withLimit(limit)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsyncpolicyretrywithlimit)
+                  * [`fn withRefresh(refresh)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsyncpolicyretrywithrefresh)
                   * [`obj spec.generators.merge.generators.clusterDecisionResource.template.spec.syncPolicy.retry.backoff`](#obj-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsyncpolicyretrybackoff)
                     * [`fn withDuration(duration)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsyncpolicyretrybackoffwithduration)
                     * [`fn withFactor(factor)`](#fn-specgeneratorsmergegeneratorsclusterdecisionresourcetemplatespecsyncpolicyretrybackoffwithfactor)
@@ -4175,9 +4261,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withComponentsMixin(components)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcekustomizewithcomponentsmixin)
                   * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcekustomizewithforcecommonannotations)
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcekustomizewithforcecommonlabels)
+                  * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcekustomizewithignoremissingcomponents)
                   * [`fn withImages(images)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcekustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcekustomizewithimagesmixin)
                   * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcekustomizewithkubeversion)
+                  * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcekustomizewithlabelincludetemplates)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcekustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcekustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourcekustomizewithnamesuffix)
@@ -4295,9 +4383,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withComponentsMixin(components)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceskustomizewithcomponentsmixin)
                   * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceskustomizewithforcecommonannotations)
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceskustomizewithforcecommonlabels)
+                  * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceskustomizewithignoremissingcomponents)
                   * [`fn withImages(images)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceskustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceskustomizewithimagesmixin)
                   * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceskustomizewithkubeversion)
+                  * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceskustomizewithlabelincludetemplates)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceskustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceskustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsourceskustomizewithnamesuffix)
@@ -4344,6 +4434,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                 * [`fn withSyncOptionsMixin(syncOptions)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsyncpolicywithsyncoptionsmixin)
                 * [`obj spec.generators.merge.generators.clusters.template.spec.syncPolicy.automated`](#obj-specgeneratorsmergegeneratorsclusterstemplatespecsyncpolicyautomated)
                   * [`fn withAllowEmpty(allowEmpty)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsyncpolicyautomatedwithallowempty)
+                  * [`fn withEnabled(enabled)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsyncpolicyautomatedwithenabled)
                   * [`fn withPrune(prune)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsyncpolicyautomatedwithprune)
                   * [`fn withSelfHeal(selfHeal)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsyncpolicyautomatedwithselfheal)
                 * [`obj spec.generators.merge.generators.clusters.template.spec.syncPolicy.managedNamespaceMetadata`](#obj-specgeneratorsmergegeneratorsclusterstemplatespecsyncpolicymanagednamespacemetadata)
@@ -4353,6 +4444,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withLabelsMixin(labels)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsyncpolicymanagednamespacemetadatawithlabelsmixin)
                 * [`obj spec.generators.merge.generators.clusters.template.spec.syncPolicy.retry`](#obj-specgeneratorsmergegeneratorsclusterstemplatespecsyncpolicyretry)
                   * [`fn withLimit(limit)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsyncpolicyretrywithlimit)
+                  * [`fn withRefresh(refresh)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsyncpolicyretrywithrefresh)
                   * [`obj spec.generators.merge.generators.clusters.template.spec.syncPolicy.retry.backoff`](#obj-specgeneratorsmergegeneratorsclusterstemplatespecsyncpolicyretrybackoff)
                     * [`fn withDuration(duration)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsyncpolicyretrybackoffwithduration)
                     * [`fn withFactor(factor)`](#fn-specgeneratorsmergegeneratorsclusterstemplatespecsyncpolicyretrybackoffwithfactor)
@@ -4372,6 +4464,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
             * [`fn withExclude(exclude)`](#fn-specgeneratorsmergegeneratorsgitdirectorieswithexclude)
             * [`fn withPath(path)`](#fn-specgeneratorsmergegeneratorsgitdirectorieswithpath)
           * [`obj spec.generators.merge.generators.git.files`](#obj-specgeneratorsmergegeneratorsgitfiles)
+            * [`fn withExclude(exclude)`](#fn-specgeneratorsmergegeneratorsgitfileswithexclude)
             * [`fn withPath(path)`](#fn-specgeneratorsmergegeneratorsgitfileswithpath)
           * [`obj spec.generators.merge.generators.git.template`](#obj-specgeneratorsmergegeneratorsgittemplate)
             * [`obj spec.generators.merge.generators.git.template.metadata`](#obj-specgeneratorsmergegeneratorsgittemplatemetadata)
@@ -4476,9 +4569,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withComponentsMixin(components)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcekustomizewithcomponentsmixin)
                   * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcekustomizewithforcecommonannotations)
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcekustomizewithforcecommonlabels)
+                  * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcekustomizewithignoremissingcomponents)
                   * [`fn withImages(images)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcekustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcekustomizewithimagesmixin)
                   * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcekustomizewithkubeversion)
+                  * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcekustomizewithlabelincludetemplates)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcekustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcekustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourcekustomizewithnamesuffix)
@@ -4596,9 +4691,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withComponentsMixin(components)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceskustomizewithcomponentsmixin)
                   * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceskustomizewithforcecommonannotations)
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceskustomizewithforcecommonlabels)
+                  * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceskustomizewithignoremissingcomponents)
                   * [`fn withImages(images)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceskustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceskustomizewithimagesmixin)
                   * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceskustomizewithkubeversion)
+                  * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceskustomizewithlabelincludetemplates)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceskustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceskustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsourceskustomizewithnamesuffix)
@@ -4645,6 +4742,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                 * [`fn withSyncOptionsMixin(syncOptions)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsyncpolicywithsyncoptionsmixin)
                 * [`obj spec.generators.merge.generators.git.template.spec.syncPolicy.automated`](#obj-specgeneratorsmergegeneratorsgittemplatespecsyncpolicyautomated)
                   * [`fn withAllowEmpty(allowEmpty)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsyncpolicyautomatedwithallowempty)
+                  * [`fn withEnabled(enabled)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsyncpolicyautomatedwithenabled)
                   * [`fn withPrune(prune)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsyncpolicyautomatedwithprune)
                   * [`fn withSelfHeal(selfHeal)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsyncpolicyautomatedwithselfheal)
                 * [`obj spec.generators.merge.generators.git.template.spec.syncPolicy.managedNamespaceMetadata`](#obj-specgeneratorsmergegeneratorsgittemplatespecsyncpolicymanagednamespacemetadata)
@@ -4654,6 +4752,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withLabelsMixin(labels)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsyncpolicymanagednamespacemetadatawithlabelsmixin)
                 * [`obj spec.generators.merge.generators.git.template.spec.syncPolicy.retry`](#obj-specgeneratorsmergegeneratorsgittemplatespecsyncpolicyretry)
                   * [`fn withLimit(limit)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsyncpolicyretrywithlimit)
+                  * [`fn withRefresh(refresh)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsyncpolicyretrywithrefresh)
                   * [`obj spec.generators.merge.generators.git.template.spec.syncPolicy.retry.backoff`](#obj-specgeneratorsmergegeneratorsgittemplatespecsyncpolicyretrybackoff)
                     * [`fn withDuration(duration)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsyncpolicyretrybackoffwithduration)
                     * [`fn withFactor(factor)`](#fn-specgeneratorsmergegeneratorsgittemplatespecsyncpolicyretrybackoffwithfactor)
@@ -4765,9 +4864,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withComponentsMixin(components)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcekustomizewithcomponentsmixin)
                   * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcekustomizewithforcecommonannotations)
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcekustomizewithforcecommonlabels)
+                  * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcekustomizewithignoremissingcomponents)
                   * [`fn withImages(images)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcekustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcekustomizewithimagesmixin)
                   * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcekustomizewithkubeversion)
+                  * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcekustomizewithlabelincludetemplates)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcekustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcekustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourcekustomizewithnamesuffix)
@@ -4885,9 +4986,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withComponentsMixin(components)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceskustomizewithcomponentsmixin)
                   * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceskustomizewithforcecommonannotations)
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceskustomizewithforcecommonlabels)
+                  * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceskustomizewithignoremissingcomponents)
                   * [`fn withImages(images)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceskustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceskustomizewithimagesmixin)
                   * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceskustomizewithkubeversion)
+                  * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceskustomizewithlabelincludetemplates)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceskustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceskustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsourceskustomizewithnamesuffix)
@@ -4934,6 +5037,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                 * [`fn withSyncOptionsMixin(syncOptions)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsyncpolicywithsyncoptionsmixin)
                 * [`obj spec.generators.merge.generators.list.template.spec.syncPolicy.automated`](#obj-specgeneratorsmergegeneratorslisttemplatespecsyncpolicyautomated)
                   * [`fn withAllowEmpty(allowEmpty)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsyncpolicyautomatedwithallowempty)
+                  * [`fn withEnabled(enabled)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsyncpolicyautomatedwithenabled)
                   * [`fn withPrune(prune)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsyncpolicyautomatedwithprune)
                   * [`fn withSelfHeal(selfHeal)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsyncpolicyautomatedwithselfheal)
                 * [`obj spec.generators.merge.generators.list.template.spec.syncPolicy.managedNamespaceMetadata`](#obj-specgeneratorsmergegeneratorslisttemplatespecsyncpolicymanagednamespacemetadata)
@@ -4943,6 +5047,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withLabelsMixin(labels)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsyncpolicymanagednamespacemetadatawithlabelsmixin)
                 * [`obj spec.generators.merge.generators.list.template.spec.syncPolicy.retry`](#obj-specgeneratorsmergegeneratorslisttemplatespecsyncpolicyretry)
                   * [`fn withLimit(limit)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsyncpolicyretrywithlimit)
+                  * [`fn withRefresh(refresh)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsyncpolicyretrywithrefresh)
                   * [`obj spec.generators.merge.generators.list.template.spec.syncPolicy.retry.backoff`](#obj-specgeneratorsmergegeneratorslisttemplatespecsyncpolicyretrybackoff)
                     * [`fn withDuration(duration)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsyncpolicyretrybackoffwithduration)
                     * [`fn withFactor(factor)`](#fn-specgeneratorsmergegeneratorslisttemplatespecsyncpolicyretrybackoffwithfactor)
@@ -5059,9 +5164,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withComponentsMixin(components)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcekustomizewithcomponentsmixin)
                   * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcekustomizewithforcecommonannotations)
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcekustomizewithforcecommonlabels)
+                  * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcekustomizewithignoremissingcomponents)
                   * [`fn withImages(images)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcekustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcekustomizewithimagesmixin)
                   * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcekustomizewithkubeversion)
+                  * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcekustomizewithlabelincludetemplates)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcekustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcekustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourcekustomizewithnamesuffix)
@@ -5179,9 +5286,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withComponentsMixin(components)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceskustomizewithcomponentsmixin)
                   * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceskustomizewithforcecommonannotations)
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceskustomizewithforcecommonlabels)
+                  * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceskustomizewithignoremissingcomponents)
                   * [`fn withImages(images)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceskustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceskustomizewithimagesmixin)
                   * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceskustomizewithkubeversion)
+                  * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceskustomizewithlabelincludetemplates)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceskustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceskustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsourceskustomizewithnamesuffix)
@@ -5228,6 +5337,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                 * [`fn withSyncOptionsMixin(syncOptions)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsyncpolicywithsyncoptionsmixin)
                 * [`obj spec.generators.merge.generators.plugin.template.spec.syncPolicy.automated`](#obj-specgeneratorsmergegeneratorsplugintemplatespecsyncpolicyautomated)
                   * [`fn withAllowEmpty(allowEmpty)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsyncpolicyautomatedwithallowempty)
+                  * [`fn withEnabled(enabled)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsyncpolicyautomatedwithenabled)
                   * [`fn withPrune(prune)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsyncpolicyautomatedwithprune)
                   * [`fn withSelfHeal(selfHeal)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsyncpolicyautomatedwithselfheal)
                 * [`obj spec.generators.merge.generators.plugin.template.spec.syncPolicy.managedNamespaceMetadata`](#obj-specgeneratorsmergegeneratorsplugintemplatespecsyncpolicymanagednamespacemetadata)
@@ -5237,14 +5347,18 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withLabelsMixin(labels)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsyncpolicymanagednamespacemetadatawithlabelsmixin)
                 * [`obj spec.generators.merge.generators.plugin.template.spec.syncPolicy.retry`](#obj-specgeneratorsmergegeneratorsplugintemplatespecsyncpolicyretry)
                   * [`fn withLimit(limit)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsyncpolicyretrywithlimit)
+                  * [`fn withRefresh(refresh)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsyncpolicyretrywithrefresh)
                   * [`obj spec.generators.merge.generators.plugin.template.spec.syncPolicy.retry.backoff`](#obj-specgeneratorsmergegeneratorsplugintemplatespecsyncpolicyretrybackoff)
                     * [`fn withDuration(duration)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsyncpolicyretrybackoffwithduration)
                     * [`fn withFactor(factor)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsyncpolicyretrybackoffwithfactor)
                     * [`fn withMaxDuration(maxDuration)`](#fn-specgeneratorsmergegeneratorsplugintemplatespecsyncpolicyretrybackoffwithmaxduration)
         * [`obj spec.generators.merge.generators.pullRequest`](#obj-specgeneratorsmergegeneratorspullrequest)
+          * [`fn withContinueOnRepoNotFoundError(continueOnRepoNotFoundError)`](#fn-specgeneratorsmergegeneratorspullrequestwithcontinueonreponotfounderror)
           * [`fn withFilters(filters)`](#fn-specgeneratorsmergegeneratorspullrequestwithfilters)
           * [`fn withFiltersMixin(filters)`](#fn-specgeneratorsmergegeneratorspullrequestwithfiltersmixin)
           * [`fn withRequeueAfterSeconds(requeueAfterSeconds)`](#fn-specgeneratorsmergegeneratorspullrequestwithrequeueafterseconds)
+          * [`fn withValues(values)`](#fn-specgeneratorsmergegeneratorspullrequestwithvalues)
+          * [`fn withValuesMixin(values)`](#fn-specgeneratorsmergegeneratorspullrequestwithvaluesmixin)
           * [`obj spec.generators.merge.generators.pullRequest.azuredevops`](#obj-specgeneratorsmergegeneratorspullrequestazuredevops)
             * [`fn withApi(api)`](#fn-specgeneratorsmergegeneratorspullrequestazuredevopswithapi)
             * [`fn withLabels(labels)`](#fn-specgeneratorsmergegeneratorspullrequestazuredevopswithlabels)
@@ -5288,9 +5402,12 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
           * [`obj spec.generators.merge.generators.pullRequest.filters`](#obj-specgeneratorsmergegeneratorspullrequestfilters)
             * [`fn withBranchMatch(branchMatch)`](#fn-specgeneratorsmergegeneratorspullrequestfilterswithbranchmatch)
             * [`fn withTargetBranchMatch(targetBranchMatch)`](#fn-specgeneratorsmergegeneratorspullrequestfilterswithtargetbranchmatch)
+            * [`fn withTitleMatch(titleMatch)`](#fn-specgeneratorsmergegeneratorspullrequestfilterswithtitlematch)
           * [`obj spec.generators.merge.generators.pullRequest.gitea`](#obj-specgeneratorsmergegeneratorspullrequestgitea)
             * [`fn withApi(api)`](#fn-specgeneratorsmergegeneratorspullrequestgiteawithapi)
             * [`fn withInsecure(insecure)`](#fn-specgeneratorsmergegeneratorspullrequestgiteawithinsecure)
+            * [`fn withLabels(labels)`](#fn-specgeneratorsmergegeneratorspullrequestgiteawithlabels)
+            * [`fn withLabelsMixin(labels)`](#fn-specgeneratorsmergegeneratorspullrequestgiteawithlabelsmixin)
             * [`fn withOwner(owner)`](#fn-specgeneratorsmergegeneratorspullrequestgiteawithowner)
             * [`fn withRepo(repo)`](#fn-specgeneratorsmergegeneratorspullrequestgiteawithrepo)
             * [`obj spec.generators.merge.generators.pullRequest.gitea.tokenRef`](#obj-specgeneratorsmergegeneratorspullrequestgiteatokenref)
@@ -5422,9 +5539,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withComponentsMixin(components)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcekustomizewithcomponentsmixin)
                   * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcekustomizewithforcecommonannotations)
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcekustomizewithforcecommonlabels)
+                  * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcekustomizewithignoremissingcomponents)
                   * [`fn withImages(images)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcekustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcekustomizewithimagesmixin)
                   * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcekustomizewithkubeversion)
+                  * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcekustomizewithlabelincludetemplates)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcekustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcekustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourcekustomizewithnamesuffix)
@@ -5542,9 +5661,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withComponentsMixin(components)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceskustomizewithcomponentsmixin)
                   * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceskustomizewithforcecommonannotations)
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceskustomizewithforcecommonlabels)
+                  * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceskustomizewithignoremissingcomponents)
                   * [`fn withImages(images)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceskustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceskustomizewithimagesmixin)
                   * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceskustomizewithkubeversion)
+                  * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceskustomizewithlabelincludetemplates)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceskustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceskustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsourceskustomizewithnamesuffix)
@@ -5591,6 +5712,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                 * [`fn withSyncOptionsMixin(syncOptions)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsyncpolicywithsyncoptionsmixin)
                 * [`obj spec.generators.merge.generators.pullRequest.template.spec.syncPolicy.automated`](#obj-specgeneratorsmergegeneratorspullrequesttemplatespecsyncpolicyautomated)
                   * [`fn withAllowEmpty(allowEmpty)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsyncpolicyautomatedwithallowempty)
+                  * [`fn withEnabled(enabled)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsyncpolicyautomatedwithenabled)
                   * [`fn withPrune(prune)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsyncpolicyautomatedwithprune)
                   * [`fn withSelfHeal(selfHeal)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsyncpolicyautomatedwithselfheal)
                 * [`obj spec.generators.merge.generators.pullRequest.template.spec.syncPolicy.managedNamespaceMetadata`](#obj-specgeneratorsmergegeneratorspullrequesttemplatespecsyncpolicymanagednamespacemetadata)
@@ -5600,6 +5722,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withLabelsMixin(labels)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsyncpolicymanagednamespacemetadatawithlabelsmixin)
                 * [`obj spec.generators.merge.generators.pullRequest.template.spec.syncPolicy.retry`](#obj-specgeneratorsmergegeneratorspullrequesttemplatespecsyncpolicyretry)
                   * [`fn withLimit(limit)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsyncpolicyretrywithlimit)
+                  * [`fn withRefresh(refresh)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsyncpolicyretrywithrefresh)
                   * [`obj spec.generators.merge.generators.pullRequest.template.spec.syncPolicy.retry.backoff`](#obj-specgeneratorsmergegeneratorspullrequesttemplatespecsyncpolicyretrybackoff)
                     * [`fn withDuration(duration)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsyncpolicyretrybackoffwithduration)
                     * [`fn withFactor(factor)`](#fn-specgeneratorsmergegeneratorspullrequesttemplatespecsyncpolicyretrybackoffwithfactor)
@@ -5793,9 +5916,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withComponentsMixin(components)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcekustomizewithcomponentsmixin)
                   * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcekustomizewithforcecommonannotations)
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcekustomizewithforcecommonlabels)
+                  * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcekustomizewithignoremissingcomponents)
                   * [`fn withImages(images)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcekustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcekustomizewithimagesmixin)
                   * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcekustomizewithkubeversion)
+                  * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcekustomizewithlabelincludetemplates)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcekustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcekustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourcekustomizewithnamesuffix)
@@ -5913,9 +6038,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withComponentsMixin(components)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceskustomizewithcomponentsmixin)
                   * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceskustomizewithforcecommonannotations)
                   * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceskustomizewithforcecommonlabels)
+                  * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceskustomizewithignoremissingcomponents)
                   * [`fn withImages(images)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceskustomizewithimages)
                   * [`fn withImagesMixin(images)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceskustomizewithimagesmixin)
                   * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceskustomizewithkubeversion)
+                  * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceskustomizewithlabelincludetemplates)
                   * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceskustomizewithlabelwithoutselector)
                   * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceskustomizewithnameprefix)
                   * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsourceskustomizewithnamesuffix)
@@ -5962,6 +6089,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                 * [`fn withSyncOptionsMixin(syncOptions)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsyncpolicywithsyncoptionsmixin)
                 * [`obj spec.generators.merge.generators.scmProvider.template.spec.syncPolicy.automated`](#obj-specgeneratorsmergegeneratorsscmprovidertemplatespecsyncpolicyautomated)
                   * [`fn withAllowEmpty(allowEmpty)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsyncpolicyautomatedwithallowempty)
+                  * [`fn withEnabled(enabled)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsyncpolicyautomatedwithenabled)
                   * [`fn withPrune(prune)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsyncpolicyautomatedwithprune)
                   * [`fn withSelfHeal(selfHeal)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsyncpolicyautomatedwithselfheal)
                 * [`obj spec.generators.merge.generators.scmProvider.template.spec.syncPolicy.managedNamespaceMetadata`](#obj-specgeneratorsmergegeneratorsscmprovidertemplatespecsyncpolicymanagednamespacemetadata)
@@ -5971,6 +6099,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
                   * [`fn withLabelsMixin(labels)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsyncpolicymanagednamespacemetadatawithlabelsmixin)
                 * [`obj spec.generators.merge.generators.scmProvider.template.spec.syncPolicy.retry`](#obj-specgeneratorsmergegeneratorsscmprovidertemplatespecsyncpolicyretry)
                   * [`fn withLimit(limit)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsyncpolicyretrywithlimit)
+                  * [`fn withRefresh(refresh)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsyncpolicyretrywithrefresh)
                   * [`obj spec.generators.merge.generators.scmProvider.template.spec.syncPolicy.retry.backoff`](#obj-specgeneratorsmergegeneratorsscmprovidertemplatespecsyncpolicyretrybackoff)
                     * [`fn withDuration(duration)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsyncpolicyretrybackoffwithduration)
                     * [`fn withFactor(factor)`](#fn-specgeneratorsmergegeneratorsscmprovidertemplatespecsyncpolicyretrybackoffwithfactor)
@@ -6088,9 +6217,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
               * [`fn withComponentsMixin(components)`](#fn-specgeneratorsmergetemplatespecsourcekustomizewithcomponentsmixin)
               * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsmergetemplatespecsourcekustomizewithforcecommonannotations)
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmergetemplatespecsourcekustomizewithforcecommonlabels)
+              * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsmergetemplatespecsourcekustomizewithignoremissingcomponents)
               * [`fn withImages(images)`](#fn-specgeneratorsmergetemplatespecsourcekustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorsmergetemplatespecsourcekustomizewithimagesmixin)
               * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergetemplatespecsourcekustomizewithkubeversion)
+              * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsmergetemplatespecsourcekustomizewithlabelincludetemplates)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmergetemplatespecsourcekustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmergetemplatespecsourcekustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmergetemplatespecsourcekustomizewithnamesuffix)
@@ -6208,9 +6339,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
               * [`fn withComponentsMixin(components)`](#fn-specgeneratorsmergetemplatespecsourceskustomizewithcomponentsmixin)
               * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsmergetemplatespecsourceskustomizewithforcecommonannotations)
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsmergetemplatespecsourceskustomizewithforcecommonlabels)
+              * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsmergetemplatespecsourceskustomizewithignoremissingcomponents)
               * [`fn withImages(images)`](#fn-specgeneratorsmergetemplatespecsourceskustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorsmergetemplatespecsourceskustomizewithimagesmixin)
               * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsmergetemplatespecsourceskustomizewithkubeversion)
+              * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsmergetemplatespecsourceskustomizewithlabelincludetemplates)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsmergetemplatespecsourceskustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsmergetemplatespecsourceskustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsmergetemplatespecsourceskustomizewithnamesuffix)
@@ -6257,6 +6390,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
             * [`fn withSyncOptionsMixin(syncOptions)`](#fn-specgeneratorsmergetemplatespecsyncpolicywithsyncoptionsmixin)
             * [`obj spec.generators.merge.template.spec.syncPolicy.automated`](#obj-specgeneratorsmergetemplatespecsyncpolicyautomated)
               * [`fn withAllowEmpty(allowEmpty)`](#fn-specgeneratorsmergetemplatespecsyncpolicyautomatedwithallowempty)
+              * [`fn withEnabled(enabled)`](#fn-specgeneratorsmergetemplatespecsyncpolicyautomatedwithenabled)
               * [`fn withPrune(prune)`](#fn-specgeneratorsmergetemplatespecsyncpolicyautomatedwithprune)
               * [`fn withSelfHeal(selfHeal)`](#fn-specgeneratorsmergetemplatespecsyncpolicyautomatedwithselfheal)
             * [`obj spec.generators.merge.template.spec.syncPolicy.managedNamespaceMetadata`](#obj-specgeneratorsmergetemplatespecsyncpolicymanagednamespacemetadata)
@@ -6266,6 +6400,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
               * [`fn withLabelsMixin(labels)`](#fn-specgeneratorsmergetemplatespecsyncpolicymanagednamespacemetadatawithlabelsmixin)
             * [`obj spec.generators.merge.template.spec.syncPolicy.retry`](#obj-specgeneratorsmergetemplatespecsyncpolicyretry)
               * [`fn withLimit(limit)`](#fn-specgeneratorsmergetemplatespecsyncpolicyretrywithlimit)
+              * [`fn withRefresh(refresh)`](#fn-specgeneratorsmergetemplatespecsyncpolicyretrywithrefresh)
               * [`obj spec.generators.merge.template.spec.syncPolicy.retry.backoff`](#obj-specgeneratorsmergetemplatespecsyncpolicyretrybackoff)
                 * [`fn withDuration(duration)`](#fn-specgeneratorsmergetemplatespecsyncpolicyretrybackoffwithduration)
                 * [`fn withFactor(factor)`](#fn-specgeneratorsmergetemplatespecsyncpolicyretrybackoffwithfactor)
@@ -6382,9 +6517,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
               * [`fn withComponentsMixin(components)`](#fn-specgeneratorsplugintemplatespecsourcekustomizewithcomponentsmixin)
               * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsplugintemplatespecsourcekustomizewithforcecommonannotations)
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsplugintemplatespecsourcekustomizewithforcecommonlabels)
+              * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsplugintemplatespecsourcekustomizewithignoremissingcomponents)
               * [`fn withImages(images)`](#fn-specgeneratorsplugintemplatespecsourcekustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorsplugintemplatespecsourcekustomizewithimagesmixin)
               * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsplugintemplatespecsourcekustomizewithkubeversion)
+              * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsplugintemplatespecsourcekustomizewithlabelincludetemplates)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsplugintemplatespecsourcekustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsplugintemplatespecsourcekustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsplugintemplatespecsourcekustomizewithnamesuffix)
@@ -6502,9 +6639,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
               * [`fn withComponentsMixin(components)`](#fn-specgeneratorsplugintemplatespecsourceskustomizewithcomponentsmixin)
               * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsplugintemplatespecsourceskustomizewithforcecommonannotations)
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsplugintemplatespecsourceskustomizewithforcecommonlabels)
+              * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsplugintemplatespecsourceskustomizewithignoremissingcomponents)
               * [`fn withImages(images)`](#fn-specgeneratorsplugintemplatespecsourceskustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorsplugintemplatespecsourceskustomizewithimagesmixin)
               * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsplugintemplatespecsourceskustomizewithkubeversion)
+              * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsplugintemplatespecsourceskustomizewithlabelincludetemplates)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsplugintemplatespecsourceskustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsplugintemplatespecsourceskustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsplugintemplatespecsourceskustomizewithnamesuffix)
@@ -6551,6 +6690,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
             * [`fn withSyncOptionsMixin(syncOptions)`](#fn-specgeneratorsplugintemplatespecsyncpolicywithsyncoptionsmixin)
             * [`obj spec.generators.plugin.template.spec.syncPolicy.automated`](#obj-specgeneratorsplugintemplatespecsyncpolicyautomated)
               * [`fn withAllowEmpty(allowEmpty)`](#fn-specgeneratorsplugintemplatespecsyncpolicyautomatedwithallowempty)
+              * [`fn withEnabled(enabled)`](#fn-specgeneratorsplugintemplatespecsyncpolicyautomatedwithenabled)
               * [`fn withPrune(prune)`](#fn-specgeneratorsplugintemplatespecsyncpolicyautomatedwithprune)
               * [`fn withSelfHeal(selfHeal)`](#fn-specgeneratorsplugintemplatespecsyncpolicyautomatedwithselfheal)
             * [`obj spec.generators.plugin.template.spec.syncPolicy.managedNamespaceMetadata`](#obj-specgeneratorsplugintemplatespecsyncpolicymanagednamespacemetadata)
@@ -6560,14 +6700,18 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
               * [`fn withLabelsMixin(labels)`](#fn-specgeneratorsplugintemplatespecsyncpolicymanagednamespacemetadatawithlabelsmixin)
             * [`obj spec.generators.plugin.template.spec.syncPolicy.retry`](#obj-specgeneratorsplugintemplatespecsyncpolicyretry)
               * [`fn withLimit(limit)`](#fn-specgeneratorsplugintemplatespecsyncpolicyretrywithlimit)
+              * [`fn withRefresh(refresh)`](#fn-specgeneratorsplugintemplatespecsyncpolicyretrywithrefresh)
               * [`obj spec.generators.plugin.template.spec.syncPolicy.retry.backoff`](#obj-specgeneratorsplugintemplatespecsyncpolicyretrybackoff)
                 * [`fn withDuration(duration)`](#fn-specgeneratorsplugintemplatespecsyncpolicyretrybackoffwithduration)
                 * [`fn withFactor(factor)`](#fn-specgeneratorsplugintemplatespecsyncpolicyretrybackoffwithfactor)
                 * [`fn withMaxDuration(maxDuration)`](#fn-specgeneratorsplugintemplatespecsyncpolicyretrybackoffwithmaxduration)
     * [`obj spec.generators.pullRequest`](#obj-specgeneratorspullrequest)
+      * [`fn withContinueOnRepoNotFoundError(continueOnRepoNotFoundError)`](#fn-specgeneratorspullrequestwithcontinueonreponotfounderror)
       * [`fn withFilters(filters)`](#fn-specgeneratorspullrequestwithfilters)
       * [`fn withFiltersMixin(filters)`](#fn-specgeneratorspullrequestwithfiltersmixin)
       * [`fn withRequeueAfterSeconds(requeueAfterSeconds)`](#fn-specgeneratorspullrequestwithrequeueafterseconds)
+      * [`fn withValues(values)`](#fn-specgeneratorspullrequestwithvalues)
+      * [`fn withValuesMixin(values)`](#fn-specgeneratorspullrequestwithvaluesmixin)
       * [`obj spec.generators.pullRequest.azuredevops`](#obj-specgeneratorspullrequestazuredevops)
         * [`fn withApi(api)`](#fn-specgeneratorspullrequestazuredevopswithapi)
         * [`fn withLabels(labels)`](#fn-specgeneratorspullrequestazuredevopswithlabels)
@@ -6611,9 +6755,12 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
       * [`obj spec.generators.pullRequest.filters`](#obj-specgeneratorspullrequestfilters)
         * [`fn withBranchMatch(branchMatch)`](#fn-specgeneratorspullrequestfilterswithbranchmatch)
         * [`fn withTargetBranchMatch(targetBranchMatch)`](#fn-specgeneratorspullrequestfilterswithtargetbranchmatch)
+        * [`fn withTitleMatch(titleMatch)`](#fn-specgeneratorspullrequestfilterswithtitlematch)
       * [`obj spec.generators.pullRequest.gitea`](#obj-specgeneratorspullrequestgitea)
         * [`fn withApi(api)`](#fn-specgeneratorspullrequestgiteawithapi)
         * [`fn withInsecure(insecure)`](#fn-specgeneratorspullrequestgiteawithinsecure)
+        * [`fn withLabels(labels)`](#fn-specgeneratorspullrequestgiteawithlabels)
+        * [`fn withLabelsMixin(labels)`](#fn-specgeneratorspullrequestgiteawithlabelsmixin)
         * [`fn withOwner(owner)`](#fn-specgeneratorspullrequestgiteawithowner)
         * [`fn withRepo(repo)`](#fn-specgeneratorspullrequestgiteawithrepo)
         * [`obj spec.generators.pullRequest.gitea.tokenRef`](#obj-specgeneratorspullrequestgiteatokenref)
@@ -6745,9 +6892,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
               * [`fn withComponentsMixin(components)`](#fn-specgeneratorspullrequesttemplatespecsourcekustomizewithcomponentsmixin)
               * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorspullrequesttemplatespecsourcekustomizewithforcecommonannotations)
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorspullrequesttemplatespecsourcekustomizewithforcecommonlabels)
+              * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorspullrequesttemplatespecsourcekustomizewithignoremissingcomponents)
               * [`fn withImages(images)`](#fn-specgeneratorspullrequesttemplatespecsourcekustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorspullrequesttemplatespecsourcekustomizewithimagesmixin)
               * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorspullrequesttemplatespecsourcekustomizewithkubeversion)
+              * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorspullrequesttemplatespecsourcekustomizewithlabelincludetemplates)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorspullrequesttemplatespecsourcekustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorspullrequesttemplatespecsourcekustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorspullrequesttemplatespecsourcekustomizewithnamesuffix)
@@ -6865,9 +7014,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
               * [`fn withComponentsMixin(components)`](#fn-specgeneratorspullrequesttemplatespecsourceskustomizewithcomponentsmixin)
               * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorspullrequesttemplatespecsourceskustomizewithforcecommonannotations)
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorspullrequesttemplatespecsourceskustomizewithforcecommonlabels)
+              * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorspullrequesttemplatespecsourceskustomizewithignoremissingcomponents)
               * [`fn withImages(images)`](#fn-specgeneratorspullrequesttemplatespecsourceskustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorspullrequesttemplatespecsourceskustomizewithimagesmixin)
               * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorspullrequesttemplatespecsourceskustomizewithkubeversion)
+              * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorspullrequesttemplatespecsourceskustomizewithlabelincludetemplates)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorspullrequesttemplatespecsourceskustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorspullrequesttemplatespecsourceskustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorspullrequesttemplatespecsourceskustomizewithnamesuffix)
@@ -6914,6 +7065,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
             * [`fn withSyncOptionsMixin(syncOptions)`](#fn-specgeneratorspullrequesttemplatespecsyncpolicywithsyncoptionsmixin)
             * [`obj spec.generators.pullRequest.template.spec.syncPolicy.automated`](#obj-specgeneratorspullrequesttemplatespecsyncpolicyautomated)
               * [`fn withAllowEmpty(allowEmpty)`](#fn-specgeneratorspullrequesttemplatespecsyncpolicyautomatedwithallowempty)
+              * [`fn withEnabled(enabled)`](#fn-specgeneratorspullrequesttemplatespecsyncpolicyautomatedwithenabled)
               * [`fn withPrune(prune)`](#fn-specgeneratorspullrequesttemplatespecsyncpolicyautomatedwithprune)
               * [`fn withSelfHeal(selfHeal)`](#fn-specgeneratorspullrequesttemplatespecsyncpolicyautomatedwithselfheal)
             * [`obj spec.generators.pullRequest.template.spec.syncPolicy.managedNamespaceMetadata`](#obj-specgeneratorspullrequesttemplatespecsyncpolicymanagednamespacemetadata)
@@ -6923,6 +7075,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
               * [`fn withLabelsMixin(labels)`](#fn-specgeneratorspullrequesttemplatespecsyncpolicymanagednamespacemetadatawithlabelsmixin)
             * [`obj spec.generators.pullRequest.template.spec.syncPolicy.retry`](#obj-specgeneratorspullrequesttemplatespecsyncpolicyretry)
               * [`fn withLimit(limit)`](#fn-specgeneratorspullrequesttemplatespecsyncpolicyretrywithlimit)
+              * [`fn withRefresh(refresh)`](#fn-specgeneratorspullrequesttemplatespecsyncpolicyretrywithrefresh)
               * [`obj spec.generators.pullRequest.template.spec.syncPolicy.retry.backoff`](#obj-specgeneratorspullrequesttemplatespecsyncpolicyretrybackoff)
                 * [`fn withDuration(duration)`](#fn-specgeneratorspullrequesttemplatespecsyncpolicyretrybackoffwithduration)
                 * [`fn withFactor(factor)`](#fn-specgeneratorspullrequesttemplatespecsyncpolicyretrybackoffwithfactor)
@@ -7116,9 +7269,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
               * [`fn withComponentsMixin(components)`](#fn-specgeneratorsscmprovidertemplatespecsourcekustomizewithcomponentsmixin)
               * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsscmprovidertemplatespecsourcekustomizewithforcecommonannotations)
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsscmprovidertemplatespecsourcekustomizewithforcecommonlabels)
+              * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsscmprovidertemplatespecsourcekustomizewithignoremissingcomponents)
               * [`fn withImages(images)`](#fn-specgeneratorsscmprovidertemplatespecsourcekustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorsscmprovidertemplatespecsourcekustomizewithimagesmixin)
               * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsscmprovidertemplatespecsourcekustomizewithkubeversion)
+              * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsscmprovidertemplatespecsourcekustomizewithlabelincludetemplates)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsscmprovidertemplatespecsourcekustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsscmprovidertemplatespecsourcekustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsscmprovidertemplatespecsourcekustomizewithnamesuffix)
@@ -7236,9 +7391,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
               * [`fn withComponentsMixin(components)`](#fn-specgeneratorsscmprovidertemplatespecsourceskustomizewithcomponentsmixin)
               * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specgeneratorsscmprovidertemplatespecsourceskustomizewithforcecommonannotations)
               * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specgeneratorsscmprovidertemplatespecsourceskustomizewithforcecommonlabels)
+              * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specgeneratorsscmprovidertemplatespecsourceskustomizewithignoremissingcomponents)
               * [`fn withImages(images)`](#fn-specgeneratorsscmprovidertemplatespecsourceskustomizewithimages)
               * [`fn withImagesMixin(images)`](#fn-specgeneratorsscmprovidertemplatespecsourceskustomizewithimagesmixin)
               * [`fn withKubeVersion(kubeVersion)`](#fn-specgeneratorsscmprovidertemplatespecsourceskustomizewithkubeversion)
+              * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specgeneratorsscmprovidertemplatespecsourceskustomizewithlabelincludetemplates)
               * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specgeneratorsscmprovidertemplatespecsourceskustomizewithlabelwithoutselector)
               * [`fn withNamePrefix(namePrefix)`](#fn-specgeneratorsscmprovidertemplatespecsourceskustomizewithnameprefix)
               * [`fn withNameSuffix(nameSuffix)`](#fn-specgeneratorsscmprovidertemplatespecsourceskustomizewithnamesuffix)
@@ -7285,6 +7442,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
             * [`fn withSyncOptionsMixin(syncOptions)`](#fn-specgeneratorsscmprovidertemplatespecsyncpolicywithsyncoptionsmixin)
             * [`obj spec.generators.scmProvider.template.spec.syncPolicy.automated`](#obj-specgeneratorsscmprovidertemplatespecsyncpolicyautomated)
               * [`fn withAllowEmpty(allowEmpty)`](#fn-specgeneratorsscmprovidertemplatespecsyncpolicyautomatedwithallowempty)
+              * [`fn withEnabled(enabled)`](#fn-specgeneratorsscmprovidertemplatespecsyncpolicyautomatedwithenabled)
               * [`fn withPrune(prune)`](#fn-specgeneratorsscmprovidertemplatespecsyncpolicyautomatedwithprune)
               * [`fn withSelfHeal(selfHeal)`](#fn-specgeneratorsscmprovidertemplatespecsyncpolicyautomatedwithselfheal)
             * [`obj spec.generators.scmProvider.template.spec.syncPolicy.managedNamespaceMetadata`](#obj-specgeneratorsscmprovidertemplatespecsyncpolicymanagednamespacemetadata)
@@ -7294,6 +7452,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
               * [`fn withLabelsMixin(labels)`](#fn-specgeneratorsscmprovidertemplatespecsyncpolicymanagednamespacemetadatawithlabelsmixin)
             * [`obj spec.generators.scmProvider.template.spec.syncPolicy.retry`](#obj-specgeneratorsscmprovidertemplatespecsyncpolicyretry)
               * [`fn withLimit(limit)`](#fn-specgeneratorsscmprovidertemplatespecsyncpolicyretrywithlimit)
+              * [`fn withRefresh(refresh)`](#fn-specgeneratorsscmprovidertemplatespecsyncpolicyretrywithrefresh)
               * [`obj spec.generators.scmProvider.template.spec.syncPolicy.retry.backoff`](#obj-specgeneratorsscmprovidertemplatespecsyncpolicyretrybackoff)
                 * [`fn withDuration(duration)`](#fn-specgeneratorsscmprovidertemplatespecsyncpolicyretrybackoffwithduration)
                 * [`fn withFactor(factor)`](#fn-specgeneratorsscmprovidertemplatespecsyncpolicyretrybackoffwithfactor)
@@ -7320,6 +7479,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
     * [`fn withLabels(labels)`](#fn-specpreservedfieldswithlabels)
     * [`fn withLabelsMixin(labels)`](#fn-specpreservedfieldswithlabelsmixin)
   * [`obj spec.strategy`](#obj-specstrategy)
+    * [`fn withDeletionOrder(deletionOrder)`](#fn-specstrategywithdeletionorder)
     * [`fn withType(type)`](#fn-specstrategywithtype)
     * [`obj spec.strategy.rollingSync`](#obj-specstrategyrollingsync)
       * [`fn withSteps(steps)`](#fn-specstrategyrollingsyncwithsteps)
@@ -7439,9 +7599,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
           * [`fn withComponentsMixin(components)`](#fn-spectemplatespecsourcekustomizewithcomponentsmixin)
           * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-spectemplatespecsourcekustomizewithforcecommonannotations)
           * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-spectemplatespecsourcekustomizewithforcecommonlabels)
+          * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-spectemplatespecsourcekustomizewithignoremissingcomponents)
           * [`fn withImages(images)`](#fn-spectemplatespecsourcekustomizewithimages)
           * [`fn withImagesMixin(images)`](#fn-spectemplatespecsourcekustomizewithimagesmixin)
           * [`fn withKubeVersion(kubeVersion)`](#fn-spectemplatespecsourcekustomizewithkubeversion)
+          * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-spectemplatespecsourcekustomizewithlabelincludetemplates)
           * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-spectemplatespecsourcekustomizewithlabelwithoutselector)
           * [`fn withNamePrefix(namePrefix)`](#fn-spectemplatespecsourcekustomizewithnameprefix)
           * [`fn withNameSuffix(nameSuffix)`](#fn-spectemplatespecsourcekustomizewithnamesuffix)
@@ -7559,9 +7721,11 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
           * [`fn withComponentsMixin(components)`](#fn-spectemplatespecsourceskustomizewithcomponentsmixin)
           * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-spectemplatespecsourceskustomizewithforcecommonannotations)
           * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-spectemplatespecsourceskustomizewithforcecommonlabels)
+          * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-spectemplatespecsourceskustomizewithignoremissingcomponents)
           * [`fn withImages(images)`](#fn-spectemplatespecsourceskustomizewithimages)
           * [`fn withImagesMixin(images)`](#fn-spectemplatespecsourceskustomizewithimagesmixin)
           * [`fn withKubeVersion(kubeVersion)`](#fn-spectemplatespecsourceskustomizewithkubeversion)
+          * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-spectemplatespecsourceskustomizewithlabelincludetemplates)
           * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-spectemplatespecsourceskustomizewithlabelwithoutselector)
           * [`fn withNamePrefix(namePrefix)`](#fn-spectemplatespecsourceskustomizewithnameprefix)
           * [`fn withNameSuffix(nameSuffix)`](#fn-spectemplatespecsourceskustomizewithnamesuffix)
@@ -7608,6 +7772,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
         * [`fn withSyncOptionsMixin(syncOptions)`](#fn-spectemplatespecsyncpolicywithsyncoptionsmixin)
         * [`obj spec.template.spec.syncPolicy.automated`](#obj-spectemplatespecsyncpolicyautomated)
           * [`fn withAllowEmpty(allowEmpty)`](#fn-spectemplatespecsyncpolicyautomatedwithallowempty)
+          * [`fn withEnabled(enabled)`](#fn-spectemplatespecsyncpolicyautomatedwithenabled)
           * [`fn withPrune(prune)`](#fn-spectemplatespecsyncpolicyautomatedwithprune)
           * [`fn withSelfHeal(selfHeal)`](#fn-spectemplatespecsyncpolicyautomatedwithselfheal)
         * [`obj spec.template.spec.syncPolicy.managedNamespaceMetadata`](#obj-spectemplatespecsyncpolicymanagednamespacemetadata)
@@ -7617,6 +7782,7 @@ permalink: /2.14/argoproj/v1alpha1/applicationSet/
           * [`fn withLabelsMixin(labels)`](#fn-spectemplatespecsyncpolicymanagednamespacemetadatawithlabelsmixin)
         * [`obj spec.template.spec.syncPolicy.retry`](#obj-spectemplatespecsyncpolicyretry)
           * [`fn withLimit(limit)`](#fn-spectemplatespecsyncpolicyretrywithlimit)
+          * [`fn withRefresh(refresh)`](#fn-spectemplatespecsyncpolicyretrywithrefresh)
           * [`obj spec.template.spec.syncPolicy.retry.backoff`](#obj-spectemplatespecsyncpolicyretrybackoff)
             * [`fn withDuration(duration)`](#fn-spectemplatespecsyncpolicyretrybackoffwithduration)
             * [`fn withFactor(factor)`](#fn-spectemplatespecsyncpolicyretrybackoffwithfactor)
@@ -8812,6 +8978,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.clusterDecisionResource.template.spec.source.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.clusterDecisionResource.template.spec.source.kustomize.withImages
 
 ```ts
@@ -8834,6 +9008,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.clusterDecisionResource.template.spec.source.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -9736,6 +9918,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.clusterDecisionResource.template.spec.sources.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.clusterDecisionResource.template.spec.sources.kustomize.withImages
 
 ```ts
@@ -9758,6 +9948,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.clusterDecisionResource.template.spec.sources.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -10114,6 +10312,14 @@ withAllowEmpty(allowEmpty)
 
 
 
+### fn spec.generators.clusterDecisionResource.template.spec.syncPolicy.automated.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+
+
 ### fn spec.generators.clusterDecisionResource.template.spec.syncPolicy.automated.withPrune
 
 ```ts
@@ -10178,6 +10384,14 @@ withLabelsMixin(labels)
 
 ```ts
 withLimit(limit)
+```
+
+
+
+### fn spec.generators.clusterDecisionResource.template.spec.syncPolicy.retry.withRefresh
+
+```ts
+withRefresh(refresh)
 ```
 
 
@@ -11124,6 +11338,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.clusters.template.spec.source.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.clusters.template.spec.source.kustomize.withImages
 
 ```ts
@@ -11146,6 +11368,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.clusters.template.spec.source.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -12048,6 +12278,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.clusters.template.spec.sources.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.clusters.template.spec.sources.kustomize.withImages
 
 ```ts
@@ -12070,6 +12308,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.clusters.template.spec.sources.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -12426,6 +12672,14 @@ withAllowEmpty(allowEmpty)
 
 
 
+### fn spec.generators.clusters.template.spec.syncPolicy.automated.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+
+
 ### fn spec.generators.clusters.template.spec.syncPolicy.automated.withPrune
 
 ```ts
@@ -12490,6 +12744,14 @@ withLabelsMixin(labels)
 
 ```ts
 withLimit(limit)
+```
+
+
+
+### fn spec.generators.clusters.template.spec.syncPolicy.retry.withRefresh
+
+```ts
+withRefresh(refresh)
 ```
 
 
@@ -12633,6 +12895,14 @@ withPath(path)
 
 
 ## obj spec.generators.git.files
+
+
+
+### fn spec.generators.git.files.withExclude
+
+```ts
+withExclude(exclude)
+```
 
 
 
@@ -13450,6 +13720,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.git.template.spec.source.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.git.template.spec.source.kustomize.withImages
 
 ```ts
@@ -13472,6 +13750,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.git.template.spec.source.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -14374,6 +14660,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.git.template.spec.sources.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.git.template.spec.sources.kustomize.withImages
 
 ```ts
@@ -14396,6 +14690,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.git.template.spec.sources.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -14752,6 +15054,14 @@ withAllowEmpty(allowEmpty)
 
 
 
+### fn spec.generators.git.template.spec.syncPolicy.automated.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+
+
 ### fn spec.generators.git.template.spec.syncPolicy.automated.withPrune
 
 ```ts
@@ -14816,6 +15126,14 @@ withLabelsMixin(labels)
 
 ```ts
 withLimit(limit)
+```
+
+
+
+### fn spec.generators.git.template.spec.syncPolicy.retry.withRefresh
+
+```ts
+withRefresh(refresh)
 ```
 
 
@@ -15684,6 +16002,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.list.template.spec.source.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.list.template.spec.source.kustomize.withImages
 
 ```ts
@@ -15706,6 +16032,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.list.template.spec.source.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -16608,6 +16942,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.list.template.spec.sources.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.list.template.spec.sources.kustomize.withImages
 
 ```ts
@@ -16630,6 +16972,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.list.template.spec.sources.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -16986,6 +17336,14 @@ withAllowEmpty(allowEmpty)
 
 
 
+### fn spec.generators.list.template.spec.syncPolicy.automated.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+
+
 ### fn spec.generators.list.template.spec.syncPolicy.automated.withPrune
 
 ```ts
@@ -17050,6 +17408,14 @@ withLabelsMixin(labels)
 
 ```ts
 withLimit(limit)
+```
+
+
+
+### fn spec.generators.list.template.spec.syncPolicy.retry.withRefresh
+
+```ts
+withRefresh(refresh)
 ```
 
 
@@ -18054,6 +18420,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.source.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.source.kustomize.withImages
 
 ```ts
@@ -18076,6 +18450,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.source.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -18978,6 +19360,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.sources.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.sources.kustomize.withImages
 
 ```ts
@@ -19000,6 +19390,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.sources.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -19356,6 +19754,14 @@ withAllowEmpty(allowEmpty)
 
 
 
+### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.syncPolicy.automated.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+
+
 ### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.syncPolicy.automated.withPrune
 
 ```ts
@@ -19420,6 +19826,14 @@ withLabelsMixin(labels)
 
 ```ts
 withLimit(limit)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusterDecisionResource.template.spec.syncPolicy.retry.withRefresh
+
+```ts
+withRefresh(refresh)
 ```
 
 
@@ -20366,6 +20780,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.matrix.generators.clusters.template.spec.source.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.matrix.generators.clusters.template.spec.source.kustomize.withImages
 
 ```ts
@@ -20388,6 +20810,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusters.template.spec.source.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -21290,6 +21720,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.matrix.generators.clusters.template.spec.sources.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.matrix.generators.clusters.template.spec.sources.kustomize.withImages
 
 ```ts
@@ -21312,6 +21750,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusters.template.spec.sources.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -21668,6 +22114,14 @@ withAllowEmpty(allowEmpty)
 
 
 
+### fn spec.generators.matrix.generators.clusters.template.spec.syncPolicy.automated.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+
+
 ### fn spec.generators.matrix.generators.clusters.template.spec.syncPolicy.automated.withPrune
 
 ```ts
@@ -21732,6 +22186,14 @@ withLabelsMixin(labels)
 
 ```ts
 withLimit(limit)
+```
+
+
+
+### fn spec.generators.matrix.generators.clusters.template.spec.syncPolicy.retry.withRefresh
+
+```ts
+withRefresh(refresh)
 ```
 
 
@@ -21875,6 +22337,14 @@ withPath(path)
 
 
 ## obj spec.generators.matrix.generators.git.files
+
+
+
+### fn spec.generators.matrix.generators.git.files.withExclude
+
+```ts
+withExclude(exclude)
+```
 
 
 
@@ -22692,6 +23162,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.matrix.generators.git.template.spec.source.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.matrix.generators.git.template.spec.source.kustomize.withImages
 
 ```ts
@@ -22714,6 +23192,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.matrix.generators.git.template.spec.source.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -23616,6 +24102,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.matrix.generators.git.template.spec.sources.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.matrix.generators.git.template.spec.sources.kustomize.withImages
 
 ```ts
@@ -23638,6 +24132,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.matrix.generators.git.template.spec.sources.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -23994,6 +24496,14 @@ withAllowEmpty(allowEmpty)
 
 
 
+### fn spec.generators.matrix.generators.git.template.spec.syncPolicy.automated.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+
+
 ### fn spec.generators.matrix.generators.git.template.spec.syncPolicy.automated.withPrune
 
 ```ts
@@ -24058,6 +24568,14 @@ withLabelsMixin(labels)
 
 ```ts
 withLimit(limit)
+```
+
+
+
+### fn spec.generators.matrix.generators.git.template.spec.syncPolicy.retry.withRefresh
+
+```ts
+withRefresh(refresh)
 ```
 
 
@@ -24926,6 +25444,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.matrix.generators.list.template.spec.source.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.matrix.generators.list.template.spec.source.kustomize.withImages
 
 ```ts
@@ -24948,6 +25474,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.matrix.generators.list.template.spec.source.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -25850,6 +26384,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.matrix.generators.list.template.spec.sources.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.matrix.generators.list.template.spec.sources.kustomize.withImages
 
 ```ts
@@ -25872,6 +26414,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.matrix.generators.list.template.spec.sources.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -26228,6 +26778,14 @@ withAllowEmpty(allowEmpty)
 
 
 
+### fn spec.generators.matrix.generators.list.template.spec.syncPolicy.automated.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+
+
 ### fn spec.generators.matrix.generators.list.template.spec.syncPolicy.automated.withPrune
 
 ```ts
@@ -26292,6 +26850,14 @@ withLabelsMixin(labels)
 
 ```ts
 withLimit(limit)
+```
+
+
+
+### fn spec.generators.matrix.generators.list.template.spec.syncPolicy.retry.withRefresh
+
+```ts
+withRefresh(refresh)
 ```
 
 
@@ -27194,6 +27760,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.matrix.generators.plugin.template.spec.source.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.matrix.generators.plugin.template.spec.source.kustomize.withImages
 
 ```ts
@@ -27216,6 +27790,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.matrix.generators.plugin.template.spec.source.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -28118,6 +28700,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.matrix.generators.plugin.template.spec.sources.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.matrix.generators.plugin.template.spec.sources.kustomize.withImages
 
 ```ts
@@ -28140,6 +28730,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.matrix.generators.plugin.template.spec.sources.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -28496,6 +29094,14 @@ withAllowEmpty(allowEmpty)
 
 
 
+### fn spec.generators.matrix.generators.plugin.template.spec.syncPolicy.automated.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+
+
 ### fn spec.generators.matrix.generators.plugin.template.spec.syncPolicy.automated.withPrune
 
 ```ts
@@ -28564,6 +29170,14 @@ withLimit(limit)
 
 
 
+### fn spec.generators.matrix.generators.plugin.template.spec.syncPolicy.retry.withRefresh
+
+```ts
+withRefresh(refresh)
+```
+
+
+
 ## obj spec.generators.matrix.generators.plugin.template.spec.syncPolicy.retry.backoff
 
 
@@ -28596,6 +29210,14 @@ withMaxDuration(maxDuration)
 
 
 
+### fn spec.generators.matrix.generators.pullRequest.withContinueOnRepoNotFoundError
+
+```ts
+withContinueOnRepoNotFoundError(continueOnRepoNotFoundError)
+```
+
+
+
 ### fn spec.generators.matrix.generators.pullRequest.withFilters
 
 ```ts
@@ -28621,6 +29243,24 @@ withRequeueAfterSeconds(requeueAfterSeconds)
 ```
 
 
+
+### fn spec.generators.matrix.generators.pullRequest.withValues
+
+```ts
+withValues(values)
+```
+
+
+
+### fn spec.generators.matrix.generators.pullRequest.withValuesMixin
+
+```ts
+withValuesMixin(values)
+```
+
+
+
+**Note:** This function appends passed data to existing values
 
 ## obj spec.generators.matrix.generators.pullRequest.azuredevops
 
@@ -28912,6 +29552,14 @@ withTargetBranchMatch(targetBranchMatch)
 
 
 
+### fn spec.generators.matrix.generators.pullRequest.filters.withTitleMatch
+
+```ts
+withTitleMatch(titleMatch)
+```
+
+
+
 ## obj spec.generators.matrix.generators.pullRequest.gitea
 
 
@@ -28931,6 +29579,24 @@ withInsecure(insecure)
 ```
 
 
+
+### fn spec.generators.matrix.generators.pullRequest.gitea.withLabels
+
+```ts
+withLabels(labels)
+```
+
+
+
+### fn spec.generators.matrix.generators.pullRequest.gitea.withLabelsMixin
+
+```ts
+withLabelsMixin(labels)
+```
+
+
+
+**Note:** This function appends passed data to existing values
 
 ### fn spec.generators.matrix.generators.pullRequest.gitea.withOwner
 
@@ -29942,6 +30608,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.matrix.generators.pullRequest.template.spec.source.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.matrix.generators.pullRequest.template.spec.source.kustomize.withImages
 
 ```ts
@@ -29964,6 +30638,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.matrix.generators.pullRequest.template.spec.source.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -30866,6 +31548,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.matrix.generators.pullRequest.template.spec.sources.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.matrix.generators.pullRequest.template.spec.sources.kustomize.withImages
 
 ```ts
@@ -30888,6 +31578,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.matrix.generators.pullRequest.template.spec.sources.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -31244,6 +31942,14 @@ withAllowEmpty(allowEmpty)
 
 
 
+### fn spec.generators.matrix.generators.pullRequest.template.spec.syncPolicy.automated.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+
+
 ### fn spec.generators.matrix.generators.pullRequest.template.spec.syncPolicy.automated.withPrune
 
 ```ts
@@ -31308,6 +32014,14 @@ withLabelsMixin(labels)
 
 ```ts
 withLimit(limit)
+```
+
+
+
+### fn spec.generators.matrix.generators.pullRequest.template.spec.syncPolicy.retry.withRefresh
+
+```ts
+withRefresh(refresh)
 ```
 
 
@@ -32760,6 +33474,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.matrix.generators.scmProvider.template.spec.source.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.matrix.generators.scmProvider.template.spec.source.kustomize.withImages
 
 ```ts
@@ -32782,6 +33504,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.matrix.generators.scmProvider.template.spec.source.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -33684,6 +34414,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.matrix.generators.scmProvider.template.spec.sources.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.matrix.generators.scmProvider.template.spec.sources.kustomize.withImages
 
 ```ts
@@ -33706,6 +34444,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.matrix.generators.scmProvider.template.spec.sources.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -34062,6 +34808,14 @@ withAllowEmpty(allowEmpty)
 
 
 
+### fn spec.generators.matrix.generators.scmProvider.template.spec.syncPolicy.automated.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+
+
 ### fn spec.generators.matrix.generators.scmProvider.template.spec.syncPolicy.automated.withPrune
 
 ```ts
@@ -34126,6 +34880,14 @@ withLabelsMixin(labels)
 
 ```ts
 withLimit(limit)
+```
+
+
+
+### fn spec.generators.matrix.generators.scmProvider.template.spec.syncPolicy.retry.withRefresh
+
+```ts
+withRefresh(refresh)
 ```
 
 
@@ -35042,6 +35804,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.matrix.template.spec.source.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.matrix.template.spec.source.kustomize.withImages
 
 ```ts
@@ -35064,6 +35834,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.matrix.template.spec.source.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -35966,6 +36744,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.matrix.template.spec.sources.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.matrix.template.spec.sources.kustomize.withImages
 
 ```ts
@@ -35988,6 +36774,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.matrix.template.spec.sources.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -36344,6 +37138,14 @@ withAllowEmpty(allowEmpty)
 
 
 
+### fn spec.generators.matrix.template.spec.syncPolicy.automated.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+
+
 ### fn spec.generators.matrix.template.spec.syncPolicy.automated.withPrune
 
 ```ts
@@ -36408,6 +37210,14 @@ withLabelsMixin(labels)
 
 ```ts
 withLimit(limit)
+```
+
+
+
+### fn spec.generators.matrix.template.spec.syncPolicy.retry.withRefresh
+
+```ts
+withRefresh(refresh)
 ```
 
 
@@ -37430,6 +38240,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.source.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.source.kustomize.withImages
 
 ```ts
@@ -37452,6 +38270,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.source.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -38354,6 +39180,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.sources.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.sources.kustomize.withImages
 
 ```ts
@@ -38376,6 +39210,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.sources.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -38732,6 +39574,14 @@ withAllowEmpty(allowEmpty)
 
 
 
+### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.syncPolicy.automated.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+
+
 ### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.syncPolicy.automated.withPrune
 
 ```ts
@@ -38796,6 +39646,14 @@ withLabelsMixin(labels)
 
 ```ts
 withLimit(limit)
+```
+
+
+
+### fn spec.generators.merge.generators.clusterDecisionResource.template.spec.syncPolicy.retry.withRefresh
+
+```ts
+withRefresh(refresh)
 ```
 
 
@@ -39742,6 +40600,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.merge.generators.clusters.template.spec.source.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.merge.generators.clusters.template.spec.source.kustomize.withImages
 
 ```ts
@@ -39764,6 +40630,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.merge.generators.clusters.template.spec.source.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -40666,6 +41540,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.merge.generators.clusters.template.spec.sources.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.merge.generators.clusters.template.spec.sources.kustomize.withImages
 
 ```ts
@@ -40688,6 +41570,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.merge.generators.clusters.template.spec.sources.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -41044,6 +41934,14 @@ withAllowEmpty(allowEmpty)
 
 
 
+### fn spec.generators.merge.generators.clusters.template.spec.syncPolicy.automated.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+
+
 ### fn spec.generators.merge.generators.clusters.template.spec.syncPolicy.automated.withPrune
 
 ```ts
@@ -41108,6 +42006,14 @@ withLabelsMixin(labels)
 
 ```ts
 withLimit(limit)
+```
+
+
+
+### fn spec.generators.merge.generators.clusters.template.spec.syncPolicy.retry.withRefresh
+
+```ts
+withRefresh(refresh)
 ```
 
 
@@ -41251,6 +42157,14 @@ withPath(path)
 
 
 ## obj spec.generators.merge.generators.git.files
+
+
+
+### fn spec.generators.merge.generators.git.files.withExclude
+
+```ts
+withExclude(exclude)
+```
 
 
 
@@ -42068,6 +42982,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.merge.generators.git.template.spec.source.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.merge.generators.git.template.spec.source.kustomize.withImages
 
 ```ts
@@ -42090,6 +43012,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.merge.generators.git.template.spec.source.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -42992,6 +43922,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.merge.generators.git.template.spec.sources.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.merge.generators.git.template.spec.sources.kustomize.withImages
 
 ```ts
@@ -43014,6 +43952,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.merge.generators.git.template.spec.sources.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -43370,6 +44316,14 @@ withAllowEmpty(allowEmpty)
 
 
 
+### fn spec.generators.merge.generators.git.template.spec.syncPolicy.automated.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+
+
 ### fn spec.generators.merge.generators.git.template.spec.syncPolicy.automated.withPrune
 
 ```ts
@@ -43434,6 +44388,14 @@ withLabelsMixin(labels)
 
 ```ts
 withLimit(limit)
+```
+
+
+
+### fn spec.generators.merge.generators.git.template.spec.syncPolicy.retry.withRefresh
+
+```ts
+withRefresh(refresh)
 ```
 
 
@@ -44302,6 +45264,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.merge.generators.list.template.spec.source.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.merge.generators.list.template.spec.source.kustomize.withImages
 
 ```ts
@@ -44324,6 +45294,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.merge.generators.list.template.spec.source.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -45226,6 +46204,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.merge.generators.list.template.spec.sources.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.merge.generators.list.template.spec.sources.kustomize.withImages
 
 ```ts
@@ -45248,6 +46234,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.merge.generators.list.template.spec.sources.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -45604,6 +46598,14 @@ withAllowEmpty(allowEmpty)
 
 
 
+### fn spec.generators.merge.generators.list.template.spec.syncPolicy.automated.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+
+
 ### fn spec.generators.merge.generators.list.template.spec.syncPolicy.automated.withPrune
 
 ```ts
@@ -45668,6 +46670,14 @@ withLabelsMixin(labels)
 
 ```ts
 withLimit(limit)
+```
+
+
+
+### fn spec.generators.merge.generators.list.template.spec.syncPolicy.retry.withRefresh
+
+```ts
+withRefresh(refresh)
 ```
 
 
@@ -46570,6 +47580,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.merge.generators.plugin.template.spec.source.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.merge.generators.plugin.template.spec.source.kustomize.withImages
 
 ```ts
@@ -46592,6 +47610,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.merge.generators.plugin.template.spec.source.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -47494,6 +48520,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.merge.generators.plugin.template.spec.sources.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.merge.generators.plugin.template.spec.sources.kustomize.withImages
 
 ```ts
@@ -47516,6 +48550,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.merge.generators.plugin.template.spec.sources.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -47872,6 +48914,14 @@ withAllowEmpty(allowEmpty)
 
 
 
+### fn spec.generators.merge.generators.plugin.template.spec.syncPolicy.automated.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+
+
 ### fn spec.generators.merge.generators.plugin.template.spec.syncPolicy.automated.withPrune
 
 ```ts
@@ -47940,6 +48990,14 @@ withLimit(limit)
 
 
 
+### fn spec.generators.merge.generators.plugin.template.spec.syncPolicy.retry.withRefresh
+
+```ts
+withRefresh(refresh)
+```
+
+
+
 ## obj spec.generators.merge.generators.plugin.template.spec.syncPolicy.retry.backoff
 
 
@@ -47972,6 +49030,14 @@ withMaxDuration(maxDuration)
 
 
 
+### fn spec.generators.merge.generators.pullRequest.withContinueOnRepoNotFoundError
+
+```ts
+withContinueOnRepoNotFoundError(continueOnRepoNotFoundError)
+```
+
+
+
 ### fn spec.generators.merge.generators.pullRequest.withFilters
 
 ```ts
@@ -47997,6 +49063,24 @@ withRequeueAfterSeconds(requeueAfterSeconds)
 ```
 
 
+
+### fn spec.generators.merge.generators.pullRequest.withValues
+
+```ts
+withValues(values)
+```
+
+
+
+### fn spec.generators.merge.generators.pullRequest.withValuesMixin
+
+```ts
+withValuesMixin(values)
+```
+
+
+
+**Note:** This function appends passed data to existing values
 
 ## obj spec.generators.merge.generators.pullRequest.azuredevops
 
@@ -48288,6 +49372,14 @@ withTargetBranchMatch(targetBranchMatch)
 
 
 
+### fn spec.generators.merge.generators.pullRequest.filters.withTitleMatch
+
+```ts
+withTitleMatch(titleMatch)
+```
+
+
+
 ## obj spec.generators.merge.generators.pullRequest.gitea
 
 
@@ -48307,6 +49399,24 @@ withInsecure(insecure)
 ```
 
 
+
+### fn spec.generators.merge.generators.pullRequest.gitea.withLabels
+
+```ts
+withLabels(labels)
+```
+
+
+
+### fn spec.generators.merge.generators.pullRequest.gitea.withLabelsMixin
+
+```ts
+withLabelsMixin(labels)
+```
+
+
+
+**Note:** This function appends passed data to existing values
 
 ### fn spec.generators.merge.generators.pullRequest.gitea.withOwner
 
@@ -49318,6 +50428,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.merge.generators.pullRequest.template.spec.source.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.merge.generators.pullRequest.template.spec.source.kustomize.withImages
 
 ```ts
@@ -49340,6 +50458,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.merge.generators.pullRequest.template.spec.source.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -50242,6 +51368,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.merge.generators.pullRequest.template.spec.sources.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.merge.generators.pullRequest.template.spec.sources.kustomize.withImages
 
 ```ts
@@ -50264,6 +51398,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.merge.generators.pullRequest.template.spec.sources.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -50620,6 +51762,14 @@ withAllowEmpty(allowEmpty)
 
 
 
+### fn spec.generators.merge.generators.pullRequest.template.spec.syncPolicy.automated.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+
+
 ### fn spec.generators.merge.generators.pullRequest.template.spec.syncPolicy.automated.withPrune
 
 ```ts
@@ -50684,6 +51834,14 @@ withLabelsMixin(labels)
 
 ```ts
 withLimit(limit)
+```
+
+
+
+### fn spec.generators.merge.generators.pullRequest.template.spec.syncPolicy.retry.withRefresh
+
+```ts
+withRefresh(refresh)
 ```
 
 
@@ -52136,6 +53294,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.merge.generators.scmProvider.template.spec.source.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.merge.generators.scmProvider.template.spec.source.kustomize.withImages
 
 ```ts
@@ -52158,6 +53324,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.merge.generators.scmProvider.template.spec.source.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -53060,6 +54234,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.merge.generators.scmProvider.template.spec.sources.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.merge.generators.scmProvider.template.spec.sources.kustomize.withImages
 
 ```ts
@@ -53082,6 +54264,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.merge.generators.scmProvider.template.spec.sources.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -53438,6 +54628,14 @@ withAllowEmpty(allowEmpty)
 
 
 
+### fn spec.generators.merge.generators.scmProvider.template.spec.syncPolicy.automated.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+
+
 ### fn spec.generators.merge.generators.scmProvider.template.spec.syncPolicy.automated.withPrune
 
 ```ts
@@ -53502,6 +54700,14 @@ withLabelsMixin(labels)
 
 ```ts
 withLimit(limit)
+```
+
+
+
+### fn spec.generators.merge.generators.scmProvider.template.spec.syncPolicy.retry.withRefresh
+
+```ts
+withRefresh(refresh)
 ```
 
 
@@ -54418,6 +55624,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.merge.template.spec.source.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.merge.template.spec.source.kustomize.withImages
 
 ```ts
@@ -54440,6 +55654,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.merge.template.spec.source.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -55342,6 +56564,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.merge.template.spec.sources.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.merge.template.spec.sources.kustomize.withImages
 
 ```ts
@@ -55364,6 +56594,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.merge.template.spec.sources.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -55720,6 +56958,14 @@ withAllowEmpty(allowEmpty)
 
 
 
+### fn spec.generators.merge.template.spec.syncPolicy.automated.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+
+
 ### fn spec.generators.merge.template.spec.syncPolicy.automated.withPrune
 
 ```ts
@@ -55784,6 +57030,14 @@ withLabelsMixin(labels)
 
 ```ts
 withLimit(limit)
+```
+
+
+
+### fn spec.generators.merge.template.spec.syncPolicy.retry.withRefresh
+
+```ts
+withRefresh(refresh)
 ```
 
 
@@ -56686,6 +57940,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.plugin.template.spec.source.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.plugin.template.spec.source.kustomize.withImages
 
 ```ts
@@ -56708,6 +57970,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.plugin.template.spec.source.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -57610,6 +58880,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.plugin.template.spec.sources.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.plugin.template.spec.sources.kustomize.withImages
 
 ```ts
@@ -57632,6 +58910,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.plugin.template.spec.sources.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -57988,6 +59274,14 @@ withAllowEmpty(allowEmpty)
 
 
 
+### fn spec.generators.plugin.template.spec.syncPolicy.automated.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+
+
 ### fn spec.generators.plugin.template.spec.syncPolicy.automated.withPrune
 
 ```ts
@@ -58056,6 +59350,14 @@ withLimit(limit)
 
 
 
+### fn spec.generators.plugin.template.spec.syncPolicy.retry.withRefresh
+
+```ts
+withRefresh(refresh)
+```
+
+
+
 ## obj spec.generators.plugin.template.spec.syncPolicy.retry.backoff
 
 
@@ -58088,6 +59390,14 @@ withMaxDuration(maxDuration)
 
 
 
+### fn spec.generators.pullRequest.withContinueOnRepoNotFoundError
+
+```ts
+withContinueOnRepoNotFoundError(continueOnRepoNotFoundError)
+```
+
+
+
 ### fn spec.generators.pullRequest.withFilters
 
 ```ts
@@ -58113,6 +59423,24 @@ withRequeueAfterSeconds(requeueAfterSeconds)
 ```
 
 
+
+### fn spec.generators.pullRequest.withValues
+
+```ts
+withValues(values)
+```
+
+
+
+### fn spec.generators.pullRequest.withValuesMixin
+
+```ts
+withValuesMixin(values)
+```
+
+
+
+**Note:** This function appends passed data to existing values
 
 ## obj spec.generators.pullRequest.azuredevops
 
@@ -58404,6 +59732,14 @@ withTargetBranchMatch(targetBranchMatch)
 
 
 
+### fn spec.generators.pullRequest.filters.withTitleMatch
+
+```ts
+withTitleMatch(titleMatch)
+```
+
+
+
 ## obj spec.generators.pullRequest.gitea
 
 
@@ -58423,6 +59759,24 @@ withInsecure(insecure)
 ```
 
 
+
+### fn spec.generators.pullRequest.gitea.withLabels
+
+```ts
+withLabels(labels)
+```
+
+
+
+### fn spec.generators.pullRequest.gitea.withLabelsMixin
+
+```ts
+withLabelsMixin(labels)
+```
+
+
+
+**Note:** This function appends passed data to existing values
 
 ### fn spec.generators.pullRequest.gitea.withOwner
 
@@ -59434,6 +60788,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.pullRequest.template.spec.source.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.pullRequest.template.spec.source.kustomize.withImages
 
 ```ts
@@ -59456,6 +60818,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.pullRequest.template.spec.source.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -60358,6 +61728,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.pullRequest.template.spec.sources.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.pullRequest.template.spec.sources.kustomize.withImages
 
 ```ts
@@ -60380,6 +61758,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.pullRequest.template.spec.sources.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -60736,6 +62122,14 @@ withAllowEmpty(allowEmpty)
 
 
 
+### fn spec.generators.pullRequest.template.spec.syncPolicy.automated.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+
+
 ### fn spec.generators.pullRequest.template.spec.syncPolicy.automated.withPrune
 
 ```ts
@@ -60800,6 +62194,14 @@ withLabelsMixin(labels)
 
 ```ts
 withLimit(limit)
+```
+
+
+
+### fn spec.generators.pullRequest.template.spec.syncPolicy.retry.withRefresh
+
+```ts
+withRefresh(refresh)
 ```
 
 
@@ -62252,6 +63654,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.scmProvider.template.spec.source.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.scmProvider.template.spec.source.kustomize.withImages
 
 ```ts
@@ -62274,6 +63684,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.scmProvider.template.spec.source.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -63176,6 +64594,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.generators.scmProvider.template.spec.sources.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.generators.scmProvider.template.spec.sources.kustomize.withImages
 
 ```ts
@@ -63198,6 +64624,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.generators.scmProvider.template.spec.sources.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -63554,6 +64988,14 @@ withAllowEmpty(allowEmpty)
 
 
 
+### fn spec.generators.scmProvider.template.spec.syncPolicy.automated.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+
+
 ### fn spec.generators.scmProvider.template.spec.syncPolicy.automated.withPrune
 
 ```ts
@@ -63618,6 +65060,14 @@ withLabelsMixin(labels)
 
 ```ts
 withLimit(limit)
+```
+
+
+
+### fn spec.generators.scmProvider.template.spec.syncPolicy.retry.withRefresh
+
+```ts
+withRefresh(refresh)
 ```
 
 
@@ -63817,6 +65267,14 @@ withLabelsMixin(labels)
 **Note:** This function appends passed data to existing values
 
 ## obj spec.strategy
+
+
+
+### fn spec.strategy.withDeletionOrder
+
+```ts
+withDeletionOrder(deletionOrder)
+```
 
 
 
@@ -64744,6 +66202,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.template.spec.source.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.template.spec.source.kustomize.withImages
 
 ```ts
@@ -64766,6 +66232,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.template.spec.source.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -65668,6 +67142,14 @@ withForceCommonLabels(forceCommonLabels)
 
 
 
+### fn spec.template.spec.sources.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+
+
 ### fn spec.template.spec.sources.kustomize.withImages
 
 ```ts
@@ -65690,6 +67172,14 @@ withImagesMixin(images)
 
 ```ts
 withKubeVersion(kubeVersion)
+```
+
+
+
+### fn spec.template.spec.sources.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
 ```
 
 
@@ -66046,6 +67536,14 @@ withAllowEmpty(allowEmpty)
 
 
 
+### fn spec.template.spec.syncPolicy.automated.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+
+
 ### fn spec.template.spec.syncPolicy.automated.withPrune
 
 ```ts
@@ -66110,6 +67608,14 @@ withLabelsMixin(labels)
 
 ```ts
 withLimit(limit)
+```
+
+
+
+### fn spec.template.spec.syncPolicy.retry.withRefresh
+
+```ts
+withRefresh(refresh)
 ```
 
 

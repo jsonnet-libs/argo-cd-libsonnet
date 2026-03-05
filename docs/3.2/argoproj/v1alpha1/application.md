@@ -1,5 +1,5 @@
 ---
-permalink: /2.14/argoproj/v1alpha1/application/
+permalink: /3.2/argoproj/v1alpha1/application/
 ---
 
 # argoproj.v1alpha1.application
@@ -40,6 +40,7 @@ permalink: /2.14/argoproj/v1alpha1/application/
     * [`fn withUsername(username)`](#fn-operationinitiatedbywithusername)
   * [`obj operation.retry`](#obj-operationretry)
     * [`fn withLimit(limit)`](#fn-operationretrywithlimit)
+    * [`fn withRefresh(refresh)`](#fn-operationretrywithrefresh)
     * [`obj operation.retry.backoff`](#obj-operationretrybackoff)
       * [`fn withDuration(duration)`](#fn-operationretrybackoffwithduration)
       * [`fn withFactor(factor)`](#fn-operationretrybackoffwithfactor)
@@ -130,9 +131,11 @@ permalink: /2.14/argoproj/v1alpha1/application/
         * [`fn withComponentsMixin(components)`](#fn-operationsyncsourcekustomizewithcomponentsmixin)
         * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-operationsyncsourcekustomizewithforcecommonannotations)
         * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-operationsyncsourcekustomizewithforcecommonlabels)
+        * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-operationsyncsourcekustomizewithignoremissingcomponents)
         * [`fn withImages(images)`](#fn-operationsyncsourcekustomizewithimages)
         * [`fn withImagesMixin(images)`](#fn-operationsyncsourcekustomizewithimagesmixin)
         * [`fn withKubeVersion(kubeVersion)`](#fn-operationsyncsourcekustomizewithkubeversion)
+        * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-operationsyncsourcekustomizewithlabelincludetemplates)
         * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-operationsyncsourcekustomizewithlabelwithoutselector)
         * [`fn withNamePrefix(namePrefix)`](#fn-operationsyncsourcekustomizewithnameprefix)
         * [`fn withNameSuffix(nameSuffix)`](#fn-operationsyncsourcekustomizewithnamesuffix)
@@ -240,9 +243,11 @@ permalink: /2.14/argoproj/v1alpha1/application/
         * [`fn withComponentsMixin(components)`](#fn-operationsyncsourceskustomizewithcomponentsmixin)
         * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-operationsyncsourceskustomizewithforcecommonannotations)
         * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-operationsyncsourceskustomizewithforcecommonlabels)
+        * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-operationsyncsourceskustomizewithignoremissingcomponents)
         * [`fn withImages(images)`](#fn-operationsyncsourceskustomizewithimages)
         * [`fn withImagesMixin(images)`](#fn-operationsyncsourceskustomizewithimagesmixin)
         * [`fn withKubeVersion(kubeVersion)`](#fn-operationsyncsourceskustomizewithkubeversion)
+        * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-operationsyncsourceskustomizewithlabelincludetemplates)
         * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-operationsyncsourceskustomizewithlabelwithoutselector)
         * [`fn withNamePrefix(namePrefix)`](#fn-operationsyncsourceskustomizewithnameprefix)
         * [`fn withNameSuffix(nameSuffix)`](#fn-operationsyncsourceskustomizewithnamesuffix)
@@ -382,9 +387,11 @@ permalink: /2.14/argoproj/v1alpha1/application/
       * [`fn withComponentsMixin(components)`](#fn-specsourcekustomizewithcomponentsmixin)
       * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specsourcekustomizewithforcecommonannotations)
       * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specsourcekustomizewithforcecommonlabels)
+      * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specsourcekustomizewithignoremissingcomponents)
       * [`fn withImages(images)`](#fn-specsourcekustomizewithimages)
       * [`fn withImagesMixin(images)`](#fn-specsourcekustomizewithimagesmixin)
       * [`fn withKubeVersion(kubeVersion)`](#fn-specsourcekustomizewithkubeversion)
+      * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specsourcekustomizewithlabelincludetemplates)
       * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specsourcekustomizewithlabelwithoutselector)
       * [`fn withNamePrefix(namePrefix)`](#fn-specsourcekustomizewithnameprefix)
       * [`fn withNameSuffix(nameSuffix)`](#fn-specsourcekustomizewithnamesuffix)
@@ -502,9 +509,11 @@ permalink: /2.14/argoproj/v1alpha1/application/
       * [`fn withComponentsMixin(components)`](#fn-specsourceskustomizewithcomponentsmixin)
       * [`fn withForceCommonAnnotations(forceCommonAnnotations)`](#fn-specsourceskustomizewithforcecommonannotations)
       * [`fn withForceCommonLabels(forceCommonLabels)`](#fn-specsourceskustomizewithforcecommonlabels)
+      * [`fn withIgnoreMissingComponents(ignoreMissingComponents)`](#fn-specsourceskustomizewithignoremissingcomponents)
       * [`fn withImages(images)`](#fn-specsourceskustomizewithimages)
       * [`fn withImagesMixin(images)`](#fn-specsourceskustomizewithimagesmixin)
       * [`fn withKubeVersion(kubeVersion)`](#fn-specsourceskustomizewithkubeversion)
+      * [`fn withLabelIncludeTemplates(labelIncludeTemplates)`](#fn-specsourceskustomizewithlabelincludetemplates)
       * [`fn withLabelWithoutSelector(labelWithoutSelector)`](#fn-specsourceskustomizewithlabelwithoutselector)
       * [`fn withNamePrefix(namePrefix)`](#fn-specsourceskustomizewithnameprefix)
       * [`fn withNameSuffix(nameSuffix)`](#fn-specsourceskustomizewithnamesuffix)
@@ -551,6 +560,7 @@ permalink: /2.14/argoproj/v1alpha1/application/
     * [`fn withSyncOptionsMixin(syncOptions)`](#fn-specsyncpolicywithsyncoptionsmixin)
     * [`obj spec.syncPolicy.automated`](#obj-specsyncpolicyautomated)
       * [`fn withAllowEmpty(allowEmpty)`](#fn-specsyncpolicyautomatedwithallowempty)
+      * [`fn withEnabled(enabled)`](#fn-specsyncpolicyautomatedwithenabled)
       * [`fn withPrune(prune)`](#fn-specsyncpolicyautomatedwithprune)
       * [`fn withSelfHeal(selfHeal)`](#fn-specsyncpolicyautomatedwithselfheal)
     * [`obj spec.syncPolicy.managedNamespaceMetadata`](#obj-specsyncpolicymanagednamespacemetadata)
@@ -560,6 +570,7 @@ permalink: /2.14/argoproj/v1alpha1/application/
       * [`fn withLabelsMixin(labels)`](#fn-specsyncpolicymanagednamespacemetadatawithlabelsmixin)
     * [`obj spec.syncPolicy.retry`](#obj-specsyncpolicyretry)
       * [`fn withLimit(limit)`](#fn-specsyncpolicyretrywithlimit)
+      * [`fn withRefresh(refresh)`](#fn-specsyncpolicyretrywithrefresh)
       * [`obj spec.syncPolicy.retry.backoff`](#obj-specsyncpolicyretrybackoff)
         * [`fn withDuration(duration)`](#fn-specsyncpolicyretrybackoffwithduration)
         * [`fn withFactor(factor)`](#fn-specsyncpolicyretrybackoffwithfactor)
@@ -812,6 +823,14 @@ withLimit(limit)
 ```
 
 "Limit is the maximum number of attempts for retrying a failed sync. If set to 0, no retries will be performed."
+
+### fn operation.retry.withRefresh
+
+```ts
+withRefresh(refresh)
+```
+
+"Refresh indicates if the latest revision should be used on retry instead of the initial one (default: false)"
 
 ## obj operation.retry.backoff
 
@@ -1519,6 +1538,14 @@ withForceCommonLabels(forceCommonLabels)
 
 "ForceCommonLabels specifies whether to force applying common labels to resources for Kustomize apps"
 
+### fn operation.sync.source.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+"IgnoreMissingComponents prevents kustomize from failing when components do not exist locally by not appending them to kustomization file"
+
 ### fn operation.sync.source.kustomize.withImages
 
 ```ts
@@ -1544,6 +1571,14 @@ withKubeVersion(kubeVersion)
 ```
 
 "KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD\nuses the Kubernetes version of the target cluster."
+
+### fn operation.sync.source.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
+```
+
+"LabelIncludeTemplates specifies whether to apply common labels to resource templates or not"
 
 ### fn operation.sync.source.kustomize.withLabelWithoutSelector
 
@@ -2379,6 +2414,14 @@ withForceCommonLabels(forceCommonLabels)
 
 "ForceCommonLabels specifies whether to force applying common labels to resources for Kustomize apps"
 
+### fn operation.sync.sources.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+"IgnoreMissingComponents prevents kustomize from failing when components do not exist locally by not appending them to kustomization file"
+
 ### fn operation.sync.sources.kustomize.withImages
 
 ```ts
@@ -2404,6 +2447,14 @@ withKubeVersion(kubeVersion)
 ```
 
 "KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD\nuses the Kubernetes version of the target cluster."
+
+### fn operation.sync.sources.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
+```
+
+"LabelIncludeTemplates specifies whether to apply common labels to resource templates or not"
 
 ### fn operation.sync.sources.kustomize.withLabelWithoutSelector
 
@@ -3479,6 +3530,14 @@ withForceCommonLabels(forceCommonLabels)
 
 "ForceCommonLabels specifies whether to force applying common labels to resources for Kustomize apps"
 
+### fn spec.source.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+"IgnoreMissingComponents prevents kustomize from failing when components do not exist locally by not appending them to kustomization file"
+
 ### fn spec.source.kustomize.withImages
 
 ```ts
@@ -3504,6 +3563,14 @@ withKubeVersion(kubeVersion)
 ```
 
 "KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD\nuses the Kubernetes version of the target cluster."
+
+### fn spec.source.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
+```
+
+"LabelIncludeTemplates specifies whether to apply common labels to resource templates or not"
 
 ### fn spec.source.kustomize.withLabelWithoutSelector
 
@@ -3877,7 +3944,7 @@ withTargetBranch(targetBranch)
 withPath(path)
 ```
 
-"Path is a directory path within the git repository where hydrated manifests should be committed to and synced\nfrom. If hydrateTo is set, this is just the path from which hydrated manifests will be synced."
+"Path is a directory path within the git repository where hydrated manifests should be committed to and synced\nfrom. The Path should never point to the root of the repo. If hydrateTo is set, this is just the path from which\nhydrated manifests will be synced."
 
 ### fn spec.sourceHydrator.syncSource.withTargetBranch
 
@@ -3885,7 +3952,7 @@ withPath(path)
 withTargetBranch(targetBranch)
 ```
 
-"TargetBranch is the branch to which hydrated manifests should be committed"
+"TargetBranch is the branch from which hydrated manifests will be synced.\nIf HydrateTo is not set, this is also the branch to which hydrated manifests are committed."
 
 ## obj spec.sources
 
@@ -4403,6 +4470,14 @@ withForceCommonLabels(forceCommonLabels)
 
 "ForceCommonLabels specifies whether to force applying common labels to resources for Kustomize apps"
 
+### fn spec.sources.kustomize.withIgnoreMissingComponents
+
+```ts
+withIgnoreMissingComponents(ignoreMissingComponents)
+```
+
+"IgnoreMissingComponents prevents kustomize from failing when components do not exist locally by not appending them to kustomization file"
+
 ### fn spec.sources.kustomize.withImages
 
 ```ts
@@ -4428,6 +4503,14 @@ withKubeVersion(kubeVersion)
 ```
 
 "KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD\nuses the Kubernetes version of the target cluster."
+
+### fn spec.sources.kustomize.withLabelIncludeTemplates
+
+```ts
+withLabelIncludeTemplates(labelIncludeTemplates)
+```
+
+"LabelIncludeTemplates specifies whether to apply common labels to resource templates or not"
 
 ### fn spec.sources.kustomize.withLabelWithoutSelector
 
@@ -4781,6 +4864,14 @@ withAllowEmpty(allowEmpty)
 
 "AllowEmpty allows apps have zero live resources (default: false)"
 
+### fn spec.syncPolicy.automated.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+"Enable allows apps to explicitly control automated sync"
+
 ### fn spec.syncPolicy.automated.withPrune
 
 ```ts
@@ -4848,6 +4939,14 @@ withLimit(limit)
 ```
 
 "Limit is the maximum number of attempts for retrying a failed sync. If set to 0, no retries will be performed."
+
+### fn spec.syncPolicy.retry.withRefresh
+
+```ts
+withRefresh(refresh)
+```
+
+"Refresh indicates if the latest revision should be used on retry instead of the initial one (default: false)"
 
 ## obj spec.syncPolicy.retry.backoff
 
