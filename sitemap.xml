@@ -2,78 +2,78 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/</loc>
-         <lastmod>2026-01-19</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.14/</loc>
-         <lastmod>2026-01-19</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.14/argoproj/</loc>
-         <lastmod>2026-01-19</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.14/argoproj/v1alpha1/</loc>
-         <lastmod>2026-01-19</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.14/argoproj/v1alpha1/appProject/</loc>
-         <lastmod>2026-01-19</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.14/argoproj/v1alpha1/application/</loc>
-         <lastmod>2026-01-19</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/2.14/argoproj/v1alpha1/applicationSet/</loc>
-         <lastmod>2026-01-19</lastmod>
+         <lastmod>2026-03-05</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/3.0/</loc>
-         <lastmod>2026-01-19</lastmod>
+         <lastmod>2026-03-05</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/3.0/argoproj/</loc>
-         <lastmod>2026-01-19</lastmod>
+         <lastmod>2026-03-05</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/3.0/argoproj/v1alpha1/</loc>
-         <lastmod>2026-01-19</lastmod>
+         <lastmod>2026-03-05</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/3.0/argoproj/v1alpha1/appProject/</loc>
-         <lastmod>2026-01-19</lastmod>
+         <lastmod>2026-03-05</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/3.0/argoproj/v1alpha1/application/</loc>
-         <lastmod>2026-01-19</lastmod>
+         <lastmod>2026-03-05</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/3.0/argoproj/v1alpha1/applicationSet/</loc>
-         <lastmod>2026-01-19</lastmod>
+         <lastmod>2026-03-05</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/3.1/</loc>
-         <lastmod>2026-01-19</lastmod>
+         <lastmod>2026-03-05</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/3.1/argoproj/</loc>
-         <lastmod>2026-01-19</lastmod>
+         <lastmod>2026-03-05</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/3.1/argoproj/v1alpha1/</loc>
-         <lastmod>2026-01-19</lastmod>
+         <lastmod>2026-03-05</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/3.1/argoproj/v1alpha1/appProject/</loc>
-         <lastmod>2026-01-19</lastmod>
+         <lastmod>2026-03-05</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/3.1/argoproj/v1alpha1/application/</loc>
-         <lastmod>2026-01-19</lastmod>
+         <lastmod>2026-03-05</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/3.1/argoproj/v1alpha1/applicationSet/</loc>
-         <lastmod>2026-01-19</lastmod>
+         <lastmod>2026-03-05</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/3.2/</loc>
+         <lastmod>2026-03-05</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/3.2/argoproj/</loc>
+         <lastmod>2026-03-05</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/3.2/argoproj/v1alpha1/</loc>
+         <lastmod>2026-03-05</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/3.2/argoproj/v1alpha1/appProject/</loc>
+         <lastmod>2026-03-05</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/3.2/argoproj/v1alpha1/application/</loc>
+         <lastmod>2026-03-05</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/argo-cd-libsonnet/3.2/argoproj/v1alpha1/applicationSet/</loc>
+         <lastmod>2026-03-05</lastmod>
     </url>
 </urlset>
